@@ -93,16 +93,14 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
         videoPlayer.source = VideoSource.VideoClip;
         videoPlayer.renderMode = VideoRenderMode.RenderTexture;
         videoPlayer.aspectRatio = VideoAspectRatio.FitOutside;
-        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.timeUpdateMode = VideoTimeUpdateMode.DSPTime;
+        videoPlayer.skipOnDrop = true;
+        videoPlayer.audioOutputMode = VideoAudioOutputMode.Direct;
 
         if (audioSource != null)
         {
             ConfigureAudioSource(audioSource);
-            videoPlayer.controlledAudioTrackCount = 1;
-            videoPlayer.EnableAudioTrack(0, true);
-            videoPlayer.SetTargetAudioSource(0, audioSource);
         }
-
     }
 
     private static void ConfigureAudioSource(AudioSource source)
@@ -275,7 +273,7 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
 
     private void ConfigureClipAudio(VideoClip clip)
     {
-        if (clip == null || videoPlayer == null || audioSource == null)
+        if (clip == null || videoPlayer == null)
         {
             return;
         }
@@ -287,10 +285,11 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
             return;
         }
 
-        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.audioOutputMode = VideoAudioOutputMode.Direct;
         videoPlayer.controlledAudioTrackCount = 1;
-        videoPlayer.SetTargetAudioSource(0, audioSource);
         videoPlayer.EnableAudioTrack(0, true);
+        videoPlayer.SetDirectAudioMute(0, false);
+        videoPlayer.SetDirectAudioVolume(0, 1f);
     }
 
     private void EnsureRenderTexture()
