@@ -7,14 +7,11 @@ using UnityEngine.Video;
 public sealed class SplashVideoSequencePlayer : MonoBehaviour
 {
     public VideoClip[] clips;
-    public AudioClip[] clipAudioOverrides;
     public RawImage targetImage;
     public VideoPlayer videoPlayer;
     public AudioSource audioSource;
-    public AudioSource overrideAudioSource;
     public string nextSceneName = "MainMenu";
     public float prepareTimeoutSeconds = 8f;
-    public float audioStartLeadTimeSeconds = 0.03f;
 
     private RenderTexture renderTexture;
     private int lastScreenWidth = -1;
@@ -40,15 +37,6 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
             }
         }
 
-        if (overrideAudioSource == null)
-        {
-            overrideAudioSource = FindOverrideAudioSource();
-            if (overrideAudioSource == null)
-            {
-                overrideAudioSource = gameObject.AddComponent<AudioSource>();
-            }
-        }
-
         if (targetImage == null)
         {
             targetImage = CreateRuntimeTargetImage();
@@ -69,7 +57,7 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
             {
                 if (clips[i] != null)
                 {
-                    yield return PlayClip(i, clips[i]);
+                    yield return PlayClip(clips[i]);
                 }
             }
         }
@@ -115,24 +103,6 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
             videoPlayer.SetTargetAudioSource(0, audioSource);
         }
 
-        if (overrideAudioSource != null)
-        {
-            ConfigureAudioSource(overrideAudioSource);
-        }
-    }
-
-    private AudioSource FindOverrideAudioSource()
-    {
-        AudioSource[] sources = GetComponents<AudioSource>();
-        foreach (AudioSource source in sources)
-        {
-            if (source != null && source != audioSource)
-            {
-                return source;
-            }
-        }
-
-        return null;
     }
 
     private static void ConfigureAudioSource(AudioSource source)
@@ -259,11 +229,10 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
         localListener.enabled = true;
     }
 
-    private IEnumerator PlayClip(int clipIndex, VideoClip clip)
+    private IEnumerator PlayClip(VideoClip clip)
     {
         bool finished = false;
         bool failed = false;
-        AudioClip audioOverride = GetAudioOverride(clipIndex);
 
         VideoPlayer.EventHandler onFinished = source => finished = true;
         VideoPlayer.ErrorEventHandler onError = (source, message) =>
@@ -278,7 +247,7 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
         videoPlayer.loopPointReached += onFinished;
         videoPlayer.errorReceived += onError;
         videoPlayer.clip = clip;
-        ConfigureClipAudio(clip, audioOverride);
+        ConfigureClipAudio(clip);
         videoPlayer.Prepare();
 
         float deadline = Time.realtimeSinceStartup + Mathf.Max(0.1f, prepareTimeoutSeconds);
@@ -294,102 +263,27 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
             yield break;
         }
 
-        double audioEndTime = 0d;
-        if (audioOverride != null)
-        {
-            yield return EnsureAudioOverrideLoaded(audioOverride);
-
-            AudioSource source = GetOverrideAudioSource();
-            source.clip = audioOverride;
-            source.time = 0f;
-            double scheduledStart = AudioSettings.dspTime + Mathf.Max(0.02f, audioStartLeadTimeSeconds);
-            audioEndTime = scheduledStart + audioOverride.length;
-            source.PlayScheduled(scheduledStart);
-
-            while (!failed && AudioSettings.dspTime < scheduledStart)
-            {
-                yield return null;
-            }
-        }
-
         videoPlayer.Play();
-        while (!failed && !IsPlaybackComplete(finished, audioOverride, audioEndTime))
+        while (!failed && !finished)
         {
             yield return null;
         }
 
         videoPlayer.Stop();
-        if (audioOverride != null)
-        {
-            AudioSource source = GetOverrideAudioSource();
-            source.Stop();
-            source.clip = null;
-        }
-
         CleanupHandlers(onFinished, onError);
     }
 
-    private IEnumerator EnsureAudioOverrideLoaded(AudioClip audioOverride)
-    {
-        if (audioOverride == null
-            || audioOverride.loadState == AudioDataLoadState.Loaded
-            || audioOverride.loadState == AudioDataLoadState.Failed)
-        {
-            yield break;
-        }
-
-        audioOverride.LoadAudioData();
-        float deadline = Time.realtimeSinceStartup + Mathf.Max(0.1f, prepareTimeoutSeconds);
-        while (audioOverride.loadState == AudioDataLoadState.Loading && Time.realtimeSinceStartup < deadline)
-        {
-            yield return null;
-        }
-
-        if (audioOverride.loadState == AudioDataLoadState.Failed)
-        {
-            Debug.LogWarning("Splash audio override failed to load: " + audioOverride.name);
-        }
-    }
-
-    private AudioClip GetAudioOverride(int clipIndex)
-    {
-        if (clipAudioOverrides == null
-            || clipIndex < 0
-            || clipIndex >= clipAudioOverrides.Length)
-        {
-            return null;
-        }
-
-        return clipAudioOverrides[clipIndex];
-    }
-
-    private bool IsPlaybackComplete(bool videoFinished, AudioClip audioOverride, double audioEndTime)
-    {
-        if (audioOverride == null)
-        {
-            return videoFinished;
-        }
-
-        bool audioFinished = AudioSettings.dspTime >= audioEndTime && !GetOverrideAudioSource().isPlaying;
-        return videoFinished && audioFinished;
-    }
-
-    private void ConfigureClipAudio(VideoClip clip, AudioClip audioOverride)
+    private void ConfigureClipAudio(VideoClip clip)
     {
         if (clip == null || videoPlayer == null || audioSource == null)
         {
             return;
         }
 
-        if (audioOverride != null)
-        {
-            videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
-            return;
-        }
-
         if (clip.audioTrackCount == 0)
         {
             Debug.LogWarning("Splash video has no audio track: " + clip.name);
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
             return;
         }
 
@@ -397,16 +291,6 @@ public sealed class SplashVideoSequencePlayer : MonoBehaviour
         videoPlayer.controlledAudioTrackCount = 1;
         videoPlayer.SetTargetAudioSource(0, audioSource);
         videoPlayer.EnableAudioTrack(0, true);
-    }
-
-    private AudioSource GetOverrideAudioSource()
-    {
-        if (overrideAudioSource == null)
-        {
-            overrideAudioSource = audioSource;
-        }
-
-        return overrideAudioSource;
     }
 
     private void EnsureRenderTexture()
