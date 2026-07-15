@@ -12,6 +12,10 @@
 - [6. Contract contextual input](#input-contract)
 - [7. Evidence P0-02](#input-evidence)
 - [8. Rollback và gate còn lại](#input-rollback)
+- [9. Understand brief P0-03](#p0-03-understand)
+- [10. Contract account và catalog](#platform-contract)
+- [11. Evidence P0-03](#platform-evidence)
+- [12. Rollback và gate còn lại](#platform-rollback)
 
 <a id="p0-01-understand"></a>
 
@@ -127,3 +131,62 @@ Unity 2022.3.62f3 batchmode đã import asset và chạy toàn bộ suite:
 Rollback runtime: tắt `smp_contextual_input_v1`; `Player` tiếp tục dùng legacy input. Nếu asset hoặc assembly lỗi, revert riêng batch P0-02; không cần migration save và không ảnh hưởng Match Core shadow flag.
 
 Gate còn lại cho P0-02: nối HUD prefab thật vào callback typed, xử lý focus loss/controller reconnect, chạy Android thấp/trung/cao và playtest người thuận tay trái/phải. Batch kế tiếp theo dependency là P0-03 account/session và versioned-data contract; nó độc lập với HUD measurement và có thể triển khai client contract/fake adapter trong khi MCV-D01/02 tiếp tục `InValidation`.
+
+<a id="p0-03-understand"></a>
+
+## 9. Understand brief P0-03
+
+**Ranh giới:** định nghĩa client contract và fake/offline adapter cho session, locale/settings và catalog có phiên bản. Không nối scene, không tạo backend/provider login, không cấp entitlement/reward, không triển khai secure storage production và không migration dữ liệu cup/audio trong `PlayerPrefs`.
+
+| Owner | Trách nhiệm và phụ thuộc |
+| --- | --- |
+| Legacy `PlayerPrefs` consumers | Audio, cup/result và feature flag cục bộ; không có account/catalog authority. |
+| `SoccerMobilePro.Platform` | Contract thuần C# không phụ thuộc UnityEngine; session/catalog projection và failure reason. |
+| `FakeSessionRepository` | Guest/link/refresh/revoke fixture, conflict và retry limit trong memory. |
+| `InMemoryCredentialVault` | Test double không bền vững; chứng minh call site không cần `PlayerPrefs`, không thay secure platform vault. |
+| `InMemoryCatalogRepository` | Read-only consumer contract, signature verifier injection, integrity/schema/expiry check và last-known-good fallback. |
+
+```text
+guest/provider intent → ISessionRepository → AccountSession hoặc reason code
+secure platform vault (production chưa có) ─┘
+
+manifest + payload → hash/signature/schema/effective-time validation
+  → atomic active projection hoặc N-1 last-known-good fallback
+  → ICatalogRepository consumer
+```
+
+Invariant: `AccountSession` không chứa credential; Guest không đủ điều kiện economy online; revoke/expiry chặn repository result; link conflict không đổi current guest; retry storm trả `RateLimited`; catalog chỉ chấp nhận schema N/N-1, hash và signature hợp lệ trong effective window. Hidden dependency chưa giải quyết gồm privacy/age/consent owner, provider SDK, secure keystore, backend ledger, signing key, CDN và clock authority.
+
+Rủi ro: test double bị dùng nhầm như production service, string catalog version bị coi là ordering policy, device clock sai và cache memory không phản ánh I/O thật. Rollback: assembly chưa được runtime tham chiếu; revert độc lập không đổi save/config.
+
+<a id="platform-contract"></a>
+
+## 10. Contract account và catalog
+
+- `AccountSession`, `LocalePreference`, `SettingsSnapshot` là immutable projection; settings copy source map và chỉ expose read-only dictionary.
+- `ISessionRepository` trả `SessionOperationResult` với reason/retry-after; `FakeSessionRepository` chỉ là deterministic test double.
+- `ISecureCredentialVault` là seam cho keystore/keychain production; `InMemoryCredentialVault` không persist và không được dùng để tuyên bố secure storage đã triển khai.
+- `CatalogManifest` chứa schema/catalog/region/season/effective/expiry/min-client/hash/signature/rollback version.
+- `ICatalogRepository` chỉ expose `GetActive`; fake seed path không nằm trong consumer interface. `ICatalogSignatureVerifier` tách production verifier khỏi `FakeCatalogSignatureVerifier`.
+- `CatalogIntegrity` kiểm tra SHA-256 payload; fake signature `test-signed:*` chỉ dùng fixture, không phải signing scheme production.
+
+<a id="platform-evidence"></a>
+
+## 11. Evidence P0-03
+
+Unity 2022.3.62f3 batchmode đã compile toàn project và chạy:
+
+- EditMode: **24/24 pass** toàn runner, gồm 11 case P0-03, 12 case P0-01/P0-02 và 1 Addressables stub có sẵn.
+- P0-03 test expiry/revoke, guest economy gate, guest-link conflict không mutation, refresh retry storm, credential delete, corrupt newest cache → N-1 offline fallback, schema N/N-1/N-2, expiry/signature và settings defensive copy.
+- PlayMode regression: **2/2 pass**; không có compiler/NullReference error.
+- `Packages/`/`ProjectSettings/` không đổi sau khi hoàn nguyên side effect batchmode.
+
+`ALS-D02` và `CAT-D01` chuyển `TestReady → InValidation`: contract/fake evidence có thật nhưng chưa có backend, provider/privacy/legal, load/cost, audit ledger hoặc production signature. `ALS-D01` giữ `Blocked`; không mục nào đạt `EvidenceReady`/`Approved`.
+
+<a id="platform-rollback"></a>
+
+## 12. Rollback và gate còn lại
+
+Rollback bằng revert assembly/test P0-03; không cần feature flag vì chưa có runtime consumer. Cấm wire fake repository/vault/signature verifier vào production scene hoặc dùng chúng để cấp economy.
+
+Gate còn lại: chọn provider/guest/privacy owner, triển khai keystore adapter, backend contract test, merge ledger invariant, retry policy theo server, key rotation và cache I/O/atomic activation. P0 foundation kết thúc ở contract seam; bước tiếp theo có giá trị cao nhất là P1-01 localization/settings schema vì có thể dùng `LocalePreference`/`SettingsSnapshot` mà không chờ economy hoặc model pipeline.

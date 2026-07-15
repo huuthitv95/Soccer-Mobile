@@ -89,6 +89,6 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 | ID | Quyết định | Owner | Gate | Trạng thái |
 | --- | --- | --- | --- | --- |
 | ALS-D01 | Provider/Guest policy theo khu vực | Product + Legal + Backend | Privacy/age/recovery review | `Blocked` |
-| ALS-D02 | Merge rule | Economy + Support | Simulation duplicate/loss và audit | `TestReady` |
+| ALS-D02 | Merge rule | Economy + Support | Fake conflict test pass; còn thiếu backend ledger duplicate/loss và audit | `InValidation` |
 | ALS-D03 | Voice locale/hot-swap | Audio + Client | Memory/download/resume device matrix | `TestReady` |
 | ALS-D04 | Cloud-sync field allowlist | Security + UX | Conflict test; không sync device-risk setting | `TestReady` |

@@ -66,12 +66,12 @@ SplashScene / SplashVideoSequencePlayer
 - `BallScript.ownerPlayer` là nguồn sự thật cục bộ về quyền sở hữu bóng; tag, khoảng cách và tên GameObject được dùng để tìm đồng đội/đối thủ.
 - Scene name, animation clip name, tag, `PlayerPrefs` key và `GameObject.Find(...)` là contract ẩn không được type-check.
 - Static flags trong role AI và `Player.noControls` có nguy cơ tồn tại qua vòng đời scene/domain reload không như mong muốn.
-- Dữ liệu serialized nằm rải trong scene/prefab/Inspector; P0-01 thêm assembly thuần C# cho Match Core, P0-02 thêm assembly Input phụ thuộc Match Core/Input System. Legacy còn lại vẫn trong assembly mặc định và chưa có ScriptableObject catalog rõ ràng.
+- Dữ liệu serialized nằm rải trong scene/prefab/Inspector; P0-01 thêm Match Core, P0-02 thêm Input và P0-03 thêm Platform contract thuần C#. Legacy còn lại vẫn trong assembly mặc định và chưa có ScriptableObject catalog rõ ràng.
 - Input System 1.14.2 đã có asset năm context map và adapter typed sau feature flag, trong khi `SoccerInput`/prefab joystick vẫn là runtime mặc định. Touch HUD production, reconnect/focus loss và device profiling chưa hoàn tất. Addressables 1.19.19 là dependency gián tiếp qua importer; Default group trống và Build Addressables with Player tắt.
 
 ### 1.5 Test, rủi ro và rollback
 
-- P0-01/P0-02 có 4 `.asmdef`, 12 EditMode test và 2 PlayMode smoke test. Toàn EditMode runner chạy 13/13 khi tính thêm Addressables stub; PlayMode chạy 2/2. Device Android, touch HUD thật, orientation/safe-area và controller reconnect vẫn là validation mở.
+- P0 foundation có 5 `.asmdef`, 23 EditMode case và 2 PlayMode smoke test. Toàn EditMode runner chạy 24/24 khi tính thêm Addressables stub; PlayMode chạy 2/2. Backend/provider/secure vault, device Android, touch HUD thật và controller reconnect vẫn là validation mở.
 - Các scene gameplay trọng tâm: `SplashScene`, `MainMenu`, `GameSelectionScene`, hai team-selection scene, `GroupsScene`, `MatchesScene`, `KickOffScene`, `MatchScene`, `FinalCeleberation`.
 - Rủi ro chính: coupling theo chuỗi/scene, state global, logic frame-dependent, legacy UI/Animation, thiếu authority và telemetry, thiếu test fixture.
 - Kế hoạch xác nhận cho mỗi thay đổi tương lai: EditMode domain tests, PlayMode flow/match tests, console sạch, kiểm tra save migration, input trên touch/gamepad/keyboard và smoke test Android.
@@ -85,12 +85,12 @@ SplashScene / SplashVideoSequencePlayer
 | Hạng mục | Kết quả xác nhận | Ghi chú |
 | --- | ---: | --- |
 | Unity Editor | 2022.3.62f3 | Từ `ProjectVersion.txt`. |
-| Script C# trong `Assets/` | 84 | 78 file baseline + Match Core, legacy shadow adapter, Input adapter và 3 test fixture. |
+| Script C# trong `Assets/` | 86 | 78 file baseline + Match Core, legacy shadow adapter, Input/Platform contract và 4 test fixture. |
 | Scene `.unity` trong `Assets/` | 14 | 11 scene được bật trong Build Settings; 3 scene test/ngoài danh sách build. |
 | Prefab trong `Assets/` | 19 | Chủ yếu cầu thủ/bóng/audience/UI và joystick legacy. |
-| Assembly definition | 4 | Match Core, Input, EditMode tests và PlayMode tests; legacy vẫn ở assembly mặc định. |
+| Assembly definition | 5 | Match Core, Input, Platform, EditMode tests và PlayMode tests; legacy vẫn ở assembly mặc định. |
 | Input Actions asset | 1 | Năm map `Match_OnBall`, `Match_OffBall`, `SetPiece`, `Goalkeeper`, `UI`; ba scheme Touch/Gamepad/Keyboard. |
-| Automated C# test | 12 EditMode + 2 PlayMode | Unity 2022.3.62f3 batchmode pass; toàn EditMode runner 13/13 gồm 1 Addressables stub có sẵn. |
+| Automated C# test | 23 EditMode + 2 PlayMode | Unity 2022.3.62f3 batchmode pass; toàn EditMode runner 24/24 gồm 1 Addressables stub có sẵn. |
 | Package đáng chú ý | Input System, Addressables, Cinemachine, Test Framework, URP | Cài package không chứng minh có implementation sản phẩm tương ứng. |
 
 `Assets/AddressableAssetsData/AddressableAssetSettings.asset` tồn tại, nhưng chưa phải football catalog/model delivery contract nêu trong [catalog spec](../systems/football-catalog-player-database-and-model-assets.md). Input foundation đã có action map theo context, nhưng feature flag mặc định tắt và chưa thay HUD/legacy controller.
@@ -123,8 +123,8 @@ Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, khô
 | --- | --- | --- |
 | Ngôn ngữ | Chưa có | Locale bootstrap, string table, font/fallback, asset variant, RTL-readiness và fallback offline. |
 | Settings | Một phần | Typed schema/version/migration; control, camera, graphics, audio, accessibility và cloud reconciliation. |
-| Tài khoản | Chưa có | Guest/account linking, token/session lifecycle, consent, recovery, deletion và secure storage. |
-| Giải đấu/CLB/cầu thủ | Prototype tĩnh | Catalog có version, ID ổn định, entitlement/licensing metadata, cache và compatibility policy. |
+| Tài khoản | Contract/fake chỉ dùng test | Có immutable session, expiry/revoke/link conflict/retry test và secure-vault seam; chưa có provider/backend/privacy/keystore production. |
+| Giải đấu/CLB/cầu thủ | Catalog contract/fake cache | Có manifest version/hash/signature seam, N/N-1 và offline fallback test; chưa có football entities/API/CDN/production signing. |
 | Player database/model 3D | Chưa có | API/manifest do Soccer Mobile Pro sở hữu, Addressables/asset bundle pipeline, rig/LOD/material validation và fallback model. |
 | Skills/PlayStyles | Chưa có | Taxonomy, gameplay modifier có giới hạn, UI projection, balance version và test determinism. |
 | Nâng cấp thẻ/market | Chưa có | Card instance, inventory, upgrade transaction, economy ledger, idempotency, odds/compliance và server authority. |

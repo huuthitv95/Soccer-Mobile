@@ -49,14 +49,14 @@ Mọi artifact nằm dưới `docs/implementation/evidence/<decision-id>/` và c
 | D06 | Notification privacy review | LiveOps + Privacy | age/region matrix | opt-out, complaint, re-enable | consent matrix + copy review | legal/privacy sign-off | default off/revoke schedule | `Blocked` |
 | D07 | Offer compliance review | Product + Compliance | age/region/store matrix | fairness, refund, ranked power gap | odds/entitlement/refund dossier | compliance sign-off, no P2W | withdraw offer/reconcile | `Blocked` |
 | ALS-D01 | Provider/guest matrix | Product + Legal + Backend | age/region/provider matrix | auth/recovery success, loss cases | privacy + recovery report | legal/backend sign-off | guest-only/offline | `Blocked` |
-| ALS-D02 | Account merge simulation | Economy + Support | duplicate/loss fixtures | zero double-grant/loss | ledger diff + audit trail | all merge invariants pass | disable merge/manual support | `TestReady` |
+| ALS-D02 | Account merge simulation | Economy + Support | duplicate/loss fixtures | zero double-grant/loss | Fake conflict/immutability tests; backend ledger fixture pending | all merge invariants pass | disable merge/manual support | `InValidation` |
 | ALS-D03 | Voice locale hot-swap | Audio + Client | low–high tier; vi/en | memory, resume, download failure | profiler + delivery matrix | no OOM; resumable/fallback works | pin packaged voice | `TestReady` |
 | ALS-D04 | Cloud-sync allowlist | Security + UX | conflict/device fixtures | conflict recovery, unsafe field count | schema diff + threat review | zero device-risk fields synced | local-only snapshot | `TestReady` |
 | CLS-D01 | Group role/load simulation | Social + Backend | 1–cap synthetic groups | latency, moderation queue, abuse rate | load run + moderation log | SLO and abuse controls pass | reduce cap/disable role | `TestReady` |
 | CLS-D02 | Club Challenge roster policy | Game Design + Licensing | licensed territory matrix | eligibility/fairness exceptions | rights register + scenario report | licensing and fairness sign-off | generic roster/offline only | `Blocked` |
 | CLS-D03 | Dispute operations rehearsal | Competitive Ops | internal tournament | resolution time, audit completeness | case timeline + audit export | SLA/reviewer separation pass | extend window/freeze bracket | `TestReady` |
 | CLS-D04 | Public profile defaults | Privacy + UX | age/region matrix | exposure, opt-out comprehension | privacy assessment + usability notes | privacy sign-off; minor-safe default | private-by-default | `Blocked` |
-| CAT-D01 | Catalog API/cache spike | Backend + Data | N/N-1; online/offline | load, cache hit, integrity failure | contract test + cost/load report | signature/version/audit pass | bundled catalog N-1 | `TestReady` |
+| CAT-D01 | Catalog API/cache spike | Backend + Data | N/N-1; online/offline | load, cache hit, integrity failure | Client contract/cache tests; backend load/cost pending | signature/version/audit pass | bundled catalog N-1 | `InValidation` |
 | CAT-D02 | Addressables staged rollout | Client + DevOps | low–high tier; bad network | success, bytes, rollback time | build manifest + rollback log | staged update/revert pass | pin prior manifest | `TestReady` |
 | CAT-D03 | Model budget profiling | Tech Art | low–high target devices | memory, frame time, load time | profiler capture + LOD matrix | tier budgets met | generic low-LOD model | `TestReady` |
 | CAT-D04 | Face/body launch coverage | Production + Licensing | territory/season matrix | rights coverage, fallback rate | rights register + capacity plan | licensing sign-off | generic likeness fallback | `Blocked` |
@@ -87,7 +87,7 @@ Mọi artifact nằm dưới `docs/implementation/evidence/<decision-id>/` và c
 | LOM-D03 | Expiry/catch-up comprehension | LiveOps + UX | new/returning personas | missed value, comprehension, FOMO | usability notes + expiry matrix | catch-up available; FOMO review pass | extend/convert expiry | `TestReady` |
 | LOM-D04 | Compensation rehearsal | Ops + Economy | incident/ledger fixtures | reconciliation, duplicate/missed grant | ledger audit + runbook log | idempotency and audit pass | stop grant/manual reconcile | `TestReady` |
 
-Trạng thái sau P0-02: **30 `TestReady`, 2 `InValidation`, 13 `Blocked`, 0 `EvidenceReady`, 0 `Approved`**. Hai mục `InValidation` có build/config và automated evidence tại [nhật ký P0](p0-foundation-implementation.md#input-evidence), nhưng vẫn thiếu human/device/fairness gate. `TestReady` chỉ xác nhận protocol đủ rõ; `Blocked` chỉ mở khi owner được nêu trong hàng đã ký evidence bắt buộc.
+Trạng thái sau P0-03: **28 `TestReady`, 4 `InValidation`, 13 `Blocked`, 0 `EvidenceReady`, 0 `Approved`**. Bốn mục `InValidation` có automated evidence tại [nhật ký P0](p0-foundation-implementation.md), nhưng vẫn thiếu human/device/fairness hoặc backend/owner gate tương ứng. `TestReady` chỉ xác nhận protocol đủ rõ; `Blocked` chỉ mở khi owner được nêu trong hàng đã ký evidence bắt buộc.
 
 <a id="evidence-protocol"></a>
 

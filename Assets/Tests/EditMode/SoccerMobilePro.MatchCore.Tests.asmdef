@@ -4,6 +4,7 @@
   "references": [
     "SoccerMobilePro.MatchCore",
     "SoccerMobilePro.Input",
+    "SoccerMobilePro.Platform",
     "Unity.InputSystem"
   ],
   "includePlatforms": [

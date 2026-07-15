@@ -1,33 +1,28 @@
 {
   "version": "1.0.0",
   "baseBranch": "main",
-  "generatedAt": "2026-07-15T07:45:00.000Z",
+  "generatedAt": "2026-07-15T08:30:00.000Z",
   "changedFiles": [
-    "Assets/Resources/Input/SoccerMobileControls.inputactions",
-    "Assets/Scripts/Player.cs",
-    "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
-    "Assets/SoccerMobilePro/Input/SoccerMobilePro.Input.asmdef",
-    "Assets/SoccerMobilePro/MatchCore/MatchCore.cs",
-    "Assets/Tests/EditMode/ContextualMatchInputTests.cs",
+    "Assets/SoccerMobilePro/Platform/PlatformContracts.cs",
+    "Assets/SoccerMobilePro/Platform/SoccerMobilePro.Platform.asmdef",
+    "Assets/Tests/EditMode/PlatformContractTests.cs",
     "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef",
-    "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs",
-    "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef",
     "docs/implementation/decision-validation-program.md",
     "docs/implementation/p0-foundation-implementation.md",
     "docs/implementation/unity-implementation-audit-and-backlog.md",
-    "docs/systems/match-controls-set-pieces-and-var.md"
+    "docs/systems/account-localization-and-settings.md",
+    "docs/systems/football-catalog-player-database-and-model-assets.md"
   ],
   "changedNodeIds": [
-    "file:Assets/Scripts/Player.cs",
-    "class:Assets/Scripts/Player.cs:Player",
-    "function:Assets/Scripts/Player.cs:Update",
-    "file:Assets/SoccerMobilePro/MatchCore/MatchCore.cs",
-    "file:Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
-    "class:Assets/SoccerMobilePro/Input/ContextualMatchInput.cs:ContextualMatchInputAdapter",
-    "class:Assets/SoccerMobilePro/Input/ContextualMatchInput.cs:ContextualMatchInputRuntime"
+    "file:Assets/SoccerMobilePro/Platform/PlatformContracts.cs",
+    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:AccountSession",
+    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:FakeSessionRepository",
+    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:CatalogManifest",
+    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:InMemoryCatalogRepository"
   ],
   "affectedNodeIds": [
-    "file:Assets/Standard Assets/SoccerInput.cs",
-    "file:Assets/Scripts/BallScript.cs"
+    "file:Assets/Scripts/AudioManager.cs",
+    "file:Assets/Scripts/MatchesSceneController.cs",
+    "file:Assets/Scripts/InitGame.cs"
   ]
 }
