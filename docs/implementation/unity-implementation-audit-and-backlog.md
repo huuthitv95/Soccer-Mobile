@@ -19,13 +19,13 @@
 
 ## 1. Understand brief
 
-**Baseline audit:** content commit `eede822`, kiểm tra lại ngày 15/07/2026. Đợt này chỉ đọc `Assets/`, `Packages/`, `ProjectSettings/` và đối chiếu tài liệu; không sửa runtime/config. Knowledge graph được refresh sau khi chốt content commit, nên metadata graph tham chiếu commit nội dung trước graph commit.
+**Baseline audit:** content commit `eede822`, kiểm tra lại ngày 15/07/2026; inventory bên dưới được đối chiếu lại sau P0-01/P0-02. Hai batch foundation chỉ thêm assembly/adapter/asset/test có feature flag mặc định tắt; `Packages/` và `ProjectSettings/` không đổi. Knowledge graph được refresh sau content commit nên metadata graph tham chiếu commit nội dung trước graph commit.
 
 ### 1.1 Nhiệm vụ và ranh giới hệ thống
 
 - **Nhiệm vụ:** đối chiếu source Unity với định hướng sản phẩm cho luồng khởi động, menu, trận đấu, điều khiển, dữ liệu bóng đá, tài khoản, thẻ cầu thủ, VAR và AI offline; chuyển khoảng trống thành backlog có thể bàn giao.
-- **Trong phạm vi:** 78 script C#, 14 scene, 19 prefab, Build Settings, package/input/addressable configuration và tài liệu sản phẩm liên quan.
-- **Ngoài phạm vi:** sửa `Assets/`, `Packages/`, `ProjectSettings/`; tạo backend; nhập dữ liệu hoặc model được cấp phép; thay đổi cân bằng và gameplay.
+- **Baseline trong phạm vi:** 78 script C#, 14 scene, 19 prefab, Build Settings, package/input/addressable configuration và tài liệu sản phẩm liên quan; inventory hiện hành được ghi tại [mục 2](#inventory).
+- **Ngoài phạm vi foundation:** đổi scene/prefab/physics/reward; sửa package/project configuration; tạo backend; nhập dữ liệu/model; thay đổi cân bằng production.
 
 ### 1.2 Chủ sở hữu chính và trách nhiệm hiện tại
 
@@ -66,12 +66,12 @@ SplashScene / SplashVideoSequencePlayer
 - `BallScript.ownerPlayer` là nguồn sự thật cục bộ về quyền sở hữu bóng; tag, khoảng cách và tên GameObject được dùng để tìm đồng đội/đối thủ.
 - Scene name, animation clip name, tag, `PlayerPrefs` key và `GameObject.Find(...)` là contract ẩn không được type-check.
 - Static flags trong role AI và `Player.noControls` có nguy cơ tồn tại qua vòng đời scene/domain reload không như mong muốn.
-- Dữ liệu serialized nằm rải trong scene/prefab/Inspector; P0-01 đã thêm một assembly boundary thuần C# cho Match Core, nhưng phần legacy còn lại vẫn nằm trong assembly mặc định và chưa có ScriptableObject catalog rõ ràng.
-- Package Input System 1.14.2 được cài; Addressables 1.19.19 là dependency gián tiếp qua importer. Không có `.inputactions`; source dùng adapter Enhanced Touch + keyboard/gamepad và prefab joystick. Gameplay keyboard/gamepad hiện chủ yếu trong nhánh `UNITY_EDITOR`, ngoại trừ pause runtime. Default Addressables group trống và Build Addressables with Player tắt; package/config tồn tại không đồng nghĩa input/catalog mục tiêu đã triển khai.
+- Dữ liệu serialized nằm rải trong scene/prefab/Inspector; P0-01 thêm assembly thuần C# cho Match Core, P0-02 thêm assembly Input phụ thuộc Match Core/Input System. Legacy còn lại vẫn trong assembly mặc định và chưa có ScriptableObject catalog rõ ràng.
+- Input System 1.14.2 đã có asset năm context map và adapter typed sau feature flag, trong khi `SoccerInput`/prefab joystick vẫn là runtime mặc định. Touch HUD production, reconnect/focus loss và device profiling chưa hoàn tất. Addressables 1.19.19 là dependency gián tiếp qua importer; Default group trống và Build Addressables with Player tắt.
 
 ### 1.5 Test, rủi ro và rollback
 
-- P0-01 đã thêm 3 `.asmdef`, 6 EditMode test và 1 PlayMode smoke test cho deterministic Match Core. Toàn EditMode runner chạy 7 test khi tính thêm Addressables test stub có sẵn. Chưa có `.inputactions`; test legacy scene/device/Android vẫn thuộc P0-02 và validation tiếp theo.
+- P0-01/P0-02 có 4 `.asmdef`, 12 EditMode test và 2 PlayMode smoke test. Toàn EditMode runner chạy 13/13 khi tính thêm Addressables stub; PlayMode chạy 2/2. Device Android, touch HUD thật, orientation/safe-area và controller reconnect vẫn là validation mở.
 - Các scene gameplay trọng tâm: `SplashScene`, `MainMenu`, `GameSelectionScene`, hai team-selection scene, `GroupsScene`, `MatchesScene`, `KickOffScene`, `MatchScene`, `FinalCeleberation`.
 - Rủi ro chính: coupling theo chuỗi/scene, state global, logic frame-dependent, legacy UI/Animation, thiếu authority và telemetry, thiếu test fixture.
 - Kế hoạch xác nhận cho mỗi thay đổi tương lai: EditMode domain tests, PlayMode flow/match tests, console sạch, kiểm tra save migration, input trên touch/gamepad/keyboard và smoke test Android.
@@ -85,15 +85,15 @@ SplashScene / SplashVideoSequencePlayer
 | Hạng mục | Kết quả xác nhận | Ghi chú |
 | --- | ---: | --- |
 | Unity Editor | 2022.3.62f3 | Từ `ProjectVersion.txt`. |
-| Script C# trong `Assets/` | 82 | 78 file baseline + Match Core, legacy shadow adapter và 2 test fixture. |
+| Script C# trong `Assets/` | 84 | 78 file baseline + Match Core, legacy shadow adapter, Input adapter và 3 test fixture. |
 | Scene `.unity` trong `Assets/` | 14 | 11 scene được bật trong Build Settings; 3 scene test/ngoài danh sách build. |
 | Prefab trong `Assets/` | 19 | Chủ yếu cầu thủ/bóng/audience/UI và joystick legacy. |
-| Assembly definition | 3 | Match Core thuần C#, EditMode tests và PlayMode tests; legacy vẫn ở assembly mặc định. |
-| Input Actions asset | 0 | Không có `.inputactions`; Input System package vẫn được tham chiếu bởi `SoccerInput`. |
-| Automated C# test | 6 EditMode + 1 PlayMode của Match Core | Unity 2022.3.62f3 batchmode pass; toàn EditMode runner 7/7 gồm 1 Addressables stub có sẵn. |
+| Assembly definition | 4 | Match Core, Input, EditMode tests và PlayMode tests; legacy vẫn ở assembly mặc định. |
+| Input Actions asset | 1 | Năm map `Match_OnBall`, `Match_OffBall`, `SetPiece`, `Goalkeeper`, `UI`; ba scheme Touch/Gamepad/Keyboard. |
+| Automated C# test | 12 EditMode + 2 PlayMode | Unity 2022.3.62f3 batchmode pass; toàn EditMode runner 13/13 gồm 1 Addressables stub có sẵn. |
 | Package đáng chú ý | Input System, Addressables, Cinemachine, Test Framework, URP | Cài package không chứng minh có implementation sản phẩm tương ứng. |
 
-`Assets/AddressableAssetsData/AddressableAssetSettings.asset` tồn tại, nhưng chưa phải football catalog/model delivery contract nêu trong [catalog spec](../systems/football-catalog-player-database-and-model-assets.md). Tương tự, Input System package và wrapper `SoccerInput` không thay thế `.inputactions`/action map theo context.
+`Assets/AddressableAssetsData/AddressableAssetSettings.asset` tồn tại, nhưng chưa phải football catalog/model delivery contract nêu trong [catalog spec](../systems/football-catalog-player-database-and-model-assets.md). Input foundation đã có action map theo context, nhưng feature flag mặc định tắt và chưa thay HUD/legacy controller.
 
 Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, không chạy codegen, formatter hay thao tác Unity Editor.
 
@@ -128,7 +128,7 @@ Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, khô
 | Player database/model 3D | Chưa có | API/manifest do Soccer Mobile Pro sở hữu, Addressables/asset bundle pipeline, rig/LOD/material validation và fallback model. |
 | Skills/PlayStyles | Chưa có | Taxonomy, gameplay modifier có giới hạn, UI projection, balance version và test determinism. |
 | Nâng cấp thẻ/market | Chưa có | Card instance, inventory, upgrade transaction, economy ledger, idempotency, odds/compliance và server authority. |
-| Điều khiển theo context | Một phần | Input Actions, explicit on-ball/off-ball/set-piece/goalkeeper/UI maps, remap, assist và accessibility. |
+| Điều khiển theo context | Foundation sau flag | Có năm Input Actions map, typed command, binding override/conflict test và Standard/LeftHanded profile; thiếu HUD production, assist policy, focus/reconnect và device playtest. |
 | VAR | Chưa có | Deterministic rule outcome, incident record, presentation-only replay/timeline và fail-safe skip. |
 | AI offline | Heuristic | Tactical/role/decision architecture, seeded simulation, difficulty tuning, scenario suite; nếu dùng ML cần dataset governance và model fallback. |
 | Telemetry/testability | Chưa có | Event schema, privacy/consent, crash/performance metrics, automated domain/match/UI suites và assembly boundary. |

@@ -68,8 +68,8 @@ Mọi artifact nằm dưới `docs/implementation/evidence/<decision-id>/` và c
 | AI-D02 | Blind difficulty calibration | Design + Analytics | Minh/Huy; low–high tier | win band, retry, perceived fairness | blind results + observation | no hidden physics cheat; flow band met | pin prior profile | `TestReady` |
 | AI-D03 | Adaptive assist review | UX + Fairness | onboarding cohorts | opt-out, disclosure comprehension | consented test + fairness review | opt-in and no ranked crossover | disable adaptation | `Blocked` |
 | AI-D04 | ML/RL baseline challenge | Tech Lead | offline dataset; device tiers | quality delta, determinism, cost | model card + benchmark | beats scripted baseline safely | stop R&D/use scripted | `TestReady` |
-| MCV-D01 | Two HUD preset playtest | Gameplay UX | left/right-handed; phone/tablet | mis-tap, reachability, latency | input trace + observation | context error < gate; accessibility pass | legacy preset | `TestReady` |
-| MCV-D02 | Assist fairness matrix | Competitive Design | beginner/expert; ranked/unranked | outcome delta, disclosure comprehension | match results + fairness review | ranked allowlist approved | disable assist in ranked | `TestReady` |
+| MCV-D01 | Two HUD preset playtest | Gameplay UX | left/right-handed; phone/tablet | mis-tap, reachability, latency | Input asset + automated tests; human/device trace pending | context error < gate; accessibility pass | legacy preset | `InValidation` |
+| MCV-D02 | Assist fairness matrix | Competitive Design | beginner/expert; ranked/unranked | outcome delta, disclosure comprehension | Typed context contract + automated tests; fairness review pending | ranked allowlist approved | disable assist in ranked | `InValidation` |
 | MCV-D03 | VAR comprehension test | Rules + Broadcast UX | match cohorts; reduced motion | duration, skip, correct understanding | incident fixtures + observation | rule outcome understood; duration budget | banner-only presentation | `TestReady` |
 | MCV-D04 | Replay retention review | Integrity + Privacy | dispute/storage matrix | retrieval, minimization, deletion | privacy/storage assessment | privacy sign-off | metadata-only retention | `Blocked` |
 | CIE-D01 | Evidence threshold audit | Integrity + Legal | false-positive fixtures | precision/recall, appeal overturn | blinded audit report | legal/integrity sign-off | manual review only | `Blocked` |
@@ -87,7 +87,7 @@ Mọi artifact nằm dưới `docs/implementation/evidence/<decision-id>/` và c
 | LOM-D03 | Expiry/catch-up comprehension | LiveOps + UX | new/returning personas | missed value, comprehension, FOMO | usability notes + expiry matrix | catch-up available; FOMO review pass | extend/convert expiry | `TestReady` |
 | LOM-D04 | Compensation rehearsal | Ops + Economy | incident/ledger fixtures | reconciliation, duplicate/missed grant | ledger audit + runbook log | idempotency and audit pass | stop grant/manual reconcile | `TestReady` |
 
-Tổng khởi tạo: **32 `TestReady`, 13 `Blocked`, 0 `Approved`**. `TestReady` xác nhận protocol đủ rõ, không khẳng định dependency đã triển khai. `Blocked` chỉ mở khi owner được nêu trong hàng đã ký evidence bắt buộc.
+Trạng thái sau P0-02: **30 `TestReady`, 2 `InValidation`, 13 `Blocked`, 0 `EvidenceReady`, 0 `Approved`**. Hai mục `InValidation` có build/config và automated evidence tại [nhật ký P0](p0-foundation-implementation.md#input-evidence), nhưng vẫn thiếu human/device/fairness gate. `TestReady` chỉ xác nhận protocol đủ rõ; `Blocked` chỉ mở khi owner được nêu trong hàng đã ký evidence bắt buộc.
 
 <a id="evidence-protocol"></a>
 

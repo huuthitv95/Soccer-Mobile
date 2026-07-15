@@ -88,7 +88,7 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 
 | ID | Quyết định | Owner | Gate | Trạng thái |
 | --- | --- | --- | --- | --- |
-| MCV-D01 | Layout/preset production | Gameplay UX | Input latency/mis-tap + left-hand playtest | `TestReady` |
-| MCV-D02 | Ranked assist allowlist | Competitive Design | Fairness/matchmaking disclosure review | `TestReady` |
+| MCV-D01 | Layout/preset production | Gameplay UX | Automated preset/binding pass; còn thiếu latency/mis-tap + left-hand playtest | `InValidation` |
+| MCV-D02 | Ranked assist allowlist | Competitive Design | Typed context pass; còn thiếu fairness/matchmaking disclosure review | `InValidation` |
 | MCV-D03 | VAR eligibility/frequency | Rules + Broadcast UX | Match duration và comprehension test | `TestReady` |
 | MCV-D04 | Replay evidence retention | Integrity + Privacy | Dispute/privacy/storage review | `Blocked` |

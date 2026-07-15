@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using SoccerMobilePro.Input;
 
 #pragma warning disable CS0649, CS0414
 
@@ -287,6 +288,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(ContextualMatchInputRuntime.Current != null && transform == ControllablePlayer())
+            ContextualMatchInputRuntime.SetContext(HasTheBall() ? MatchInputContext.OnBall : MatchInputContext.OffBall);
         if (noControls)
         {
             if (GetComponent<Animation>()["reposo"].enabled == false)

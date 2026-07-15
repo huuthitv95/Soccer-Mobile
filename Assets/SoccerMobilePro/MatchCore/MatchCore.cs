@@ -24,7 +24,29 @@ namespace SoccerMobilePro.MatchCore
         AwardGoal = 5,
         EndHalf = 6,
         StartSecondHalf = 7,
-        EndMatch = 8
+        EndMatch = 8,
+        PlayerMove = 20,
+        Sprint = 21,
+        Pass = 22,
+        ThroughPass = 23,
+        Shoot = 24,
+        Skill = 25,
+        SwitchPlayer = 26,
+        Press = 27,
+        Tackle = 28,
+        SlideTackle = 29,
+        MatchUp = 30,
+        GoalkeeperRush = 31,
+        GoalkeeperDive = 32,
+        GoalkeeperCatch = 33,
+        Distribute = 34,
+        SetPieceAim = 35,
+        SetPiecePower = 36,
+        SetPieceCurl = 37,
+        TriggerRunner = 38,
+        Confirm = 39,
+        Cancel = 40,
+        Pause = 41
     }
 
     public enum MatchEventType
@@ -43,7 +65,11 @@ namespace SoccerMobilePro.MatchCore
             string actorId,
             MatchCommandType type,
             int teamIndex = -1,
-            int tickDelta = 0)
+            int tickDelta = 0,
+            float directionX = 0f,
+            float directionY = 0f,
+            float magnitude = 0f,
+            string modifiers = "")
         {
             SequenceId = sequenceId;
             ClientTick = clientTick;
@@ -51,6 +77,10 @@ namespace SoccerMobilePro.MatchCore
             Type = type;
             TeamIndex = teamIndex;
             TickDelta = tickDelta;
+            DirectionX = directionX;
+            DirectionY = directionY;
+            Magnitude = magnitude;
+            Modifiers = modifiers ?? string.Empty;
         }
 
         public long SequenceId { get; }
@@ -59,6 +89,10 @@ namespace SoccerMobilePro.MatchCore
         public MatchCommandType Type { get; }
         public int TeamIndex { get; }
         public int TickDelta { get; }
+        public float DirectionX { get; }
+        public float DirectionY { get; }
+        public float Magnitude { get; }
+        public string Modifiers { get; }
     }
 
     public readonly struct MatchEvent

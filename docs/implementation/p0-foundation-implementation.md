@@ -8,6 +8,10 @@
 - [2. Contract deterministic match core](#match-contract)
 - [3. Validation và trạng thái](#validation-status)
 - [4. Rollback và bước tiếp theo](#rollback-next)
+- [5. Understand brief P0-02](#p0-02-understand)
+- [6. Contract contextual input](#input-contract)
+- [7. Evidence P0-02](#input-evidence)
+- [8. Rollback và gate còn lại](#input-rollback)
 
 <a id="p0-01-understand"></a>
 
@@ -66,3 +70,60 @@ Evidence đủ cho **P0-01 foundation**, nhưng chưa đủ cho bất kỳ decis
 Rollback runtime: đặt `smp_match_core_v1=0`; adapter không được phép thay score, reward, Rigidbody, HUD hoặc scene routing. Nếu assembly compile lỗi, revert commit P0-01 độc lập.
 
 Sau P0-01, batch đề xuất tiếp theo là P0-02 contextual input: typed action maps dùng `MatchCommand`, hai HUD preset và binding/accessibility tests. Dependency vào core chỉ được coi đạt khi deterministic tests pass và legacy flow không có console regression.
+
+<a id="p0-02-understand"></a>
+
+## 5. Understand brief P0-02
+
+**Ranh giới:** thêm lớp Input System theo context và adapter tạo typed `MatchCommand`; không thay HUD prefab, assist policy, physics, animation, server authority hoặc reward. Feature flag `smp_contextual_input_v1` mặc định tắt nên `SoccerInput`/joystick và nhánh xử lý hiện tại trong `Player` vẫn là đường production của prototype.
+
+| Owner | Trách nhiệm và phụ thuộc |
+| --- | --- |
+| `SoccerInput`, `Joystick`, `Player` | Đọc Enhanced Touch/legacy GUI, chọn action theo possession và tác động trực tiếp gameplay. |
+| `SoccerMobileControls.inputactions` | Khai báo năm context map và control scheme touch/gamepad/keyboard. |
+| `ContextualMatchInputAdapter` | Chỉ bật một map, chuẩn hóa direction/magnitude, cấp sequence và tạo `MatchCommand`. |
+| `ContextualMatchInputRuntime` | Nạp asset từ `Resources`, nối callback và giữ queue bounded sau feature flag. |
+| `HudLayoutProfile` | Hai prototype Standard/LeftHanded cùng preset Legacy rollback; clamp scale/opacity/dead-zone. |
+
+```text
+device binding hoặc on-screen control callback
+  → active InputActionMap theo possession/set-piece/GK/UI
+  → ContextualMatchInputAdapter
+  → typed MatchCommand + sequence/context
+  → bounded queue cho Match Core adapter tương lai
+```
+
+Invariant: chỉ một action map được enable; context không hợp lệ không tạo command; client/domain không nhận raw touch coordinate; binding override không sửa asset mặc định; mất asset hoặc flag tắt phải giữ legacy controller. Hidden dependency còn lại là possession từ `BallScript.ownerPlayer`, lifecycle scene của `Player`, callback Input System và `PlayerPrefs` chỉ dùng cho local feature flag, không dùng để lưu token hay authority.
+
+Rủi ro chính là context đổi trễ một frame, binding conflict, callback sống quá asset, queue spam và HUD prototype chưa được chứng minh trên thiết bị. Rollback độc lập bằng cách giữ `smp_contextual_input_v1=0`; không xóa controller/prefab cũ.
+
+<a id="input-contract"></a>
+
+## 6. Contract contextual input
+
+- Action maps: `Match_OnBall`, `Match_OffBall`, `SetPiece`, `Goalkeeper`, `UI`.
+- Control schemes: `Touch`, `Gamepad`, `Keyboard`; touch HUD gọi `SubmitTouchAction` bằng action semantic, không chuyển tọa độ thô vào domain.
+- `MatchCommand` mở rộng action typed cho move, pass/shoot/skill, switch/press/tackle, goalkeeper, set piece và UI; direction được clamp, magnitude nằm trong `0..1`, sequence tăng đơn điệu.
+- `ContextualMatchInputAdapter.SetContext` disable toàn asset rồi chỉ enable map đích.
+- Binding override dùng serialization của Input System; conflict validator kiểm tra binding đơn trùng trong cùng map/control group.
+- `HudLayoutProfile` cung cấp Standard và LeftHanded mirror, cùng Legacy fallback; đây là dữ liệu prototype, chưa phải layout production được phê duyệt.
+
+<a id="input-evidence"></a>
+
+## 7. Evidence P0-02
+
+Unity 2022.3.62f3 batchmode đã import asset và chạy toàn bộ suite:
+
+- EditMode: **13/13 pass**, gồm 6 test Match Core, 6 test contextual input và 1 Addressables stub có sẵn. Input tests xác nhận đủ map/scheme, không conflict binding đơn, chỉ một map active, semantic theo context, sequence đơn điệu, HUD mirror/bounds và binding override round-trip.
+- PlayMode: **2/2 pass**, gồm lifecycle Match Core và typed `Shoot` command qua nhiều frame.
+- Không có compiler error; `ProjectSettings/` và `Packages/` không còn diff sau khi hoàn nguyên side effect batchmode.
+
+`MCV-D01` và `MCV-D02` chuyển `TestReady → InValidation`: build/config và automated evidence đã tồn tại, nhưng chưa có touch HUD production, phép đo latency/mis-tap/reachability, device matrix hoặc fairness playtest. Vì vậy không decision nào được nâng `EvidenceReady`/`Approved`.
+
+<a id="input-rollback"></a>
+
+## 8. Rollback và gate còn lại
+
+Rollback runtime: tắt `smp_contextual_input_v1`; `Player` tiếp tục dùng legacy input. Nếu asset hoặc assembly lỗi, revert riêng batch P0-02; không cần migration save và không ảnh hưởng Match Core shadow flag.
+
+Gate còn lại cho P0-02: nối HUD prefab thật vào callback typed, xử lý focus loss/controller reconnect, chạy Android thấp/trung/cao và playtest người thuận tay trái/phải. Batch kế tiếp theo dependency là P0-03 account/session và versioned-data contract; nó độc lập với HUD measurement và có thể triển khai client contract/fake adapter trong khi MCV-D01/02 tiếp tục `InValidation`.

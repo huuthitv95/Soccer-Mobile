@@ -2,7 +2,9 @@
   "name": "SoccerMobilePro.MatchCore.Tests",
   "rootNamespace": "SoccerMobilePro.MatchCore.Tests",
   "references": [
-    "SoccerMobilePro.MatchCore"
+    "SoccerMobilePro.MatchCore",
+    "SoccerMobilePro.Input",
+    "Unity.InputSystem"
   ],
   "includePlatforms": [
     "Editor"

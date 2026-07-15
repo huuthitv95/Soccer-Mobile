@@ -2,7 +2,9 @@
   "name": "SoccerMobilePro.MatchCore.PlayModeTests",
   "rootNamespace": "SoccerMobilePro.MatchCore.PlayModeTests",
   "references": [
-    "SoccerMobilePro.MatchCore"
+    "SoccerMobilePro.MatchCore",
+    "SoccerMobilePro.Input",
+    "Unity.InputSystem"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

@@ -1,37 +1,33 @@
 {
   "version": "1.0.0",
   "baseBranch": "main",
-  "generatedAt": "2026-07-15T07:05:58.1543404Z",
+  "generatedAt": "2026-07-15T07:45:00.000Z",
   "changedFiles": [
-    "Assets/Scripts/FoulTriggerController.cs",
-    "Assets/Scripts/InitGame.cs",
-    "Assets/Scripts/LegacyMatchCoreAdapter.cs",
-    "Assets/Scripts/OCornerTriggerController.cs",
-    "Assets/Scripts/PCornerTriggerController.cs",
+    "Assets/Resources/Input/SoccerMobileControls.inputactions",
+    "Assets/Scripts/Player.cs",
+    "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
+    "Assets/SoccerMobilePro/Input/SoccerMobilePro.Input.asmdef",
     "Assets/SoccerMobilePro/MatchCore/MatchCore.cs",
-    "Assets/SoccerMobilePro/MatchCore/SoccerMobilePro.MatchCore.asmdef",
-    "Assets/Tests/EditMode/DeterministicMatchSimulationTests.cs",
+    "Assets/Tests/EditMode/ContextualMatchInputTests.cs",
     "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef",
     "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs",
     "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef",
+    "docs/implementation/decision-validation-program.md",
     "docs/implementation/p0-foundation-implementation.md",
     "docs/implementation/unity-implementation-audit-and-backlog.md",
-    "docs/index.md"
+    "docs/systems/match-controls-set-pieces-and-var.md"
   ],
   "changedNodeIds": [
-    "file:Assets/Scripts/FoulTriggerController.cs",
-    "class:Assets/Scripts/FoulTriggerController.cs:FoulTriggerController",
-    "function:Assets/Scripts/FoulTriggerController.cs:OnTriggerEnter",
-    "file:Assets/Scripts/InitGame.cs",
-    "class:Assets/Scripts/InitGame.cs:InitGame",
-    "function:Assets/Scripts/InitGame.cs:Awake",
-    "function:Assets/Scripts/InitGame.cs:Update",
-    "file:Assets/Scripts/OCornerTriggerController.cs",
-    "class:Assets/Scripts/OCornerTriggerController.cs:OCornerTriggerController",
-    "function:Assets/Scripts/OCornerTriggerController.cs:OnTriggerEnter",
-    "file:Assets/Scripts/PCornerTriggerController.cs",
-    "class:Assets/Scripts/PCornerTriggerController.cs:PCornerTriggerController",
-    "function:Assets/Scripts/PCornerTriggerController.cs:OnTriggerEnter"
+    "file:Assets/Scripts/Player.cs",
+    "class:Assets/Scripts/Player.cs:Player",
+    "function:Assets/Scripts/Player.cs:Update",
+    "file:Assets/SoccerMobilePro/MatchCore/MatchCore.cs",
+    "file:Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
+    "class:Assets/SoccerMobilePro/Input/ContextualMatchInput.cs:ContextualMatchInputAdapter",
+    "class:Assets/SoccerMobilePro/Input/ContextualMatchInput.cs:ContextualMatchInputRuntime"
   ],
-  "affectedNodeIds": []
+  "affectedNodeIds": [
+    "file:Assets/Standard Assets/SoccerInput.cs",
+    "file:Assets/Scripts/BallScript.cs"
+  ]
 }

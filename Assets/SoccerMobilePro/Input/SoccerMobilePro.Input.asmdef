@@ -1,0 +1,17 @@
+{
+  "name": "SoccerMobilePro.Input",
+  "rootNamespace": "SoccerMobilePro.Input",
+  "references": [
+    "SoccerMobilePro.MatchCore",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
