@@ -19,7 +19,7 @@
 | Video | [`04-club-squad-customization.mp4`](../../../references/fc-mobile-vn/videos/04-club-squad-customization.mp4) |
 | Thời lượng | 00:52.367 |
 | Khung hình | 1920×1080, landscape |
-| Contact sheet | [Mở ảnh](../../../references/video-analysis/04-club-squad-customization/contact-sheet.jpg) |
+| Contact sheet | [Mở ảnh](../../assets/video-analysis/04-club-squad-customization/contact-sheet.jpg) |
 
 **Nhãn bằng chứng:** Mô tả là **Quan sát từ video**. Video chứng minh cách model được trình bày, không chứng minh pipeline import/model bundle nội bộ. Whisper/Tesseract không khả dụng; audio bị bỏ qua, chữ đọc thủ công.
 
@@ -37,7 +37,7 @@
 | 00:34–00:45 | Sân nhà | Preview sân full canvas, tab Chung/Sự kiện, danh sách sân và điều kiện mở khóa; lựa chọn đổi ánh sáng/thời tiết. |
 | 00:46–00:52 | Ngoại hình hub | Grid category quanh model: đội nhà, bóng, đồng phục, biểu cảm, số, ngoại hình, sân vận động. |
 
-Key frame: [00:08](../../../references/video-analysis/04-club-squad-customization/key-00m08s.jpg), [00:16](../../../references/video-analysis/04-club-squad-customization/key-00m16s.jpg), [00:28](../../../references/video-analysis/04-club-squad-customization/key-00m28s.jpg), [00:36](../../../references/video-analysis/04-club-squad-customization/key-00m36s.jpg), [00:48](../../../references/video-analysis/04-club-squad-customization/key-00m48s.jpg).
+Key frame: [00:08](../../assets/video-analysis/04-club-squad-customization/key-00m08s.jpg), [00:16](../../assets/video-analysis/04-club-squad-customization/key-00m16s.jpg), [00:28](../../assets/video-analysis/04-club-squad-customization/key-00m28s.jpg), [00:36](../../assets/video-analysis/04-club-squad-customization/key-00m36s.jpg), [00:48](../../assets/video-analysis/04-club-squad-customization/key-00m48s.jpg).
 
 <a id="screens"></a>
 

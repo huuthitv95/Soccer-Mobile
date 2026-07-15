@@ -19,7 +19,7 @@
 | Video | [`05-exchange-missions-events.mp4`](../../../references/fc-mobile-vn/videos/05-exchange-missions-events.mp4) |
 | Thời lượng | 00:53.035 |
 | Khung hình | 1920×1080, landscape |
-| Contact sheet | [Mở ảnh](../../../references/video-analysis/05-exchange-missions-events/contact-sheet.jpg) |
+| Contact sheet | [Mở ảnh](../../assets/video-analysis/05-exchange-missions-events/contact-sheet.jpg) |
 
 **Nhãn bằng chứng:** Các chi tiết là **Quan sát từ video**. Whisper/Tesseract không có trên máy; phân tích bỏ qua audio và không dùng OCR tự động.
 
@@ -38,7 +38,7 @@
 | 00:42–00:47 | Giải Vô Địch Thế Giới | Task event khác trong cùng template, có thời gian còn lại và reward panel. |
 | 00:48–00:53 | Home | Trở lại hero carousel; shell không đổi. |
 
-Key frame: [00:00](../../../references/video-analysis/05-exchange-missions-events/key-00m00s.jpg), [00:08](../../../references/video-analysis/05-exchange-missions-events/key-00m08s.jpg), [00:20](../../../references/video-analysis/05-exchange-missions-events/key-00m20s.jpg), [00:28](../../../references/video-analysis/05-exchange-missions-events/key-00m28s.jpg), [00:36](../../../references/video-analysis/05-exchange-missions-events/key-00m36s.jpg), [00:40](../../../references/video-analysis/05-exchange-missions-events/key-00m40s.jpg), [00:44](../../../references/video-analysis/05-exchange-missions-events/key-00m44s.jpg).
+Key frame: [00:00](../../assets/video-analysis/05-exchange-missions-events/key-00m00s.jpg), [00:08](../../assets/video-analysis/05-exchange-missions-events/key-00m08s.jpg), [00:20](../../assets/video-analysis/05-exchange-missions-events/key-00m20s.jpg), [00:28](../../assets/video-analysis/05-exchange-missions-events/key-00m28s.jpg), [00:36](../../assets/video-analysis/05-exchange-missions-events/key-00m36s.jpg), [00:40](../../assets/video-analysis/05-exchange-missions-events/key-00m40s.jpg), [00:44](../../assets/video-analysis/05-exchange-missions-events/key-00m44s.jpg).
 
 <a id="screens"></a>
 

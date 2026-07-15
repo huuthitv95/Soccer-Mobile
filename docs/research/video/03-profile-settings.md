@@ -19,7 +19,7 @@
 | Video | [`03-profile-settings.mp4`](../../../references/fc-mobile-vn/videos/03-profile-settings.mp4) |
 | Thời lượng | 01:01.033 |
 | Khung hình | 1920×1080, landscape |
-| Contact sheet | [Mở ảnh](../../../references/video-analysis/03-profile-settings/contact-sheet.jpg) |
+| Contact sheet | [Mở ảnh](../../assets/video-analysis/03-profile-settings/contact-sheet.jpg) |
 
 **Nhãn bằng chứng:** Nội dung dưới đây là **Quan sát từ video** ở chế độ visual-first. Whisper và Tesseract không khả dụng; không phiên âm audio và không OCR tự động.
 
@@ -37,7 +37,7 @@
 | 00:35–00:45 | Cài đặt tổng | Modal lớn hai cột: tài khoản, gameplay, âm thanh, ngôn ngữ, đơn vị, hỗ trợ và xóa tài khoản. |
 | 00:46–01:01 | Gameplay settings | Danh sách toggle cuộn dọc cho điều khiển, hỗ trợ trực quan, power shot, chuyển cầu thủ và PlayStyles. |
 
-Key frame: [00:00](../../../references/video-analysis/03-profile-settings/key-00m00s.jpg), [00:04](../../../references/video-analysis/03-profile-settings/key-00m04s.jpg), [00:28](../../../references/video-analysis/03-profile-settings/key-00m28s.jpg), [00:36](../../../references/video-analysis/03-profile-settings/key-00m36s.jpg), [00:48](../../../references/video-analysis/03-profile-settings/key-00m48s.jpg), [00:56](../../../references/video-analysis/03-profile-settings/key-00m56s.jpg).
+Key frame: [00:00](../../assets/video-analysis/03-profile-settings/key-00m00s.jpg), [00:04](../../assets/video-analysis/03-profile-settings/key-00m04s.jpg), [00:28](../../assets/video-analysis/03-profile-settings/key-00m28s.jpg), [00:36](../../assets/video-analysis/03-profile-settings/key-00m36s.jpg), [00:48](../../assets/video-analysis/03-profile-settings/key-00m48s.jpg), [00:56](../../assets/video-analysis/03-profile-settings/key-00m56s.jpg).
 
 <a id="screens"></a>
 

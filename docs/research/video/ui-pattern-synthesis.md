@@ -30,11 +30,11 @@ Whisper và Tesseract không khả dụng trên máy tại thời điểm phân 
 
 | Video | Trọng tâm | Contact sheet | Phân tích chi tiết |
 | --- | --- | --- | --- |
-| 01 | Provider picker, Garena web login, keyboard, loading handoff | [Ảnh](../../../references/video-analysis/01-login-account/contact-sheet.jpg) | [Đăng nhập và tài khoản](./01-login-account.md) |
-| 02 | Home shell, carousel, nhiệm vụ, daily login, pass, event webview | [Ảnh](../../../references/video-analysis/02-home-liveops/contact-sheet.jpg) | [Home và liveops](./02-home-liveops.md) |
-| 03 | Đổi tên, hồ sơ, social/bạn bè, settings và gameplay toggles | [Ảnh](../../../references/video-analysis/03-profile-settings/contact-sheet.jpg) | [Hồ sơ và cài đặt](./03-profile-settings.md) |
-| 04 | Club hub, squad/player inventory, locker room, stadium, appearance | [Ảnh](../../../references/video-analysis/04-club-squad-customization/contact-sheet.jpg) | [Câu lạc bộ và tùy biến](./04-club-squad-customization.md) |
-| 05 | Cosmetic item, exchange, badge, missions và events | [Ảnh](../../../references/video-analysis/05-exchange-missions-events/contact-sheet.jpg) | [Trao đổi và sự kiện](./05-exchange-missions-events.md) |
+| 01 | Provider picker, Garena web login, keyboard, loading handoff | [Ảnh](../../assets/video-analysis/01-login-account/contact-sheet.jpg) | [Đăng nhập và tài khoản](./01-login-account.md) |
+| 02 | Home shell, carousel, nhiệm vụ, daily login, pass, event webview | [Ảnh](../../assets/video-analysis/02-home-liveops/contact-sheet.jpg) | [Home và liveops](./02-home-liveops.md) |
+| 03 | Đổi tên, hồ sơ, social/bạn bè, settings và gameplay toggles | [Ảnh](../../assets/video-analysis/03-profile-settings/contact-sheet.jpg) | [Hồ sơ và cài đặt](./03-profile-settings.md) |
+| 04 | Club hub, squad/player inventory, locker room, stadium, appearance | [Ảnh](../../assets/video-analysis/04-club-squad-customization/contact-sheet.jpg) | [Câu lạc bộ và tùy biến](./04-club-squad-customization.md) |
+| 05 | Cosmetic item, exchange, badge, missions và events | [Ảnh](../../assets/video-analysis/05-exchange-missions-events/contact-sheet.jpg) | [Trao đổi và sự kiện](./05-exchange-missions-events.md) |
 
 <a id="layout-system"></a>
 
