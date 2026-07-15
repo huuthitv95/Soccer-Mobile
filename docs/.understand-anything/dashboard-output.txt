@@ -1,0 +1,5 @@
+Understand Anything dashboard runtime snapshot
+Project: Soccer Mobile Pro Knowledge Wiki
+Local endpoint: http://127.0.0.1:5174/
+Runtime credentials omitted before version control
+Status at capture: Vite ready

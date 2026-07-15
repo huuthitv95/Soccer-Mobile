@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "baseBranch": "main",
+  "generatedAt": "2026-07-15T02:10:14.9252778Z",
+  "changedFiles": [
+    ".gitignore",
+    ".understand-anything/.understandignore",
+    ".understand-anything/config.json",
+    ".understand-anything/dashboard-output.txt",
+    ".understand-anything/diff-overlay.json",
+    ".understand-anything/domain-graph.json",
+    ".understand-anything/fingerprints.json",
+    ".understand-anything/intermediate/scan-result.json",
+    ".understand-anything/knowledge-graph.json",
+    ".understand-anything/meta.json",
+    "docs/.understand-anything/dashboard-output.txt",
+    "docs/.understand-anything/knowledge-graph.json",
+    "docs/.understand-anything/meta.json"
+  ],
+  "changedNodeIds": [],
+  "affectedNodeIds": []
+}

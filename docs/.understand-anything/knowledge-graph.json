@@ -1,0 +1,677 @@
+{
+  "version": "1.0.0",
+  "kind": "knowledge",
+  "project": {
+    "name": "Soccer Mobile Pro — Knowledge Wiki",
+    "languages": [
+      "markdown"
+    ],
+    "frameworks": [
+      "karpathy-wiki"
+    ],
+    "description": "Knowledge graph for Soccer Mobile Pro — Knowledge Wiki",
+    "analyzedAt": "2026-07-15T01:54:14.763642+00:00",
+    "gitCommitHash": "947f4bbd58cd588bf55b33615c25463ab16631fd"
+  },
+  "nodes": [
+    {
+      "id": "article:Competitive-Integrity-Esports",
+      "type": "article",
+      "name": "CÔNG BẰNG THI ĐẤU, BÁO CÁO GIAN LẬN & ESPORTS",
+      "filePath": "Competitive-Integrity-Esports.md",
+      "summary": "- Bảo vệ người chơi chân chính khỏi hành vi gian lận, sử dụng phần mềm thứ ba. - Thiết kế luồng báo cáo gian lận rõ ràng, dễ dùng và có phản hồi. - Chuẩn hóa chế tài vi phạm, liên kết với hệ thống ...",
+      "tags": [
+        "công bằng thi đấu và esports"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Công bằng thi đấu và esports",
+        "content": "# CÔNG BẰNG THI ĐẤU, BÁO CÁO GIAN LẬN & ESPORTS\n\n## 1. Mục tiêu\n\n- Bảo vệ người chơi chân chính khỏi hành vi gian lận, sử dụng phần mềm thứ ba.\n- Thiết kế luồng báo cáo gian lận rõ ràng, dễ dùng và có phản hồi.\n- Chuẩn hóa chế tài vi phạm, liên kết với hệ thống giải đấu (FVSL-style) và môi trường esports.\n\n## 2. Các hành vi gian lận phổ biến\n\n- Sử dụng phần mềm thứ ba/MOD APK/ứng dụng trái phép để thay đổi hành vi game.\n- Can thiệp vào file game, vượt qua hệ thống bảo mật, sử dụng phiên bản không chính thức.\n- Gian lận thẻ ngân hàng/nạp tiền bằng phương thức có dấu hiệu lừa đảo.\n- Thông đồng dàn xếp kết quả trận, win-trade, AFK cố ý trong ranked.\n\n## 3. Luồng báo cáo trong game\n\n1. Người chơi mở màn hình kết quả trận đấu.\n2. Nhấn nút \"Báo cáo\" cạnh tên đối thủ.\n3. Chọn lý do (gian lận phần mềm, hành vi phá game, chat xúc phạm, nghi dàn xếp…).\n4. Gửi kèm mô tả chi tiết và, nếu có, ảnh/video bằng form ngoài game.\n5. Hệ thống ghi log trận: telemetry, ping, hành vi input, nghiệm thu kết quả.\n\n## 4. Cơ chế xử phạt đề xuất\n\n| Hành vi | Xử phạt |\n|---|---|\n| Sử dụng phần mềm thứ 3 | Khóa tài khoản 30 ngày hoặc vĩnh viễn tùy mức độ; tái phạm khóa vĩnh viễn |\n| Can thiệp file/bảo mật | Khóa vĩnh viễn, blacklist thiết bị |\n| Gian lận nạp thẻ | Tạm khóa, yêu cầu liên hệ CS để xác minh, rollback giao dịch bất thường |\n| Win-trade có hệ thống | Reset thành tích mùa, cấm tham gia ranked/giải đấu trong khoảng thời gian nhất định |\n\n## 5. Reconnect & xử lý mất mạng\n\n- Cho phép reconnect vào trận trong thời gian ngắn nếu bị mất kết nối tạm thời.\n- Nếu người chơi rời trận quá lâu hoặc cố ý thoát, coi là thua và áp dụng penalty phù hợp.\n- Telemetry cần ghi rõ: thời gian disconnect, trạng thái mạng, hành vi input cuối cùng.\n\n## 6. Luồng giải đấu & esports\n\n- Hỗ trợ tạo giải đấu ingame: đăng ký, check-in, bracket, lịch thi đấu, luật.\n- Kết nối với giải FVSL-style: tổng thưởng lớn, nhiều vòng tuyển chọn, broadcast.\n- Có chế độ spectator cho trận đấu quan trọng (cam tự động hoặc manual).\n\n## 7. Công cụ CS & vận hành\n\n- Bảng điều khiển cho đội vận hành: xem log trận, hành vi báo cáo, lịch sử xử phạt.\n- Hệ thống ticket liên kết tài khoản, hỗ trợ appeal vi phạm.\n- Quy trình rà soát định kỳ các tài khoản có dấu hiệu gian lận hoặc khiếu nại nhiều.\n",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:FC-Mobile-VN-Coverage-Audit",
+      "type": "article",
+      "name": "KIỂM TOÁN PHẠM VI NGHIÊN CỨU FC MOBILE VN",
+      "filePath": "FC-Mobile-VN-Coverage-Audit.md",
+      "summary": "Tài liệu này kiểm tra mức độ bao phủ toàn bộ yêu cầu nghiên cứu ban đầu cho Soccer Mobile Pro. Nó không tuyên bố truy cập nội bộ FC Mobile VN/EA/Garena; mọi mục không có tài liệu công khai chính th...",
+      "tags": [
+        "nghiên cứu và kiểm toán phạm vi"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Nghiên cứu và kiểm toán phạm vi",
+        "content": "# KIỂM TOÁN PHẠM VI NGHIÊN CỨU FC MOBILE VN\n\n## Mục đích\n\nTài liệu này kiểm tra mức độ bao phủ toàn bộ yêu cầu nghiên cứu ban đầu cho Soccer Mobile Pro. Nó không tuyên bố truy cập nội bộ FC Mobile VN/EA/Garena; mọi mục không có tài liệu công khai chính thức được đánh dấu là **đề xuất triển khai**.\n\n## Ma trận bao phủ\n\n| Yêu cầu | Tài liệu nguồn trong repo | Trạng thái | Bổ sung cần làm tiếp theo |\n|---|---|---|---|\n| Tính năng tổng thể | `FC-Mobile-VN-Research.md` §§1, 15 | Có | Theo dõi update game theo mùa |\n| Layout UI/UX | `FC-Mobile-VN-Research.md` §2; `UX-Wireflows-States.md` | Có khung | Tạo wireframe/Figma từng màn hình |\n| Chọn ngôn ngữ | `FC-Mobile-VN-Research.md` §3 | Có khung | Chốt localization pipeline và voice-pack vendor |\n| Cài đặt | `FC-Mobile-VN-Research.md` §4 | Có khung | Viết schema settings + default theo device tier |\n| Tài khoản | `FC-Mobile-VN-Research.md` §5 | Có khung | Chốt identity provider, recovery SLA, consent copy |\n| Giải đấu | `FC-Mobile-VN-Research.md` §6; `Competitive-Integrity-Esports.md` | Có khung | Viết bracket/state machine/check-in policy |\n| Câu lạc bộ & giải | `FC-Mobile-VN-Research.md` §§6, 16 | Có khung | Chốt licensing catalogue và asset acceptance checklist |\n| Cầu thủ & player database | `FC-Mobile-VN-Research.md` §§7, 16, 17; `LiveData-Operations.md` | Có khung kỹ thuật | Chốt source license, API contract, CMS data dictionary |\n| Model 3D | `FC-Mobile-VN-Research.md` §7 | Có khung kỹ thuật | Prototype DCC-to-engine, LOD/texture budget, legal likeness clearance |\n| Skills/Play’s Styles | `FC-Mobile-VN-Research.md` §8 | Có khung | Chốt catalog, trigger conditions, balance spreadsheet |\n| Nâng cấp thẻ | `FC-Mobile-VN-Research.md` §§9, 17; GDD §6 | Có khung | Chốt formula, economy sinks/sources, migration policy |\n| Controls trái/phải | `FC-Mobile-VN-Research.md` §10; `Match-Systems-SetPieces-Controls.md` | Có khung | Usability playtest & input-latency benchmark |\n| VAR | `FC-Mobile-VN-Research.md` §§11, 18; GDD §16 | Có khung | Prototype deterministic replay và decision logger |\n| AI offline | `FC-Mobile-VN-Research.md` §§12, 18; GDD §17 | Có khung | AI prototype, telemetry schema, difficulty validation |\n\n## Khoảng trống cần xử lý trước production\n\n1. **Không có bằng chứng công khai về kiến trúc nội bộ FC Mobile VN:** không được reverse-engineer hoặc mô tả endpoint/API/asset bundles/AI training của EA-Garena như sự thật.\n2. **Bản quyền dữ liệu và likeness:** trước khi ingest cầu thủ, CLB, áo đấu, logo hoặc scan gương mặt, cần có quyền sử dụng bằng văn bản và quy trình xóa/thu hồi asset.\n3. **Luật loot-box và thanh toán:** cần công bố tỷ lệ nếu có random packs, age-gate, parental controls, refund policy và receipt reconciliation.\n4. **Online fairness:** cần server authority, anti-cheat, reconnect, desync handling và replay/audit trail trước ranked launch.\n5. **Data operations:** cần CMS, version manifest, approval workflow, rollback drill và on-call ownership trước khi live service.\n\n## Definition ",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:FC-Mobile-VN-Research",
+      "type": "article",
+      "name": "FC MOBILE VN — NGHIÊN CỨU THAM CHIẾU CHI TIẾT",
+      "filePath": "FC-Mobile-VN-Research.md",
+      "summary": "**Mục đích:** tài liệu nghiên cứu tham chiếu để bổ sung cho `GDD-Soccer-Mobile-Pro.md`, tập trung vào các nhóm tính năng người dùng yêu cầu và chỉ rõ đâu là dữ liệu xác nhận được từ nguồn công khai...",
+      "tags": [
+        "nghiên cứu và kiểm toán phạm vi"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Nghiên cứu và kiểm toán phạm vi",
+        "content": "# FC MOBILE VN — NGHIÊN CỨU THAM CHIẾU CHI TIẾT\n\n**Mục đích:** tài liệu nghiên cứu tham chiếu để bổ sung cho `GDD-Soccer-Mobile-Pro.md`, tập trung vào các nhóm tính năng người dùng yêu cầu và chỉ rõ đâu là dữ liệu xác nhận được từ nguồn công khai, đâu là suy luận thiết kế dùng cho Soccer Mobile Pro.\n\n**Phạm vi nguồn công khai đã xác nhận:** Google Play listing của FC Mobile VN và bài công bố Siêu cập nhật mùa hè từ Garena. Các phần liên quan đến kiến trúc nội bộ như player database backend, pipeline thêm model 3D, logic VAR và huấn luyện AI offline **không được Garena/EA công bố chi tiết công khai**; vì vậy tài liệu này tách rõ phần “xác nhận được” và “đề xuất suy luận sản phẩm/kỹ thuật”.\n\n---\n\n## 1. TÍNH NĂNG TỔNG THỂ ĐÃ XÁC NHẬN CÔNG KHAI\n\n### 1.1 Tính năng lõi\n- Hơn 19.000 cầu thủ, 690+ đội bóng, 35+ giải đấu.\n- Có hơn 50 đội tuyển quốc gia chính thức trong chế độ **The World’s Game**.\n- Có chế độ **Quick Match** để giao hữu nhanh với bạn bè.\n- Có hệ thống **PVP xếp hạng**, bảng xếp hạng tuần, và ghép trận được cải thiện.\n- Có bình luận tiếng Việt và mùa thẻ **Vietnam All-Star** với cầu thủ Việt Nam.\n- Gameplay được nhấn mạnh ở chuyền bóng, điều khiển, phòng ngự phạt góc, cân bằng kỹ năng và chỉ số cầu thủ.\n- Bản cập nhật hè 2026 bổ sung/tăng cường: **The World’s Game**, **Play’s Styles**, **Quick Match có hiệp phụ + penalty**, và **hệ thống so sánh cầu thủ**.\n\n### 1.2 Hàm ý thiết kế rút ra cho Soccer Mobile Pro\n- FC Mobile VN định vị là game live service xoay quanh 3 trục: **sưu tầm cầu thủ**, **thi đấu PvP/PvE**, **sự kiện/mùa thẻ**.\n- Sản phẩm ưu tiên độ phủ bản quyền rất lớn, nội dung cập nhật liên tục, và bản địa hóa riêng cho Việt Nam.\n- Các hệ thống meta quan trọng nhất cần xuất hiện trong GDD của Soccer Mobile Pro là: đội tuyển/CLB thật, bảng xếp hạng, sự kiện theo mùa, so sánh cầu thủ, phong cách chơi, và social match với bạn bè.\n\n---\n\n## 2. LAYOUT UI/UX THAM CHIẾU\n\n### 2.1 Các lớp màn hình nên có\nDựa trên mô hình vận hành của FC Mobile VN, layout chuẩn nên chia thành 5 lớp:\n1. **Lớp mở đầu**: splash, tải tài nguyên, chọn ngôn ngữ lần đầu.\n2. **Lớp vào game**: đăng nhập/tài khoản khách, đồng bộ dữ liệu, thông báo sự kiện đang chạy.\n3. **Lớp sảnh chính**: banner sự kiện, truy cập đội hình, thị trường/gói, chế độ chơi, nhiệm vụ, cài đặt.\n4. **Lớp meta team-building**: đội hình, cầu thủ, nâng cấp, so sánh, CLB, giải đấu, inventory.\n5. **Lớp thi đấu**: tiền trận, chọn đội/chế độ, HUD in-match, tạm dừng, kết quả, MVP, thưởng.\n\n### 2.2 Nguyên tắc UI/UX nên bổ sung vào GDD\n- **Home hub nhiều shortcut**: vì game live service luôn có nhiều entry points theo sự kiện.\n- **Banner ưu tiên theo mùa**: nội dung đang chạy phải đứng đầu luồng điều hướng.\n- **Bottom nav hoặc tab lớn** cho các cụm chính: Home, Club/Team, Market/Store, Play, Events.\n- **Một thao tác đến đội hình** từ mọi vị trí quan trọng vì đội hình là trung tâm tiến trình.\n- **Luồng nâng cấp nhiều bước nhưng không sâu quá 3 lớp** để tránh người chơi bị lạc giữa thẻ, vật phẩm, chỉ số và",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:GDD-Soccer-Mobile-Pro",
+      "type": "article",
+      "name": "SOCCER MOBILE PRO — BẢN KẾ HOẠCH TỔNG (GAME DESIGN DOCUMENT)",
+      "filePath": "GDD-Soccer-Mobile-Pro.md",
+      "summary": "**Chủ đầu tư / Studio:** ZGameVN **Nền tảng:** Android / iOS **Thể loại:** Bóng đá mobile online — kết hợp cơ chế xây đội hình thẻ bài (lấy cảm hứng FC Mobile VN) với trải nghiệm thi đấu trực tiếp ...",
+      "tags": [
+        "định hướng sản phẩm và trải nghiệm"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Định hướng sản phẩm và trải nghiệm",
+        "content": "# SOCCER MOBILE PRO — BẢN KẾ HOẠCH TỔNG (GAME DESIGN DOCUMENT)\n\n**Chủ đầu tư / Studio:** ZGameVN\n**Nền tảng:** Android / iOS\n**Thể loại:** Bóng đá mobile online — kết hợp cơ chế xây đội hình thẻ bài (lấy cảm hứng FC Mobile VN) với trải nghiệm thi đấu trực tiếp (lấy cảm hứng eFootball Mobile)\n**Trạng thái tài liệu:** Living document — v1.0, có thể mở rộng ở các vòng nghiên cứu tiếp theo\n**Ngày tổng hợp:** 14/07/2026\n\n> Tài liệu này tổng hợp 4 vòng nghiên cứu về FC Mobile VN (Garena/EA) và eFootball Mobile (Konami), sau đó chuyển hóa thành đặc tả thiết kế cho Soccer Mobile Pro. Mỗi mục đều ghi rõ **phần nào lấy cảm hứng từ đâu**, **phần nào là thiết kế riêng của ZVN**, và **phần nào còn nằm trong backlog nghiên cứu** để các vòng sau bổ sung.\n\n---\n\n## MỤC LỤC\n\n1. [Tổng quan & Tầm nhìn sản phẩm](#1-tổng-quan--tầm-nhìn-sản-phẩm)\n2. [Ngôn ngữ & Bản địa hóa](#2-ngôn-ngữ--bản-địa-hóa)\n3. [Vòng lặp gameplay chính (Core Loop)](#3-vòng-lặp-gameplay-chính-core-loop)\n4. [Chế độ chơi](#4-chế-độ-chơi)\n5. [Hệ thống tiền tệ & kinh tế](#5-hệ-thống-tiền-tệ--kinh-tế)\n6. [Thẻ cầu thủ: phân loại & hệ thống nâng cấp](#6-thẻ-cầu-thủ-phân-loại--hệ-thống-nâng-cấp)\n7. [Chợ chuyển nhượng & Ký hợp đồng](#7-chợ-chuyển-nhượng--ký-hợp-đồng)\n8. [Đội hình: Chemistry, Team Badge, PlayStyle](#8-đội-hình-chemistry-team-badge-playstyle)\n9. [Trải nghiệm trận đấu & Điều khiển](#9-trải-nghiệm-trận-đấu--điều-khiển)\n10. [Bản đồ màn hình (Screen Map)](#10-bản-đồ-màn-hình-screen-map)\n11. [Tài khoản, Cài đặt & Hỗ trợ](#11-tài-khoản-cài-đặt--hỗ-trợ)\n12. [Tùy biến & trình bày trực quan](#12-tùy-biến--trình-bày-trực-quan)\n13. [Sự kiện, mùa giải & Season Pass](#13-sự-kiện-mùa-giải--season-pass)\n14. [Player Database — nguồn dữ liệu & vận hành](#14-player-database--nguồn-dữ-liệu--vận-hành)\n15. [Model 3D cầu thủ — pipeline sản xuất](#15-model-3d-cầu-thủ--pipeline-sản-xuất)\n16. [Luật trận đấu đặc biệt: VAR Presentation Layer](#16-luật-trận-đấu-đặc-biệt-var-presentation-layer)\n17. [AI đá offline với máy](#17-ai-đá-offline-với-máy)\n18. [Tuân thủ pháp lý & đạo đức](#18-tuân-thủ-pháp-lý--đạo-đức)\n19. [Kiến trúc kỹ thuật: Prototype → Production](#19-kiến-trúc-kỹ-thuật-prototype--production)\n20. [Phạm vi bản Prototype hiện tại (v1)](#20-phạm-vi-bản-prototype-hiện-tại-v1)\n21. [Backlog nghiên cứu & Lộ trình mở rộng](#21-backlog-nghiên-cứu--lộ-trình-mở-rộng)\n22. [Phụ lục: Nguồn tham khảo](#22-phụ-lục-nguồn-tham-khảo)\n\n---\n\n## 1. TỔNG QUAN & TẦM NHÌN SẢN PHẨM\n\nSoccer Mobile Pro là game bóng đá mobile online, xây dựng đội hình từ **cầu thủ, CLB và giải đấu đã được ZGameVN cấp phép bản quyền**, phối trộn hai triết lý thiết kế:\n\n- **Từ FC Mobile VN:** hệ thống thẻ bài cạnh tranh (Rank Up / Training / Skill Points), chợ chuyển nhượng giữa người chơi, Division Rivals (3 chế độ xếp hạng song song), sự kiện dạng lộ trình đổi token, bình luận/giao diện tiếng Việt.\n- **Từ eFootball Mobile:** mô hình ký hợp đồng cầu thủ đặc biệt/huyền thoại (Dream Team), Progression Points tùy biến chỉ số, Team Playstyle + độ phù hợp H",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:LiveData-Operations",
+      "type": "article",
+      "name": "LIVE DATA & OPERATIONS",
+      "filePath": "LiveData-Operations.md",
+      "summary": "- Tách static player/club/league assets, dynamic card data, market/economy data và event config. - Manifest version theo region/season; CDN cache với hash, staged rollout, compatibility gate và rol...",
+      "tags": [
+        "live service và vận hành"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Live service và vận hành",
+        "content": "# LIVE DATA & OPERATIONS\n\n## Data Versioning\n- Tách static player/club/league assets, dynamic card data, market/economy data và event config.\n- Manifest version theo region/season; CDN cache với hash, staged rollout, compatibility gate và rollback pointer.\n- Mọi schema thay đổi phải versioned, có migration, validation và backward compatibility policy.\n\n## CMS & Approval\n- CMS cho event, banner, giftcode, pass, shop bundle, drop odds, localization và reward table.\n- Bốn mắt phê duyệt cho currency/odds/reward; audit log: ai đổi gì, khi nào, trước/sau thay đổi.\n- Preview sandbox và automated validation trước publish: ID tồn tại, reward hợp lệ, translated strings, start/end time, inventory cap.\n\n## Economy & Market Operations\n- Ledger server-side cho tất cả currency; source/sink dashboard theo cohort.\n- Market có price floor/ceiling, listing limits, tax, anomaly detection, anti-bot và suspend tooling.\n- Alert khi lạm phát, reward duplication, negative balance, abnormal trade graph hoặc claim spike.\n\n## Asset Delivery\n- Player model có asset manifest, LOD/tier, size budget, checksum, fallback generic head và hot-update bundle.\n- Patch rollback tránh crash: retain manifest trước, feature flag, crash/performance telemetry sau rollout.\n\n## Observability & Incident\n- Dashboard: API latency/error, match completion, desync, payment verify, event claims, crash-free users.\n- Incident runbook: detect > mitigate/disable via flag > communicate > compensate > postmortem.\n",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:LiveOps-Monetization-Membership",
+      "type": "article",
+      "name": "LIVEOPS, NẠP TIỀN & HỆ THỐNG HỘI VIÊN (THAM CHIẾU FC MOBILE VN)",
+      "filePath": "LiveOps-Monetization-Membership.md",
+      "summary": "- Tận dụng mô hình live service với sự kiện liên tục, login rewards, giftcode và quà cộng đồng. - Thiết kế hệ thống Hội viên/VIP vừa khuyến khích nạp tiền, vừa minh bạch quyền lợi theo tháng. - Đảm...",
+      "tags": [
+        "live service và vận hành"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Live service và vận hành",
+        "content": "# LIVEOPS, NẠP TIỀN & HỆ THỐNG HỘI VIÊN (THAM CHIẾU FC MOBILE VN)\n\n## 1. Mục tiêu hệ thống\n\n- Tận dụng mô hình live service với sự kiện liên tục, login rewards, giftcode và quà cộng đồng.\n- Thiết kế hệ thống Hội viên/VIP vừa khuyến khích nạp tiền, vừa minh bạch quyền lợi theo tháng.\n- Đảm bảo các luồng nạp tiền, nhận quà, redeem code và quà sự kiện không gây rối hoặc tạo cảm giác pay-to-win tuyệt đối.\n\n## 2. Nạp tiền & Entitlement\n\n### 2.1 Luồng nạp cơ bản\n\n1. Người chơi mở Store/Nạp trong game.\n2. Chọn gói nạp (gói Kim cương, gói ưu đãi theo sự kiện, season pass…).\n3. Gọi API nền tảng (Google Play, App Store…) để thanh toán.\n4. Xác thực receipt phía server, tạo entitlement (currency, vật phẩm, điểm hội viên).\n5. Gửi thông báo trong game (popup, thư inbox) và cập nhật tài khoản.\n\n### 2.2 Quy tắc sản phẩm\n\n- Đảm bảo transaction id và receipt được log đầy đủ để chống double-charge và hỗ trợ hoàn tiền.\n- Mọi entitlement phải gắn với tài khoản (account-level), không gắn device.\n- Có cơ chế retry nếu mạng lỗi giữa chừng, tránh mất tiền mà không nhận vật phẩm.\n\n## 3. Hệ thống Hội viên/VIP (tham chiếu FC Mobile VN)\n\n### 3.1 Lõi tính điểm hội viên\n\n- Mỗi 1.000 VNĐ thanh toán = 1 điểm hội viên (áp dụng cho tất cả giao dịch nạp hợp lệ).\n- Hệ thống tính **cấp bậc tháng** dựa trên tổng điểm hội viên của tháng trước.\n- Ví dụ: cấp bậc Hội viên tháng 2 = tổng điểm tháng 1; cấp bậc tháng 3 = tổng điểm tháng 2…\n\n### 3.2 Cấp bậc gợi ý\n\n| Hạng | Ngưỡng điểm tháng | Ghi chú |\n|---|---|---|\n| Đồng | 200 | Hạng hội viên cơ bản, mở quà ngày |\n| Bạc | 500 | Mở thêm quà tuần, một số ưu đãi sự kiện |\n| Vàng | 1.000 (có thể duy trì từ 900 điểm) | Quà sinh nhật, cửa hàng hội viên riêng, quà đặc biệt |\n\n### 3.3 Quyền lợi hội viên\n\n- **Quà ngày**: gửi vào thư cuối mỗi ngày nếu HLV có đăng nhập.\n- **Quà tuần**: gửi vào thư vào một ngày cố định (ví dụ thứ 7).\n- **Quà sinh nhật**: gửi trong vòng 2 ngày kể từ ngày sinh đã khai báo.\n- **Cửa hàng Hội viên**: shop riêng cho hạng Vàng, bán vật phẩm giới hạn theo tháng (thẻ cầu thủ, token, cosmetics…).\n\n### 3.4 Đăng ký thông tin\n\n- Để nhận quyền lợi Hội viên, người chơi phải khai báo: họ tên, ngày sinh, số điện thoại, địa chỉ (tùy quy định region).\n- Dữ liệu này phải được xử lý theo pháp luật bảo vệ dữ liệu cá nhân, có consent rõ ràng và quyền yêu cầu xóa.\n\n## 4. Inbox & Reward Calendar\n\n### 4.1 Thư trong game (Inbox)\n\n- Inbox là trung tâm nhận quà: quà login, quà tuần, quà sự kiện, thông báo hệ thống, bồi thường lỗi.\n- Mỗi thư có: tiêu đề, nội dung, phần thưởng, hạn dùng, sender (System/Community/Esports).\n\n### 4.2 Lịch thưởng\n\n- Thiết kế lịch quà ngày/tuần/tháng gắn với season pass và hội viên.\n- Cho người chơi xem trước toàn bộ quà có thể nhận trong tháng nếu duy trì đăng nhập/nhiệm vụ.\n\n## 5. Giftcode / Redeem Code\n\n- Hỗ trợ nhập giftcode từ NPH/đối tác/thương hiệu để đổi Coin/Kim cương/vật phẩm.\n- Mỗi code có: prefix, nguồn, thời hạn, số lần dùng tối đa theo account, nội dung quà.\n- Cần hệ thống chống abuse (giới hạn per account,",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:Match-Systems-SetPieces-Controls",
+      "type": "article",
+      "name": "MATCH SYSTEMS — SET PIECES & CONTROLS",
+      "filePath": "Match-Systems-SetPieces-Controls.md",
+      "summary": "| Trạng thái | Cụm trái | Cụm phải | |---|---|---| | Có bóng | Joystick/floating stick | Pass, Through, Shoot, Sprint & Skill; contextual Cross/Lob/Clear | | Không bóng | Joystick/floating stick | ...",
+      "tags": [
+        "gameplay trận đấu"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Gameplay trận đấu",
+        "content": "# MATCH SYSTEMS — SET PIECES & CONTROLS\n\n## Input Matrix\n| Trạng thái | Cụm trái | Cụm phải |\n|---|---|---|\n| Có bóng | Joystick/floating stick | Pass, Through, Shoot, Sprint & Skill; contextual Cross/Lob/Clear |\n| Không bóng | Joystick/floating stick | Switch, Press/Sprint, Tackle, Slide, Match-Up/Jockey |\n| Thủ môn | Joystick + hướng nhảy | Rush, Dive, Catch/Parry, pass/throw distribution |\n| Bóng chết | Aim/curl/target selector | Power, pass variant, runner trigger, defensive assignment |\n\n## Control Rules\n- Context remap giữ vị trí nút ổn định, chỉ đổi nhãn/hành động theo tình huống.\n- Có Classic, Gesture và Advanced; HUD đổi cỡ/vị trí/opacity; có input buffering ngắn và tutorial overlay.\n- Assist có 4 mức: Beginner, Assisted, Semi, Manual; mọi ranked competitive queue phải công bố assist policy.\n\n## Set Pieces\n- Corner: chọn người đá, target zone, power/curl, gọi người chạy cột gần/xa; phòng ngự phân kèm người/khu vực và người phá bóng.\n- Free kick: direct/cross/short routine; target, curve, power, wall positioning.\n- Penalty: aim, power, stutter policy, GK direction/commit timing; shoot-out state machine đầy đủ.\n- Throw-in/goal kick: lựa chọn nhanh, timeout, chống câu giờ; AI positioning theo tactical profile.\n\n## VAR Presentation\n- Trigger: offside sát nút, goal line, penalty, red card; luật engine quyết định, replay chỉ minh họa.\n- Có skip setting, không lạm dụng ở ranked, record decision reason trong match log.\n\n## QA Metrics\n- Test accidental-tap, command latency, mirrored handedness, 30/60 FPS, screen sizes, touch accessibility và input fairness theo assist level.\n",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "article:UX-Wireflows-States",
+      "type": "article",
+      "name": "UX WIREFLOWS & UI STATES",
+      "filePath": "UX-Wireflows-States.md",
+      "summary": "- Bottom navigation: Home, Squad, Play, Market/Store, Profile; Events được ưu tiên bằng banner + deep link. - Back behavior: đóng modal trước, trở về parent screen sau, không thoát app vô tình từ t...",
+      "tags": [
+        "định hướng sản phẩm và trải nghiệm"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "wikilinks": [],
+        "category": "Định hướng sản phẩm và trải nghiệm",
+        "content": "# UX WIREFLOWS & UI STATES\n\n## Global Navigation\n- Bottom navigation: Home, Squad, Play, Market/Store, Profile; Events được ưu tiên bằng banner + deep link.\n- Back behavior: đóng modal trước, trở về parent screen sau, không thoát app vô tình từ transaction hoặc match flow.\n- Deep links phải xử lý app chưa đăng nhập, event hết hạn, asset chưa tải và entitlement không hợp lệ.\n\n## Core Wireflows\n1. First launch: splash > chọn language > tải core asset > guest/login > privacy consent > home.\n2. Player upgrade: player detail > compare impact > chọn material > safety lock check > preview cost/result > confirm > server result > updated squad.\n3. Purchase: bundle > odds/terms > platform checkout > server receipt verify > inbox/entitlement confirmation > history.\n4. Report: opponent profile > reason > match context > submit > case acknowledgement > resolution/appeal.\n5. Tournament: rules > eligibility > register > check-in > bracket/lobby > verified result > reward.\n\n## State Catalogue\n- Loading: skeleton đúng cấu trúc trang, progress cho asset pack; không dùng spinner vô hạn.\n- Empty: message hành động được, CTA rõ cho squad/market/inbox/event.\n- Error: mã lỗi thân thiện, retry, support link, correlation id; transaction không được retry mù.\n- Offline/degraded: cache-readonly, chặn hành động có ghi dữ liệu, giải thích rõ.\n- Maintenance: countdown, phạm vi ảnh hưởng, bù đắp nếu có.\n\n## Accessibility\n- Font scale, subtitle, high contrast/color-blind palettes, reduced motion, vibration toggle, left-handed HUD, touch target tối thiểu 44dp.\n- UI strings dùng localization key; audio pack có size, download state, fallback subtitle và delete flow.\n",
+        "backlinks": []
+      }
+    },
+    {
+      "id": "topic:định-hướng-sản-phẩm-và-trải-nghiệm",
+      "type": "topic",
+      "name": "Định hướng sản phẩm và trải nghiệm",
+      "summary": "Category from index: Định hướng sản phẩm và trải nghiệm (2 articles)",
+      "tags": [
+        "category"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:gameplay-trận-đấu",
+      "type": "topic",
+      "name": "Gameplay trận đấu",
+      "summary": "Category from index: Gameplay trận đấu (1 articles)",
+      "tags": [
+        "category"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:nghiên-cứu-và-kiểm-toán-phạm-vi",
+      "type": "topic",
+      "name": "Nghiên cứu và kiểm toán phạm vi",
+      "summary": "Category from index: Nghiên cứu và kiểm toán phạm vi (2 articles)",
+      "tags": [
+        "category"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:live-service-và-vận-hành",
+      "type": "topic",
+      "name": "Live service và vận hành",
+      "summary": "Category from index: Live service và vận hành (2 articles)",
+      "tags": [
+        "category"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:công-bằng-thi-đấu-và-esports",
+      "type": "topic",
+      "name": "Công bằng thi đấu và esports",
+      "summary": "Category from index: Công bằng thi đấu và esports (1 articles)",
+      "tags": [
+        "category"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "entity:zgamevn",
+      "type": "entity",
+      "name": "ZGameVN",
+      "summary": "Studio và chủ đầu tư được nêu trong bản kế hoạch tổng của Soccer Mobile Pro.",
+      "tags": [
+        "entity",
+        "định hướng sản phẩm và trải nghiệm"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "entity:fc-mobile-vn",
+      "type": "entity",
+      "name": "FC Mobile VN",
+      "summary": "Trò chơi bóng đá di động được dùng làm nguồn tham chiếu công khai cho thiết kế và vận hành Soccer Mobile Pro.",
+      "tags": [
+        "entity",
+        "nghiên cứu và kiểm toán phạm vi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "entity:efootball-mobile",
+      "type": "entity",
+      "name": "eFootball Mobile",
+      "summary": "Trò chơi bóng đá di động được GDD dùng làm nguồn cảm hứng cho trải nghiệm thi đấu trực tiếp.",
+      "tags": [
+        "entity",
+        "định hướng sản phẩm và trải nghiệm"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "entity:google-play",
+      "type": "entity",
+      "name": "Google Play",
+      "summary": "Nền tảng thanh toán được nêu làm ví dụ trong luồng mua hàng của trò chơi.",
+      "tags": [
+        "entity",
+        "live service và vận hành"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "entity:cms",
+      "type": "entity",
+      "name": "CMS",
+      "summary": "Hệ thống quản trị nội dung dùng để cấu hình sự kiện, cửa hàng, phần thưởng và bản địa hóa.",
+      "tags": [
+        "entity",
+        "live service và vận hành"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "entity:cdn",
+      "type": "entity",
+      "name": "CDN",
+      "summary": "Hạ tầng phân phối và lưu đệm tài nguyên theo manifest phiên bản, hash và khu vực.",
+      "tags": [
+        "entity",
+        "live service và vận hành"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:competitive-integrity-esports:telemetry-backed-enforcement",
+      "type": "claim",
+      "name": "Chế tài phải dựa trên bằng chứng telemetry",
+      "summary": "Báo cáo gian lận và xử phạt cần dựa trên log trận, trạng thái mạng, hành vi input và lịch sử xử lý, đồng thời hỗ trợ khiếu nại.",
+      "tags": [
+        "claim",
+        "công bằng thi đấu và esports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:fc-mobile-vn-coverage-audit:production-gaps-must-close",
+      "type": "claim",
+      "name": "Phải đóng các khoảng trống trước production",
+      "summary": "Sản phẩm chưa sẵn sàng production nếu thiếu quyền dữ liệu, server authority, chống gian lận, vận hành dữ liệu có rollback và kiểm soát thanh toán.",
+      "tags": [
+        "claim",
+        "nghiên cứu và kiểm toán phạm vi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:fc-mobile-vn-research:separate-facts-from-inference",
+      "type": "claim",
+      "name": "Tách thông tin công khai khỏi suy luận thiết kế",
+      "summary": "Nghiên cứu tham chiếu phải phân biệt rõ dữ kiện được nguồn công khai xác nhận với đề xuất hoặc suy luận kỹ thuật dành riêng cho Soccer Mobile Pro.",
+      "tags": [
+        "claim",
+        "nghiên cứu và kiểm toán phạm vi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:gdd-soccer-mobile-pro:hybrid-football-design",
+      "type": "claim",
+      "name": "Thiết kế kết hợp sưu tập thẻ và thi đấu trực tiếp",
+      "summary": "Soccer Mobile Pro kết hợp meta xây dựng đội hình thẻ bài với trải nghiệm điều khiển thi đấu trực tiếp trên thiết bị di động.",
+      "tags": [
+        "claim",
+        "định hướng sản phẩm và trải nghiệm"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:livedata-operations:versioned-and-reversible-live-data",
+      "type": "claim",
+      "name": "Live data phải có phiên bản và khả năng hoàn tác",
+      "summary": "Mọi thay đổi schema, cấu hình và tài nguyên live service cần được xác thực, phê duyệt, triển khai theo giai đoạn, quan sát và có đường rollback.",
+      "tags": [
+        "claim",
+        "live service và vận hành"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:liveops-monetization-membership:server-verified-entitlements",
+      "type": "claim",
+      "name": "Quyền lợi mua hàng phải được máy chủ xác thực",
+      "summary": "Receipt phải được máy chủ xác thực và quyền lợi phải gắn với tài khoản, có log giao dịch cùng cơ chế retry để tránh thu tiền mà không cấp vật phẩm.",
+      "tags": [
+        "claim",
+        "live service và vận hành"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:match-systems-setpieces-controls:rules-engine-authoritative-var",
+      "type": "claim",
+      "name": "Luật engine quyết định, VAR chỉ trình bày",
+      "summary": "Kết quả VAR phải do luật engine quyết định; replay chỉ minh họa và lý do quyết định phải được ghi vào match log.",
+      "tags": [
+        "claim",
+        "gameplay trận đấu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "claim:ux-wireflows-states:flows-require-complete-states",
+      "type": "claim",
+      "name": "Mỗi luồng UX cần đầy đủ trạng thái vận hành",
+      "summary": "Các luồng cốt lõi phải xử lý rõ loading, empty, error, offline hoặc degraded, bảo trì và yêu cầu trợ năng thay vì chỉ mô tả đường đi thành công.",
+      "tags": [
+        "claim",
+        "định hướng sản phẩm và trải nghiệm"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "article:GDD-Soccer-Mobile-Pro",
+      "target": "topic:định-hướng-sản-phẩm-và-trải-nghiệm",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:UX-Wireflows-States",
+      "target": "topic:định-hướng-sản-phẩm-và-trải-nghiệm",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:Match-Systems-SetPieces-Controls",
+      "target": "topic:gameplay-trận-đấu",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:FC-Mobile-VN-Research",
+      "target": "topic:nghiên-cứu-và-kiểm-toán-phạm-vi",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:FC-Mobile-VN-Coverage-Audit",
+      "target": "topic:nghiên-cứu-và-kiểm-toán-phạm-vi",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:LiveData-Operations",
+      "target": "topic:live-service-và-vận-hành",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:LiveOps-Monetization-Membership",
+      "target": "topic:live-service-và-vận-hành",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:Competitive-Integrity-Esports",
+      "target": "topic:công-bằng-thi-đấu-và-esports",
+      "type": "categorized_under",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "article:Competitive-Integrity-Esports",
+      "target": "claim:competitive-integrity-esports:telemetry-backed-enforcement",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Bài viết cụ thể hóa cách telemetry, log trận và lịch sử xử lý tạo căn cứ cho báo cáo và chế tài."
+    },
+    {
+      "source": "article:FC-Mobile-VN-Coverage-Audit",
+      "target": "claim:fc-mobile-vn-coverage-audit:production-gaps-must-close",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Bài kiểm toán liệt kê trực tiếp các khoảng trống về quyền dữ liệu, công bằng online, thanh toán và vận hành cần xử lý."
+    },
+    {
+      "source": "article:FC-Mobile-VN-Research",
+      "target": "claim:fc-mobile-vn-research:separate-facts-from-inference",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Tài liệu chủ động phân tách nội dung được xác nhận công khai với suy luận sản phẩm và kỹ thuật."
+    },
+    {
+      "source": "article:GDD-Soccer-Mobile-Pro",
+      "target": "claim:gdd-soccer-mobile-pro:hybrid-football-design",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "GDD mô tả trực tiếp triết lý kết hợp meta thẻ bài với trải nghiệm thi đấu điều khiển trực tiếp."
+    },
+    {
+      "source": "article:LiveData-Operations",
+      "target": "claim:livedata-operations:versioned-and-reversible-live-data",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Bài viết quy định versioning, validation, staged rollout, feature flag, telemetry và rollback cho live data."
+    },
+    {
+      "source": "article:LiveOps-Monetization-Membership",
+      "target": "claim:liveops-monetization-membership:server-verified-entitlements",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Luồng nạp tiền yêu cầu xác thực receipt phía máy chủ, tạo entitlement theo tài khoản và chống cấp trùng hoặc mất quyền lợi."
+    },
+    {
+      "source": "article:Match-Systems-SetPieces-Controls",
+      "target": "claim:match-systems-setpieces-controls:rules-engine-authoritative-var",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Phần VAR nêu rõ luật engine là nguồn quyết định còn replay chỉ đóng vai trò minh họa."
+    },
+    {
+      "source": "article:UX-Wireflows-States",
+      "target": "claim:ux-wireflows-states:flows-require-complete-states",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Tài liệu mô tả đồng thời wireflow, trạng thái lỗi và suy giảm, cùng yêu cầu trợ năng cho các màn hình."
+    },
+    {
+      "source": "article:GDD-Soccer-Mobile-Pro",
+      "target": "entity:zgamevn",
+      "type": "authored_by",
+      "direction": "forward",
+      "weight": 0.6,
+      "description": "Phần đầu GDD ghi ZGameVN là chủ đầu tư và studio của tài liệu sản phẩm."
+    },
+    {
+      "source": "article:GDD-Soccer-Mobile-Pro",
+      "target": "article:FC-Mobile-VN-Research",
+      "type": "builds_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "description": "GDD cho biết thiết kế được tổng hợp từ các vòng nghiên cứu và dùng FC Mobile VN làm một nguồn cảm hứng chính."
+    },
+    {
+      "source": "article:FC-Mobile-VN-Coverage-Audit",
+      "target": "article:FC-Mobile-VN-Research",
+      "type": "builds_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "description": "Bài kiểm toán dùng trực tiếp tài liệu nghiên cứu FC Mobile VN làm nguồn để đánh giá độ bao phủ yêu cầu."
+    },
+    {
+      "source": "article:FC-Mobile-VN-Coverage-Audit",
+      "target": "article:GDD-Soccer-Mobile-Pro",
+      "type": "builds_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "description": "Ma trận bao phủ đối chiếu nhiều yêu cầu với các mục cụ thể trong GDD."
+    },
+    {
+      "source": "article:FC-Mobile-VN-Coverage-Audit",
+      "target": "article:Competitive-Integrity-Esports",
+      "type": "builds_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "description": "Kiểm toán lấy đặc tả công bằng thi đấu và esports làm căn cứ đánh giá phạm vi giải đấu và chống gian lận."
+    },
+    {
+      "source": "article:FC-Mobile-VN-Coverage-Audit",
+      "target": "article:LiveData-Operations",
+      "type": "builds_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "description": "Kiểm toán tham chiếu Live Data & Operations khi đánh giá player database và yêu cầu vận hành dữ liệu trước production."
+    },
+    {
+      "source": "entity:fc-mobile-vn",
+      "target": "claim:fc-mobile-vn-research:separate-facts-from-inference",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "FC Mobile VN là đối tượng tham chiếu mà tài liệu yêu cầu phân biệt dữ kiện công khai với suy luận thiết kế."
+    },
+    {
+      "source": "entity:efootball-mobile",
+      "target": "claim:gdd-soccer-mobile-pro:hybrid-football-design",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "eFootball Mobile được nêu làm ví dụ cho nhánh trải nghiệm thi đấu trực tiếp trong triết lý thiết kế kết hợp."
+    },
+    {
+      "source": "entity:google-play",
+      "target": "claim:liveops-monetization-membership:server-verified-entitlements",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "Google Play là nền tảng thanh toán cụ thể trong luồng yêu cầu máy chủ xác thực receipt và cấp entitlement."
+    },
+    {
+      "source": "entity:cms",
+      "target": "claim:livedata-operations:versioned-and-reversible-live-data",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "CMS là thành phần cụ thể thực thi quy trình preview, phê duyệt, kiểm tra và phát hành cấu hình live data."
+    },
+    {
+      "source": "entity:cdn",
+      "target": "claim:livedata-operations:versioned-and-reversible-live-data",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 0.7,
+      "description": "CDN minh họa cơ chế phân phối tài nguyên có hash, staged rollout và rollback pointer theo manifest."
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:định-hướng-sản-phẩm-và-trải-nghiệm",
+      "name": "Định hướng sản phẩm và trải nghiệm",
+      "description": "Định hướng sản phẩm và trải nghiệm (7 nodes)",
+      "nodeIds": [
+        "article:GDD-Soccer-Mobile-Pro",
+        "article:UX-Wireflows-States",
+        "topic:định-hướng-sản-phẩm-và-trải-nghiệm",
+        "claim:gdd-soccer-mobile-pro:hybrid-football-design",
+        "claim:ux-wireflows-states:flows-require-complete-states",
+        "entity:zgamevn",
+        "entity:efootball-mobile"
+      ]
+    },
+    {
+      "id": "layer:gameplay-trận-đấu",
+      "name": "Gameplay trận đấu",
+      "description": "Gameplay trận đấu (3 nodes)",
+      "nodeIds": [
+        "article:Match-Systems-SetPieces-Controls",
+        "topic:gameplay-trận-đấu",
+        "claim:match-systems-setpieces-controls:rules-engine-authoritative-var"
+      ]
+    },
+    {
+      "id": "layer:nghiên-cứu-và-kiểm-toán-phạm-vi",
+      "name": "Nghiên cứu và kiểm toán phạm vi",
+      "description": "Nghiên cứu và kiểm toán phạm vi (8 nodes)",
+      "nodeIds": [
+        "article:FC-Mobile-VN-Research",
+        "article:FC-Mobile-VN-Coverage-Audit",
+        "topic:nghiên-cứu-và-kiểm-toán-phạm-vi",
+        "claim:fc-mobile-vn-coverage-audit:production-gaps-must-close",
+        "claim:fc-mobile-vn-research:separate-facts-from-inference",
+        "entity:fc-mobile-vn",
+        "entity:google-play",
+        "entity:cms"
+      ]
+    },
+    {
+      "id": "layer:live-service-và-vận-hành",
+      "name": "Live service và vận hành",
+      "description": "Live service và vận hành (6 nodes)",
+      "nodeIds": [
+        "article:LiveData-Operations",
+        "article:LiveOps-Monetization-Membership",
+        "topic:live-service-và-vận-hành",
+        "claim:livedata-operations:versioned-and-reversible-live-data",
+        "claim:liveops-monetization-membership:server-verified-entitlements",
+        "entity:cdn"
+      ]
+    },
+    {
+      "id": "layer:công-bằng-thi-đấu-và-esports",
+      "name": "Công bằng thi đấu và esports",
+      "description": "Công bằng thi đấu và esports (3 nodes)",
+      "nodeIds": [
+        "article:Competitive-Integrity-Esports",
+        "topic:công-bằng-thi-đấu-và-esports",
+        "claim:competitive-integrity-esports:telemetry-backed-enforcement"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Định hướng sản phẩm và trải nghiệm",
+      "description": "Explore the Định hướng sản phẩm và trải nghiệm section (2 articles)",
+      "nodeIds": [
+        "article:GDD-Soccer-Mobile-Pro",
+        "article:UX-Wireflows-States"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Gameplay trận đấu",
+      "description": "Explore the Gameplay trận đấu section (1 articles)",
+      "nodeIds": [
+        "article:Match-Systems-SetPieces-Controls"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Nghiên cứu và kiểm toán phạm vi",
+      "description": "Explore the Nghiên cứu và kiểm toán phạm vi section (2 articles)",
+      "nodeIds": [
+        "article:FC-Mobile-VN-Research",
+        "article:FC-Mobile-VN-Coverage-Audit"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Live service và vận hành",
+      "description": "Explore the Live service và vận hành section (2 articles)",
+      "nodeIds": [
+        "article:LiveData-Operations",
+        "article:LiveOps-Monetization-Membership"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Công bằng thi đấu và esports",
+      "description": "Explore the Công bằng thi đấu và esports section (1 articles)",
+      "nodeIds": [
+        "article:Competitive-Integrity-Esports"
+      ]
+    }
+  ]
+}

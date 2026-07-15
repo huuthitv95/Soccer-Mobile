@@ -9,8 +9,8 @@
 [Mm]emoryCaptures/
 [Rr]ecordings/
 
-# Local analysis output
-.understand-anything/
+# Local analysis scratch output
+**/.understand-anything/.trash-*/
 
 # IDE generated files
 .vs/
