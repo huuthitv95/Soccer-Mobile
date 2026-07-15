@@ -685,6 +685,11 @@
       "fileCategory": "docs"
     },
     {
+      "path": "docs/product/ui-design-system-and-screen-catalogue.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
       "path": "docs/product/ux-wireflows-and-states.md",
       "language": "markdown",
       "fileCategory": "docs"
@@ -735,12 +740,37 @@
       "fileCategory": "docs"
     },
     {
+      "path": "docs/systems/account-localization-and-settings.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/systems/competitions-leagues-clubs-and-social.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
       "path": "docs/systems/competitive-integrity-and-esports.md",
       "language": "markdown",
       "fileCategory": "docs"
     },
     {
+      "path": "docs/systems/football-catalog-player-database-and-model-assets.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
       "path": "docs/systems/match-controls-set-pieces-and-var.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/systems/offline-ai-tactics-and-difficulty.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/systems/player-cards-skills-progression-market-and-exchange.md",
       "language": "markdown",
       "fileCategory": "docs"
     },

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "c4cc6c7de22b65ecf651b0293a2e3a5bbf5c70cf",
-  "generatedAt": "2026-07-15T04:03:41.627Z",
+  "gitCommitHash": "eede82279a4be3bd1d9dcdbe69cde04a702e0da0",
+  "generatedAt": "2026-07-15T05:37:31.758Z",
   "files": {
     ".gitattributes": {
       "filePath": ".gitattributes",
@@ -25,12 +25,12 @@
     },
     "AGENTS.md": {
       "filePath": "AGENTS.md",
-      "contentHash": "d72c2b1e3ee150836a7f15984ecfa0ebba75f4d73bdabe2246bc00c489b40b78",
+      "contentHash": "5bc0404929a22a1a9141d0db09bf10588e59e65589814e2139666883a4379b59",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 235,
+      "totalLines": 236,
       "hasStructuralAnalysis": true
     },
     "Assets/_LifeBar.unity": {
@@ -7040,97 +7040,97 @@
     },
     "docs/implementation/unity-implementation-audit-and-backlog.md": {
       "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
-      "contentHash": "fe22e46999708a3843bec3f03c6dd234fc4e54ce2a6e92f29319f9a0f50331eb",
+      "contentHash": "3ad94ade3ac8b5a0ca19312e385fe5566476ac838b339d56699446dca90b2fb5",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 283,
+      "totalLines": 289,
       "hasStructuralAnalysis": true
     },
     "docs/index.md": {
       "filePath": "docs/index.md",
-      "contentHash": "29dac8036e40f8c320f33c4adc04f0ed0e8a2a5462827d02cd71595c5af31189",
+      "contentHash": "6bff676f7a50b378b5c8192e032886dca4daff101a4d5f71377b2da2de4842ca",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 64,
+      "totalLines": 70,
       "hasStructuralAnalysis": true
     },
     "docs/operations/live-data-and-operations.md": {
       "filePath": "docs/operations/live-data-and-operations.md",
-      "contentHash": "3a8aeec8f0de3d6892493a42c13b57ea34871e8b64c496ee64c5135333bb0181",
+      "contentHash": "ca8b6cbab3e256220294833f0cb949208c93f3dcee7389eee584af806acc974f",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 51,
+      "totalLines": 69,
       "hasStructuralAnalysis": true
     },
     "docs/operations/liveops-monetization-and-membership.md": {
       "filePath": "docs/operations/liveops-monetization-and-membership.md",
-      "contentHash": "8564187640d6e678ea1835262a697011df53482af3d0deb29f60587f2b839c17",
+      "contentHash": "beb308cb749d96a78c0f05eff9d11f54dc1cb501e30b46cb1baa169e03f99fb0",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 57,
+      "totalLines": 77,
       "hasStructuralAnalysis": true
     },
     "docs/product/gdd-soccer-mobile-pro.md": {
       "filePath": "docs/product/gdd-soccer-mobile-pro.md",
-      "contentHash": "9a72346a8a280cafe9958aa1933e4c351c984a167af1d529a3096876ee737d81",
+      "contentHash": "cf57308888b1346117f2301cc728bb2a8a91f9a96cf3df27743a85a2660a19bf",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 523,
+      "totalLines": 540,
       "hasStructuralAnalysis": true
     },
     "docs/product/ux-wireflows-and-states.md": {
       "filePath": "docs/product/ux-wireflows-and-states.md",
-      "contentHash": "32c57cfbf79850b1cdc59d075eb6f1c67cdc22dd0313c03dec88a21d70057240",
+      "contentHash": "dc46b8e6848e0a96d2ccb59898426e2c14d08b612bd7abf70b0cfcad94cde4ac",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 75,
+      "totalLines": 83,
       "hasStructuralAnalysis": true
     },
     "docs/research/fc-mobile-vn-coverage-audit.md": {
       "filePath": "docs/research/fc-mobile-vn-coverage-audit.md",
-      "contentHash": "2cbb5489a94c139af84cb2ab210c780e7b52680d010c60540302d10df151a75b",
+      "contentHash": "e491575c20cdea42791885e1d85ddca4eb3fd14037e0929f093cac1c785b9157",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 84,
+      "totalLines": 81,
       "hasStructuralAnalysis": true
     },
     "docs/research/fc-mobile-vn-research.md": {
       "filePath": "docs/research/fc-mobile-vn-research.md",
-      "contentHash": "403623be38b43e7281c9e5d95718240b9901cc9b92294fe55eaba0e704bb0ae0",
+      "contentHash": "fe3139197b3cf3b1a01b1e90c0e0c9b552eec3a97eed47752f835bc6c5031fdd",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 153,
+      "totalLines": 162,
       "hasStructuralAnalysis": true
     },
     "docs/research/fc-mobile-vn-source-register.md": {
       "filePath": "docs/research/fc-mobile-vn-source-register.md",
-      "contentHash": "b867af4a5cd3535db68efa5843fdecab723c8b007045dfce3215d0ea9ee942a5",
+      "contentHash": "ca69f063cb720740e898b21ac81583b4c3aba1cee1aec35512761da751b89647",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 62,
+      "totalLines": 93,
       "hasStructuralAnalysis": true
     },
     "docs/research/video/01-login-account.md": {
       "filePath": "docs/research/video/01-login-account.md",
-      "contentHash": "2596d304b0b223ca97c4d75c79382cbfeeaffaa71080766eaaab615954da634c",
+      "contentHash": "f08b325cc0a15ff9527d31297833f9cc581e10e03cdccbe037e8a2d2e63bc993",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -7140,7 +7140,7 @@
     },
     "docs/research/video/02-home-liveops.md": {
       "filePath": "docs/research/video/02-home-liveops.md",
-      "contentHash": "2697b5ab7f7ed12c32323671d01b1fc8df2cc800678e5965a331f12f7ff8166f",
+      "contentHash": "62e00776ae20dc38d9251d1468ad7cce264ea903d9806428da91147d1170eba3",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -7150,7 +7150,7 @@
     },
     "docs/research/video/03-profile-settings.md": {
       "filePath": "docs/research/video/03-profile-settings.md",
-      "contentHash": "ca3b0c53b46f8485e1e618e1bac957035ff2e6270a171523e2ee507a9048df6f",
+      "contentHash": "ecd62ae9929f335be2a86d11c81d1fc090f2827c143d59d11d915ba2104c776b",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -7160,7 +7160,7 @@
     },
     "docs/research/video/04-club-squad-customization.md": {
       "filePath": "docs/research/video/04-club-squad-customization.md",
-      "contentHash": "a2aced7d1b0de379ed1a3b4da24e8fe8a34380fb4a2a164cb5cb68d3809017ee",
+      "contentHash": "b16a19dbbef34fb2a0220a41e5e82a1216d39c6a4e560165247bd4bbfd028d91",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -7170,7 +7170,7 @@
     },
     "docs/research/video/05-exchange-missions-events.md": {
       "filePath": "docs/research/video/05-exchange-missions-events.md",
-      "contentHash": "4fadee6872fbb38fe47af13161d2317b8113d406286a27cdfc4907bf873e85c7",
+      "contentHash": "c433b6939d09291b08e9f77300c7e69118ddebee7dafad3d070902490b94932f",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -7180,32 +7180,32 @@
     },
     "docs/research/video/ui-pattern-synthesis.md": {
       "filePath": "docs/research/video/ui-pattern-synthesis.md",
-      "contentHash": "46a6ef31640e698c23c90f899f135ed44551216bb88bdb72d19f6599d94c5520",
+      "contentHash": "560996328fdca4d44e145a3fcecc4cc48a78006f91ccd204e403c8498156bd68",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 121,
+      "totalLines": 136,
       "hasStructuralAnalysis": true
     },
     "docs/systems/competitive-integrity-and-esports.md": {
       "filePath": "docs/systems/competitive-integrity-and-esports.md",
-      "contentHash": "f2c2f2ab40c417f8125b505a84a887f011ff2a66dc65c00a576119a38e8344fc",
+      "contentHash": "a49e8c33d533853de342aeb53e03fd9af9d617952c2bbac3e10d162360a9dd9d",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 69,
+      "totalLines": 93,
       "hasStructuralAnalysis": true
     },
     "docs/systems/match-controls-set-pieces-and-var.md": {
       "filePath": "docs/systems/match-controls-set-pieces-and-var.md",
-      "contentHash": "e992efa7d0d752417f2e50ceaeb2c85c4f1bc7d3a97d2e02593c165201791304",
+      "contentHash": "eb8aaad7ba91d14aba547f45ccde9ea6ed2d1b66389de060556890f9bb0f1efc",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 73,
+      "totalLines": 93,
       "hasStructuralAnalysis": true
     },
     "Packages/manifest.json": {
@@ -7296,6 +7296,66 @@
       "imports": [],
       "exports": [],
       "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "docs/product/ui-design-system-and-screen-catalogue.md": {
+      "filePath": "docs/product/ui-design-system-and-screen-catalogue.md",
+      "contentHash": "718e0301344f1f9b1d64d66df7c8d5d2184ccbbbec379f75fc991cd38aa362e3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 122,
+      "hasStructuralAnalysis": true
+    },
+    "docs/systems/account-localization-and-settings.md": {
+      "filePath": "docs/systems/account-localization-and-settings.md",
+      "contentHash": "0dcc7fd4f0db7f7ddcefa71991b9ecf5d9659ab77bf8b5022cdbb868368789b3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "docs/systems/competitions-leagues-clubs-and-social.md": {
+      "filePath": "docs/systems/competitions-leagues-clubs-and-social.md",
+      "contentHash": "944dc867914210279e577e82c712f1c49c96c7a815b31b99a0871536111d4535",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "docs/systems/football-catalog-player-database-and-model-assets.md": {
+      "filePath": "docs/systems/football-catalog-player-database-and-model-assets.md",
+      "contentHash": "08aeae025b5810f57ef666b38e9d99baaa74049f4ca7f9c72b473f63195f1f16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 92,
+      "hasStructuralAnalysis": true
+    },
+    "docs/systems/offline-ai-tactics-and-difficulty.md": {
+      "filePath": "docs/systems/offline-ai-tactics-and-difficulty.md",
+      "contentHash": "3f71f9701c80945ff58cfce9c0bce199de170c8d86f920108fd89e156a20fcae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "docs/systems/player-cards-skills-progression-market-and-exchange.md": {
+      "filePath": "docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "contentHash": "83b546f3179ebb3d3ac2384ef9c5638a3e0e420353224348e0d2d26cbc5992ef",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 92,
       "hasStructuralAnalysis": true
     }
   }

@@ -19,6 +19,8 @@
 
 ## 1. Understand brief
 
+**Baseline audit:** content commit `eede822`, kiểm tra lại ngày 15/07/2026. Đợt này chỉ đọc `Assets/`, `Packages/`, `ProjectSettings/` và đối chiếu tài liệu; không sửa runtime/config. Knowledge graph được refresh sau khi chốt content commit, nên metadata graph tham chiếu commit nội dung trước graph commit.
+
 ### 1.1 Nhiệm vụ và ranh giới hệ thống
 
 - **Nhiệm vụ:** đối chiếu source Unity với định hướng sản phẩm cho luồng khởi động, menu, trận đấu, điều khiển, dữ liệu bóng đá, tài khoản, thẻ cầu thủ, VAR và AI offline; chuyển khoảng trống thành backlog có thể bàn giao.
@@ -32,7 +34,7 @@
 | Khởi động | `SplashVideoSequencePlayer` trong `SplashScene` | Phát chuỗi video bằng `VideoPlayer`, quản lý render texture/audio và tải `MainMenu`. |
 | Điều hướng | `ButtonAction`, `GUI_MainMenu`, `GameManager` | Chọn quick match/cup, đội, vòng đấu và chuyển scene bằng tên chuỗi. |
 | Khởi tạo trận | `InitGame`, `KickOffController` | Áp lựa chọn đội/trận, reset trạng thái hiệp/trận, điều phối kickoff và kết quả. |
-| Input và người chơi | `SoccerInput`, `Joystick`, `Player` | Chuẩn hóa Enhanced Touch/keyboard; chọn cầu thủ gần bóng; di chuyển, sprint, pass, shoot, tackle. |
+| Input và người chơi | `SoccerInput`, `Joystick`, `Player` | Adapter Enhanced Touch + keyboard/gamepad; gameplay keyboard/gamepad chủ yếu nhánh Editor, gamepad Start/Pause dùng runtime; chọn cầu thủ gần bóng và action prototype. |
 | AI offline | `AI_Striker`, `AI_MidfielderScript`, `AI_DefenderScript`, goalkeeper scripts | Di chuyển theo khoảng cách/vị trí, lựa chọn chuyền/sút bằng ngưỡng và timer. |
 | Bóng và luật cơ bản | `BallScript`, goal/foul/corner handler scripts | Quyền sở hữu bóng, Rigidbody impulse, bàn thắng, foul, corner và goalkeeper restart. |
 | Trình bày trận | `animationControllernew`, `RadarSystem`, score/time controllers, `AudioManager` | Legacy `Animation`, HUD/OnGUI, radar, âm thanh và trạng thái pause/result. |
@@ -65,7 +67,7 @@ SplashScene / SplashVideoSequencePlayer
 - Scene name, animation clip name, tag, `PlayerPrefs` key và `GameObject.Find(...)` là contract ẩn không được type-check.
 - Static flags trong role AI và `Player.noControls` có nguy cơ tồn tại qua vòng đời scene/domain reload không như mong muốn.
 - Dữ liệu serialized nằm rải trong scene/prefab/Inspector; chưa có assembly boundary hoặc ScriptableObject catalog rõ ràng.
-- Package Input System 1.14.2 và Addressables được cài, nhưng không có `.inputactions`; source dùng wrapper Enhanced Touch/keyboard và prefab joystick. Việc package tồn tại không đồng nghĩa hệ thống input/catalog mục tiêu đã triển khai.
+- Package Input System 1.14.2 được cài; Addressables 1.19.19 là dependency gián tiếp qua importer. Không có `.inputactions`; source dùng adapter Enhanced Touch + keyboard/gamepad và prefab joystick. Gameplay keyboard/gamepad hiện chủ yếu trong nhánh `UNITY_EDITOR`, ngoại trừ pause runtime. Default Addressables group trống và Build Addressables with Player tắt; package/config tồn tại không đồng nghĩa input/catalog mục tiêu đã triển khai.
 
 ### 1.5 Test, rủi ro và rollback
 
@@ -90,6 +92,8 @@ SplashScene / SplashVideoSequencePlayer
 | Input Actions asset | 0 | Không có `.inputactions`; Input System package vẫn được tham chiếu bởi `SoccerInput`. |
 | Automated C# test | 0 | Không có test file hoặc test attribute trong `Assets/`. |
 | Package đáng chú ý | Input System, Addressables, Cinemachine, Test Framework, URP | Cài package không chứng minh có implementation sản phẩm tương ứng. |
+
+`Assets/AddressableAssetsData/AddressableAssetSettings.asset` tồn tại, nhưng chưa phải football catalog/model delivery contract nêu trong [catalog spec](../systems/football-catalog-player-database-and-model-assets.md). Tương tự, Input System package và wrapper `SoccerInput` không thay thế `.inputactions`/action map theo context.
 
 Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, không chạy codegen, formatter hay thao tác Unity Editor.
 
@@ -128,6 +132,8 @@ Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, khô
 | VAR | Chưa có | Deterministic rule outcome, incident record, presentation-only replay/timeline và fail-safe skip. |
 | AI offline | Heuristic | Tactical/role/decision architecture, seeded simulation, difficulty tuning, scenario suite; nếu dùng ML cần dataset governance và model fallback. |
 | Telemetry/testability | Chưa có | Event schema, privacy/consent, crash/performance metrics, automated domain/match/UI suites và assembly boundary. |
+
+Authority đặc tả cho các khoảng trống: [account/settings](../systems/account-localization-and-settings.md), [competition/social](../systems/competitions-leagues-clubs-and-social.md), [catalog/model](../systems/football-catalog-player-database-and-model-assets.md), [cards/progression/market](../systems/player-cards-skills-progression-market-and-exchange.md), [offline AI](../systems/offline-ai-tactics-and-difficulty.md), [controls/VAR](../systems/match-controls-set-pieces-and-var.md) và [UI catalogue](../product/ui-design-system-and-screen-catalogue.md). Backlog bên dưới là handoff implementation cho các contract này; trạng thái “decision-complete” trong docs không thay đổi trạng thái code “chưa có”.
 
 <a id="backlog-p0"></a>
 

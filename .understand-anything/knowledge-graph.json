@@ -16,8 +16,8 @@
       "Addressables"
     ],
     "description": "Dự án game bóng đá mobile Unity; graph tập trung vào runtime, scene/prefab, cấu hình và tài liệu domain đã chuẩn hóa.",
-    "analyzedAt": "2026-07-15T04:03:41.627Z",
-    "gitCommitHash": "c4cc6c7de22b65ecf651b0293a2e3a5bbf5c70cf"
+    "analyzedAt": "2026-07-15T05:37:31.758Z",
+    "gitCommitHash": "eede82279a4be3bd1d9dcdbe69cde04a702e0da0"
   },
   "nodes": [
     {
@@ -46,20 +46,18 @@
       "tags": [
         "config",
         ".markdownlint.jsonc"
-      ]
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:AGENTS.md",
       "type": "document",
       "name": "AGENTS.md",
       "filePath": "AGENTS.md",
-      "summary": "Tài liệu AGENTS.md — Soccer Mobile Pro: You are working in **Soccer Mobile Pro**, a Unity mobile-football project. Your objective is to improve the game system safely and incrementally while keeping implementation, design documentation, tests, and production c",
+      "summary": "Tai lieu AGENTS.md — Soccer Mobile Pro: You are working in Soccer Mobile Pro, a Unity mobile-football project. Your objective is to improve the game system safely and incrementally while keeping implementation, design documentation, tests, and production constraints aligned.",
       "tags": [
-        "documentation",
-        "soccer-mobile-pro",
-        "product-spec",
         "document",
-        "agents.md"
+        "project"
       ],
       "complexity": "moderate",
       "language": "markdown"
@@ -2437,204 +2435,237 @@
       "type": "document",
       "name": "unity-implementation-audit-and-backlog.md",
       "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
-      "summary": "Tài liệu Audit triển khai Unity và backlog kỹ thuật: - [1. Understand brief](#understand-brief)",
+      "summary": "Tai lieu Audit triển khai Unity và backlog kỹ thuật: Mốc kiểm tra: 15/07/2026. Tài liệu này mô tả trạng thái quan sát được trong checkout hiện tại, không khẳng định kiến trúc nội bộ của FC Mobile VN và không thay đổi mã runtime.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "implementation"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/index.md",
       "type": "document",
       "name": "index.md",
       "filePath": "docs/index.md",
-      "summary": "Tài liệu Soccer Mobile Pro — chỉ mục tài liệu: Đây là cổng vào duy nhất của knowledge wiki. Tài liệu được chia theo domain để mỗi quyết định chỉ có một nơi chịu trách nhiệm, còn các trang khác dùng liên kết tương đối thay vì sao chép nội dung.",
+      "summary": "Tai lieu Soccer Mobile Pro — chỉ mục tài liệu: Đây là cổng vào duy nhất của knowledge wiki. Tài liệu được chia theo domain để mỗi quyết định chỉ có một nơi chịu trách nhiệm, còn các trang khác dùng liên kết tương đối thay vì sao chép nội dung.",
       "language": "markdown",
       "tags": [
         "document",
         "docs"
-      ]
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/operations/live-data-and-operations.md",
       "type": "document",
       "name": "live-data-and-operations.md",
       "filePath": "docs/operations/live-data-and-operations.md",
-      "summary": "Tài liệu Live data và operations: Vận hành catalog cầu thủ/CLB/giải, card program, economy, event và asset theo version có thể audit/rollback. Server là authority cho inventory, currency, progression, purchase, market và reward grant; client chỉ cache/pr",
+      "summary": "Tai lieu Live data và operations: Vận hành catalog cầu thủ/CLB/giải, card program, economy, event và asset theo version có thể audit/rollback. Server là authority cho inventory, currency, progression, purchase, market và reward grant; client chỉ cache/projection.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "operations"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/operations/liveops-monetization-and-membership.md",
       "type": "document",
       "name": "liveops-monetization-and-membership.md",
       "filePath": "docs/operations/liveops-monetization-and-membership.md",
-      "summary": "Tài liệu LiveOps, monetization và membership: Tạo live service minh bạch, có entitlement server-side, tôn trọng thời gian người chơi và không biến progression thành nghĩa vụ. Mọi ngưỡng, giá và quyền lợi bên dưới là **đề xuất cho Soccer Mobile Pro**, không phải xác ",
+      "summary": "Tai lieu LiveOps, monetization và membership: Tạo live service minh bạch, có entitlement server-side, tôn trọng thời gian người chơi và không biến progression thành nghĩa vụ. Mọi ngưỡng, giá và quyền lợi bên dưới là đề xuất cho Soccer Mobile Pro, không phải xác nhận cơ chế nội bộ FC Mobile VN.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "operations"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "document",
       "name": "gdd-soccer-mobile-pro.md",
       "filePath": "docs/product/gdd-soccer-mobile-pro.md",
-      "summary": "Tài liệu Soccer Mobile Pro — Game Design Document: 1. [Tổng quan và tầm nhìn](#section-1)",
+      "summary": "Tai lieu Soccer Mobile Pro — Game Design Document: Chủ đầu tư / Studio: ZGameVN",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "product"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/product/ux-wireflows-and-states.md",
       "type": "document",
       "name": "ux-wireflows-and-states.md",
       "filePath": "docs/product/ux-wireflows-and-states.md",
-      "summary": "Tài liệu UX wireflows và trạng thái UI: Đặc tả này định nghĩa điều hướng, trạng thái bất đồng bộ, accessibility và contract UX dùng chung. Hình ảnh FC Mobile VN chỉ là tham chiếu; Soccer Mobile Pro dùng hệ thống hình ảnh và dữ liệu riêng.",
+      "summary": "Tai lieu UX wireflows và trạng thái UI: Đặc tả này định nghĩa điều hướng, trạng thái bất đồng bộ, accessibility và contract UX dùng chung. Hình ảnh FC Mobile VN chỉ là tham chiếu; Soccer Mobile Pro dùng hệ thống hình ảnh và dữ liệu riêng.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "product"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "type": "document",
       "name": "fc-mobile-vn-coverage-audit.md",
       "filePath": "docs/research/fc-mobile-vn-coverage-audit.md",
-      "summary": "Tài liệu Kiểm toán độ phủ yêu cầu FC Mobile VN: Ma trận này là authority về độ phủ của yêu cầu nghiên cứu tại mốc **15/07/2026**. “Đủ” nghĩa là đã ghi rõ bằng chứng công khai, giới hạn và đề xuất cần thiết; không có nghĩa đã biết nội bộ EA/Garena. “Một phần” nghĩa là ",
+      "summary": "Tai lieu Kiểm toán độ phủ yêu cầu FC Mobile VN: Ma trận này là authority về độ phủ tại mốc 15/07/2026. Ba cột được chấm độc lập: Research chỉ hỏi claim có nguồn hoặc kết luận “không công khai”; Spec hỏi contract có đủ state/authority/version/failure/QA/rollback; Unity chỉ phản ánh code hiện hữu. Một section tồn tại không tự động được tính hoàn thành.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/fc-mobile-vn-research.md",
       "type": "document",
       "name": "fc-mobile-vn-research.md",
       "filePath": "docs/research/fc-mobile-vn-research.md",
-      "summary": "Tài liệu Nghiên cứu tham chiếu FC Mobile VN: - **[Thông tin công khai đã xác minh]** FC Mobile VN là bản Garena phát hành trên iOS/Android, mở server 16/10/2025, có giao diện tiếng Việt và layout cảm ứng được tối ưu. Nguồn: [S01](https://fcmobile.garena.vn/fc-mobil",
+      "summary": "Tai lieu Nghiên cứu tham chiếu FC Mobile VN: Mốc nghiên cứu: 15/07/2026  ",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/fc-mobile-vn-source-register.md",
       "type": "document",
       "name": "fc-mobile-vn-source-register.md",
       "filePath": "docs/research/fc-mobile-vn-source-register.md",
-      "summary": "Tài liệu Sổ nguồn nghiên cứu FC Mobile VN: Tài liệu này là danh mục nguồn có thẩm quyền cho nghiên cứu FC Mobile VN, chốt dữ liệu đến **15/07/2026**. Nội dung trang web được truy cập ngày **15/07/2026**; ngày xuất bản được ghi riêng khi trang có cung cấp.",
+      "summary": "Tai lieu Sổ nguồn nghiên cứu FC Mobile VN: Tài liệu này là danh mục nguồn có thẩm quyền cho nghiên cứu FC Mobile VN, chốt dữ liệu đến 15/07/2026. Nội dung trang web được truy cập ngày 15/07/2026; ngày xuất bản được ghi riêng khi trang có cung cấp.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/video/01-login-account.md",
       "type": "document",
       "name": "01-login-account.md",
       "filePath": "docs/research/video/01-login-account.md",
-      "summary": "Tài liệu Phân tích video 01 — Đăng nhập và liên kết tài khoản: - [1. Phạm vi và bằng chứng](#scope)",
+      "summary": "Tai lieu Phân tích video 01 — Đăng nhập và liên kết tài khoản: Nhãn bằng chứng: Toàn bộ mô tả trực quan dưới đây là Quan sát từ video, không phải xác nhận kiến trúc nội bộ của FC Mobile VN. Whisper và Tesseract không có trên máy tại thời điểm phân tích, vì vậy không có phiên âm âm thanh hoặc OCR tự động; chữ được đọc thủ công từ frame rõ nét.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/video/02-home-liveops.md",
       "type": "document",
       "name": "02-home-liveops.md",
       "filePath": "docs/research/video/02-home-liveops.md",
-      "summary": "Tài liệu Phân tích video 02 — Home và live operations: - [1. Phạm vi và bằng chứng](#scope)",
+      "summary": "Tai lieu Phân tích video 02 — Home và live operations: Nhãn bằng chứng: Các mô tả là Quan sát từ video. Whisper/Tesseract không khả dụng, nên audio bị bỏ qua và không có OCR tự động; nhãn màn hình được đọc thủ công.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/video/03-profile-settings.md",
       "type": "document",
       "name": "03-profile-settings.md",
       "filePath": "docs/research/video/03-profile-settings.md",
-      "summary": "Tài liệu Phân tích video 03 — Hồ sơ, bạn bè và cài đặt: - [1. Phạm vi và bằng chứng](#scope)",
+      "summary": "Tai lieu Phân tích video 03 — Hồ sơ, bạn bè và cài đặt: Nhãn bằng chứng: Nội dung dưới đây là Quan sát từ video ở chế độ visual-first. Whisper và Tesseract không khả dụng; không phiên âm audio và không OCR tự động.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/video/04-club-squad-customization.md",
       "type": "document",
       "name": "04-club-squad-customization.md",
       "filePath": "docs/research/video/04-club-squad-customization.md",
-      "summary": "Tài liệu Phân tích video 04 — Câu lạc bộ, đội hình và tùy biến: - [1. Phạm vi và bằng chứng](#scope)",
+      "summary": "Tai lieu Phân tích video 04 — Câu lạc bộ, đội hình và tùy biến: Nhãn bằng chứng: Mô tả là Quan sát từ video. Video chứng minh cách model được trình bày, không chứng minh pipeline import/model bundle nội bộ. Whisper/Tesseract không khả dụng; audio bị bỏ qua, chữ đọc thủ công.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/video/05-exchange-missions-events.md",
       "type": "document",
       "name": "05-exchange-missions-events.md",
       "filePath": "docs/research/video/05-exchange-missions-events.md",
-      "summary": "Tài liệu Phân tích video 05 — Ngoại hình, trao đổi, nhiệm vụ và sự kiện: - [1. Phạm vi và bằng chứng](#scope)",
+      "summary": "Tai lieu Phân tích video 05 — Ngoại hình, trao đổi, nhiệm vụ và sự kiện: Nhãn bằng chứng: Các chi tiết là Quan sát từ video. Whisper/Tesseract không có trên máy; phân tích bỏ qua audio và không dùng OCR tự động.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "document",
       "name": "ui-pattern-synthesis.md",
       "filePath": "docs/research/video/ui-pattern-synthesis.md",
-      "summary": "Tài liệu Tổng hợp mẫu UI/UX từ bộ video tham chiếu: - [1. Phạm vi và phương pháp](#method)",
+      "summary": "Tai lieu Tổng hợp mẫu UI/UX từ bộ video tham chiếu: Tài liệu tổng hợp năm video do người dùng cung cấp, phân tích visual-first bằng `ffprobe`, contact sheet có timestamp và key frame chọn lọc. Mọi nhận định được phân loại như sau:",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "research"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/systems/competitive-integrity-and-esports.md",
       "type": "document",
       "name": "competitive-integrity-and-esports.md",
       "filePath": "docs/systems/competitive-integrity-and-esports.md",
-      "summary": "Tài liệu Competitive integrity, báo cáo gian lận và esports: - Bảo vệ người chơi chân chính khỏi hành vi gian lận, sử dụng phần mềm thứ ba.",
+      "summary": "Tai lieu Competitive integrity, báo cáo gian lận và esports: - Bảo vệ người chơi chân chính khỏi hành vi gian lận, sử dụng phần mềm thứ ba.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "systems"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "type": "document",
       "name": "match-controls-set-pieces-and-var.md",
       "filePath": "docs/systems/match-controls-set-pieces-and-var.md",
-      "summary": "Tài liệu Match controls, set pieces và VAR: Tạo control model dễ học nhưng có skill ceiling, đồng thời tách quyết định luật khỏi lớp trình bày VAR. Match simulation/server là authority cho ranked; client gửi intent có timestamp, không gửi kết quả.",
+      "summary": "Tai lieu Match controls, set pieces và VAR: Tạo control model dễ học nhưng có skill ceiling, đồng thời tách quyết định luật khỏi lớp trình bày VAR. Match simulation/server là authority cho ranked; client gửi intent có timestamp, không gửi kết quả.",
       "language": "markdown",
       "tags": [
         "document",
-        "docs"
-      ]
+        "docs",
+        "systems"
+      ],
+      "complexity": "moderate"
     },
     {
       "id": "config:Packages/manifest.json",
@@ -2776,16 +2807,12 @@
       "type": "document",
       "name": "README.md",
       "filePath": "README.md",
-      "summary": "Tài liệu Soccer Mobile Pro: Soccer Mobile Pro là prototype game bóng đá mobile xây dựng bằng Unity 2022.3 LTS. Checkout hiện tại tập trung vào match prototype, scene flow, điều khiển cảm ứng legacy và AI heuristic; các hệ thống live service trong G",
+      "summary": "Tai lieu Soccer Mobile Pro: Soccer Mobile Pro là prototype game bóng đá mobile xây dựng bằng Unity 2022.3 LTS. Checkout hiện tại tập trung vào match prototype, scene flow, điều khiển cảm ứng legacy và AI heuristic; các hệ thống live service trong GDD là định hướng/backlog, không phải toàn bộ đã được triển khai.",
       "tags": [
-        "documentation",
-        "project-overview",
-        "unity",
-        "entry-point",
         "document",
-        "readme.md"
+        "project"
       ],
-      "complexity": "simple",
+      "complexity": "moderate",
       "language": "markdown"
     },
     {
@@ -7784,6 +7811,90 @@
         "runtime-logic"
       ],
       "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "type": "document",
+      "name": "ui-design-system-and-screen-catalogue.md",
+      "filePath": "docs/product/ui-design-system-and-screen-catalogue.md",
+      "summary": "Tai lieu UI design system và screen catalogue: Tài liệu định nghĩa contract trình bày để design, product và Unity UI cùng dùng. Đây là Đề xuất cho Soccer Mobile Pro, không phải bản sao pixel của FC Mobile VN. Video chỉ cung cấp pattern app shell, hub/detail, CTA, modal, loading và preview; giá trị cụ thể dưới đây là token khởi điểm cần kiểm tra trên thiết bị.",
+      "language": "markdown",
+      "complexity": "moderate",
+      "tags": [
+        "document",
+        "docs",
+        "product"
+      ]
+    },
+    {
+      "id": "document:docs/systems/account-localization-and-settings.md",
+      "type": "document",
+      "name": "account-localization-and-settings.md",
+      "filePath": "docs/systems/account-localization-and-settings.md",
+      "summary": "Tai lieu Account, localization và settings: Mục tiêu: first launch có locale/consent rõ; Guest nâng cấp an toàn; session phục hồi đa thiết bị; setting có owner/default/scope/version. Non-goal: sao chép provider policy Global sang Garena, lưu credential trong Unity, hoặc tự merge hai inventory có xung đột. S09 là tham chiếu Global; provider Soccer Mobile Pro phải được product/legal khóa riêng.",
+      "language": "markdown",
+      "complexity": "moderate",
+      "tags": [
+        "document",
+        "docs",
+        "systems"
+      ]
+    },
+    {
+      "id": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "type": "document",
+      "name": "competitions-leagues-clubs-and-social.md",
+      "filePath": "docs/systems/competitions-leagues-clubs-and-social.md",
+      "summary": "Tai lieu Competitions, leagues, clubs và social: Mục tiêu: tách rõ `Competition` bóng đá, `LeagueGroup` cộng đồng, ranked `Season` và esports `Tournament`; hỗ trợ club/roster có hiệu lực theo mùa và social an toàn. Non-goal: suy toàn bộ license từ một event UCL hoặc gọi League bang hội là giải bóng đá.",
+      "language": "markdown",
+      "complexity": "moderate",
+      "tags": [
+        "document",
+        "docs",
+        "systems"
+      ]
+    },
+    {
+      "id": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "document",
+      "name": "football-catalog-player-database-and-model-assets.md",
+      "filePath": "docs/systems/football-catalog-player-database-and-model-assets.md",
+      "summary": "Tai lieu Football catalog, player database và model assets: Mục tiêu: catalog versioned cho identity/ratings/items và manifest asset 3D có fallback theo tier. Non-goal: mô tả endpoint, database engine, CDN, chữ ký hoặc pipeline face scan nội bộ EA/Garena. Không nguồn S01–S19 công khai các chi tiết đó; kiến trúc dưới đây chỉ dành cho Soccer Mobile Pro, tham chiếu T03/T04.",
+      "language": "markdown",
+      "complexity": "moderate",
+      "tags": [
+        "document",
+        "docs",
+        "systems"
+      ]
+    },
+    {
+      "id": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "type": "document",
+      "name": "offline-ai-tactics-and-difficulty.md",
+      "filePath": "docs/systems/offline-ai-tactics-and-difficulty.md",
+      "summary": "Tai lieu Offline AI, tactics và difficulty: Mục tiêu: AI offline tạo shape/role/decision bóng đá có thể giải thích, deterministic theo seed để test, và difficulty thay hành vi chứ không buff ẩn. Non-goal: khẳng định FC Mobile VN dùng ML/RL, tự học từ dữ liệu người chơi trên thiết bị, hoặc dùng NavMesh làm toàn bộ football AI. S03 chỉ xác nhận chế độ giả lập; T05 là tham chiếu R&D scenario, không phải production algorithm.",
+      "language": "markdown",
+      "complexity": "moderate",
+      "tags": [
+        "document",
+        "docs",
+        "systems"
+      ]
+    },
+    {
+      "id": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "type": "document",
+      "name": "player-cards-skills-progression-market-and-exchange.md",
+      "filePath": "docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "summary": "Tai lieu Player cards, skills, progression, market và exchange: Mục tiêu: card instance, skill taxonomy, upgrade và market/exchange có preview/receipt, server authority và meaningful trade-off. Non-goal: hard-code vật phẩm/công thức FC Mobile theo một version, dùng progression thay core fun, hoặc cho client tính/grant kết quả. S08/S11 có drift nên mọi rule phải versioned.",
+      "language": "markdown",
+      "complexity": "moderate",
+      "tags": [
+        "document",
+        "docs",
+        "systems"
+      ]
     }
   ],
   "edges": [
@@ -10703,582 +10814,1305 @@
       "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "target": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "target": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "target": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "target": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "target": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:README.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/product/ux-wireflows-and-states.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/fc-mobile-vn-source-register.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/video/01-login-account.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/video/02-home-liveops.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/video/03-profile-settings.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/video/04-club-squad-customization.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/research/video/05-exchange-missions-events.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/systems/competitive-integrity-and-esports.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/operations/live-data-and-operations.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/operations/liveops-monetization-and-membership.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/index.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/operations/live-data-and-operations.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/operations/live-data-and-operations.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/operations/live-data-and-operations.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/operations/liveops-monetization-and-membership.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/operations/liveops-monetization-and-membership.md",
       "target": "document:docs/operations/live-data-and-operations.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/operations/liveops-monetization-and-membership.md",
       "target": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/operations/liveops-monetization-and-membership.md",
+      "target": "document:docs/research/fc-mobile-vn-source-register.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/research/fc-mobile-vn-source-register.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/operations/liveops-monetization-and-membership.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/systems/competitive-integrity-and-esports.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/product/ux-wireflows-and-states.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/operations/live-data-and-operations.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/gdd-soccer-mobile-pro.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "target": "document:docs/index.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "target": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "target": "document:docs/product/ux-wireflows-and-states.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "target": "document:docs/research/video/ui-pattern-synthesis.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/ux-wireflows-and-states.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/ux-wireflows-and-states.md",
       "target": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/ux-wireflows-and-states.md",
+      "target": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/ux-wireflows-and-states.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/ux-wireflows-and-states.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/product/ux-wireflows-and-states.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "target": "document:docs/research/fc-mobile-vn-source-register.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
-      "target": "document:docs/research/video/03-profile-settings.md",
+      "target": "document:docs/product/ui-design-system-and-screen-catalogue.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/systems/competitive-integrity-and-esports.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "target": "document:docs/operations/liveops-monetization-and-membership.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-research.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-research.md",
       "target": "document:docs/research/fc-mobile-vn-source-register.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-research.md",
       "target": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-research.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-research.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-source-register.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-source-register.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/fc-mobile-vn-source-register.md",
       "target": "document:docs/research/fc-mobile-vn-coverage-audit.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/01-login-account.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/01-login-account.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/02-home-liveops.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/02-home-liveops.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/03-profile-settings.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/03-profile-settings.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/04-club-squad-customization.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/04-club-squad-customization.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/05-exchange-missions-events.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/05-exchange-missions-events.md",
       "target": "document:docs/research/video/ui-pattern-synthesis.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/ui-pattern-synthesis.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/ui-pattern-synthesis.md",
       "target": "document:docs/research/video/01-login-account.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/ui-pattern-synthesis.md",
       "target": "document:docs/research/video/02-home-liveops.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/ui-pattern-synthesis.md",
       "target": "document:docs/research/video/03-profile-settings.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/ui-pattern-synthesis.md",
       "target": "document:docs/research/video/04-club-squad-customization.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/research/video/ui-pattern-synthesis.md",
       "target": "document:docs/research/video/05-exchange-missions-events.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/index.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/product/ux-wireflows-and-states.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/research/fc-mobile-vn-source-register.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/index.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/research/fc-mobile-vn-research.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/systems/competitive-integrity-and-esports.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/systems/competitive-integrity-and-esports.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/systems/competitive-integrity-and-esports.md",
       "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/systems/competitive-integrity-and-esports.md",
       "target": "document:docs/operations/live-data-and-operations.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitive-integrity-and-esports.md",
+      "target": "document:docs/research/fc-mobile-vn-source-register.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/index.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/research/fc-mobile-vn-research.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/research/fc-mobile-vn-source-register.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "target": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:docs/systems/match-controls-set-pieces-and-var.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/index.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/research/fc-mobile-vn-research.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/index.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/operations/liveops-monetization-and-membership.md",
+      "type": "documents",
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:README.md",
       "target": "document:docs/index.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:README.md",
       "target": "document:docs/product/gdd-soccer-mobile-pro.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:README.md",
       "target": "document:docs/research/fc-mobile-vn-research.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
     },
     {
       "source": "document:README.md",
       "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
       "type": "documents",
-      "label": "liên kết tài liệu",
-      "weight": 0.5
+      "label": "lien ket tai lieu",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/index.md",
+      "target": "document:docs/research/fc-mobile-vn-coverage-audit.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/product/ux-wireflows-and-states.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/product/ux-wireflows-and-states.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/research/fc-mobile-vn-source-register.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/systems/competitive-integrity-and-esports.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/operations/liveops-monetization-and-membership.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/systems/match-controls-set-pieces-and-var.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitive-integrity-and-esports.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitive-integrity-and-esports.md",
+      "target": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitive-integrity-and-esports.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/operations/liveops-monetization-and-membership.md",
+      "target": "document:docs/operations/live-data-and-operations.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/operations/liveops-monetization-and-membership.md",
+      "target": "document:docs/systems/account-localization-and-settings.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/gdd-soccer-mobile-pro.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/product/ui-design-system-and-screen-catalogue.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/account-localization-and-settings.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/competitions-leagues-clubs-and-social.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+      "target": "document:docs/implementation/unity-implementation-audit-and-backlog.md",
+      "type": "depends_on",
+      "label": "phu thuoc authority",
+      "weight": 0.6,
+      "direction": "forward"
     }
   ],
   "layers": [
@@ -11287,12 +12121,12 @@
       "name": "Tài liệu sản phẩm",
       "description": "GDD, UX, nghiên cứu, system spec, operations và audit triển khai.",
       "nodeIds": [
-        "document:AGENTS.md",
         "document:docs/implementation/unity-implementation-audit-and-backlog.md",
         "document:docs/index.md",
         "document:docs/operations/live-data-and-operations.md",
         "document:docs/operations/liveops-monetization-and-membership.md",
         "document:docs/product/gdd-soccer-mobile-pro.md",
+        "document:docs/product/ui-design-system-and-screen-catalogue.md",
         "document:docs/product/ux-wireflows-and-states.md",
         "document:docs/research/fc-mobile-vn-coverage-audit.md",
         "document:docs/research/fc-mobile-vn-research.md",
@@ -11303,8 +12137,14 @@
         "document:docs/research/video/04-club-squad-customization.md",
         "document:docs/research/video/05-exchange-missions-events.md",
         "document:docs/research/video/ui-pattern-synthesis.md",
+        "document:docs/systems/account-localization-and-settings.md",
+        "document:docs/systems/competitions-leagues-clubs-and-social.md",
         "document:docs/systems/competitive-integrity-and-esports.md",
+        "document:docs/systems/football-catalog-player-database-and-model-assets.md",
         "document:docs/systems/match-controls-set-pieces-and-var.md",
+        "document:docs/systems/offline-ai-tactics-and-difficulty.md",
+        "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+        "document:AGENTS.md",
         "document:README.md"
       ]
     },
@@ -11495,7 +12335,8 @@
       "description": "Đọc GDD và UX contract trước khi thay đổi hành vi.",
       "nodeIds": [
         "document:docs/product/gdd-soccer-mobile-pro.md",
-        "document:docs/product/ux-wireflows-and-states.md"
+        "document:docs/product/ux-wireflows-and-states.md",
+        "document:docs/product/ui-design-system-and-screen-catalogue.md"
       ]
     },
     {
@@ -11542,6 +12383,11 @@
       "nodeIds": [
         "document:docs/operations/live-data-and-operations.md",
         "document:docs/operations/liveops-monetization-and-membership.md",
+        "document:docs/systems/account-localization-and-settings.md",
+        "document:docs/systems/competitions-leagues-clubs-and-social.md",
+        "document:docs/systems/football-catalog-player-database-and-model-assets.md",
+        "document:docs/systems/player-cards-skills-progression-market-and-exchange.md",
+        "document:docs/systems/offline-ai-tactics-and-difficulty.md",
         "document:docs/systems/competitive-integrity-and-esports.md"
       ]
     }

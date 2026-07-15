@@ -14,19 +14,19 @@ Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba c�
 
 | Yêu cầu | Research | Spec | Unity | Authority / evidence |
 | --- | --- | --- | --- | --- |
-| Tính năng tổng thể/core loop | Hoàn thành | Decision-complete | Prototype một phần | [GDD](../product/gdd-soccer-mobile-pro.md), [nghiên cứu](fc-mobile-vn-research.md#features-and-modes) |
-| Layout UI/UX | Hoàn thành visual-first | Decision-complete | Chưa có product shell | [Video synthesis](video/ui-pattern-synthesis.md), [UI catalogue](../product/ui-design-system-and-screen-catalogue.md) |
-| Ngôn ngữ/cài đặt/tài khoản | Hoàn thành; provider VN còn decision | Decision-complete | Chưa triển khai | [Account spec](../systems/account-localization-and-settings.md) |
-| Giải đấu/CLB/League/social | Hoàn thành; license catalog không suy diễn | Decision-complete | Chưa triển khai | [Competition spec](../systems/competitions-leagues-clubs-and-social.md) |
-| Cầu thủ/player database | Hoàn thành với kết luận endpoint không công khai | Decision-complete proposal | Chưa triển khai | [Catalog spec](../systems/football-catalog-player-database-and-model-assets.md) |
-| Model 3D | Hoàn thành với kết luận pipeline nội bộ không công khai | Decision-complete proposal | Asset hiện tại không phải pipeline sản phẩm | [Catalog/model spec](../systems/football-catalog-player-database-and-model-assets.md) |
-| Skills/PlayStyles/nâng cấp thẻ | Hoàn thành, ghi drift S08/S11 | Decision-complete | Chưa triển khai | [Cards/progression spec](../systems/player-cards-skills-progression-market-and-exchange.md) |
-| Controls có/không bóng, set piece | Hoàn thành ở mức public boundary/proposal | Decision-complete | Legacy prototype một phần | [Controls spec](../systems/match-controls-set-pieces-and-var.md) |
-| VAR | Hoàn thành với kết luận chưa xác nhận VAR tương tác | Decision-complete presentation | Chưa triển khai | [Controls/VAR spec](../systems/match-controls-set-pieces-and-var.md) |
-| AI offline | Hoàn thành với kết luận thuật toán không công khai | Decision-complete | Heuristic prototype, không trained model | [AI spec](../systems/offline-ai-tactics-and-difficulty.md) |
-| Report/integrity/esports | Hoàn thành, gồm S17 | Decision-complete | Chưa có service | [Integrity spec](../systems/competitive-integrity-and-esports.md) |
-| Live data/assets/operations | Hoàn thành public boundary | Decision-complete proposal | Chưa triển khai | [Operations](../operations/live-data-and-operations.md) |
-| Giftcode/liveops/monetization | Hoàn thành, gồm S18/S19 support context | Decision-complete | Chưa triển khai | [LiveOps](../operations/liveops-monetization-and-membership.md) |
+| Tính năng tổng thể/core loop | Hoàn thành | Contract/guardrail hoàn chỉnh; tuning gated | Prototype một phần | [GDD](../product/gdd-soccer-mobile-pro.md), [nghiên cứu](fc-mobile-vn-research.md#features-and-modes) |
+| Layout UI/UX | Hoàn thành visual-first | Coverage hoàn chỉnh; token/art decisions gated | Chưa có product shell | [Video synthesis](video/ui-pattern-synthesis.md), [UI catalogue](../product/ui-design-system-and-screen-catalogue.md) |
+| Ngôn ngữ/cài đặt/tài khoản | Hoàn thành; provider VN còn decision | Contract hoàn chỉnh; provider/legal gated | Chưa triển khai | [Account spec](../systems/account-localization-and-settings.md) |
+| Giải đấu/CLB/League/social | Hoàn thành; license catalog không suy diễn | Contract hoàn chỉnh; policy/licensing gated | Chưa triển khai | [Competition spec](../systems/competitions-leagues-clubs-and-social.md) |
+| Cầu thủ/player database | Hoàn thành với kết luận endpoint không công khai | Contract proposal hoàn chỉnh; backend choice gated | Chưa triển khai | [Catalog spec](../systems/football-catalog-player-database-and-model-assets.md) |
+| Model 3D | Hoàn thành với kết luận pipeline nội bộ không công khai | Pipeline proposal hoàn chỉnh; budgets gated | Asset hiện tại không phải pipeline sản phẩm | [Catalog/model spec](../systems/football-catalog-player-database-and-model-assets.md) |
+| Skills/PlayStyles/nâng cấp thẻ | Hoàn thành, ghi drift S08/S11 | Contract hoàn chỉnh; balance/economy gated | Chưa triển khai | [Cards/progression spec](../systems/player-cards-skills-progression-market-and-exchange.md) |
+| Controls có/không bóng, set piece | Hoàn thành ở mức public boundary/proposal | Contract hoàn chỉnh; layout/assist gated | Legacy prototype một phần | [Controls spec](../systems/match-controls-set-pieces-and-var.md) |
+| VAR | Hoàn thành với kết luận chưa xác nhận VAR tương tác | Presentation contract hoàn chỉnh; eligibility gated | Chưa triển khai | [Controls/VAR spec](../systems/match-controls-set-pieces-and-var.md) |
+| AI offline | Hoàn thành với kết luận thuật toán không công khai | Contract/R&D governance hoàn chỉnh; policy gated | Heuristic prototype, không trained model | [AI spec](../systems/offline-ai-tactics-and-difficulty.md) |
+| Report/integrity/esports | Hoàn thành, gồm S17 | Case/sanction/appeal contract hoàn chỉnh; policy gated | Chưa có service | [Integrity spec](../systems/competitive-integrity-and-esports.md) |
+| Live data/assets/operations | Hoàn thành public boundary | Publish/incident contract hoàn chỉnh; SLA gated | Chưa triển khai | [Operations](../operations/live-data-and-operations.md) |
+| Giftcode/liveops/monetization | Hoàn thành, gồm S18/S19 support context | Transaction contract hoàn chỉnh; commercial policy gated | Chưa triển khai | [LiveOps](../operations/liveops-monetization-and-membership.md) |
 | Năm video | Hoàn thành visual-first | Chuyển hóa thành catalogue/state | Không phải implementation evidence | [Coverage video](video/ui-pattern-synthesis.md#evidence-coverage) |
 | Audit Unity | Không áp dụng | Backlog handoff | Đã audit HEAD theo batch cuối | [Audit](../implementation/unity-implementation-audit-and-backlog.md) |
 

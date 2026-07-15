@@ -29,19 +29,29 @@
 4. Gửi kèm mô tả chi tiết và, nếu có, ảnh/video bằng form ngoài game.
 5. Hệ thống gắn report với match ID, telemetry, ping, input summary và kết quả authoritative; không cho client sửa evidence.
 
-## 4. Cơ chế xử phạt đề xuất
+## 4. Case, sanction và appeal state machine
 
-| Hành vi | Xử phạt |
-| --- | --- |
-| Sử dụng phần mềm thứ 3 | Khóa tài khoản 30 ngày hoặc vĩnh viễn tùy mức độ; tái phạm khóa vĩnh viễn |
-| Can thiệp file/bảo mật | Khóa vĩnh viễn, blacklist thiết bị |
-| Gian lận nạp thẻ | Tạm khóa, yêu cầu liên hệ CS để xác minh, rollback giao dịch bất thường |
-| Win-trade có hệ thống | Reset thành tích mùa, cấm tham gia ranked/giải đấu trong khoảng thời gian nhất định |
+```text
+ReportReceived → Triaged → Investigating → Decided → Notified → Closed
+                         ↘ NeedMoreEvidence       ↘ Appealed → Upheld|Modified|Revoked
+Sanction: Proposed → Reviewed → Active → Expired|Revoked
+```
+
+`IntegrityCase` gồm case ID, subject pseudonymous ID, scoped evidence refs, rules version, investigator/audit và retention class. `SanctionDecision` gồm violation code, evidence standard, severity band, scope, start/end, reviewer và appeal eligibility. Client không tự thu raw device data hoặc quyết định vi phạm.
+
+| Severity band | Loại biện pháp khả dụng | Gate bắt buộc |
+| --- | --- | --- |
+| Education/warning | Cảnh báo, hướng dẫn, mute hạn chế | Rule rõ, thông báo và audit |
+| Temporary restriction | Tạm chặn chat/market/ranked/tournament | Proportionality, duration config, human review theo risk |
+| Result/economy correction | Hủy result/reward bất hợp lệ, ledger reconcile | Signed evidence, không balance âm im lặng |
+| Account enforcement | Suspend/terminate theo region/policy | Dual review, legal/privacy, appeal |
+
+Không hard-code 30 ngày, khóa vĩnh viễn hay blacklist thiết bị như policy chung. Device signal chỉ là risk input; biện pháp theo thiết bị cần necessity/proportionality, false-positive test và privacy/legal approval. Enforcement matrix versioned theo region và decision register.
 
 ## 5. Reconnect & xử lý mất mạng
 
-- Cho phép reconnect vào trận trong thời gian ngắn nếu bị mất kết nối tạm thời.
-- Nếu người chơi rời trận quá lâu hoặc cố ý thoát, coi là thua và áp dụng penalty phù hợp.
+- Reconnect dùng `Connected → Interrupted → Reconnecting → Resynced|ForfeitPending → Resolved`; cửa sổ thời gian là config theo mode/rules, chưa khóa trước load/network/fairness test.
+- Nếu hết cửa sổ, authoritative server xác nhận forfeit/result theo reason code; không kết luận “cố ý” chỉ từ một lần disconnect.
 - Telemetry cần ghi rõ: thời gian disconnect, trạng thái mạng, hành vi input cuối cùng.
 
 ## 6. Luồng giải đấu & esports
@@ -68,3 +78,15 @@
 - Test disconnect/reconnect, duplicate report, late result, bracket conflict, sanction expiry và appeal restore.
 - Enforcement rule versioned; rollback rule không tự động gỡ sanction đã review mà tạo re-evaluation queue.
 - Acceptance: mọi report có acknowledgement, sanction có reason code/audit trail, và tournament reward chỉ grant sau result verification.
+
+## 10. Version, migration và decision register
+
+Rule, evidence schema, sanction matrix và tournament/reconnect policy có version/effective time theo region. Case đang mở pin version lúc incident nhưng có thể áp dụng policy có lợi hơn theo legal decision; migration không xóa evidence/audit. Retention expiry xóa/anonymize theo class và legal hold. Rollback rule tạo re-evaluation queue, không tự động kết tội hoặc gỡ sanction.
+
+| ID | Quyết định | Owner | Gate |
+| --- | --- | --- | --- |
+| CIE-D01 | Evidence standard và automation threshold | Integrity + Legal | False-positive/appeal audit |
+| CIE-D02 | Sanction matrix theo region | Policy + Legal | Proportionality/age/privacy review |
+| CIE-D03 | Reconnect window/forfeit | Match + Network | Packet-loss/load/fairness test |
+| CIE-D04 | Case/telemetry retention | Privacy + Security | Purpose, minimization, legal hold |
+| CIE-D05 | Appeal SLA và reviewer separation | Support Ops | Staffing rehearsal và audit |

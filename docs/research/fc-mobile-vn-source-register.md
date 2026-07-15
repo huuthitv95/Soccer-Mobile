@@ -66,6 +66,10 @@ Claim register là authority để biết một nguồn thực sự chứng minh
 | C08 | Suy luận thiết kế | Catalog client nên có manifest ký/version, cache và fallback last-known-good | T03 | Soccer Mobile Pro | Kiến trúc đề xuất, không phải nội bộ EA/Garena | Trung bình |
 | C09 | Suy luận thiết kế | Model cầu thủ nên qua import/rig/LOD/validation rồi phân phối theo catalog | T03, T04 | Soccer Mobile Pro | Face scan và asset gốc cần pipeline/licensing riêng | Trung bình |
 | C10 | Suy luận thiết kế | AI offline cần scenario suite, seed tái lập và trace quyết định trước khi cân nhắc ML | T05 | Soccer Mobile Pro R&D | Paper không bảo đảm phù hợp mobile production | Trung bình |
+| C11 | Thông tin công khai đã xác minh | Bản cập nhật mùa hè VN công bố nội dung/chế độ theo mùa, Quick Match, so sánh cầu thủ và Play's Styles | S02 | Việt Nam, 2026 | Marketing feature; terminology/rule có thể đổi | Cao |
+| C12 | Thông tin công khai đã xác minh | Quy tắc giải và FVSL Summer mô tả eligibility, thiết bị/tài khoản, cấu trúc vòng và xử lý vận hành | S04, S05 | Việt Nam, mùa 2026 | Không mô tả runtime/tournament service | Cao |
+| C13 | Thông tin công khai đã xác minh | Gameplay deep dive công bố thay đổi chuyền/sút/phòng ngự/thủ môn/trọng tài/accessibility và face scans đầu ra | S10 | Global, FC Mobile 26 | Không chứng minh mapping touch, VAR hay model pipeline | Cao |
+| C14 | Thông tin công khai đã xác minh | Nội dung UCL được mô tả có 34 CLB khả dụng trong phạm vi mode | S14 | Global, UCL 2025 | Không chứng minh toàn bộ license catalog | Cao |
 
 <a id="research-boundaries"></a>
 

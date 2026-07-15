@@ -30,6 +30,8 @@ TacticalPlan { formation, phaseRules, width, lineHeight, tempo,
 AIDecisionTrace { tick, seed, actorId, phase, perceivedStateHash,
   candidates[{action, utility, rejectReason}], chosenAction }
 AIScenario { id, initialState, seedSet, successMetrics, maxTicks }
+AIModelCard { modelId, datasetVersion, policyVersion, intendedUse,
+  excludedUse, metricsByScenario, fairnessLimits, runtimeBudget, rollbackId }
 ```
 
 Input: authoritative/local match snapshot, perception filtered theo profile, tactic/role, stamina và rule state. Output: `MatchCommand` giống command người chơi (`Move`, `Pass`, `Shoot`, `Tackle`, `SwitchRole`, set-piece intent), không sửa trực tiếp ball/result. Trace bật trong dev/test và sampling support, không ship chi tiết nhạy cảm trong ranked.
@@ -53,6 +55,8 @@ Phase: `InPossession`, `OutOfPossession`, `PositiveTransition`, `NegativeTransit
 Difficulty tăng theo reaction delay, perception noise, candidate breadth, tactical risk và execution error trong biên công bố. Không thay speed/OVR/stamina/physics ngoài catalog/rules chung. Adaptive assist, nếu có, chỉ trong onboarding/offline, opt-out được và log profile change; không rubber-band score ẩn.
 
 Pipeline: định nghĩa hypothesis → scenario seed set → batch simulation → metric/trace review → human playtest → config candidate → regression → staged release. ML/RL chỉ là nhánh R&D offline để đề xuất policy/tuning; policy phải export cố định, kiểm tra exploit/fairness/performance và rollback được trước runtime.
+
+Dataset R&D có `datasetId/version`, provenance, rights/consent, collection purpose, retention, anonymization, feature schema và train/validation/test split chống leakage. Không ingest raw player telemetry nếu consent/purpose không cho phép; delete request phải đi qua lineage. Mỗi candidate có model card, seed/build/config, evaluation theo scenario/persona, known limitation và scripted fallback. Dataset/model registry do AI Platform sở hữu; Unity client chỉ nhận policy artifact đã ký/versioned.
 
 Scenario bắt buộc: build-up press, low block, wing overload, counter/recovery, marking/cross, through-ball line, time wasting, foul risk, corner/free kick/penalty, GK distribution và final-minutes risk.
 

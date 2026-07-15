@@ -27,6 +27,8 @@ OwnedPlayerItem { itemId, ownerId, itemDefinitionId, rank, trainingLevel,
   allocatedSkillPoints, lockState, acquisition, revision }
 SkillMoveDefinition { id, inputId, requirements, animationProfile,
   staminaCost, riskTags, rulesVersion }
+TraitDefinition { id, triggers, conditions, modifiers, caps,
+  exclusions, traceLabelKey, rulesVersion }
 PlayStyleDefinition { id, triggers, modifiers, caps, exclusions, rulesVersion }
 UpgradePreview { commandHash, itemRevision, ruleVersion, cost,
   consumedItems, before, after, warnings, expiresAt }
@@ -45,7 +47,7 @@ Market listing có `listingId`, seller, item snapshot hash, price, currency, cre
 - Listing: `Draft → Active → Reserved → Sold|Cancelled|Expired`; price/revision đổi làm preview cũ invalid.
 - Exchange: `Eligible → Previewed → Reserved → Granted|Rejected`; input consume và output grant cùng transaction.
 
-Skill/PlayStyle modifier có trigger/context/cap/exclusion và trace; không tạo option mạnh hơn mọi mặt. Rank/Training/Skill là trục riêng; respec preview consequence và không mất điểm do timeout.
+Skill/Trait/PlayStyle modifier có trigger/context/cap/exclusion và trace; Trait là đặc tính thụ động, SkillMove là input/animation, PlayStyle là identity chiến thuật. Không tạo option mạnh hơn mọi mặt. Rank/Training/Skill là trục riêng; respec preview consequence và không mất điểm do timeout.
 
 <a id="version"></a>
 

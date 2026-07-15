@@ -9,6 +9,8 @@
 **Ngày cập nhật:** 15/07/2026
 **Authority:** Quyết định sản phẩm của Soccer Mobile Pro; thông tin tham chiếu phải truy về [sổ nguồn](../research/fc-mobile-vn-source-register.md).
 
+**Thứ tự authority:** GDD khóa vision/guardrail; spec domain khóa contract/state/authority; operations khóa publish/incident; implementation audit khóa trạng thái code. Khi ví dụ hoặc số giả thuyết trong GDD khác spec domain, spec domain và decision register thắng; không dùng ví dụ GDD làm config production.
+
 > Tài liệu phân biệt **Thông tin công khai đã xác minh**, **Quan sát từ video**, **Suy luận thiết kế** và **Đề xuất cho Soccer Mobile Pro**. Những gì không có nguồn công khai không được mô tả như kiến trúc nội bộ EA/Garena.
 
 ---
@@ -165,7 +167,7 @@ Tạo phòng, chia sẻ mã phòng, đấu không tính thứ hạng.
 
 | Loại tiền | Nguồn gốc | Công dụng | Tham chiếu |
 | --- | --- | --- | --- |
-| **Kim cương** (premium) | Nạp thật; một phần nhỏ miễn phí qua nhiệm vụ/Season Pass/sự kiện | Mở gói cầu thủ cao cấp, ký hợp đồng cầu thủ đặc biệt/huyền thoại, rút ngắn thời gian chờ | FC Points + Gems (FC Mobile), Coins (eFootball) |
+| **Kim cương** (premium) | Nạp thật; một phần nhỏ miễn phí qua nhiệm vụ/Season Pass/sự kiện | Cosmetic/convenience và offer đã qua odds/age/fairness review; không mua lợi thế ranked độc quyền | FC Points + Gems (FC Mobile), Coins (eFootball) |
 | **Xu** (F2P) | Thắng trận, nhiệm vụ ngày, bán cầu thủ trên chợ | Mua bán trên Chợ chuyển nhượng, một phần chi phí Rank Up | Coins (FC Mobile), GP (eFootball) |
 | **Token sự kiện** | Chỉ trong thời gian sự kiện đang diễn ra | Đổi lấy cầu thủ/thưởng giới hạn theo lộ trình sự kiện đó | Event Tokens (FC Mobile) |
 | **Điểm Nâng Rank** | Thi đấu, sự kiện, đổi vật phẩm dư thừa | Nâng Rank cầu thủ (xem mục 6) | Rank Up Points (FC Mobile 26+) |
@@ -173,8 +175,8 @@ Tạo phòng, chia sẻ mã phòng, đấu không tính thứ hạng.
 **Nguyên tắc thiết kế kinh tế:**
 
 - Xu luôn là con đường F2P khả thi để cạnh tranh (qua giao dịch chợ thông minh), không khóa cứng người không nạp tiền.
-- Token sự kiện hết hạn khi sự kiện kết thúc để tránh tồn kho vô hạn.
-- Chợ chuyển nhượng thu thuế giao dịch (đề xuất 5–10%) để kiểm soát lạm phát Xu.
+- Token sự kiện có expiry/conversion/catch-up theo decision `LOM-D03`; không tự động xóa nếu chưa công bố và playtest FOMO.
+- Thuế/price band/limit của chợ là hypothesis `D02/PCS-D03`, chỉ khóa sau mô phỏng source/sink và abuse.
 
 ---
 
@@ -195,7 +197,7 @@ Tạo phòng, chia sẻ mã phòng, đấu không tính thứ hạng.
 
 **Trục 1 — Rank Up (nâng OVR):**
 
-- Dùng **Điểm Nâng Rank** (tiền tệ tiến trình riêng — không cần thẻ trùng bản) để tăng OVR, tối đa **5 cấp Rank**, mỗi cấp +1 OVR.
+- Dùng **Điểm Nâng Rank** (tiền tệ tiến trình riêng — không cần thẻ trùng bản) để tăng OVR; ví dụ tối đa 5 cấp/+1 chỉ là hypothesis `D04/PCS-D01`.
 - Nâng cấp **luôn thành công** khi đủ điểm — không có tỉ lệ rủi ro, tránh gây ức chế (bài học rút ra từ hệ thống cũ dùng thẻ trùng bản của FC Mobile trước bản 26).
 - Rank cao hơn = mở trần Training cao hơn (2 trục liên kết một chiều: Rank quyết định giới hạn của Training, nhưng không tự động tăng chỉ số).
 
@@ -207,9 +209,9 @@ Tạo phòng, chia sẻ mã phòng, đấu không tính thứ hạng.
 
 **Trục 3 — Skill Points (tùy biến lối chơi):**
 
-- Mỗi lần Rank Up mở khóa **1 Skill Point** (tối đa 5 điểm/thẻ trong vòng đời Rank).
-- Mỗi vị trí có bộ kỹ năng riêng: **2 kỹ năng chính** (nâng tối đa cấp 2) + khi hoàn thành kỹ năng chính, mở **1 trong 3 kỹ năng phụ nâng cao** (chỉ 1 cấp) — buộc người chơi chọn hướng phát triển rõ ràng (thiên công/thủ/kiểm soát) thay vì rải đều.
-- Có thể reset toàn bộ Skill Points bằng Kim cương để thử nghiệm lại.
+- Rank có thể mở Skill Point; số điểm/cấp/nhánh là hypothesis phải qua `PCS-D02`.
+- Mỗi vị trí cần nhánh có trade-off rõ, nhưng số kỹ năng chính/phụ không phải policy trước scenario/playtest.
+- Respec phải có preview và receipt; giá/premium policy chờ `PCS-D04`, không hard-code paywall experimentation.
 
 **Trục 4 — Position Training (mở vị trí phụ):**
 
@@ -390,34 +392,9 @@ Thiết kế lai giữa 2 mô hình:
 3. **Cơ chế cập nhật tức thời:** áp dụng dạng "Cầu thủ đang lên" (Trending) — tăng chỉ số tạm thời cho cầu thủ vừa có màn trình diễn nổi bật, làm mới theo tuần.
 4. **Cơ chế refresh lớn theo mùa:** đầu mỗi mùa giải thật (ví dụ đầu mùa bóng mới), thực hiện đợt cập nhật chỉ số tổng thể.
 
-### 14.2 Schema dữ liệu kỹ thuật (đề xuất cho đội lập trình)
+### 14.2 Schema dữ liệu kỹ thuật (authority tách file)
 
-```json
-{
-  "player_id": "string (unique)",
-  "name": "string",
-  "club_id": "string",
-  "league_id": "string",
-  "nationality": "string",
-  "position_main": "string",
-  "position_alt": ["string"],
-  "card_type": "standard | featured | trending | legend",
-  "ovr_base": "number",
-  "stats": {
-    "pace": "number", "shooting": "number", "passing": "number",
-    "dribbling": "number", "defending": "number", "physical": "number"
-  },
-  "playstyle": ["string"],
-  "rank": "number (0-5)",
-  "training_level": "number",
-  "skill_points_allocated": { "primary": {}, "secondary": {} },
-  "contract_expiry": "date | null",
-  "data_version": "string (theo mùa/tháng)",
-  "asset_tier": "star_head | generic_head | placeholder"
-}
-```
-
-**Nguyên tắc kiến trúc:** tách **dữ liệu tĩnh** (tên, CLB, giải đấu, hình ảnh — ít đổi) khỏi **dữ liệu động** (chỉ số, giá thị trường, phiên bản — đổi thường xuyên), cho phép cập nhật qua backend live-ops **không cần** người chơi tải bản cập nhật app mới.
+Contract canonical nằm ở [football catalog và model assets](../systems/football-catalog-player-database-and-model-assets.md#contracts) và [cards/progression](../systems/player-cards-skills-progression-market-and-exchange.md#contracts). Bắt buộc tách `PlayerIdentity`, `PlayerSeasonRating`, `PlayerItemDefinition`, `OwnedPlayerItem` và `ModelAssetManifest`; identity/catalog public không chứa rank/training/skill allocation/owner state. Mọi entity có stable ID, version/effective interval; client tải manifest/delta đã xác minh, server giữ inventory/economy.
 
 ---
 
