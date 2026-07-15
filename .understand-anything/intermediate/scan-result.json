@@ -15,8 +15,8 @@
       "Addressables"
     ],
     "description": "Dự án game bóng đá mobile Unity; graph tập trung vào runtime, scene/prefab, cấu hình và tài liệu domain đã chuẩn hóa.",
-    "analyzedAt": "2026-07-15T03:44:40.180Z",
-    "gitCommitHash": "46c6142eb8207633264fa4a439980bcbcedce485"
+    "analyzedAt": "2026-07-15T04:03:41.627Z",
+    "gitCommitHash": "c4cc6c7de22b65ecf651b0293a2e3a5bbf5c70cf"
   },
   "files": [
     {
@@ -788,16 +788,6 @@
       "path": "README.md",
       "language": "markdown",
       "fileCategory": "docs"
-    },
-    {
-      "path": "tools/refresh-knowledge-graph.mjs",
-      "language": "javascript",
-      "fileCategory": "code"
-    },
-    {
-      "path": "tools/validate-docs.ps1",
-      "language": "powershell",
-      "fileCategory": "code"
     }
   ],
   "filteredByIgnore": 1964

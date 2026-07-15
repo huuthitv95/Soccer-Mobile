@@ -197,6 +197,7 @@ Mobile performance work must report the target device tier, scenario, measured m
 - Every implementation-oriented spec should state: goal, scope/non-scope, user flow, data inputs/outputs, client/server responsibility, analytics events, abuse/failure cases, accessibility, QA/acceptance criteria, rollback/fallback, and open questions.
 - Avoid duplicated authority: link to the canonical file rather than copying large sections between documents.
 - Keep source citations or URLs near research claims; do not cite a source as support for a claim it does not make.
+- Do not create a repository `tools/` directory or persistent helper scripts for Markdown validation or knowledge-graph generation/cleanup. Run those operations directly in the active session or through an installed skill. This restriction does not apply to approved Unity runtime code or legitimate build, test, and migration automation. Creating an equivalent helper requires explicit user approval.
 
 ## Engineering and safety rules
 

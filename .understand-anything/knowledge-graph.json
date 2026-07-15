@@ -16,8 +16,8 @@
       "Addressables"
     ],
     "description": "Dự án game bóng đá mobile Unity; graph tập trung vào runtime, scene/prefab, cấu hình và tài liệu domain đã chuẩn hóa.",
-    "analyzedAt": "2026-07-15T03:44:40.180Z",
-    "gitCommitHash": "46c6142eb8207633264fa4a439980bcbcedce485"
+    "analyzedAt": "2026-07-15T04:03:41.627Z",
+    "gitCommitHash": "c4cc6c7de22b65ecf651b0293a2e3a5bbf5c70cf"
   },
   "nodes": [
     {
@@ -2787,30 +2787,6 @@
       ],
       "complexity": "simple",
       "language": "markdown"
-    },
-    {
-      "id": "file:tools/refresh-knowledge-graph.mjs",
-      "type": "file",
-      "name": "refresh-knowledge-graph.mjs",
-      "filePath": "tools/refresh-knowledge-graph.mjs",
-      "summary": "Cấu hình hoặc công cụ dự án tại tools/refresh-knowledge-graph.mjs.",
-      "language": "javascript",
-      "tags": [
-        "file",
-        "tools"
-      ]
-    },
-    {
-      "id": "file:tools/validate-docs.ps1",
-      "type": "file",
-      "name": "validate-docs.ps1",
-      "filePath": "tools/validate-docs.ps1",
-      "summary": "Cấu hình hoặc công cụ dự án tại tools/validate-docs.ps1.",
-      "language": "powershell",
-      "tags": [
-        "file",
-        "tools"
-      ]
     },
     {
       "id": "class:Assets/Graphics/TeamSelection/TeamSelectionController.cs:TeamSelectionController",
@@ -11501,15 +11477,6 @@
         "config:ProjectSettings/ProjectVersion.txt",
         "config:ProjectSettings/QualitySettings.asset"
       ]
-    },
-    {
-      "id": "layer:documentation-tools",
-      "name": "Công cụ tài liệu",
-      "description": "Validator Markdown và trình tái tạo knowledge graph.",
-      "nodeIds": [
-        "file:tools/refresh-knowledge-graph.mjs",
-        "file:tools/validate-docs.ps1"
-      ]
     }
   ],
   "tour": [
@@ -11576,14 +11543,6 @@
         "document:docs/operations/live-data-and-operations.md",
         "document:docs/operations/liveops-monetization-and-membership.md",
         "document:docs/systems/competitive-integrity-and-esports.md"
-      ]
-    },
-    {
-      "order": 8,
-      "title": "Kiểm tra tài liệu",
-      "description": "Chạy validator sau khi đổi tên, heading hoặc liên kết.",
-      "nodeIds": [
-        "file:tools/validate-docs.ps1"
       ]
     }
   ]

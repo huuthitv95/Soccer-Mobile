@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "46c6142eb8207633264fa4a439980bcbcedce485",
-  "generatedAt": "2026-07-15T03:44:40.841Z",
+  "gitCommitHash": "c4cc6c7de22b65ecf651b0293a2e3a5bbf5c70cf",
+  "generatedAt": "2026-07-15T04:03:41.627Z",
   "files": {
     ".gitattributes": {
       "filePath": ".gitattributes",
@@ -7297,97 +7297,6 @@
       "exports": [],
       "totalLines": 17,
       "hasStructuralAnalysis": true
-    },
-    "tools/refresh-knowledge-graph.mjs": {
-      "filePath": "tools/refresh-knowledge-graph.mjs",
-      "contentHash": "0a40dcbcc39620f6188abcc5614717aaa4e09ba7f4cb328607d6788190922815",
-      "functions": [
-        {
-          "name": "include",
-          "params": [
-            "p"
-          ],
-          "exported": false,
-          "lineCount": 12
-        },
-        {
-          "name": "prefixFor",
-          "params": [
-            "p"
-          ],
-          "exported": false,
-          "lineCount": 5
-        },
-        {
-          "name": "idFor",
-          "params": [
-            "p"
-          ],
-          "exported": false,
-          "lineCount": 1
-        },
-        {
-          "name": "languageFor",
-          "params": [
-            "p"
-          ],
-          "exported": false,
-          "lineCount": 4
-        },
-        {
-          "name": "summaryFor",
-          "params": [
-            "p"
-          ],
-          "exported": false,
-          "lineCount": 13
-        },
-        {
-          "name": "addEdge",
-          "params": [
-            "source",
-            "target",
-            "type",
-            "label"
-          ],
-          "exported": false,
-          "lineCount": 7
-        }
-      ],
-      "classes": [],
-      "imports": [
-        {
-          "source": "node:child_process",
-          "specifiers": [
-            "execFileSync"
-          ]
-        },
-        {
-          "source": "node:fs",
-          "specifiers": [
-            "fs"
-          ]
-        },
-        {
-          "source": "node:path",
-          "specifiers": [
-            "path"
-          ]
-        }
-      ],
-      "exports": [],
-      "totalLines": 162,
-      "hasStructuralAnalysis": true
-    },
-    "tools/validate-docs.ps1": {
-      "filePath": "tools/validate-docs.ps1",
-      "contentHash": "1f6fe1bcb8db5b13c3edd5b08ef12e7b0c0d85648c5af4e4935300e31cc82010",
-      "functions": [],
-      "classes": [],
-      "imports": [],
-      "exports": [],
-      "totalLines": 83,
-      "hasStructuralAnalysis": false
     }
   }
 }
