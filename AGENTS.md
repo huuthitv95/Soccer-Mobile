@@ -18,14 +18,14 @@ Read this file before doing work. Treat `docs/` as the product source of truth f
 
 Read the relevant files before designing or implementing a system:
 
-- `docs/GDD-Soccer-Mobile-Pro.md`: canonical product direction and system decisions.
-- `docs/FC-Mobile-VN-Research.md`: public reference research. It explicitly separates verified public facts from Soccer Mobile Pro proposals.
-- `docs/FC-Mobile-VN-Coverage-Audit.md`: requirement coverage, production gaps, and Definition of Done.
-- `docs/Match-Systems-SetPieces-Controls.md`: match flow, controls, set pieces, VAR presentation, and QA metrics.
-- `docs/UX-Wireflows-States.md`: navigation, core UI flows, loading/empty/error states, and accessibility.
-- `docs/LiveData-Operations.md`: versioning, CMS, economy/market operations, asset delivery, telemetry, and incident response.
-- `docs/LiveOps-Monetization-Membership.md`: live events, purchases, membership, inbox, and gift codes.
-- `docs/Competitive-Integrity-Esports.md`: cheating reports, enforcement, reconnect, tournaments, and support operations.
+- `docs/product/gdd-soccer-mobile-pro.md`: canonical product direction and system decisions.
+- `docs/research/fc-mobile-vn-research.md`: public reference research. It explicitly separates verified public facts from Soccer Mobile Pro proposals.
+- `docs/research/fc-mobile-vn-coverage-audit.md`: requirement coverage, production gaps, and Definition of Done.
+- `docs/systems/match-controls-set-pieces-and-var.md`: match flow, controls, set pieces, VAR presentation, and QA metrics.
+- `docs/product/ux-wireflows-and-states.md`: navigation, core UI flows, loading/empty/error states, and accessibility.
+- `docs/operations/live-data-and-operations.md`: versioning, CMS, economy/market operations, asset delivery, telemetry, and incident response.
+- `docs/operations/liveops-monetization-and-membership.md`: live events, purchases, membership, inbox, and gift codes.
+- `docs/systems/competitive-integrity-and-esports.md`: cheating reports, enforcement, reconnect, tournaments, and support operations.
 
 ## Evidence and research rules
 
@@ -137,7 +137,7 @@ Use the Input System skills when implementing on-ball, off-ball, set-piece, goal
 - `inputsystem-controlscheme-add`: add touch/gamepad/keyboard testing schemes when required.
 - `inputsystem-get`, `inputsystem-modify`, `inputsystem-save`: inspect, update, and persist input configuration.
 
-Do not reuse the same action semantics for on-ball and off-ball behavior without an explicit contextual state model. Preserve remapping, HUD scaling, left-handed layouts, assist settings, and accessibility requirements described in `docs/Match-Systems-SetPieces-Controls.md` and `docs/UX-Wireflows-States.md`.
+Do not reuse the same action semantics for on-ball and off-ball behavior without an explicit contextual state model. Preserve remapping, HUD scaling, left-handed layouts, assist settings, and accessibility requirements described in `docs/systems/match-controls-set-pieces-and-var.md` and `docs/product/ux-wireflows-and-states.md`.
 
 ### Camera, replay, and VAR presentation
 

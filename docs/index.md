@@ -1,26 +1,63 @@
-# Soccer Mobile Pro — Knowledge Wiki
+# Soccer Mobile Pro — chỉ mục tài liệu
 
-Chỉ mục này tổ chức tài liệu sản phẩm và kỹ thuật của Soccer Mobile Pro theo mô hình wiki. Các trang được liên kết bằng wikilink để phục vụ tra cứu, phân tích quan hệ và dựng knowledge graph.
+> Cập nhật: 15/07/2026 · Ngôn ngữ chuẩn: tiếng Việt · [Mở thư mục dự án](../README.md)
 
-## Định hướng sản phẩm và trải nghiệm
+Đây là cổng vào duy nhất của knowledge wiki. Tài liệu được chia theo domain để mỗi quyết định chỉ có một nơi chịu trách nhiệm, còn các trang khác dùng liên kết tương đối thay vì sao chép nội dung.
 
-- [[GDD-Soccer-Mobile-Pro|Game Design Document tổng thể]]
-- [[UX-Wireflows-States|UX wireflows, UI states và accessibility]]
+## 1. Quy ước bằng chứng
 
-## Gameplay trận đấu
+| Nhãn | Ý nghĩa |
+| --- | --- |
+| **Thông tin công khai đã xác minh** | Có nguồn chính thức hoặc nguồn công khai đáng tin cậy, kèm URL và ngày truy cập. |
+| **Quan sát từ video** | Nhìn thấy trực tiếp trong video người dùng cung cấp, kèm tên video và timestamp. |
+| **Suy luận thiết kế** | Diễn giải hợp lý từ bằng chứng nhưng không phải xác nhận kiến trúc nội bộ. |
+| **Đề xuất cho Soccer Mobile Pro** | Quyết định hoặc hướng triển khai của dự án, không được gán cho EA/Garena. |
 
-- [[Match-Systems-SetPieces-Controls|Match systems, set pieces và controls]]
+## 2. Product
 
-## Nghiên cứu và kiểm toán phạm vi
+- [Game Design Document](product/gdd-soccer-mobile-pro.md)
+- [UX wireflows và trạng thái UI](product/ux-wireflows-and-states.md)
 
-- [[FC-Mobile-VN-Research|Nghiên cứu tham chiếu FC Mobile VN]]
-- [[FC-Mobile-VN-Coverage-Audit|Kiểm toán độ bao phủ và Definition of Done]]
+## 3. Research
 
-## Live service và vận hành
+- [Nghiên cứu FC Mobile VN](research/fc-mobile-vn-research.md)
+- [Sổ nguồn FC Mobile VN](research/fc-mobile-vn-source-register.md)
+- [Kiểm toán độ bao phủ](research/fc-mobile-vn-coverage-audit.md)
+- [Tổng hợp pattern UI từ video](research/video/ui-pattern-synthesis.md)
+- Phân tích từng video: [login/account](research/video/01-login-account.md), [Home/LiveOps](research/video/02-home-liveops.md), [profile/settings](research/video/03-profile-settings.md), [club/customization](research/video/04-club-squad-customization.md), [exchange/events](research/video/05-exchange-missions-events.md)
 
-- [[LiveData-Operations|Live data, CMS, economy và incident operations]]
-- [[LiveOps-Monetization-Membership|LiveOps, monetization, membership và reward delivery]]
+## 4. Systems
 
-## Công bằng thi đấu và esports
+- [Match controls, set pieces và VAR](systems/match-controls-set-pieces-and-var.md)
+- [Competitive integrity và esports](systems/competitive-integrity-and-esports.md)
 
-- [[Competitive-Integrity-Esports|Competitive integrity, enforcement, reconnect và esports]]
+## 5. Operations
+
+- [Live data và operations](operations/live-data-and-operations.md)
+- [LiveOps, monetization và membership](operations/liveops-monetization-and-membership.md)
+
+## 6. Implementation
+
+- [Audit Unity và backlog triển khai](implementation/unity-implementation-audit-and-backlog.md)
+
+## 7. Bản đồ phụ thuộc
+
+```text
+Nguồn chính thức + video
+          ↓
+Nghiên cứu + coverage audit
+          ↓
+GDD + UX + system specs
+          ↓
+Unity implementation audit + backlog
+          ↓
+Knowledge graph và dashboard
+```
+
+## 8. Điều hướng và đóng góp
+
+- Mỗi file chỉ có một tiêu đề H1; các mục H2 dùng số thứ tự.
+- Liên kết nội bộ phải là Markdown tương đối và trỏ tới file hoặc anchor tồn tại.
+- Claim nghiên cứu phải dùng một trong bốn nhãn ở mục 1.
+- Spec triển khai phải có input/output, trách nhiệm client/server, analytics, accessibility, QA và rollback.
+- Graph canonical nằm tại [`.understand-anything/knowledge-graph.json`](../.understand-anything/knowledge-graph.json); không tạo graph lồng trong `docs/`.
