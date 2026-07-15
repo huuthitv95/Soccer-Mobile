@@ -29,6 +29,11 @@
 
 ## 4. Systems
 
+- [Account, localization và settings](systems/account-localization-and-settings.md)
+- [Competitions, leagues, clubs và social](systems/competitions-leagues-clubs-and-social.md)
+- [Football catalog, player database và model assets](systems/football-catalog-player-database-and-model-assets.md)
+- [Player cards, skills, progression, market và exchange](systems/player-cards-skills-progression-market-and-exchange.md)
+- [Offline AI, tactics và difficulty](systems/offline-ai-tactics-and-difficulty.md)
 - [Match controls, set pieces và VAR](systems/match-controls-set-pieces-and-var.md)
 - [Competitive integrity và esports](systems/competitive-integrity-and-esports.md)
 

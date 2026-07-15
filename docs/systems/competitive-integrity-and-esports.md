@@ -21,6 +21,8 @@
 
 ## 3. Luồng báo cáo trong game
 
+**Thông tin công khai đã xác minh:** Garena mô tả bốn bước: hồ sơ đối thủ → biểu tượng “Cái Loa” → “Nội dung không phù hợp” → lý do “Gian lận” → gửi; thông tin được bảo mật và đội ngũ giám sát kiểm tra trước quyết định. Nguồn [S17](../research/fc-mobile-vn-source-register.md#claim-register), truy cập 15/07/2026. Soccer Mobile Pro giữ pattern dễ tìm này nhưng contract bên dưới là đề xuất riêng.
+
 1. Người chơi mở màn hình kết quả trận đấu.
 2. Nhấn nút "Báo cáo" cạnh tên đối thủ.
 3. Chọn lý do (gian lận phần mềm, hành vi phá game, chat xúc phạm, nghi dàn xếp…).

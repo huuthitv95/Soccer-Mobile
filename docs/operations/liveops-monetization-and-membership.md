@@ -31,6 +31,8 @@ Ngưỡng tiền/điểm cụ thể phải được economy, legal và privacy p
 - Reward calendar cho xem trước nhưng có catch-up hợp lý; không phạt mất chuỗi theo cách gây ép buộc.
 - Giftcode có campaign/source, region, expiry, max redemption, per-account/device/IP abuse controls và audit log.
 
+**Thông tin công khai đã xác minh:** bản FC Mobile VN cho nhập giftcode từ Khu Phức Hợp, yêu cầu 6–16 ký tự chữ hoa/số, tài khoản liên kết và trả quà qua hộp thư; xem [S18](../research/fc-mobile-vn-source-register.md#claim-register). Đây là UX reference, không chứng minh backend. Soccer Mobile Pro dùng `CodeIssued → Active → Redeemed|Expired|Revoked`; redeem tạo receipt/ledger idempotent, còn inbox attachment chuyển `Pending → Claimable → Claimed|Expired|Reconciled`.
+
 ## 5. Event và season pass
 
 - Mỗi event có mục tiêu, eligibility, nhiệm vụ, currency, source/sink, reward table, Home placement, end-state và compensation policy.
@@ -54,3 +56,21 @@ Chống abuse: receipt replay, guest reroll, refund fraud, code farming, duplica
 - Sandbox purchase, duplicate callback, delayed receipt, refund, reconnect và cross-device restore.
 - Feature flag cho offer/event/tier; rollback không xóa entitlement đã grant.
 - Acceptance: không double grant/charge, odds và terms luôn khớp offer version, mọi claim có trạng thái cuối có thể audit.
+
+## 9. Failure matrix và decision register
+
+| Failure/abuse | UX | Authority/recovery |
+| --- | --- | --- |
+| Receipt pending/duplicate | Pending + history; không yêu cầu mua lại | Verify/idempotency/reconcile server |
+| Offer/event hết hạn giữa flow | Giữ context, giải thích, không charge/consume | Server time + preview version |
+| Inbox full/claim timeout | Receipt có thể tra; retry | Grant ledger, overflow policy |
+| Giftcode replay/farming | Reason code không lộ risk signal | Per-account limit/risk/audit/appeal |
+| Refund sau grant | Lịch sử và support route | Platform event → entitlement reconcile |
+| Config/odds mismatch | Disable checkout | Signed offer, four-eyes, rollback |
+
+| ID | Quyết định | Owner | Gate |
+| --- | --- | --- | --- |
+| LOM-D01 | Offer/odds/region policy | Product + Compliance | Store/age/privacy review |
+| LOM-D02 | Membership cycle/tier | Economy | Cohort simulation; no ranked pay advantage |
+| LOM-D03 | Inbox expiry/catch-up | LiveOps + UX | Comprehension/FOMO review |
+| LOM-D04 | Compensation rules | Ops + Economy | Incident rehearsal và ledger audit |

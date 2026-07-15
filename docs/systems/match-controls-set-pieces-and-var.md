@@ -70,3 +70,23 @@ Event tối thiểu: `input_action`, `input_context_changed`, `command_rejected`
 ## 10. Rollback
 
 Control preset/config có version và feature flag. Khi preset mới lỗi, server từ chối version không tương thích và client quay về Classic; VAR presentation có thể tắt độc lập mà không tắt rule engine.
+
+## 11. Contracts và decision register
+
+```text
+MatchCommand { matchId, actorId, sequenceId, clientTick, inputContext,
+  action, direction, magnitude, modifiers, assistVersion }
+RuleIncident { incidentId, matchTick, type, decision, reasonCode,
+  actorIds, evidenceStateHash, rulesVersion }
+VARPresentationState { incidentId, state, presentationProfile,
+  startedAt, timeoutAt, skippable }
+```
+
+`MatchCommand` là intent và có thể bị reject; không chứa kết quả bóng. `RuleIncident` bất biến sau authoritative resolution; correction chỉ qua result dispute ngoài match, không qua replay UI. VAR state: `NotEligible → Queued → Reviewing → DecisionShown → Resume|TimedOut`; timeout dùng instant decision fallback.
+
+| ID | Quyết định | Owner | Gate |
+| --- | --- | --- | --- |
+| MCV-D01 | Layout/preset production | Gameplay UX | Input latency/mis-tap + left-hand playtest |
+| MCV-D02 | Ranked assist allowlist | Competitive Design | Fairness/matchmaking disclosure review |
+| MCV-D03 | VAR eligibility/frequency | Rules + Broadcast UX | Match duration và comprehension test |
+| MCV-D04 | Replay evidence retention | Integrity + Privacy | Dispute/privacy/storage review |

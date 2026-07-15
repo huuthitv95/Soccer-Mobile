@@ -48,3 +48,21 @@ Vận hành catalog cầu thủ/CLB/giải, card program, economy, event và ass
 - Contract test cho manifest/schema; migration test từ hai client version gần nhất; chaos test CDN/cache mismatch.
 - Rehearse rollback catalog, event, odds và asset bundle trước live launch.
 - Acceptance: publish không tạo dangling reference, grant idempotent và rollback hoàn tất trong SLA đã định.
+
+## 9. Publish state machine và failure matrix
+
+```text
+Draft → Validated → Approved → Scheduled → Publishing → Active
+                    ↘ Rejected      ↘ Failed → RolledBack
+Active → Superseded|Revoked
+```
+
+| Failure | Detection | Mitigation | Recovery/acceptance |
+| --- | --- | --- | --- |
+| Catalog/schema mismatch | Contract/reference validator | Không activate; giữ last-known-good | N-2 clients bootstrap được |
+| CDN partial/corrupt | Checksum/download telemetry | Retry/backoff/alternate edge | Atomic activation, generic fallback |
+| Economy config sai | Source/sink/claim anomaly | Freeze offer/recipe/grant | Reconcile ledger + compensation audit |
+| Clock/region sai | Effective-time canary | Pause publish theo region | Server time đúng, không early/late claim |
+| CMS compromise/mis-publish | Audit/risk alert | Revoke credential + rollback pointer | Four-eyes/key rotation/postmortem |
+
+Analytics có `publish_validated/approved/activated/rolled_back`, catalog mismatch, fallback và reconcile result; actor ID chỉ trong audit access-controlled. Accessibility validator kiểm tra localization key, text length/alt label trước publish. Decision mở: SLA rollback theo severity, backward window, key rotation và device-tier budget do DevOps/Data/Tech Art khóa sau rehearsal; không hard-code số chưa đo.
