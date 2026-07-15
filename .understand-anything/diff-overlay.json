@@ -1,28 +1,8 @@
 {
   "version": "1.0.0",
   "baseBranch": "main",
-  "generatedAt": "2026-07-15T08:30:00.000Z",
-  "changedFiles": [
-    "Assets/SoccerMobilePro/Platform/PlatformContracts.cs",
-    "Assets/SoccerMobilePro/Platform/SoccerMobilePro.Platform.asmdef",
-    "Assets/Tests/EditMode/PlatformContractTests.cs",
-    "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef",
-    "docs/implementation/decision-validation-program.md",
-    "docs/implementation/p0-foundation-implementation.md",
-    "docs/implementation/unity-implementation-audit-and-backlog.md",
-    "docs/systems/account-localization-and-settings.md",
-    "docs/systems/football-catalog-player-database-and-model-assets.md"
-  ],
-  "changedNodeIds": [
-    "file:Assets/SoccerMobilePro/Platform/PlatformContracts.cs",
-    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:AccountSession",
-    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:FakeSessionRepository",
-    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:CatalogManifest",
-    "class:Assets/SoccerMobilePro/Platform/PlatformContracts.cs:InMemoryCatalogRepository"
-  ],
-  "affectedNodeIds": [
-    "file:Assets/Scripts/AudioManager.cs",
-    "file:Assets/Scripts/MatchesSceneController.cs",
-    "file:Assets/Scripts/InitGame.cs"
-  ]
+  "generatedAt": "2026-07-15T07:59:53.211Z",
+  "changedFiles": [],
+  "changedNodeIds": [],
+  "affectedNodeIds": []
 }
