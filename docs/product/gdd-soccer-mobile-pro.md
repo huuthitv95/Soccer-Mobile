@@ -38,6 +38,7 @@
 21. [Backlog nghiên cứu](#section-21)
     - [Đặc tả đã tách file](#section-21a)
 22. [Nguồn tham khảo](#section-22)
+23. [Decision register và playtest gates](#section-23)
 
 ---
 
@@ -59,6 +60,10 @@ Soccer Mobile Pro là game bóng đá mobile online, xây dựng đội hình t�
 - Người chơi cạnh tranh cần manual depth, fairness, replay/audit và không bị lợi thế trả phí tuyệt đối.
 - Người sưu tầm cần catalog, compare, progression có trade-off và quyền kiểm soát tài nguyên.
 
+**Persona chính — Minh, 22 tuổi, người chơi bóng đá mobile theo phiên ngắn:** Minh dùng Android tầm trung, chơi 2–4 phiên/ngày, mỗi phiên 8–15 phút; hiểu luật bóng đá nhưng không muốn học combo dài. Minh ưu tiên điều khiển phản hồi nhanh, đội hình có cầu thủ/CLB yêu thích, đấu bạn bè và tiến bộ nhờ kỹ năng. Minh sẽ rời game nếu thua vì input mơ hồ, AI “buff ẩn”, tải asset quá lâu hoặc progression bắt buộc quay gói.
+
+**Persona phụ — Huy, 31 tuổi, người quản lý đội hình:** Huy chơi 3–5 phiên/tuần, thích tối ưu role/formation/market và trận offline có thể tạm dừng. Huy cần compare rõ, quyết định có trade-off và không bị FOMO phạt khi nghỉ một tuần. Hai persona cùng yêu cầu UI tiếng Việt, chữ dễ đọc và tiến trình có thể phục hồi trên thiết bị khác.
+
 ### 1.2 Trải nghiệm đích và ba trụ cột
 
 1. **Đá bóng có cảm giác:** input rõ, phản hồi nhanh, quyết định chiến thuật có ý nghĩa.
@@ -75,6 +80,18 @@ Soccer Mobile Pro là game bóng đá mobile online, xây dựng đội hình t�
 | Live service | Không double grant/charge; catalog, event và asset rollback được diễn tập. |
 
 Rủi ro chính: feature creep trước khi core match được chứng minh; progression thay thế fun; UI liveops quá tải; AI tạo cảm giác gian lận; economy/pay-to-win; và tài liệu đi trước implementation quá xa. Mọi milestone phải có prototype/playtest và evidence trước khi mở rộng.
+
+Các ngưỡng sau là **playtest gate**, không phải production policy: ≥80% người mới hoàn thành onboarding match không cần người hướng dẫn; ≥70% gọi đúng ba action cơ bản sau một lần thực hành; median time-to-first-kickoff ≤5 phút; retry sau trận thua đầu ≥50%; lỗi input do nhầm context <3% action; 0 giao dịch test double-charge/double-grant. Owner Product Analytics khóa cohort/device tier trước test và thay ngưỡng bằng baseline quan sát sau tối thiểu 30 người chơi mục tiêu.
+
+### 1.4 MDA và meaningful trade-off
+
+| Aesthetic đích | Dynamic cần tạo | Mechanic hỗ trợ | Dấu hiệu thất bại |
+| --- | --- | --- | --- |
+| Năng lực và làm chủ | Đọc khoảng trống, chọn nhịp, sửa sai | Input theo context, assist minh bạch, replay decision trace | Auto-play quyết định thay người chơi |
+| Bản sắc đội bóng | Chọn role/formation theo đối thủ | PlayStyle, chemistry có cap, compare theo tình huống | Một đội hình/OVR thống trị mọi context |
+| Kịch tính công bằng | Chấp nhận rủi ro có thông tin | Stamina, press risk, set piece, rule deterministic | Rubber-band/buff ẩn hoặc kết quả không giải thích được |
+
+Ba lựa chọn cốt lõi phải tạo trade-off: pressing cao đổi lấy stamina/khoảng trống sau lưng; chuyền mạo hiểm đổi lấy tốc độ tiến bóng và nguy cơ mất bóng; dùng cầu thủ chuyên biệt đổi lấy sức mạnh theo tình huống nhưng giảm linh hoạt đội hình. Một option “tốt hơn mọi mặt” là lỗi thiết kế và chặn content gate.
 
 ---
 
@@ -103,6 +120,14 @@ Xây & nâng cấp đội hình  →  Thi đấu (chọn 1 trong các chế đ�
 ```
 
 Vòng lặp phụ theo tuần/mùa: **Sự kiện theo lộ trình** → tích token → đổi cầu thủ/thưởng → tăng sức mạnh đội hình cho vòng lặp chính.
+
+| Nhịp | Người chơi làm gì | Cảm giác phải chứng minh | Gate trước khi mở rộng |
+| --- | --- | --- | --- |
+| 30 giây — micro | Nhận bóng → đọc áp lực → chọn chuyền/rê/sút → nhận phản hồi → chuyển trạng thái | Input có chủ ý, bóng dễ đọc, thành công/thất bại giải thích được | Gray-box 10 phút vẫn vui khi tắt reward/progression |
+| 30 phút — meso | Chuẩn bị đội hình → chơi 2–3 trận → xem result/trace → chỉnh chiến thuật hoặc cầu thủ → chơi lại | Có điểm dừng tự nhiên và “thử thêm một trận” vì học được điều mới | Người chơi tự nêu được một điều chỉnh chiến thuật sau phiên |
+| 30 giờ — macro | Làm chủ control/role → mở lựa chọn ngang → xây đội có bản sắc → tham gia season/social | Năng lực và quyền tự chủ, không phải nghĩa vụ/FOMO | Core match đạt gate trước khi progression tăng power được production hóa |
+
+Micro success tạo insight cho meso; meso cung cấp bằng chứng cho macro. Progression chỉ mở cách chơi hoặc biểu đạt mới, không dùng để che core match chưa vui. Tutorial áp dụng `safe practice → low stakes → real match`, dạy đúng lúc bằng thao tác và feedback thay vì chuỗi popup chữ.
 
 ---
 
@@ -483,15 +508,7 @@ Các video tham chiếu không phải bằng chứng rằng các màn hình tư�
 
 ## 21. BACKLOG NGHIÊN CỨU & LỘ TRÌNH MỞ RỘNG
 
-Các hạng mục cần playtest/balancing tiếp; backlog triển khai quyết định-complete nằm ở [tài liệu implementation](../implementation/unity-implementation-audit-and-backlog.md):
-
-- [ ] Công thức tính Chemistry chi tiết (trọng số theo CLB/giải đấu/quốc tịch, ngưỡng kích hoạt bonus)
-- [ ] Cấu trúc dữ liệu & luật vận hành Chợ chuyển nhượng đầy đủ (chống thao túng giá, giới hạn giao dịch/ngày, thuế lũy tiến)
-- [ ] Thiết kế chi tiết từng chiến thuật preset trong Chế độ HLV (AI behavior tree)
-- [ ] Cân bằng số học cụ thể: chi phí Rank Up theo từng mốc OVR, tốc độ farm Điểm Nâng Rank
-- [ ] Thiết kế esports/giải đấu cộng đồng dài hạn (tham chiếu FVSL của FC Mobile VN)
-- [ ] Chi tiết hệ thống thông báo đẩy & giữ chân người chơi (retention loop)
-- [ ] Mô hình doanh thu chi tiết (tỷ lệ giá gói, bundle, giá trị trọn đời người chơi)
+Các câu hỏi chưa khóa không còn là checkbox vô chủ. Chúng được quản lý tại [decision register](#section-23); backlog triển khai nằm ở [tài liệu implementation](../implementation/unity-implementation-audit-and-backlog.md). Số cân bằng trong GDD là hypothesis/config cho đến khi vượt playtest gate và có owner phê duyệt.
 
 ---
 
@@ -520,3 +537,21 @@ Các hệ thống dưới đây được tách khỏi GDD tổng để đội s�
 - [Bằng chứng video có timestamp](../research/video/ui-pattern-synthesis.md)
 
 Các công thức, schema và pipeline trong GDD là quyết định hoặc đề xuất của Soccer Mobile Pro trừ khi đoạn văn gắn nhãn và dẫn nguồn khác.
+
+---
+
+<a id="section-23"></a>
+
+## 23. DECISION REGISTER VÀ PLAYTEST GATES
+
+| ID | Quyết định mở | Owner | Dependency/phạm vi thử | Metric và gate | Trạng thái |
+| --- | --- | --- | --- | --- | --- |
+| D01 | Công thức chemistry và cap | Game Design | Core match + catalog role | Không dominant strategy; ≥3 formation khả dụng trong scenario suite | Chờ core gate |
+| D02 | Thuế/limit market | Economy + Backend | Ledger, price band, anti-abuse | Sink/source ratio và false-positive manipulation trong simulation | Chờ economy prototype |
+| D03 | Preset AI Manager | AI/Gameplay | Tactical state/decision trace | Shape error, pass diversity, exploit rate theo seed | Chờ AI scenario suite |
+| D04 | Chi phí Rank/Training | Economy + Product | Core loop đạt gate, upgrade receipt | Time-to-goal, regret/undo request, power gap cohort | Không production hóa |
+| D05 | Esports dài hạn | Competitive Ops | Deterministic result, reconnect, audit | Dispute SLA, verified result và tournament completion | Chờ integrity P1 |
+| D06 | Push/retention | LiveOps + Privacy | Consent, quiet hours, preference | Opt-out/complaint; không dùng mất streak làm phạt | Chờ privacy review |
+| D07 | Giá bundle/LTV | Product + Compliance | Odds/entitlement/refund | Không pay-to-win; refund/reconcile pass; age review | Chờ compliance gate |
+
+Mỗi decision chuyển sang `Approved` chỉ khi có build/config version, cohort/device tier, câu hỏi nghiên cứu, raw metric, biên bản rủi ro và rollback. Playtest quan sát hành vi (time, mis-input, retry, quit point) trước survey; ba người lặp cùng lỗi tạo design issue. Khi core match thất bại gate, D01–D07 không được dùng làm lý do mở thêm feature.

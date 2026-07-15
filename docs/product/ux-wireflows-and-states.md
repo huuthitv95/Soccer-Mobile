@@ -1,6 +1,6 @@
 # UX wireflows và trạng thái UI
 
-> [Chỉ mục](../index.md) · [GDD](gdd-soccer-mobile-pro.md) · [Bằng chứng video](../research/video/ui-pattern-synthesis.md)
+> [Chỉ mục](../index.md) · [GDD](gdd-soccer-mobile-pro.md) · [UI design system](ui-design-system-and-screen-catalogue.md) · [Bằng chứng video](../research/video/ui-pattern-synthesis.md)
 
 ## 1. Mục tiêu và phạm vi
 
@@ -28,6 +28,13 @@
 5. **Match:** mode → eligibility/squad check → opponent/loading → gameplay → reconnect/result → reward reconciliation.
 6. **Report:** result/profile → reason → match context → submit → case acknowledgement → resolution/appeal.
 7. **Tournament:** rules → eligibility → register → check-in → bracket/lobby → verified result → reward.
+8. **Settings:** Profile → Settings → category → preview/change → owner validates → auto-save/apply → sync result; reset chỉ tác động category đã chọn.
+9. **Club/squad/player:** Club → squad slot → inventory/filter → player detail/compare → assign → squad validation → save revision.
+10. **Market/exchange:** entry → browse/recipe → detail + current revision → preview cost/output → protected-item check → confirm → authoritative receipt → inventory projection.
+11. **Offline AI:** mode → difficulty/tactics → squad validation → local asset gate → seeded match → pause/resume → result + decision trace → optional replay.
+12. **VAR:** immutable rule incident → presentation eligibility → review overlay/replay → decision shown → resume; skip chỉ bỏ presentation.
+
+Mỗi flow đi qua cùng gate theo thứ tự: `session → version/catalog → entitlement/eligibility → asset → domain command`. Gate thất bại trả về state có hành động và route fallback; không chuyển thẳng về Home làm mất context.
 
 ## 4. State catalogue
 
@@ -72,3 +79,4 @@ Event tối thiểu: `screen_view`, `navigation_action`, `cta_tap`, `modal_resul
 - [Quan sát video UI](../research/video/ui-pattern-synthesis.md)
 - [Nghiên cứu FC Mobile VN](../research/fc-mobile-vn-research.md)
 - [Audit Unity và backlog](../implementation/unity-implementation-audit-and-backlog.md)
+- [UI design system và screen catalogue](ui-design-system-and-screen-catalogue.md)
