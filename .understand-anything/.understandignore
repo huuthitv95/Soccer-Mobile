@@ -84,3 +84,19 @@
 # **/*_browsertest.cc
 # **/*_benchmark.cc
 # **/*Benchmark.cpp
+
+# --- Soccer Mobile Pro canonical graph scope ---
+
+[Ll]ibrary/
+[Tt]emp/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+.agents/
+.codex/
+.understand-anything/
+docs/.understand-anything/
+docs/assets/
+references/
+**/*.meta
+**/*.csproj
+**/*.sln
