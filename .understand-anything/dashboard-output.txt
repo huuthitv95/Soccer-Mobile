@@ -1,5 +1,7 @@
-Understand Anything dashboard runtime snapshot
-Project: Soccer-Mobile-Pro
-Local endpoint: http://127.0.0.1:5173/
-Runtime credentials omitted before version control
-Status at capture: Vite ready
+
+  🔑  Dashboard URL: http://127.0.0.1:5173/?token=12cb3198e317fb941c6b56d2de5a3048
+
+
+  VITE v6.4.3  ready in 587 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
