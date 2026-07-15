@@ -129,7 +129,7 @@
 ## 12. VAR và trọng tài
 
 - **[Thông tin công khai đã xác minh]** EA công bố cải thiện referee decision-making và collision detection; va chạm nhẹ hoặc skill move lao vào hậu vệ không tự động tạo foul. Nguồn: [S10](https://www.ea.com/games/ea-sports-fc/fc-mobile/news/fc-mobile-26-update-gameplay), truy cập 15/07/2026. Độ chắc chắn: **Cao**.
-- **[Suy luận thiết kế]** Không tìm thấy trong S01–S16 bằng chứng FC Mobile VN có quy trình “check VAR” tương tác. Referee tuning không đồng nghĩa VAR; replay hình ảnh không chứng minh engine dùng video để quyết định luật.
+- **[Suy luận thiết kế]** Không tìm thấy trong S01–S19 bằng chứng FC Mobile VN có quy trình “check VAR” tương tác. Referee tuning không đồng nghĩa VAR; replay hình ảnh không chứng minh engine dùng video để quyết định luật.
 - **[Đề xuất cho Soccer Mobile Pro]** Rule engine deterministic chốt goal/offside/foul/penalty từ match state authoritative; VAR chỉ là presentation state (`ReviewRequested → Reviewing → DecisionShown → Resume`). Replay camera không được thay đổi decision. Có timeout, skip presentation, audit event và fallback instant decision trên thiết bị yếu.
 
 <a id="offline-ai"></a>
@@ -141,9 +141,18 @@
 - **[Đề xuất cho Soccer Mobile Pro]** Bắt đầu bằng AI deterministic nhiều tầng: tactical shape → role assignment → perception/blackboard → utility scoring → action planner → locomotion/animation. Dùng scenario tests và telemetry để tune tham số; ML chỉ được thử offline để gợi ý tuning, không tự học từ người chơi trên thiết bị.
 - **[Đề xuất cho Soccer Mobile Pro]** Difficulty điều chỉnh reaction delay, perception noise, tactical risk và execution error trong biên minh bạch; không tăng tốc/OVR bí mật. Acceptance gồm build-up, pressing, marking, transition, set piece, goalkeeper, time wasting và recovery shape; seed replayable để debug.
 
+<a id="verified-operations"></a>
+
+## 14. Luồng vận hành công khai đã xác minh
+
+- **[Thông tin công khai đã xác minh]** Báo cáo gian lận tại bản VN gồm bốn bước: mở hồ sơ đối thủ, chọn biểu tượng “Cái Loa”, chọn “Nội dung không phù hợp” rồi lý do “Gian lận”, và gửi báo cáo. Garena nói thông tin được bảo mật và đội ngũ giám sát kiểm tra trước quyết định cuối. Nguồn: [S17](https://fcmobile.garena.vn/huong-dan-chi-tiet-cac-buoc-bao-cao-hanh-vi-gian-lan-ket-qua-tran-dau-trong-fc-mobile-vn/), truy cập 15/07/2026. Độ chắc chắn: **Cao**. Điều này không xác nhận thuật toán phát hiện hay SLA xử lý.
+- **[Thông tin công khai đã xác minh]** Giftcode được nhập từ “Khu Phức Hợp” → “Nơi Nhập GiftCode”; quà trả về hộp thư. Mã dài 6–16 ký tự chữ hoa/số, có hạn và yêu cầu tài khoản Garena/Google/Facebook/Apple đã liên kết. Nguồn: [S18](https://fcmobile.garena.vn/huong-dan-nhap-code-qua-tang-trong-fc-mobile-viet-nam/), truy cập 15/07/2026. Độ chắc chắn: **Cao**. UI không chứng minh cơ chế grant/idempotency backend.
+- **[Thông tin công khai đã xác minh]** Khi gặp “Download Resource Error”, Garena hướng dẫn xóa CBT và cài bản chính thức, thử đổi Wi-Fi/4G/5G, hoặc tắt iOS Private Relay tạm thời. Nguồn: [S19](https://fcmobile.garena.vn/faq-cach-khac-phuc-loi-tai-nguyen/), truy cập 15/07/2026. Độ chắc chắn: **Cao**. Đây là runbook hỗ trợ, không phải mô tả CDN/manifest.
+- **[Đề xuất cho Soccer Mobile Pro]** Report phải gắn `matchId`/evidence server-side; giftcode phải đổi qua ledger idempotent và inbox; tải nội dung phải có checksum, retry/backoff, mạng thay đổi giữa chừng và last-known-good catalog. Chi tiết contract nằm ở các spec systems/operations, không suy diễn thành nội bộ FC Mobile VN.
+
 <a id="research-risks"></a>
 
-## 14. Rủi ro và câu hỏi cần xác minh
+## 15. Rủi ro và câu hỏi cần xác minh
 
 - Phiên bản Global, Garena VN và thời điểm update có thể khác; đặc biệt Rank Up/Training và provider account.
 - Tên Play's Styles trên trang VN cần đối chiếu terminology trong client trước khi dùng làm type chính thức.

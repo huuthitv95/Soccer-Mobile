@@ -11,6 +11,7 @@
 - [5. Hiệu ứng và chuyển động](#motion)
 - [6. Mẫu chức năng](#functional-patterns)
 - [7. Đề xuất cho Soccer Mobile Pro](#recommendations)
+- [8. Coverage bằng chứng và giới hạn đo](#evidence-coverage)
 
 <a id="method"></a>
 
@@ -118,3 +119,17 @@ Model/stadium là preview surface, selector là control surface; selected/locked
 5. Mọi giao dịch reward/exchange/account là server-authoritative, idempotent, có telemetry và recovery; không suy diễn backend FC Mobile VN từ video.
 6. Bổ sung UX chưa xuất hiện trong clip: loading skeleton, empty có CTA, offline/retry, timeout, maintenance, partial asset, validation, confirmation, entitlement conflict và hỗ trợ người dùng.
 7. Dùng key frame trong bộ này làm reference evidence, không dùng làm pixel-perfect source hoặc asset nguồn. Spec triển khai phải chuyển quan sát thành wireflow và acceptance criteria độc lập.
+
+<a id="evidence-coverage"></a>
+
+## 8. Coverage bằng chứng và giới hạn đo
+
+| Video | Screen/state | Layout hierarchy | CTA/modal/loading | Transition/motion | Audio/OCR | Kết luận |
+| --- | --- | --- | --- | --- | --- | --- |
+| 01 login/account | Đủ theo timeline | Đủ ở mức vùng tương đối | Đủ cho provider, webview và spinner | Đủ loại chuyển cảnh, không đủ duration/easing | Ngoài phạm vi | Đủ làm UX evidence, không đủ suy backend |
+| 02 Home/liveops | Đủ theo module | Đủ shell/hero/rail/nav | Đủ CTA reward và loading quan sát được | Đủ carousel/content swap, không đủ token chính xác | Ngoài phạm vi | Đủ làm screen catalogue/liveops proposal |
+| 03 profile/settings | Đủ modal/tab/empty | Đủ modal hai cột và list row | Đủ toggle, confirm và empty; thiếu failure | Đủ loại overlay/drill-down | Ngoài phạm vi | Đủ cho settings state model đề xuất |
+| 04 club/squad | Đủ hub/grid/preview | Đủ preview/control/action surface | Đủ selected/locked/deferred asset | Đủ reveal/loading, không đủ easing | Ngoài phạm vi | Không chứng minh player API/model pipeline |
+| 05 exchange/events | Đủ module/task/reward | Đủ rail/list/detail | Đủ contextual CTA/progress; thiếu lỗi/expired | Đủ reveal/content swap | Ngoài phạm vi | Đủ cho transaction UX proposal |
+
+Các tỷ lệ layout chỉ là ước lượng từ frame 1920×864, làm tròn theo vùng (`<25%`, `25–50%`, `>50%`) thay vì pixel spec. Timestamp có độ phân giải theo frame/key frame đã trích; một state không xuất hiện được ghi là **không quan sát**, không được ghi là “không tồn tại”. Motion duration, easing, haptic, âm thanh, focus screen reader và text do OCR đều chưa được chứng minh. Quy tắc này ngăn contact sheet trở thành nguồn pixel-perfect hoặc nguồn kiến trúc.

@@ -39,20 +39,47 @@ Mọi nhận định trong bộ tài liệu phải mang một trong bốn nhãn:
 | S14 | EA, 2025 | [UEFA Champions League Deep Dive](https://www.ea.com/games/ea-sports-fc/fc-mobile/news/uefa-champions-league-deep-dive-2025) | Chế độ UCL và phạm vi CLB tham gia | Không chứng minh toàn bộ danh mục license | Cao |
 | S15 | EA | [Trang chủ EA SPORTS FC Mobile](https://www.ea.com/games/ea-sports-fc/fc-mobile) | Định vị sản phẩm, Ultimate Team, gameplay mobile | Nội dung marketing tổng quan | Cao |
 | S16 | EA Help | [Trung tâm hỗ trợ FC Mobile](https://help.ea.com/en/games/ea-sports-fc/fc-mobile/) | Chỉ mục account, redeem code, squad và troubleshooting | Trang tổng hợp thay đổi liên tục | Trung bình |
+| S17 | Garena, 20/03/2026 | [Hướng dẫn báo cáo hành vi gian lận](https://fcmobile.garena.vn/huong-dan-chi-tiet-cac-buoc-bao-cao-hanh-vi-gian-lan-ket-qua-tran-dau-trong-fc-mobile-vn/) | Luồng bốn bước từ hồ sơ đối thủ, lý do gian lận, bảo mật và kiểm tra thủ công | Không công bố tín hiệu phát hiện, SLA hay thang xử phạt | Cao |
+| S18 | Garena, 23/10/2025 | [Hướng dẫn nhập code quà tặng](https://fcmobile.garena.vn/huong-dan-nhap-code-qua-tang-trong-fc-mobile-viet-nam/) | Điểm vào Khu Phức Hợp, định dạng code, liên kết tài khoản, hộp thư và hết hạn | Không công bố API, chống replay hay grant ledger | Cao |
+| S19 | Garena, 16/10/2025 | [FAQ lỗi tải tài nguyên](https://fcmobile.garena.vn/faq-cach-khac-phuc-loi-tai-nguyen/) | Reinstall bản chính thức, đổi mạng và xử lý iOS Private Relay | Là hướng dẫn hỗ trợ, không mô tả CDN/manifest nội bộ | Cao |
+| T01 | Unity Technologies, tài liệu Unity 2022.3 | [Localization package](https://docs.unity3d.com/Packages/com.unity.localization@1.5/manual/index.html) | Locale, string/asset table, fallback và pseudo-localization cho proposal | Không mô tả FC Mobile VN | Cao |
+| T02 | Unity Technologies, tài liệu Unity 2022.3 | [Input System Actions](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.7/manual/Actions.html) | Action map, binding và context cho proposal controls | Không xác nhận layout FC Mobile VN | Cao |
+| T03 | Unity Technologies, tài liệu Unity 2022.3 | [Addressables content update](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/content-update-builds.html) | Catalog/version/content update cho proposal asset delivery | Không xác nhận pipeline EA/Garena | Cao |
+| T04 | Unity Technologies, tài liệu Unity 2022.3 | [Importing models](https://docs.unity3d.com/2022.3/Documentation/Manual/ImportingModelFiles.html) | Import mesh, rig, animation và dependency cho model pipeline đề xuất | Không xác nhận face-scan hoặc bundle nội bộ | Cao |
+| T05 | Kurach và cộng sự, 2019 | [Google Research Football](https://arxiv.org/abs/1907.11180) | Môi trường, scenario và đánh giá multi-agent football cho R&D AI | Paper nghiên cứu; không phải thuật toán FC Mobile VN | Trung bình |
+
+<a id="claim-register"></a>
+
+## 3. Claim register
+
+Claim register là authority để biết một nguồn thực sự chứng minh điều gì. `Khu vực/phiên bản` ngăn việc lấy dữ kiện Global áp thẳng sang bản Garena; `Giới hạn` bắt buộc đi cùng claim.
+
+| Claim ID | Nhãn | Claim được hỗ trợ | Nguồn | Khu vực/phiên bản | Giới hạn | Chắc chắn |
+| --- | --- | --- | --- | --- | --- | --- |
+| C01 | Thông tin công khai đã xác minh | FC Mobile VN phát hành trên iOS/Android, có giao diện tiếng Việt và bố cục cảm ứng | S01 | Việt Nam, launch 2025 | Không chứng minh hot-swap locale | Cao |
+| C02 | Thông tin công khai đã xác minh | Đấu Giả Lập cho phép chọn chiến thuật mà không điều khiển cầu thủ trực tiếp | S03 | Việt Nam, 2025 | Không công bố AI/training | Cao |
+| C03 | Thông tin công khai đã xác minh | Training, Rank Up, OVR và Market là các khái niệm liên quan nhưng có drift theo phiên bản | S08, S11 | Global, 2025–2026 | Phải version data; không hard-code vật phẩm | Trung bình |
+| C04 | Thông tin công khai đã xác minh | League xã hội có thành viên, quest, leaderboard, tournament và season contribution | S12, S13 | Global, 2025 | Không đồng nghĩa competition bóng đá | Cao |
+| C05 | Thông tin công khai đã xác minh | Báo cáo gian lận đi từ hồ sơ đối thủ qua biểu tượng báo cáo, chọn lý do và gửi để đội ngũ kiểm tra | S17 | Việt Nam, 2026 | Không chứng minh automated detection | Cao |
+| C06 | Thông tin công khai đã xác minh | Giftcode dài 6–16 ký tự chữ hoa/số, cần tài khoản liên kết và trả quà qua hộp thư | S18 | Việt Nam, 2025 | Không công bố idempotency hoặc ledger | Cao |
+| C07 | Thông tin công khai đã xác minh | Hỗ trợ lỗi tải tài nguyên gồm cài bản chính thức, đổi mạng và tắt Private Relay tạm thời trên iOS | S19 | Việt Nam, 2025 | Không chứng minh CDN hay cơ chế tải | Cao |
+| C08 | Suy luận thiết kế | Catalog client nên có manifest ký/version, cache và fallback last-known-good | T03 | Soccer Mobile Pro | Kiến trúc đề xuất, không phải nội bộ EA/Garena | Trung bình |
+| C09 | Suy luận thiết kế | Model cầu thủ nên qua import/rig/LOD/validation rồi phân phối theo catalog | T03, T04 | Soccer Mobile Pro | Face scan và asset gốc cần pipeline/licensing riêng | Trung bình |
+| C10 | Suy luận thiết kế | AI offline cần scenario suite, seed tái lập và trace quyết định trước khi cân nhắc ML | T05 | Soccer Mobile Pro R&D | Paper không bảo đảm phù hợp mobile production | Trung bình |
 
 <a id="research-boundaries"></a>
 
-## 3. Ranh giới bằng chứng
+## 4. Ranh giới bằng chứng
 
-- Không nguồn S01–S16 công bố schema/API endpoint của player database, cách client gọi catalog, tên CDN, cơ chế ký request hoặc chiến lược cache cụ thể.
-- Không nguồn S01–S16 công bố pipeline nội bộ để scan, rig, LOD, đóng gói hay tải model 3D cầu thủ vào game. “New Face Scans” là bằng chứng về nội dung đầu ra, không phải bằng chứng về pipeline.
+- Không nguồn S01–S19 công bố schema/API endpoint của player database, cách client gọi catalog, tên CDN, cơ chế ký request hoặc chiến lược cache cụ thể.
+- Không nguồn S01–S19 công bố pipeline nội bộ để scan, rig, LOD, đóng gói hay tải model 3D cầu thủ vào game. “New Face Scans” là bằng chứng về nội dung đầu ra, không phải bằng chứng về pipeline.
 - S10 xác nhận cải tiến **trọng tài**, nhưng không xác nhận một hệ thống **VAR tương tác** hay dùng replay hình ảnh để quyết định luật.
 - S03 xác nhận Đấu Giả Lập không cần điều khiển trực tiếp; không công bố dữ liệu huấn luyện, kiến trúc mô hình, utility score, behavior tree hoặc reinforcement learning.
 - License mà người dùng sở hữu cho Soccer Mobile Pro không làm thay đổi mức xác thực của mô tả kỹ thuật EA/Garena. Tài liệu vẫn phải phân biệt dữ kiện và đề xuất.
 
 <a id="research-process"></a>
 
-## 4. Quy trình cập nhật
+## 5. Quy trình cập nhật
 
 1. Ưu tiên Garena, EA/EA Help, Google Play và luật giải chính thức.
 2. Gắn URL và ngày truy cập sát claim; thêm nguồn mới vào bảng trước khi dùng.
