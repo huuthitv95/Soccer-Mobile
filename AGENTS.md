@@ -50,7 +50,7 @@ Use the narrowest applicable skill and read that skill's `SKILL.md` before invok
 Use the following routing table for the user-installed skill catalog.
 
 | Work type | Prefer these installed skills | Use when | Do not use for |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Product/game research | `game-design-core`, `content-research-writer`, `firecrawl-deep-research`, `firecrawl-market-research`, `firecrawl-research-papers` | FC Mobile VN/eFootball feature research, football-AI papers, economy and live-service analysis | Private API reverse engineering, unlicensed asset acquisition |
 | Focused web research | `firecrawl-search`, `firecrawl-scrape`, `firecrawl-crawl`, `firecrawl-parse`, `firecrawl-map`, `firecrawl-download` | Official pages, patch notes, FAQ, event rules, tournament pages, source extraction | Crawling inaccessible/private content or bypassing restrictions |
 | Research corpus and monitoring | `firecrawl-knowledge-base`, `firecrawl-knowledge-ingest`, `firecrawl-research-index`, `firecrawl-monitor`, `firecrawl-qa` | Building a searchable documentation corpus, tracking official update pages, checking research coverage | Replacing source citations or making unsupported claims |
@@ -189,6 +189,7 @@ Mobile performance work must report the target device tier, scenario, measured m
 6. **Validate:** run relevant tests, inspect console logs, save scenes/assets, and capture screenshots or profiler evidence where applicable.
 7. **Document:** update `docs/` whenever a feature decision, data contract, UI flow, control mapping, operation policy, or known limitation changes.
 8. **Commit and push:** every completed editing batch must be committed and pushed to `origin/main`, unless the user explicitly asks for a branch/PR workflow.
+9. **Recommend the next batch:** every batch handoff must propose the next implementation plan, including scope, dependencies, risks, acceptance criteria, and why it is the highest-value next step.
 
 ## Documentation standards
 

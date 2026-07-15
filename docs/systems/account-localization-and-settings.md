@@ -84,9 +84,11 @@ QA: cold/warm boot; vi/en; locale table thiếu; Guest/link/revoke; callback dup
 
 ## 7. Decision register
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| ALS-D01 | Provider/Guest policy theo khu vực | Product + Legal + Backend | Privacy/age/recovery review |
-| ALS-D02 | Merge rule | Economy + Support | Simulation duplicate/loss và audit |
-| ALS-D03 | Voice locale/hot-swap | Audio + Client | Memory/download/resume device matrix |
-| ALS-D04 | Cloud-sync field allowlist | Security + UX | Conflict test; không sync device-risk setting |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| ALS-D01 | Provider/Guest policy theo khu vực | Product + Legal + Backend | Privacy/age/recovery review | `Blocked` |
+| ALS-D02 | Merge rule | Economy + Support | Simulation duplicate/loss và audit | `TestReady` |
+| ALS-D03 | Voice locale/hot-swap | Audio + Client | Memory/download/resume device matrix | `TestReady` |
+| ALS-D04 | Cloud-sync field allowlist | Security + UX | Conflict test; không sync device-risk setting | `TestReady` |

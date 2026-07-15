@@ -83,9 +83,11 @@ QA property/contract: duplicate command, revision race, insufficient balance, pr
 
 ## 7. Decision register
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| PCS-D01 | Rank/Training caps và cost | Economy + Design | Core gate + cohort simulation/playtest |
-| PCS-D02 | Skill taxonomy/caps | Gameplay | Scenario suite, không dominant strategy |
-| PCS-D03 | Market model/tax/band | Economy + Backend | Inflation/abuse/load simulation |
-| PCS-D04 | Respec price/policy | Product + Compliance | Regret/fairness test; không paywall experimentation |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| PCS-D01 | Rank/Training caps và cost | Economy + Design | Core gate + cohort simulation/playtest | `TestReady` |
+| PCS-D02 | Skill taxonomy/caps | Gameplay | Scenario suite, không dominant strategy | `TestReady` |
+| PCS-D03 | Market model/tax/band | Economy + Backend | Inflation/abuse/load simulation | `TestReady` |
+| PCS-D04 | Respec price/policy | Product + Compliance | Regret/fairness test; không paywall experimentation | `Blocked` |

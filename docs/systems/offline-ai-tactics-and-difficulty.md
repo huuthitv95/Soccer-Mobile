@@ -87,9 +87,11 @@ QA: deterministic replay, 30/60 FPS independence, pause/save/resume, all formati
 
 ## 7. Decision register
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| AI-D01 | Utility/BT/hybrid implementation | AI + Gameplay | Prototype profile + debugability/performance |
-| AI-D02 | Difficulty profile values | Design + Analytics | Blind playtest theo persona/device |
-| AI-D03 | Adaptive onboarding assist | UX + Fairness | Opt-out, disclosure, no ranked crossover |
-| AI-D04 | ML/RL R&D continuation | Tech Lead | Vượt scripted baseline, deterministic export, safety/cost |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| AI-D01 | Utility/BT/hybrid implementation | AI + Gameplay | Prototype profile + debugability/performance | `TestReady` |
+| AI-D02 | Difficulty profile values | Design + Analytics | Blind playtest theo persona/device | `TestReady` |
+| AI-D03 | Adaptive onboarding assist | UX + Fairness | Opt-out, disclosure, no ranked crossover | `Blocked` |
+| AI-D04 | ML/RL R&D continuation | Tech Lead | Vượt scripted baseline, deterministic export, safety/cost | `TestReady` |

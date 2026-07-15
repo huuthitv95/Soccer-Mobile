@@ -75,9 +75,11 @@ QA: season boundary/timezone, rights expiry, roster transfer, duplicate join, ow
 
 ## 7. Decision register
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| CLS-D01 | Group cap/roles | Social + Backend | Load/moderation simulation |
-| CLS-D02 | Club Challenge roster policy | Game Design + Licensing | Rights + fairness review |
-| CLS-D03 | Tournament dispute window | Competitive Ops | Operational rehearsal/SLA |
-| CLS-D04 | Public profile defaults | Privacy + UX | Age/region review |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| CLS-D01 | Group cap/roles | Social + Backend | Load/moderation simulation | `TestReady` |
+| CLS-D02 | Club Challenge roster policy | Game Design + Licensing | Rights + fairness review | `Blocked` |
+| CLS-D03 | Tournament dispute window | Competitive Ops | Operational rehearsal/SLA | `TestReady` |
+| CLS-D04 | Public profile defaults | Privacy + UX | Age/region review | `Blocked` |

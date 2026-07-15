@@ -45,6 +45,7 @@
 ## 6. Implementation
 
 - [Audit Unity và backlog triển khai](implementation/unity-implementation-audit-and-backlog.md)
+- [Chương trình kiểm chứng decision register](implementation/decision-validation-program.md)
 
 ## 7. Bản đồ phụ thuộc
 

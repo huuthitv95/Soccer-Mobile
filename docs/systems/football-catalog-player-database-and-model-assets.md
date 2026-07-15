@@ -83,9 +83,11 @@ QA: manifest signature, corrupt/partial download, N-2 migration, locale/search, 
 
 ## 7. Decision register
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| CAT-D01 | Backend store/API shape | Backend/Data | Load, cache, audit và cost test |
-| CAT-D02 | Addressables group/CDN | Client/DevOps | Staged update + rollback rehearsal |
-| CAT-D03 | Device-tier model budgets | Tech Art | Profiler trên target devices |
-| CAT-D04 | Face/body coverage launch | Production/Licensing | Rights, capacity và fallback quality |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| CAT-D01 | Backend store/API shape | Backend/Data | Load, cache, audit và cost test | `TestReady` |
+| CAT-D02 | Addressables group/CDN | Client/DevOps | Staged update + rollback rehearsal | `TestReady` |
+| CAT-D03 | Device-tier model budgets | Tech Art | Profiler trên target devices | `TestReady` |
+| CAT-D04 | Face/body coverage launch | Production/Licensing | Rights, capacity và fallback quality | `Blocked` |

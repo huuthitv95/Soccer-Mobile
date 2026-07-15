@@ -528,12 +528,12 @@ Các công thức, schema và pipeline trong GDD là quyết định hoặc đ�
 
 | ID | Quyết định mở | Owner | Dependency/phạm vi thử | Metric và gate | Trạng thái |
 | --- | --- | --- | --- | --- | --- |
-| D01 | Công thức chemistry và cap | Game Design | Core match + catalog role | Không dominant strategy; ≥3 formation khả dụng trong scenario suite | Chờ core gate |
-| D02 | Thuế/limit market | Economy + Backend | Ledger, price band, anti-abuse | Sink/source ratio và false-positive manipulation trong simulation | Chờ economy prototype |
-| D03 | Preset AI Manager | AI/Gameplay | Tactical state/decision trace | Shape error, pass diversity, exploit rate theo seed | Chờ AI scenario suite |
-| D04 | Chi phí Rank/Training | Economy + Product | Core loop đạt gate, upgrade receipt | Time-to-goal, regret/undo request, power gap cohort | Không production hóa |
-| D05 | Esports dài hạn | Competitive Ops | Deterministic result, reconnect, audit | Dispute SLA, verified result và tournament completion | Chờ integrity P1 |
-| D06 | Push/retention | LiveOps + Privacy | Consent, quiet hours, preference | Opt-out/complaint; không dùng mất streak làm phạt | Chờ privacy review |
-| D07 | Giá bundle/LTV | Product + Compliance | Odds/entitlement/refund | Không pay-to-win; refund/reconcile pass; age review | Chờ compliance gate |
+| D01 | Công thức chemistry và cap | Game Design | Core match + catalog role | Không dominant strategy; ≥3 formation khả dụng trong scenario suite | `TestReady` |
+| D02 | Thuế/limit market | Economy + Backend | Ledger, price band, anti-abuse | Sink/source ratio và false-positive manipulation trong simulation | `TestReady` |
+| D03 | Preset AI Manager | AI/Gameplay | Tactical state/decision trace | Shape error, pass diversity, exploit rate theo seed | `TestReady` |
+| D04 | Chi phí Rank/Training | Economy + Product | Core loop đạt gate, upgrade receipt | Time-to-goal, regret/undo request, power gap cohort | `TestReady` |
+| D05 | Esports dài hạn | Competitive Ops | Deterministic result, reconnect, audit | Dispute SLA, verified result và tournament completion | `TestReady` |
+| D06 | Push/retention | LiveOps + Privacy | Consent, quiet hours, preference | Opt-out/complaint; không dùng mất streak làm phạt | `Blocked` |
+| D07 | Giá bundle/LTV | Product + Compliance | Odds/entitlement/refund | Không pay-to-win; refund/reconcile pass; age review | `Blocked` |
 
-Mỗi decision chuyển sang `Approved` chỉ khi có build/config version, cohort/device tier, câu hỏi nghiên cứu, raw metric, biên bản rủi ro và rollback. Playtest quan sát hành vi (time, mis-input, retry, quit point) trước survey; ba người lặp cùng lỗi tạo design issue. Khi core match thất bại gate, D01–D07 không được dùng làm lý do mở thêm feature.
+Lifecycle và evidence package được quản lý tại [chương trình kiểm chứng decision register](../implementation/decision-validation-program.md). Mỗi decision chuyển sang `Approved` chỉ khi có build/config version, cohort/device tier, câu hỏi nghiên cứu, raw metric, biên bản rủi ro và rollback. Playtest quan sát hành vi (time, mis-input, retry, quit point) trước survey; ba người lặp cùng lỗi tạo design issue. Khi core match thất bại gate, D01–D07 không được dùng làm lý do mở thêm feature.

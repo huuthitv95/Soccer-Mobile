@@ -68,9 +68,11 @@ Chống abuse: receipt replay, guest reroll, refund fraud, code farming, duplica
 | Refund sau grant | Lịch sử và support route | Platform event → entitlement reconcile |
 | Config/odds mismatch | Disable checkout | Signed offer, four-eyes, rollback |
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| LOM-D01 | Offer/odds/region policy | Product + Compliance | Store/age/privacy review |
-| LOM-D02 | Membership cycle/tier | Economy | Cohort simulation; no ranked pay advantage |
-| LOM-D03 | Inbox expiry/catch-up | LiveOps + UX | Comprehension/FOMO review |
-| LOM-D04 | Compensation rules | Ops + Economy | Incident rehearsal và ledger audit |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| LOM-D01 | Offer/odds/region policy | Product + Compliance | Store/age/privacy review | `Blocked` |
+| LOM-D02 | Membership cycle/tier | Economy | Cohort simulation; no ranked pay advantage | `TestReady` |
+| LOM-D03 | Inbox expiry/catch-up | LiveOps + UX | Comprehension/FOMO review | `TestReady` |
+| LOM-D04 | Compensation rules | Ops + Economy | Incident rehearsal và ledger audit | `TestReady` |

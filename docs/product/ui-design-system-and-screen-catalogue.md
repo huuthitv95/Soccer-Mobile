@@ -112,10 +112,12 @@ Rollback: token/theme/config có version; giữ `lastKnownGoodUiConfig`; remote 
 
 ## 8. Decision register
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| UI-D01 | Brand palette/font production | Art + Accessibility | Contrast và glyph vi/en trên device matrix |
-| UI-D02 | Portrait support ngoài web auth | Product + Engineering | Usage/rotation test; không làm giảm match readability |
-| UI-D03 | Bottom nav so với side rail theo aspect | UX | First-click success, reachability và mis-tap playtest |
-| UI-D04 | Motion duration cuối | UX + Tech Art | Frame pacing low tier và Reduced Motion review |
-| UI-D05 | Store/liveops attention budget | Product + UX | Không quá một primary CTA; task completion không giảm |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| UI-D01 | Brand palette/font production | Art + Accessibility | Contrast và glyph vi/en trên device matrix | `TestReady` |
+| UI-D02 | Portrait support ngoài web auth | Product + Engineering | Usage/rotation test; không làm giảm match readability | `TestReady` |
+| UI-D03 | Bottom nav so với side rail theo aspect | UX | First-click success, reachability và mis-tap playtest | `TestReady` |
+| UI-D04 | Motion duration cuối | UX + Tech Art | Frame pacing low tier và Reduced Motion review | `TestReady` |
+| UI-D05 | Store/liveops attention budget | Product + UX | Không quá một primary CTA; task completion không giảm | `TestReady` |

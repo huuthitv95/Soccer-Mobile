@@ -83,10 +83,12 @@ Không hard-code 30 ngày, khóa vĩnh viễn hay blacklist thiết bị như po
 
 Rule, evidence schema, sanction matrix và tournament/reconnect policy có version/effective time theo region. Case đang mở pin version lúc incident nhưng có thể áp dụng policy có lợi hơn theo legal decision; migration không xóa evidence/audit. Retention expiry xóa/anonymize theo class và legal hold. Rollback rule tạo re-evaluation queue, không tự động kết tội hoặc gỡ sanction.
 
-| ID | Quyết định | Owner | Gate |
-| --- | --- | --- | --- |
-| CIE-D01 | Evidence standard và automation threshold | Integrity + Legal | False-positive/appeal audit |
-| CIE-D02 | Sanction matrix theo region | Policy + Legal | Proportionality/age/privacy review |
-| CIE-D03 | Reconnect window/forfeit | Match + Network | Packet-loss/load/fairness test |
-| CIE-D04 | Case/telemetry retention | Privacy + Security | Purpose, minimization, legal hold |
-| CIE-D05 | Appeal SLA và reviewer separation | Support Ops | Staffing rehearsal và audit |
+Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](../implementation/decision-validation-program.md#decision-matrix).
+
+| ID | Quyết định | Owner | Gate | Trạng thái |
+| --- | --- | --- | --- | --- |
+| CIE-D01 | Evidence standard và automation threshold | Integrity + Legal | False-positive/appeal audit | `Blocked` |
+| CIE-D02 | Sanction matrix theo region | Policy + Legal | Proportionality/age/privacy review | `Blocked` |
+| CIE-D03 | Reconnect window/forfeit | Match + Network | Packet-loss/load/fairness test | `TestReady` |
+| CIE-D04 | Case/telemetry retention | Privacy + Security | Purpose, minimization, legal hold | `Blocked` |
+| CIE-D05 | Appeal SLA và reviewer separation | Support Ops | Staffing rehearsal và audit | `TestReady` |

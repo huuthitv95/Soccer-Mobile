@@ -6,7 +6,7 @@
 
 ## 1. Mục tiêu kiểm toán
 
-Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba cột được chấm độc lập: **Research** chỉ hỏi claim có nguồn hoặc kết luận “không công khai”; **Spec** hỏi contract có đủ state/authority/version/failure/QA/rollback; **Unity** chỉ phản ánh code hiện hữu. Một section tồn tại không tự động được tính hoàn thành.
+Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba cột được chấm độc lập: **Research** chỉ hỏi claim có nguồn hoặc kết luận “không công khai”; **Spec** hỏi contract có đủ state/authority/version/failure/QA/rollback; **Unity** chỉ phản ánh code hiện hữu. Một section tồn tại không tự động được tính hoàn thành. Trạng thái phê duyệt của toàn bộ quyết định mở do [chương trình kiểm chứng decision register](../implementation/decision-validation-program.md) quản lý; coverage hoàn chỉnh không đồng nghĩa decision đã `Approved`.
 
 <a id="coverage-matrix"></a>
 
@@ -47,6 +47,8 @@ Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba c�
 <a id="priority-gaps"></a>
 
 ## 4. Khoảng trống ưu tiên
+
+Lifecycle chuẩn là `Open → TestReady → InValidation → EvidenceReady → Approved | Rejected | Blocked`. Mọi mục dưới đây phải có evidence artifact và rollback trước khi phê duyệt.
 
 ### P0 — cần trước khi chốt interface
 
