@@ -19,7 +19,7 @@
 | Video | [`01-login-account.mp4`](../../../references/fc-mobile-vn/videos/01-login-account.mp4) |
 | Thời lượng | 00:31.672 |
 | Khung hình | 1920×864, landscape; nội dung web đăng nhập hiển thị portrait ở giữa |
-| Contact sheet | [Mở ảnh](../../assets/video-analysis/01-login-account/contact-sheet.jpg) |
+| Contact sheet | [Mở ảnh](../../../references/video-analysis/01-login-account/contact-sheet.jpg) |
 | Chế độ phân tích | Visual-first, lấy mẫu 2 giây và key frame chọn lọc |
 
 **Nhãn bằng chứng:** Toàn bộ mô tả trực quan dưới đây là **Quan sát từ video**, không phải xác nhận kiến trúc nội bộ của FC Mobile VN. Whisper và Tesseract không có trên máy tại thời điểm phân tích, vì vậy không có phiên âm âm thanh hoặc OCR tự động; chữ được đọc thủ công từ frame rõ nét.
@@ -36,7 +36,7 @@
 | 00:25–00:27 | Quay lại game | Webview đóng; modal chọn tài khoản trở lại với spinner khóa tương tác. |
 | 00:28–00:31 | Loading toàn màn | Nền đen và glyph/spinner trắng ở tâm cho biết tác vụ xác thực tiếp tục. |
 
-Key frame: [00:00](../../assets/video-analysis/01-login-account/key-00m00s.jpg), [00:05](../../assets/video-analysis/01-login-account/key-00m05s.jpg), [00:08](../../assets/video-analysis/01-login-account/key-00m08s.jpg), [00:26](../../assets/video-analysis/01-login-account/key-00m26s.jpg), [00:28](../../assets/video-analysis/01-login-account/key-00m28s.jpg).
+Key frame: [00:00](../../../references/video-analysis/01-login-account/key-00m00s.jpg), [00:05](../../../references/video-analysis/01-login-account/key-00m05s.jpg), [00:08](../../../references/video-analysis/01-login-account/key-00m08s.jpg), [00:26](../../../references/video-analysis/01-login-account/key-00m26s.jpg), [00:28](../../../references/video-analysis/01-login-account/key-00m28s.jpg).
 
 <a id="screens"></a>
 

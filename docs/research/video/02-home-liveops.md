@@ -19,7 +19,7 @@
 | Video | [`02-home-liveops.mp4`](../../../references/fc-mobile-vn/videos/02-home-liveops.mp4) |
 | Thời lượng | 01:00.333 |
 | Khung hình | 1920×1080, landscape |
-| Contact sheet | [Mở ảnh](../../assets/video-analysis/02-home-liveops/contact-sheet.jpg) |
+| Contact sheet | [Mở ảnh](../../../references/video-analysis/02-home-liveops/contact-sheet.jpg) |
 | Chế độ phân tích | Visual-first, lấy mẫu 4 giây và key frame chọn lọc |
 
 **Nhãn bằng chứng:** Các mô tả là **Quan sát từ video**. Whisper/Tesseract không khả dụng, nên audio bị bỏ qua và không có OCR tự động; nhãn màn hình được đọc thủ công.
@@ -39,7 +39,7 @@
 | 00:48–00:55 | Event webview | Trang “Hành Trình Chinh Phục” tải trong lớp web có rail thumbnail trái, nút đóng và refresh phải. |
 | 00:56–01:00 | Home | Hero “Record Holders”; shell phục hồi sau khi đóng event. |
 
-Key frame: [00:00](../../assets/video-analysis/02-home-liveops/key-00m00s.jpg), [00:16](../../assets/video-analysis/02-home-liveops/key-00m16s.jpg), [00:24](../../assets/video-analysis/02-home-liveops/key-00m24s.jpg), [00:36](../../assets/video-analysis/02-home-liveops/key-00m36s.jpg), [00:48](../../assets/video-analysis/02-home-liveops/key-00m48s.jpg), [00:52](../../assets/video-analysis/02-home-liveops/key-00m52s.jpg).
+Key frame: [00:00](../../../references/video-analysis/02-home-liveops/key-00m00s.jpg), [00:16](../../../references/video-analysis/02-home-liveops/key-00m16s.jpg), [00:24](../../../references/video-analysis/02-home-liveops/key-00m24s.jpg), [00:36](../../../references/video-analysis/02-home-liveops/key-00m36s.jpg), [00:48](../../../references/video-analysis/02-home-liveops/key-00m48s.jpg), [00:52](../../../references/video-analysis/02-home-liveops/key-00m52s.jpg).
 
 <a id="home-layout"></a>
 
