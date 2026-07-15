@@ -66,12 +66,12 @@ SplashScene / SplashVideoSequencePlayer
 - `BallScript.ownerPlayer` là nguồn sự thật cục bộ về quyền sở hữu bóng; tag, khoảng cách và tên GameObject được dùng để tìm đồng đội/đối thủ.
 - Scene name, animation clip name, tag, `PlayerPrefs` key và `GameObject.Find(...)` là contract ẩn không được type-check.
 - Static flags trong role AI và `Player.noControls` có nguy cơ tồn tại qua vòng đời scene/domain reload không như mong muốn.
-- Dữ liệu serialized nằm rải trong scene/prefab/Inspector; chưa có assembly boundary hoặc ScriptableObject catalog rõ ràng.
+- Dữ liệu serialized nằm rải trong scene/prefab/Inspector; P0-01 đã thêm một assembly boundary thuần C# cho Match Core, nhưng phần legacy còn lại vẫn nằm trong assembly mặc định và chưa có ScriptableObject catalog rõ ràng.
 - Package Input System 1.14.2 được cài; Addressables 1.19.19 là dependency gián tiếp qua importer. Không có `.inputactions`; source dùng adapter Enhanced Touch + keyboard/gamepad và prefab joystick. Gameplay keyboard/gamepad hiện chủ yếu trong nhánh `UNITY_EDITOR`, ngoại trừ pause runtime. Default Addressables group trống và Build Addressables with Player tắt; package/config tồn tại không đồng nghĩa input/catalog mục tiêu đã triển khai.
 
 ### 1.5 Test, rủi ro và rollback
 
-- Không tìm thấy C# test file, `[Test]`, `[UnityTest]`, `.asmdef` hay `.inputactions`. Unity Test Framework có trong manifest nhưng chưa có suite dự án.
+- P0-01 đã thêm 3 `.asmdef`, 6 EditMode test và 1 PlayMode smoke test cho deterministic Match Core. Toàn EditMode runner chạy 7 test khi tính thêm Addressables test stub có sẵn. Chưa có `.inputactions`; test legacy scene/device/Android vẫn thuộc P0-02 và validation tiếp theo.
 - Các scene gameplay trọng tâm: `SplashScene`, `MainMenu`, `GameSelectionScene`, hai team-selection scene, `GroupsScene`, `MatchesScene`, `KickOffScene`, `MatchScene`, `FinalCeleberation`.
 - Rủi ro chính: coupling theo chuỗi/scene, state global, logic frame-dependent, legacy UI/Animation, thiếu authority và telemetry, thiếu test fixture.
 - Kế hoạch xác nhận cho mỗi thay đổi tương lai: EditMode domain tests, PlayMode flow/match tests, console sạch, kiểm tra save migration, input trên touch/gamepad/keyboard và smoke test Android.
@@ -85,12 +85,12 @@ SplashScene / SplashVideoSequencePlayer
 | Hạng mục | Kết quả xác nhận | Ghi chú |
 | --- | ---: | --- |
 | Unity Editor | 2022.3.62f3 | Từ `ProjectVersion.txt`. |
-| Script C# trong `Assets/` | 78 | Bao gồm gameplay, legacy standard assets và adapter input. |
+| Script C# trong `Assets/` | 82 | 78 file baseline + Match Core, legacy shadow adapter và 2 test fixture. |
 | Scene `.unity` trong `Assets/` | 14 | 11 scene được bật trong Build Settings; 3 scene test/ngoài danh sách build. |
 | Prefab trong `Assets/` | 19 | Chủ yếu cầu thủ/bóng/audience/UI và joystick legacy. |
-| Assembly definition | 0 | Không có `.asmdef`; code dự án nằm trong assembly mặc định. |
+| Assembly definition | 3 | Match Core thuần C#, EditMode tests và PlayMode tests; legacy vẫn ở assembly mặc định. |
 | Input Actions asset | 0 | Không có `.inputactions`; Input System package vẫn được tham chiếu bởi `SoccerInput`. |
-| Automated C# test | 0 | Không có test file hoặc test attribute trong `Assets/`. |
+| Automated C# test | 6 EditMode + 1 PlayMode của Match Core | Unity 2022.3.62f3 batchmode pass; toàn EditMode runner 7/7 gồm 1 Addressables stub có sẵn. |
 | Package đáng chú ý | Input System, Addressables, Cinemachine, Test Framework, URP | Cài package không chứng minh có implementation sản phẩm tương ứng. |
 
 `Assets/AddressableAssetsData/AddressableAssetSettings.asset` tồn tại, nhưng chưa phải football catalog/model delivery contract nêu trong [catalog spec](../systems/football-catalog-player-database-and-model-assets.md). Tương tự, Input System package và wrapper `SoccerInput` không thay thế `.inputactions`/action map theo context.
@@ -104,7 +104,7 @@ Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, khô
 | Hệ thống | Đã có | Giới hạn hiện tại |
 | --- | --- | --- |
 | Bootstrap/menu | Splash video, menu, scene selection, quick match và cup flow. | Điều hướng hard-code theo scene name; chưa có login/session/loading/error state chuẩn. |
-| Match state | Hai hiệp, timer, score, pause/result, kickoff, foul/corner và goal restart cơ bản. | State phân tán qua singleton/static/component flags; chưa có deterministic event log, VAR hay replay authority. |
+| Match state | Legacy hai hiệp/timer/score/restart + deterministic Match Core cho phase/command/snapshot/event/hash và shadow adapter mặc định tắt. | Core chưa điều khiển physics/HUD/result; legacy state vẫn phân tán; chưa có VAR/replay authority hoặc online server. |
 | Điều khiển | Joystick trái; sprint/pass/shoot khi có bóng; sprint/tackle khi không bóng; keyboard trong Editor. | Rect theo pixel/legacy GUI, chưa remap, left-handed layout, assist profile, action context, gamepad scheme hoặc accessibility đầy đủ. |
 | Bóng/animation | Rigidbody impulse, ball owner, clip chạy/chuyền/sút/tackle/goalkeeper. | Legacy `Animation`, timer và chuỗi clip; chưa có animation graph, motion matching hoặc gameplay-event synchronization. |
 | AI offline | Heuristic theo role, khoảng cách, vùng sân, timer, chuyền/sút và goalkeeper reaction. | Không phải mô hình đã train; không tactical team model, perception/memory, difficulty profile, scenario evaluation hay telemetry tuning. |

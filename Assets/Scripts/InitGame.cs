@@ -15,6 +15,7 @@ public class InitGame : MonoBehaviour
 
 	void OnDestroy()
 	{
+		LegacyMatchCoreAdapter.EndSession();
 		AudioManager.StopAudienceSound();
 	}
 	void Start()
@@ -45,6 +46,7 @@ public class InitGame : MonoBehaviour
 		gm.IsGameReady = false;
 		gm.PlayerMadeFoul = false;
 		gm.OpponentMadeFoul = false;
+		LegacyMatchCoreAdapter.BeginSession(gm.IsFirstHalf, gm.CurrentMatch);
 
 		if(gm.IsFirstHalf)
 		{
@@ -74,11 +76,15 @@ public class InitGame : MonoBehaviour
 		if(Time.time-lasTime >= matchTimeStep && GameManager.SharedObject().IsGameReady)
 		{
 			GameManager.SharedObject().GameTime += 1;
+			if(LegacyMatchCoreAdapter.Current != null)
+				LegacyMatchCoreAdapter.Current.AdvanceClock(GameManager.SharedObject().GameTime);
 			lasTime = Time.time;
 		}
 
 		if(GameManager.SharedObject().GameTime > 45f*60f)
 		{
+			if(LegacyMatchCoreAdapter.Current != null)
+				LegacyMatchCoreAdapter.Current.CompleteCurrentHalf(GameManager.SharedObject().GameTime);
 			Player.noControls = true;
 
 			GameManager.SharedObject().IsGameReady = false;

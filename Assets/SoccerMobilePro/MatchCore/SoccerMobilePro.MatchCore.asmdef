@@ -1,0 +1,14 @@
+{
+  "name": "SoccerMobilePro.MatchCore",
+  "rootNamespace": "SoccerMobilePro.MatchCore",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true
+}

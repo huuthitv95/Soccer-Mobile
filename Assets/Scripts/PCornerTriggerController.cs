@@ -37,6 +37,7 @@ public class PCornerTriggerController : MonoBehaviour
 			other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
 			other.gameObject.transform.position = GameManager.SharedObject().foulPosition;
+			LegacyMatchCoreAdapter.RecordCorner(GameManager.SharedObject().GameTime);
 		}
 	}
 }

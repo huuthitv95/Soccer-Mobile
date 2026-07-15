@@ -34,6 +34,7 @@ public class FoulTriggerController : MonoBehaviour
 				z = 37.5f;
 
 			GameManager.SharedObject().foulPosition = new Vector3(other.gameObject.transform.position.x,0,z);
+			LegacyMatchCoreAdapter.RecordFoul(GameManager.SharedObject().GameTime);
 		}
 	}
 }
