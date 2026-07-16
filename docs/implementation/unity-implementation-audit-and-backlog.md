@@ -24,7 +24,7 @@
 ### 1.1 Nhiệm vụ và ranh giới hệ thống
 
 - **Nhiệm vụ:** đối chiếu source Unity với định hướng sản phẩm cho luồng khởi động, menu, trận đấu, điều khiển, dữ liệu bóng đá, tài khoản, thẻ cầu thủ, VAR và AI offline; chuyển khoảng trống thành backlog có thể bàn giao.
-- **Baseline trong phạm vi:** 115 script C#, 14 scene, 19 prefab, 12 assembly definition, Build Settings, package/input/addressable configuration và tài liệu sản phẩm liên quan; inventory hiện hành được ghi tại [mục 2](#inventory).
+- **Baseline trong phạm vi:** 116 script C#, 14 scene, 19 prefab, 12 assembly definition, Build Settings, package/input/addressable configuration và tài liệu sản phẩm liên quan; inventory hiện hành được ghi tại [mục 2](#inventory).
 - **Ngoài phạm vi audit:** đổi scene/prefab/physics/reward, tạo backend, nhập toàn bộ dữ liệu/model production hoặc thay đổi cân bằng production.
 
 ### 1.2 Chủ sở hữu chính và trách nhiệm hiện tại
@@ -85,7 +85,7 @@ SplashScene / SplashVideoSequencePlayer
 | Hạng mục | Kết quả xác nhận | Ghi chú |
 | --- | ---: | --- |
 | Unity Editor | 2022.3.62f3 | Từ `ProjectVersion.txt`. |
-| Script C# trong `Assets/` | 115 | Bao gồm legacy, foundation P0/P1, Editor guard và test fixture; không tính package cache. |
+| Script C# trong `Assets/` | 116 | Bao gồm legacy, foundation P0/P1, Editor guard và test fixture; không tính package cache. |
 | Scene `.unity` trong `Assets/` | 14 | 11 scene được bật trong Build Settings; 3 scene test/ngoài danh sách build. |
 | Prefab trong `Assets/` | 19 | Chủ yếu cầu thủ/bóng/audience/UI và joystick legacy. |
 | Assembly definition | 12 | Match Core, Input, Platform, Catalog, Catalog Unity, Settings UI, Player Items, Player Items Unity, Editor và ba test assembly; legacy vẫn ở assembly mặc định. |
