@@ -1,0 +1,21 @@
+{
+  "name": "SoccerMobilePro.SettingsUI",
+  "rootNamespace": "SoccerMobilePro.SettingsUI",
+  "references": [
+    "SoccerMobilePro.Platform",
+    "Unity.ugui",
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "Unity.Localization",
+    "Unity.ResourceManager"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

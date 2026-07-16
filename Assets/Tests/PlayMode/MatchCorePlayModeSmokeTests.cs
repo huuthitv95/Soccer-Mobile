@@ -5,11 +5,26 @@ using SoccerMobilePro.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
 
 namespace SoccerMobilePro.MatchCore.PlayModeTests
 {
     public sealed class MatchCorePlayModeSmokeTests
     {
+        [UnityTest]
+        public IEnumerator QuickMatchSelectionScene_LoadsFromBuildSettings()
+        {
+            yield return SceneManager.LoadSceneAsync("GameSelectionScene", LoadSceneMode.Single);
+            Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo("GameSelectionScene"));
+        }
+
+        [UnityTest]
+        public IEnumerator CupGroupScene_LoadsFromBuildSettings()
+        {
+            yield return SceneManager.LoadSceneAsync("GroupsScene", LoadSceneMode.Single);
+            Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo("GroupsScene"));
+        }
+
         [UnityTest]
         public IEnumerator MatchLifecycle_AdvancesAcrossFrames()
         {
