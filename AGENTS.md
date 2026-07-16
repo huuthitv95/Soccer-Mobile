@@ -14,6 +14,8 @@ Read this file before doing work. Treat `docs/` as the product source of truth f
 - `.agents/skills/`: repository-local Unity MCP skills. These are the first choice for scene, asset, input, camera, navigation, testing, profiling, and editor operations.
 - `.codex/config.toml`: configures the `ai-game-developer` MCP server at `http://localhost:22113`.
 
+The project-local Unity MCP stack is pinned to core package `0.83.1` and local server `8.0.3`. Do not upgrade the core package independently of the local-server routing contract: core `0.84.1` expects a project-pinned `/p/<pin>` Codex URL while its bundled server returns `404` for that route in this project, which causes `Reconfiguration Required` after every domain reload. Keep the project `.codex/config.toml` as the only Codex authority and do not duplicate `ai-game-developer` in the user-global config.
+
 ## Core documentation
 
 Read the relevant files before designing or implementing a system:
