@@ -2,6 +2,14 @@
 
 > [Chỉ mục](../index.md) · [Nghiên cứu tổng hợp](fc-mobile-vn-research.md) · [Coverage](fc-mobile-vn-coverage-audit.md)
 
+## 0. Mục lục
+
+- [1. Mục đích và quy ước](#source-register)
+- [2. Nguồn chính thức](#official-sources)
+- [3. Claim register](#claim-register)
+- [4. Ranh giới bằng chứng](#research-boundaries)
+- [5. Quy trình cập nhật](#research-process)
+
 <a id="source-register"></a>
 
 ## 1. Mục đích và quy ước

@@ -51,7 +51,7 @@ Mọi artifact nằm dưới `docs/implementation/evidence/<decision-id>/` và c
 | ALS-D01 | Provider/guest matrix | Product + Legal + Backend | age/region/provider matrix | auth/recovery success, loss cases | privacy + recovery report | legal/backend sign-off | guest-only/offline | `Blocked` |
 | ALS-D02 | Account merge simulation | Economy + Support | duplicate/loss fixtures | zero double-grant/loss | Fake conflict/immutability tests; backend ledger fixture pending | all merge invariants pass | disable merge/manual support | `InValidation` |
 | ALS-D03 | Voice locale hot-swap | Audio + Client | low–high tier; vi/en | memory, resume, download failure | profiler + delivery matrix | no OOM; resumable/fallback works | pin packaged voice | `TestReady` |
-| ALS-D04 | Cloud-sync allowlist | Security + UX | conflict/device fixtures | conflict recovery, unsafe field count | schema diff + threat review | zero device-risk fields synced | local-only snapshot | `TestReady` |
+| ALS-D04 | Cloud-sync allowlist | Security + UX | conflict/device fixtures | conflict recovery, unsafe field count | Automated registry/merge tests; backend schema diff + threat review pending | zero device-risk fields synced | local-only snapshot | `InValidation` |
 | CLS-D01 | Group role/load simulation | Social + Backend | 1–cap synthetic groups | latency, moderation queue, abuse rate | load run + moderation log | SLO and abuse controls pass | reduce cap/disable role | `TestReady` |
 | CLS-D02 | Club Challenge roster policy | Game Design + Licensing | licensed territory matrix | eligibility/fairness exceptions | rights register + scenario report | licensing and fairness sign-off | generic roster/offline only | `Blocked` |
 | CLS-D03 | Dispute operations rehearsal | Competitive Ops | internal tournament | resolution time, audit completeness | case timeline + audit export | SLA/reviewer separation pass | extend window/freeze bracket | `TestReady` |
@@ -87,7 +87,7 @@ Mọi artifact nằm dưới `docs/implementation/evidence/<decision-id>/` và c
 | LOM-D03 | Expiry/catch-up comprehension | LiveOps + UX | new/returning personas | missed value, comprehension, FOMO | usability notes + expiry matrix | catch-up available; FOMO review pass | extend/convert expiry | `TestReady` |
 | LOM-D04 | Compensation rehearsal | Ops + Economy | incident/ledger fixtures | reconciliation, duplicate/missed grant | ledger audit + runbook log | idempotency and audit pass | stop grant/manual reconcile | `TestReady` |
 
-Trạng thái sau P0-03: **28 `TestReady`, 4 `InValidation`, 13 `Blocked`, 0 `EvidenceReady`, 0 `Approved`**. Bốn mục `InValidation` có automated evidence tại [nhật ký P0](p0-foundation-implementation.md), nhưng vẫn thiếu human/device/fairness hoặc backend/owner gate tương ứng. `TestReady` chỉ xác nhận protocol đủ rõ; `Blocked` chỉ mở khi owner được nêu trong hàng đã ký evidence bắt buộc.
+Trạng thái sau automated evidence P1-01: **27 `TestReady`, 5 `InValidation`, 13 `Blocked`, 0 `EvidenceReady`, 0 `Approved`**. Năm mục `InValidation` có automated evidence tại [nhật ký P0](p0-foundation-implementation.md) và [nhật ký P1-01](p1-localization-settings-implementation.md), nhưng vẫn thiếu human/device/fairness, backend/threat review hoặc owner gate tương ứng. `ALS-D03` và `UI-D01` giữ `TestReady` vì text fallback/automated UI không thay thế voice delivery, target-device và human accessibility evidence. `TestReady` chỉ xác nhận protocol đủ rõ; `Blocked` chỉ mở khi owner được nêu trong hàng đã ký evidence bắt buộc.
 
 <a id="evidence-protocol"></a>
 

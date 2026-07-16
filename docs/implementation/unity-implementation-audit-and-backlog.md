@@ -109,7 +109,7 @@ Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, khô
 | Bóng/animation | Rigidbody impulse, ball owner, clip chạy/chuyền/sút/tackle/goalkeeper. | Legacy `Animation`, timer và chuỗi clip; chưa có animation graph, motion matching hoặc gameplay-event synchronization. |
 | AI offline | Heuristic theo role, khoảng cách, vùng sân, timer, chuyền/sút và goalkeeper reaction. | Không phải mô hình đã train; không tactical team model, perception/memory, difficulty profile, scenario evaluation hay telemetry tuning. |
 | Tournament | Cup cục bộ 8 trận, chọn đội và lưu score bằng `PlayerPrefs`. | Không catalog giải/CLB có version, schedule/rules engine, server result authority, reconnect hoặc anti-cheat. |
-| Settings | Music/SFX local và một số safe-area/text scaling helpers. | Chưa có settings schema, ngôn ngữ, graphics/control/accessibility matrix, cloud sync hoặc migration. |
+| Settings | Music/SFX legacy; P1-01 thêm typed registry, file repository, locale `vi-VN`/`en`, N/N-1 migration và MainMenu panel có safe area. | Chưa localize legacy UI, chưa có cloud backend, voice delivery, production brand/accessibility review hoặc full graphics/control UI. |
 | Content/data | Texture/team name gắn trong Inspector và scene/prefab. | Không player/club/league catalog, card instance, skills/PlayStyles, upgrade economy, model manifest hay asset delivery contract. |
 | Online/liveops | Không quan sát thấy implementation. | Không account, CMS/config, economy/market, inbox/grant, purchases, telemetry hay support/audit trail. |
 
@@ -121,8 +121,8 @@ Audit dùng tìm kiếm source/config tĩnh. Không mở hoặc lưu scene, khô
 
 | Nhu cầu | Trạng thái | Khoảng trống bắt buộc |
 | --- | --- | --- |
-| Ngôn ngữ | Chưa có | Locale bootstrap, string table, font/fallback, asset variant, RTL-readiness và fallback offline. |
-| Settings | Một phần | Typed schema/version/migration; control, camera, graphics, audio, accessibility và cloud reconciliation. |
+| Ngôn ngữ | Foundation P1-01 | Có locale/string table `vi-VN`/`en`, QA pseudo-locale và fallback; thiếu legacy-screen coverage, voice/assets delivery, RTL-readiness và production font review. |
+| Settings | Foundation P1-01 | Có typed schema/scope, local file persistence, migration N/N-1, allowlist merge và locale UI; thiếu cloud backend, full control/camera/graphics/audio/accessibility UI và device/human validation. |
 | Tài khoản | Contract/fake chỉ dùng test | Có immutable session, expiry/revoke/link conflict/retry test và secure-vault seam; chưa có provider/backend/privacy/keystore production. |
 | Giải đấu/CLB/cầu thủ | Catalog contract/fake cache | Có manifest version/hash/signature seam, N/N-1 và offline fallback test; chưa có football entities/API/CDN/production signing. |
 | Player database/model 3D | Chưa có | API/manifest do Soccer Mobile Pro sở hữu, Addressables/asset bundle pipeline, rig/LOD/material validation và fallback model. |
@@ -183,6 +183,8 @@ Authority đặc tả cho các khoảng trống: [account/settings](../systems/a
 ## 6. Backlog P1
 
 ### P1-01 — Localization và settings schema
+
+**Trạng thái:** foundation đã triển khai và automated test đạt; xem [nhật ký P1-01](p1-localization-settings-implementation.md). Product policy, voice/device/human evidence và cloud authority vẫn chưa hoàn tất.
 
 - **Owner layer:** Client Platform + UX/Accessibility.
 - **Dependencies:** P0-03 profile sync, string/font inventory, supported-locale policy và device capability tiers.

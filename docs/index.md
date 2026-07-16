@@ -47,6 +47,7 @@
 - [Audit Unity và backlog triển khai](implementation/unity-implementation-audit-and-backlog.md)
 - [Chương trình kiểm chứng decision register](implementation/decision-validation-program.md)
 - [Nhật ký P0 foundation](implementation/p0-foundation-implementation.md)
+- [Nhật ký P1-01 localization và settings](implementation/p1-localization-settings-implementation.md)
 
 ## 7. Bản đồ phụ thuộc
 

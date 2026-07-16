@@ -6,6 +6,24 @@
 **Phạm vi:** tính năng, UI/UX, ngôn ngữ, cài đặt, tài khoản, giải/CLB/cầu thủ, kỹ năng, nâng cấp thẻ, điều khiển, VAR và AI offline.  
 **Nguyên tắc:** mọi thông tin kỹ thuật không được công khai đều được ghi là suy luận hoặc đề xuất; xem [ranh giới bằng chứng](./fc-mobile-vn-source-register.md#research-boundaries).
 
+## 0. Mục lục
+
+- [1. Kết luận điều hành](#evidence-summary)
+- [2. Tính năng và chế độ](#features-and-modes)
+- [3. Layout UI/UX](#ui-ux-layout)
+- [4. Hệ thống ngôn ngữ](#language-system)
+- [5. Hệ thống cài đặt](#settings-system)
+- [6. Hệ thống tài khoản](#account-system)
+- [7. Giải đấu và câu lạc bộ](#competitions-clubs)
+- [8. Cầu thủ, player database và model 3D](#players-and-assets)
+- [9. Skills và PlayStyles](#skills-system)
+- [10. Nâng cấp thẻ cầu thủ](#card-upgrade)
+- [11. Điều khiển trái/phải](#mobile-controls)
+- [12. VAR và trọng tài](#var-system)
+- [13. AI offline](#offline-ai)
+- [14. Luồng vận hành công khai](#verified-operations)
+- [15. Rủi ro và câu hỏi cần xác minh](#research-risks)
+
 <a id="evidence-summary"></a>
 
 ## 1. Kết luận điều hành

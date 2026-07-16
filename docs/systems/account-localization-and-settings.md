@@ -91,4 +91,6 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 | ALS-D01 | Provider/Guest policy theo khu vực | Product + Legal + Backend | Privacy/age/recovery review | `Blocked` |
 | ALS-D02 | Merge rule | Economy + Support | Fake conflict test pass; còn thiếu backend ledger duplicate/loss và audit | `InValidation` |
 | ALS-D03 | Voice locale/hot-swap | Audio + Client | Memory/download/resume device matrix | `TestReady` |
-| ALS-D04 | Cloud-sync field allowlist | Security + UX | Conflict test; không sync device-risk setting | `TestReady` |
+| ALS-D04 | Cloud-sync field allowlist | Security + UX | Automated allowlist/conflict pass; còn thiếu backend schema diff, threat review và sign-off | `InValidation` |
+
+Foundation và automated evidence P1-01 được ghi tại [nhật ký localization/settings](../implementation/p1-localization-settings-implementation.md). `ALS-D03` giữ `TestReady` vì chưa có voice download/resume và device profiling; UI/font tự động không thay gate human/accessibility của `UI-D01`.
