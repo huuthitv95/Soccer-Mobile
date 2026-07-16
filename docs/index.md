@@ -52,6 +52,7 @@
 - [Nhật ký P1-02 football catalog và model foundation](implementation/p1-football-catalog-and-model-foundation.md)
 - [Kế hoạch P1-03 player items, skills và progression foundation](implementation/p1-player-items-skills-and-progression-plan.md)
 - [Nhật ký P1-03 player items, skills và progression](implementation/p1-player-items-skills-and-progression-implementation.md)
+- [Nhật ký P1-04 competition và integrity foundation](implementation/p1-competition-and-integrity-foundation.md)
 - [Sổ migration tên và cấu trúc Unity asset](implementation/asset-naming-migration-register.md)
 
 ## 7. Bản đồ phụ thuộc

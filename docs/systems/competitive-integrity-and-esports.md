@@ -122,6 +122,6 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 | --- | --- | --- | --- | --- |
 | CIE-D01 | Evidence standard và automation threshold | Integrity + Legal | False-positive/appeal audit | `Blocked` |
 | CIE-D02 | Sanction matrix theo region | Policy + Legal | Proportionality/age/privacy review | `Blocked` |
-| CIE-D03 | Reconnect window/forfeit | Match + Network | Packet-loss/load/fairness test | `TestReady` |
+| CIE-D03 | Reconnect window/forfeit | Match + Network | [Automated foundation](../implementation/p1-competition-and-integrity-foundation.md#evidence) đạt; packet-loss/load/fairness test còn thiếu | `InValidation` |
 | CIE-D04 | Case/telemetry retention | Privacy + Security | Purpose, minimization, legal hold | `Blocked` |
 | CIE-D05 | Appeal SLA và reviewer separation | Support Ops | Staffing rehearsal và audit | `TestReady` |

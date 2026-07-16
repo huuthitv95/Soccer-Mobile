@@ -81,5 +81,5 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 | --- | --- | --- | --- | --- |
 | CLS-D01 | Group cap/roles | Social + Backend | Load/moderation simulation | `TestReady` |
 | CLS-D02 | Club Challenge roster policy | Game Design + Licensing | Rights + fairness review | `Blocked` |
-| CLS-D03 | Tournament dispute window | Competitive Ops | Operational rehearsal/SLA | `TestReady` |
+| CLS-D03 | Tournament dispute window | Competitive Ops | [Automated foundation](../implementation/p1-competition-and-integrity-foundation.md#evidence) đạt; operational rehearsal/SLA còn thiếu | `InValidation` |
 | CLS-D04 | Public profile defaults | Privacy + UX | Age/region review | `Blocked` |

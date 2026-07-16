@@ -24,7 +24,7 @@
 ### 1.1 Nhiệm vụ và ranh giới hệ thống
 
 - **Nhiệm vụ:** đối chiếu source Unity với định hướng sản phẩm cho luồng khởi động, menu, trận đấu, điều khiển, dữ liệu bóng đá, tài khoản, thẻ cầu thủ, VAR và AI offline; chuyển khoảng trống thành backlog có thể bàn giao.
-- **Baseline trong phạm vi:** 116 script C#, 14 scene, 19 prefab, 12 assembly definition, Build Settings, package/input/addressable configuration và tài liệu sản phẩm liên quan; inventory hiện hành được ghi tại [mục 2](#inventory).
+- **Baseline trong phạm vi:** 121 script C#, 14 scene, 19 prefab, 13 assembly definition, Build Settings, package/input/addressable configuration và tài liệu sản phẩm liên quan; inventory hiện hành được ghi tại [mục 2](#inventory).
 - **Ngoài phạm vi audit:** đổi scene/prefab/physics/reward, tạo backend, nhập toàn bộ dữ liệu/model production hoặc thay đổi cân bằng production.
 
 ### 1.2 Chủ sở hữu chính và trách nhiệm hiện tại
@@ -71,7 +71,7 @@ SplashScene / SplashVideoSequencePlayer
 
 ### 1.5 Test, rủi ro và rollback
 
-- Checkout có 12 `.asmdef`, 83 EditMode và 18 PlayMode case do project định nghĩa. Baseline ngày 16/07/2026: toàn EditMode runner 83/83 và PlayMode 18/18, gồm player-item transaction/persistence, catalog/Addressables, localization/settings và Quick Match/Cup regression. Android P1-03 smoke bị chặn bởi MCP Hub reconnect trong batchmode; backend/provider/secure vault, remote catalog/CDN, touch HUD thật, controller reconnect và device-tier profiling vẫn là validation mở.
+- Checkout có 13 `.asmdef`, 102 EditMode và 19 PlayMode case do project định nghĩa. Baseline ngày 16/07/2026: toàn EditMode runner 102/102 và PlayMode 19/19, gồm player-item transaction/persistence, catalog/Addressables, localization/settings, Competition P1-04 và Quick Match/Cup regression. Android smoke hoàn tất Addressables/Bee nhưng Editor dừng trước bước tạo APK; backend/provider/secure vault, remote catalog/CDN, touch HUD thật, controller reconnect và device-tier profiling vẫn là validation mở.
 - Các scene gameplay trọng tâm: `SplashScene`, `MainMenu`, `GameSelectionScene`, hai team-selection scene, `GroupsScene`, `MatchesScene`, `KickOffScene`, `MatchScene`, `FinalCeleberation`.
 - Rủi ro chính: coupling theo chuỗi/scene, state global, logic frame-dependent, legacy UI/Animation, thiếu authority và telemetry, thiếu test fixture.
 - Kế hoạch xác nhận cho mỗi thay đổi tương lai: EditMode domain tests, PlayMode flow/match tests, console sạch, kiểm tra save migration, input trên touch/gamepad/keyboard và smoke test Android.
@@ -85,12 +85,12 @@ SplashScene / SplashVideoSequencePlayer
 | Hạng mục | Kết quả xác nhận | Ghi chú |
 | --- | ---: | --- |
 | Unity Editor | 2022.3.62f3 | Từ `ProjectVersion.txt`. |
-| Script C# trong `Assets/` | 116 | Bao gồm legacy, foundation P0/P1, Editor guard và test fixture; không tính package cache. |
+| Script C# trong `Assets/` | 121 | Bao gồm legacy, foundation P0/P1, Editor guard và test fixture; không tính package cache. |
 | Scene `.unity` trong `Assets/` | 14 | 11 scene được bật trong Build Settings; 3 scene test/ngoài danh sách build. |
 | Prefab trong `Assets/` | 19 | Chủ yếu cầu thủ/bóng/audience/UI và joystick legacy. |
 | Assembly definition | 12 | Match Core, Input, Platform, Catalog, Catalog Unity, Settings UI, Player Items, Player Items Unity, Editor và ba test assembly; legacy vẫn ở assembly mặc định. |
 | Input Actions asset | 1 | Năm map `Match_OnBall`, `Match_OffBall`, `SetPiece`, `Goalkeeper`, `UI`; ba scheme Touch/Gamepad/Keyboard. |
-| Automated C# test | 83 EditMode + 18 PlayMode | Runner: EditMode 83/83; PlayMode 18/18. P1-03 đóng góp 22 EditMode và 2 PlayMode case. |
+| Automated C# test | 102 EditMode + 19 PlayMode | Runner: EditMode 102/102; PlayMode 19/19. P1-04 đóng góp 19 EditMode và 1 PlayMode case. |
 | Package đáng chú ý | Input System 1.14.2, Addressables 1.25.0, Localization 1.5.12, Newtonsoft JSON 3.0.2, Cinemachine, Test Framework, URP | Cài package không chứng minh có implementation sản phẩm tương ứng. |
 
 `Assets/AddressableAssetsData/AddressableAssetSettings.asset` hiện phục vụ Localization cùng hai group football local. Fixture có catalog JSON và generic player prefab; remote delivery/CDN cùng model production chưa được cấu hình. Input foundation đã có action map theo context, nhưng feature flag mặc định tắt và chưa thay HUD/legacy controller.
@@ -111,7 +111,7 @@ Mỗi backlog được chấm độc lập theo bốn gate; `Đạt` không có 
 | P1-01 Localization/settings | Đạt | Đạt trong MainMenu; legacy UI chưa chuyển đổi | Đạt | Một phần: Android smoke có, thiếu human/device matrix |
 | P1-02 Catalog/model | Đạt cho foundation/fixture | Một phần: local Addressables adapter, chưa nối scene/catalog production | Đạt cho fixture: 15 EditMode + 4 PlayMode | Một phần: local build/rollback pass; chưa có device/CDN evidence |
 | P1-03 Player items/skills/progression | Đạt cho foundation | Một phần: file/fake authority và projection sau diagnostic flag, legacy scene chưa nối | Đạt: 22 EditMode + 2 PlayMode; full regression 83/83 + 18/18 | Chưa đạt: Android smoke bị tooling block; thiếu backend/device/human/economy evidence |
-| P1-04 Competition/integrity | Chưa đạt | Chưa đạt | Chưa đạt | Chưa đạt |
+| P1-04 Competition/integrity | Đạt cho foundation | Một phần: fake/file authority, feature gate mặc định tắt, legacy Cup chưa nối | Đạt: 19 EditMode + 1 PlayMode; full regression 102/102 + 19/19 | Chưa đạt: backend, packet-loss/device/operations rehearsal và Android APK |
 | P2 VAR/AI/telemetry | Một phần ở Match Core và heuristic AI | Chưa đạt mục tiêu | Một phần | Chưa đạt |
 
 | Hệ thống | Đã có | Giới hạn hiện tại |
@@ -121,7 +121,7 @@ Mỗi backlog được chấm độc lập theo bốn gate; `Đạt` không có 
 | Điều khiển | Joystick trái; sprint/pass/shoot khi có bóng; sprint/tackle khi không bóng; keyboard trong Editor. | Rect theo pixel/legacy GUI, chưa remap, left-handed layout, assist profile, action context, gamepad scheme hoặc accessibility đầy đủ. |
 | Bóng/animation | Rigidbody impulse, ball owner, clip chạy/chuyền/sút/tackle/goalkeeper. | Legacy `Animation`, timer và chuỗi clip; chưa có animation graph, motion matching hoặc gameplay-event synchronization. |
 | AI offline | Heuristic theo role, khoảng cách, vùng sân, timer, chuyền/sút và goalkeeper reaction. | Không phải mô hình đã train; không tactical team model, perception/memory, difficulty profile, scenario evaluation hay telemetry tuning. |
-| Tournament | Cup cục bộ 8 trận, chọn đội và lưu score bằng `PlayerPrefs`. | Không catalog giải/CLB có version, schedule/rules engine, server result authority, reconnect hoặc anti-cheat. |
+| Tournament | Cup cục bộ 8 trận vẫn chạy; P1-04 thêm rules/catalog version, Single Elimination/Round Robin deterministic, roster lock, result receipt, reconnect và dispute foundation. | Feature gate mặc định tắt; chưa nối scene, backend authority, packet-loss/forfeit policy, anti-cheat, tournament UI hoặc reward economy production. |
 | Settings | Music/SFX legacy; P1-01 thêm typed registry, file repository, locale `vi-VN`/`en`, N/N-1 migration và MainMenu panel có safe area. | Chưa localize legacy UI, chưa có cloud backend, voice delivery, production brand/accessibility review hoặc full graphics/control UI. |
 | Content/data | Texture/team name legacy gắn trong Inspector; P1-02 có catalog versioned 2 giải/4 CLB/44 cầu thủ hư cấu và local model fallback; P1-03 có owned item, deterministic skill/position/fusion fixture. | Fixture chưa nối scene/đội hình; không dataset/model production, collection UI, upgrade economy production, remote signing/CDN hoặc device budget. |
 | Online/liveops | P1-03 có fake/file transaction authority, idempotent receipt và balanced ledger phục vụ test. | Không backend account/economy, CMS/config, market, inbox/grant service, purchases, telemetry transport hay support/audit operations production. |
@@ -241,6 +241,8 @@ Authority đặc tả cho các khoảng trống: [account/settings](../systems/a
 - **Rollback:** disable recipe/skill bằng config; compensating ledger transaction, không sửa/xóa lịch sử; client fallback read-only inventory.
 
 ### P1-04 — Luật giải, kết quả, reconnect và competitive integrity
+
+**Trạng thái:** foundation đã triển khai; xem [nhật ký P1-04](p1-competition-and-integrity-foundation.md). Contract, fake/file authority và automated evidence đã đạt; backend, packet-loss/device matrix, operations rehearsal, UI production và compensating reward vẫn mở.
 
 - **Owner layer:** Competition Backend + Match Services + Client Tournament UI.
 - **Dependencies:** P0-01 match event, P0-03 identity, P1-02 catalog, anti-cheat/rules config và reward ledger.
