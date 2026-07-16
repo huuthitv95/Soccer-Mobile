@@ -1,0 +1,30 @@
+{
+  "name": "SoccerMobilePro.MatchCore.PlayModeTests",
+  "rootNamespace": "SoccerMobilePro.MatchCore.PlayModeTests",
+    "references": [
+        "SoccerMobilePro.MatchCore",
+        "SoccerMobilePro.Platform",
+        "SoccerMobilePro.Input",
+    "SoccerMobilePro.Catalog",
+    "SoccerMobilePro.Catalog.Unity",
+    "SoccerMobilePro.PlayerItems",
+    "SoccerMobilePro.PlayerItems.Unity",
+    "Unity.InputSystem",
+    "Unity.Addressables",
+    "Unity.ResourceManager"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}
