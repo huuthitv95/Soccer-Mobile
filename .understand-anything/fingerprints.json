@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "8b79d513d91228101b7abb6104d741b2003eca3e",
-  "generatedAt": "2026-07-16T01:33:56.221Z",
+  "gitCommitHash": "a6276a6346c1067d3e5f691cc9035b2e27553b4a",
+  "generatedAt": "2026-07-16T03:09:10.900Z",
   "files": {
     ".gitattributes": {
       "filePath": ".gitattributes",
@@ -65,12 +65,12 @@
     },
     "Assets/AddressableAssetsData/AddressableAssetSettings.asset": {
       "filePath": "Assets/AddressableAssetsData/AddressableAssetSettings.asset",
-      "contentHash": "2db69bf6b54786a75a2872cf8bd7c8f0de743741207dbf1eb4f1683ada920ce9",
+      "contentHash": "f90ba4f136baffc5bb79b98087010859c8b4dc71f8362d8424cbb25dd5fb6e1c",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 118,
+      "totalLines": 124,
       "hasStructuralAnalysis": false
     },
     "Assets/AddressableAssetsData/AddressableImportSettings.asset": {
@@ -111,6 +111,26 @@
       "imports": [],
       "exports": [],
       "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/FootballCatalog-Local.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/FootballCatalog-Local.asset",
+      "contentHash": "edd85595133dd2851ab6ea14ef0dde9e98c2638c41627a509a1f96cfe5282ff3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/FootballModels-Local.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/FootballModels-Local.asset",
+      "contentHash": "94fd8c1b000451311809f029816e59f0daabf83820777548bc8bc4a8b705796f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
       "hasStructuralAnalysis": false
     },
     "Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset": {
@@ -176,6 +196,46 @@
     "Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset": {
       "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset",
       "contentHash": "859476aa14f21d89328e29b6bae60db4ebe61b396aa6ba6c91ba35c89b449a4b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballCatalog-Local_BundledAssetGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballCatalog-Local_BundledAssetGroupSchema.asset",
+      "contentHash": "73d7af6da94114fccbf246ad8b9c8f38a46dcc7904cd7f592c342e2305621f88",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballCatalog-Local_ContentUpdateGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballCatalog-Local_ContentUpdateGroupSchema.asset",
+      "contentHash": "93b0c8c8d5a6afcc411c4668465af106cd5cf6f08fa612022b624da388f04aac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballModels-Local_BundledAssetGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballModels-Local_BundledAssetGroupSchema.asset",
+      "contentHash": "b16b264e3ad406e00c3ad10073dcee24a65a94d95e628d1f5f6b3027b914d132",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballModels-Local_ContentUpdateGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/FootballModels-Local_ContentUpdateGroupSchema.asset",
+      "contentHash": "e967b6ac1a875d76f5503a2b149e3372e73c579fbb930a73f2dae0cc0ab9d37c",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -8719,6 +8779,1484 @@
       "totalLines": 233,
       "hasStructuralAnalysis": false
     },
+    "Assets/SoccerMobilePro/Catalog/CatalogCodec.cs": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/CatalogCodec.cs",
+      "contentHash": "1c6318a7ca4705c65f24640a8993ab7e3f23508a79f77db326550e07a5721551",
+      "functions": [
+        {
+          "name": "SerializeSnapshot",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "DeserializeSnapshot",
+          "params": [
+            "payload"
+          ],
+          "returnType": "CatalogSnapshot",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "SerializeDelta",
+          "params": [
+            "delta"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "DeserializeDelta",
+          "params": [
+            "payload"
+          ],
+          "returnType": "CatalogDelta",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "CatalogFormatException",
+          "params": [
+            "message"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "CatalogFormatException",
+          "params": [
+            "message",
+            "innerException"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "ComputePayloadHash",
+          "params": [
+            "delta",
+            "codec"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "ICatalogCodec",
+          "methods": [
+            "SerializeSnapshot",
+            "DeserializeSnapshot",
+            "SerializeDelta",
+            "DeserializeDelta"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "NewtonsoftCatalogCodec",
+          "methods": [
+            "SerializeSnapshot",
+            "DeserializeSnapshot",
+            "SerializeDelta",
+            "DeserializeDelta"
+          ],
+          "properties": [
+            "Settings"
+          ],
+          "exported": true,
+          "lineCount": 50
+        },
+        {
+          "name": "CatalogFormatException",
+          "methods": [
+            "CatalogFormatException",
+            "CatalogFormatException"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "CatalogDeltaIntegrity",
+          "methods": [
+            "ComputePayloadHash"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "Newtonsoft.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        }
+      ],
+      "exports": [
+        "ICatalogCodec",
+        "SerializeSnapshot",
+        "DeserializeSnapshot",
+        "SerializeDelta",
+        "DeserializeDelta",
+        "NewtonsoftCatalogCodec",
+        "CatalogFormatException",
+        "CatalogFormatException",
+        "CatalogFormatException",
+        "ComputePayloadHash",
+        "CatalogDeltaIntegrity"
+      ],
+      "totalLines": 91,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/CatalogDeltaApplier.cs": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/CatalogDeltaApplier.cs",
+      "contentHash": "7fedd50dc46c1d0aea888b41de032e3b696bf079a7baf5a58e83b9669c9086bf",
+      "functions": [
+        {
+          "name": "CatalogDeltaApplier",
+          "params": [
+            "codec",
+            "validator"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "Apply",
+          "params": [
+            "active",
+            "delta"
+          ],
+          "returnType": "CatalogSnapshot",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "Merge",
+          "params": [
+            "current",
+            "upserts",
+            "removals",
+            "idSelector"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "CatalogDeltaException",
+          "params": [
+            "message",
+            "errors"
+          ],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "CatalogDeltaApplier",
+          "methods": [
+            "CatalogDeltaApplier",
+            "Apply",
+            "Merge"
+          ],
+          "properties": [
+            "codec",
+            "validator"
+          ],
+          "exported": true,
+          "lineCount": 50
+        },
+        {
+          "name": "CatalogDeltaException",
+          "methods": [
+            "CatalogDeltaException"
+          ],
+          "properties": [
+            "Errors"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        }
+      ],
+      "exports": [
+        "CatalogDeltaApplier",
+        "Apply",
+        "CatalogDeltaApplier",
+        "CatalogDeltaException",
+        "Errors",
+        "CatalogDeltaException"
+      ],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/CatalogEntities.cs": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/CatalogEntities.cs",
+      "contentHash": "1a27ca865a48b82581beefe41ede01daa048e4177a53b5429b1fe523208de20f",
+      "functions": [
+        {
+          "name": "IsCanonical",
+          "params": [
+            "value"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "Compare",
+          "params": [
+            "left",
+            "right"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "CatalogVersion",
+          "methods": [
+            "IsCanonical",
+            "Compare"
+          ],
+          "properties": [
+            "Length"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "LeagueDefinition",
+          "methods": [],
+          "properties": [
+            "LeagueId",
+            "NameKey",
+            "CountryCode",
+            "RightsVersion",
+            "ProvenanceId"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "CompetitionDefinition",
+          "methods": [],
+          "properties": [
+            "CompetitionId",
+            "LeagueId",
+            "NameKey",
+            "SeasonId"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "ClubDefinition",
+          "methods": [],
+          "properties": [
+            "ClubId",
+            "LeagueId",
+            "NameKey",
+            "ShortName",
+            "CrestAddress",
+            "RightsVersion",
+            "ProvenanceId"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "PlayerIdentity",
+          "methods": [],
+          "properties": [
+            "PlayerId",
+            "DisplayName",
+            "BirthYear",
+            "NationalityIds",
+            "PreferredFoot",
+            "RightsVersion",
+            "ProvenanceId"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "PlayerAttributeValue",
+          "methods": [],
+          "properties": [
+            "AttributeId",
+            "Value"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "PlayerSeasonRating",
+          "methods": [],
+          "properties": [
+            "RatingId",
+            "PlayerId",
+            "SeasonId",
+            "PrimaryPosition",
+            "Overall",
+            "Attributes"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "PlayerItemDefinition",
+          "methods": [],
+          "properties": [
+            "ItemDefinitionId",
+            "PlayerId",
+            "ProgramId",
+            "BaseOverall",
+            "RulesVersion",
+            "ModelAssetId"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "PlayerClubRegistration",
+          "methods": [],
+          "properties": [
+            "RegistrationId",
+            "PlayerId",
+            "ClubId",
+            "SeasonId",
+            "ShirtNumber"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "ModelAssetManifest",
+          "methods": [],
+          "properties": [
+            "ModelAssetId",
+            "Address",
+            "FallbackModelAssetId",
+            "RigVersion",
+            "LodAddresses",
+            "Dependencies",
+            "SizeBytes",
+            "Checksum"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "CatalogSnapshot",
+          "methods": [],
+          "properties": [
+            "SchemaVersion",
+            "CatalogVersion",
+            "Region",
+            "Season",
+            "Leagues",
+            "Competitions",
+            "Clubs",
+            "Players",
+            "Ratings",
+            "Items",
+            "Registrations",
+            "Models"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "CatalogRemovalSet",
+          "methods": [],
+          "properties": [
+            "LeagueIds",
+            "CompetitionIds",
+            "ClubIds",
+            "PlayerIds",
+            "RatingIds",
+            "ItemDefinitionIds",
+            "RegistrationIds",
+            "ModelAssetIds"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "CatalogDelta",
+          "methods": [],
+          "properties": [
+            "BaseVersion",
+            "TargetVersion",
+            "PayloadHash",
+            "Upserts",
+            "Removals"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        }
+      ],
+      "exports": [
+        "Length",
+        "IsCanonical",
+        "Compare",
+        "CatalogVersion",
+        "LeagueId",
+        "NameKey",
+        "CountryCode",
+        "RightsVersion",
+        "ProvenanceId",
+        "LeagueDefinition",
+        "CompetitionId",
+        "LeagueId",
+        "NameKey",
+        "SeasonId",
+        "CompetitionDefinition",
+        "ClubId",
+        "LeagueId",
+        "NameKey",
+        "ShortName",
+        "CrestAddress",
+        "RightsVersion",
+        "ProvenanceId",
+        "ClubDefinition",
+        "PlayerId",
+        "DisplayName",
+        "BirthYear",
+        "NationalityIds",
+        "PreferredFoot",
+        "RightsVersion",
+        "ProvenanceId",
+        "PlayerIdentity",
+        "AttributeId",
+        "Value",
+        "PlayerAttributeValue",
+        "RatingId",
+        "PlayerId",
+        "SeasonId",
+        "PrimaryPosition",
+        "Overall",
+        "Attributes",
+        "PlayerSeasonRating",
+        "ItemDefinitionId",
+        "PlayerId",
+        "ProgramId",
+        "BaseOverall",
+        "RulesVersion",
+        "ModelAssetId",
+        "PlayerItemDefinition",
+        "RegistrationId",
+        "PlayerId",
+        "ClubId",
+        "SeasonId",
+        "ShirtNumber",
+        "PlayerClubRegistration",
+        "ModelAssetId",
+        "Address",
+        "FallbackModelAssetId",
+        "RigVersion",
+        "LodAddresses",
+        "Dependencies",
+        "SizeBytes",
+        "Checksum",
+        "ModelAssetManifest",
+        "SchemaVersion",
+        "CatalogVersion",
+        "Region",
+        "Season",
+        "Leagues",
+        "Competitions",
+        "Clubs",
+        "Players",
+        "Ratings",
+        "Items",
+        "Registrations",
+        "Models",
+        "CatalogSnapshot",
+        "LeagueIds",
+        "CompetitionIds",
+        "ClubIds",
+        "PlayerIds",
+        "RatingIds",
+        "ItemDefinitionIds",
+        "RegistrationIds",
+        "ModelAssetIds",
+        "CatalogRemovalSet",
+        "BaseVersion",
+        "TargetVersion",
+        "PayloadHash",
+        "Upserts",
+        "Removals",
+        "CatalogDelta"
+      ],
+      "totalLines": 152,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/CatalogFixtureFactory.cs": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/CatalogFixtureFactory.cs",
+      "contentHash": "f85e6c52656a23e1c834cc96962c46a331267bd391520eb682cba35f36d9364f",
+      "functions": [
+        {
+          "name": "Create",
+          "params": [],
+          "returnType": "CatalogSnapshot",
+          "exported": true,
+          "lineCount": 113
+        }
+      ],
+      "classes": [
+        {
+          "name": "CatalogFixtureFactory",
+          "methods": [
+            "Create"
+          ],
+          "properties": [
+            "InitialVersion",
+            "GenericModelId",
+            "MissingModelId",
+            "GenericModelAddress"
+          ],
+          "exported": true,
+          "lineCount": 121
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        }
+      ],
+      "exports": [
+        "InitialVersion",
+        "GenericModelId",
+        "MissingModelId",
+        "GenericModelAddress",
+        "Create",
+        "CatalogFixtureFactory"
+      ],
+      "totalLines": 127,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/CatalogStore.cs": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/CatalogStore.cs",
+      "contentHash": "eb2e69b78dae0f0654c8d4e6e53412ad2e6691c96ec26b8a64232fc46b5c63dc",
+      "functions": [
+        {
+          "name": "FileCatalogStore",
+          "params": [
+            "rootPath",
+            "codec",
+            "validator"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "HasVersion",
+          "params": [
+            "catalogVersion"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "TryRead",
+          "params": [
+            "catalogVersion",
+            "snapshot"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "TryReadActive",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "Stage",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "Activate",
+          "params": [
+            "catalogVersion"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "Rollback",
+          "params": [
+            "catalogVersion"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "SnapshotPath",
+          "params": [
+            "version"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "StagePath",
+          "params": [
+            "version"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "WriteAtomically",
+          "params": [
+            "path",
+            "content"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "CatalogInstallResult",
+          "params": [
+            "status",
+            "activeVersion",
+            "errors"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "CatalogInstaller",
+          "params": [
+            "store",
+            "codec",
+            "validator",
+            "signatureVerifier"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "InstallSnapshot",
+          "params": [
+            "manifest",
+            "payload",
+            "clientSchemaVersion",
+            "nowUtc"
+          ],
+          "returnType": "CatalogInstallResult",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "InstallDelta",
+          "params": [
+            "targetManifest",
+            "deltaPayload",
+            "clientSchemaVersion",
+            "nowUtc"
+          ],
+          "returnType": "CatalogInstallResult",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "Rollback",
+          "params": [
+            "catalogVersion"
+          ],
+          "returnType": "CatalogInstallResult",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "ValidateManifest",
+          "params": [
+            "manifest",
+            "payload",
+            "clientSchemaVersion",
+            "nowUtc"
+          ],
+          "returnType": "CatalogInstallStatus",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "Result",
+          "params": [
+            "status"
+          ],
+          "returnType": "CatalogInstallResult",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "CatalogStoreException",
+          "params": [
+            "message"
+          ],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [
+        {
+          "name": "IActiveCatalogStore",
+          "methods": [
+            "HasVersion",
+            "TryRead",
+            "TryReadActive",
+            "Stage",
+            "Activate",
+            "Rollback"
+          ],
+          "properties": [
+            "ActiveVersion"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "FileCatalogStore",
+          "methods": [
+            "FileCatalogStore",
+            "HasVersion",
+            "TryRead",
+            "TryReadActive",
+            "Stage",
+            "Activate",
+            "Rollback",
+            "SnapshotPath",
+            "StagePath",
+            "WriteAtomically"
+          ],
+          "properties": [
+            "rootPath",
+            "codec",
+            "validator",
+            "ActiveVersion",
+            "PointerPath"
+          ],
+          "exported": true,
+          "lineCount": 88
+        },
+        {
+          "name": "CatalogInstallResult",
+          "methods": [
+            "CatalogInstallResult"
+          ],
+          "properties": [
+            "Status",
+            "ActiveVersion",
+            "Errors",
+            "Succeeded"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "CatalogInstaller",
+          "methods": [
+            "CatalogInstaller",
+            "InstallSnapshot",
+            "InstallDelta",
+            "Rollback",
+            "ValidateManifest",
+            "Result"
+          ],
+          "properties": [
+            "BackwardSchemaWindow",
+            "store",
+            "codec",
+            "validator",
+            "signatureVerifier",
+            "deltaApplier"
+          ],
+          "exported": true,
+          "lineCount": 77
+        },
+        {
+          "name": "CatalogStoreException",
+          "methods": [
+            "CatalogStoreException"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        }
+      ],
+      "exports": [
+        "IActiveCatalogStore",
+        "FileCatalogStore",
+        "ActiveVersion",
+        "HasVersion",
+        "TryRead",
+        "TryReadActive",
+        "Stage",
+        "Activate",
+        "Rollback",
+        "FileCatalogStore",
+        "CatalogInstallResult",
+        "Status",
+        "ActiveVersion",
+        "Errors",
+        "Succeeded",
+        "CatalogInstallResult",
+        "CatalogInstaller",
+        "InstallSnapshot",
+        "InstallDelta",
+        "Rollback",
+        "CatalogInstaller",
+        "CatalogStoreException",
+        "CatalogStoreException"
+      ],
+      "totalLines": 220,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/CatalogValidation.cs": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/CatalogValidation.cs",
+      "contentHash": "803db5bfcdd9e2064dcbce52d423ad8afe09673efe5f48240d7a00bd049f5dc3",
+      "functions": [
+        {
+          "name": "CatalogValidationError",
+          "params": [
+            "code",
+            "field",
+            "entityId",
+            "message"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "CatalogValidationResult",
+          "params": [
+            "errors"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "ValidateSnapshot",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "CatalogValidationResult",
+          "exported": true,
+          "lineCount": 48
+        },
+        {
+          "name": "ValidateDelta",
+          "params": [
+            "delta",
+            "activeVersion",
+            "codec"
+          ],
+          "returnType": "CatalogValidationResult",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "CollectIds",
+          "params": [
+            "source",
+            "selector",
+            "field",
+            "errors"
+          ],
+          "returnType": "HashSet<string>",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "RequireReference",
+          "params": [
+            "ids",
+            "reference",
+            "field",
+            "entityId",
+            "errors"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "ValidateFallbackCycles",
+          "params": [
+            "source",
+            "errors"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 18
+        },
+        {
+          "name": "Error",
+          "params": [
+            "code",
+            "field",
+            "entityId",
+            "message"
+          ],
+          "returnType": "CatalogValidationError",
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [
+        {
+          "name": "CatalogValidationError",
+          "methods": [
+            "CatalogValidationError"
+          ],
+          "properties": [
+            "Code",
+            "Field",
+            "EntityId",
+            "Message"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "CatalogValidationResult",
+          "methods": [
+            "CatalogValidationResult"
+          ],
+          "properties": [
+            "Errors",
+            "Succeeded"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "ICatalogValidator",
+          "methods": [
+            "ValidateSnapshot",
+            "ValidateDelta"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "DefaultCatalogValidator",
+          "methods": [
+            "ValidateSnapshot",
+            "ValidateDelta",
+            "CollectIds",
+            "RequireReference",
+            "ValidateFallbackCycles",
+            "Error"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 107
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        }
+      ],
+      "exports": [
+        "CatalogValidationError",
+        "Code",
+        "Field",
+        "EntityId",
+        "Message",
+        "CatalogValidationError",
+        "CatalogValidationResult",
+        "Errors",
+        "Succeeded",
+        "CatalogValidationResult",
+        "ICatalogValidator",
+        "ValidateSnapshot",
+        "ValidateDelta",
+        "DefaultCatalogValidator"
+      ],
+      "totalLines": 162,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/Fixtures/catalog-snapshot.json": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/Fixtures/catalog-snapshot.json",
+      "contentHash": "8b37e525919d3bbec6daa56106f18081016c4df786bcc7208bf82b6b1490823d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Catalog/SoccerMobilePro.Catalog.asmdef": {
+      "filePath": "Assets/SoccerMobilePro/Catalog/SoccerMobilePro.Catalog.asmdef",
+      "contentHash": "5e7e66da85b55a81dfb9d0cbbcffe3a661485620f189e7087dacbc6c75370032",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/CatalogUnity/AddressableCatalogLoader.cs": {
+      "filePath": "Assets/SoccerMobilePro/CatalogUnity/AddressableCatalogLoader.cs",
+      "contentHash": "be4aca34ea495e0e008421f095be44b2980475c62726180b9a7cbbb5cacdd44f",
+      "functions": [
+        {
+          "name": "AddressableCatalogLoadResult",
+          "params": [
+            "succeeded",
+            "snapshot",
+            "failureReason"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "AddressableCatalogLoader",
+          "params": [
+            "codec",
+            "validator"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "Load",
+          "params": [
+            "address",
+            "completed"
+          ],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 29
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddressableCatalogLoadResult",
+          "methods": [
+            "AddressableCatalogLoadResult"
+          ],
+          "properties": [
+            "Succeeded",
+            "Snapshot",
+            "FailureReason"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "AddressableCatalogLoader",
+          "methods": [
+            "AddressableCatalogLoader",
+            "Load"
+          ],
+          "properties": [
+            "codec",
+            "validator"
+          ],
+          "exported": true,
+          "lineCount": 41
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections",
+          "specifiers": [
+            "Collections"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Catalog",
+          "specifiers": [
+            "Catalog"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        },
+        {
+          "source": "UnityEngine.AddressableAssets",
+          "specifiers": [
+            "AddressableAssets"
+          ]
+        },
+        {
+          "source": "UnityEngine.ResourceManagement.AsyncOperations",
+          "specifiers": [
+            "AsyncOperations"
+          ]
+        }
+      ],
+      "exports": [
+        "AddressableCatalogLoadResult",
+        "Succeeded",
+        "Snapshot",
+        "FailureReason",
+        "AddressableCatalogLoadResult",
+        "AddressableCatalogLoader",
+        "Load",
+        "AddressableCatalogLoader"
+      ],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/CatalogUnity/AddressableModelAssetResolver.cs": {
+      "filePath": "Assets/SoccerMobilePro/CatalogUnity/AddressableModelAssetResolver.cs",
+      "contentHash": "acc46325932c1e648f74cd6e8862e9a769e39d202dfe33d5237d9799deac4058",
+      "functions": [
+        {
+          "name": "ModelAssetResolution",
+          "params": [
+            "requestedModelAssetId",
+            "resolvedModelAssetId",
+            "state",
+            "instance",
+            "usedFallback",
+            "failureReason"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "Verify",
+          "params": [
+            "manifest"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "AddressableModelAssetResolver",
+          "params": [
+            "verifier"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "GetState",
+          "params": [
+            "modelAssetId"
+          ],
+          "returnType": "ModelAssetLoadState",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Resolve",
+          "params": [
+            "requested",
+            "manifests",
+            "completed"
+          ],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "Release",
+          "params": [
+            "resolution"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "Evict",
+          "params": [
+            "modelAssetId"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "ResolveInternal",
+          "params": [
+            "current",
+            "requestedId",
+            "manifests",
+            "visited",
+            "completed"
+          ],
+          "returnType": "IEnumerator",
+          "exported": false,
+          "lineCount": 32
+        }
+      ],
+      "classes": [
+        {
+          "name": "ModelAssetResolution",
+          "methods": [
+            "ModelAssetResolution"
+          ],
+          "properties": [
+            "RequestedModelAssetId",
+            "ResolvedModelAssetId",
+            "State",
+            "Instance",
+            "UsedFallback",
+            "FailureReason"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "IModelManifestVerifier",
+          "methods": [
+            "Verify"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "RequiredChecksumModelManifestVerifier",
+          "methods": [
+            "Verify"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "IModelAssetResolver",
+          "methods": [
+            "GetState",
+            "Resolve",
+            "Release",
+            "Evict"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "AddressableModelAssetResolver",
+          "methods": [
+            "AddressableModelAssetResolver",
+            "GetState",
+            "Resolve",
+            "Release",
+            "Evict",
+            "ResolveInternal"
+          ],
+          "properties": [
+            "verifier",
+            "states"
+          ],
+          "exported": true,
+          "lineCount": 71
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections",
+          "specifiers": [
+            "Collections"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Catalog",
+          "specifiers": [
+            "Catalog"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        },
+        {
+          "source": "UnityEngine.AddressableAssets",
+          "specifiers": [
+            "AddressableAssets"
+          ]
+        },
+        {
+          "source": "UnityEngine.ResourceManagement.AsyncOperations",
+          "specifiers": [
+            "AsyncOperations"
+          ]
+        }
+      ],
+      "exports": [
+        "ModelAssetResolution",
+        "RequestedModelAssetId",
+        "ResolvedModelAssetId",
+        "State",
+        "Instance",
+        "UsedFallback",
+        "FailureReason",
+        "ModelAssetResolution",
+        "IModelManifestVerifier",
+        "Verify",
+        "RequiredChecksumModelManifestVerifier",
+        "IModelAssetResolver",
+        "AddressableModelAssetResolver",
+        "GetState",
+        "Resolve",
+        "Release",
+        "Evict",
+        "AddressableModelAssetResolver"
+      ],
+      "totalLines": 130,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/CatalogUnity/SoccerMobilePro.Catalog.Unity.asmdef": {
+      "filePath": "Assets/SoccerMobilePro/CatalogUnity/SoccerMobilePro.Catalog.Unity.asmdef",
+      "contentHash": "f79ec0df5502cc606601a5343503da64c3ff7a29b6984f375317347f98862975",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
     "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs": {
       "filePath": "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
       "contentHash": "7bb00c079e65274a5de041a4cc53194df12bc65057a722792b70da75a0bf0e9c",
@@ -12881,6 +14419,241 @@
       "totalLines": 262,
       "hasStructuralAnalysis": true
     },
+    "Assets/Tests/EditMode/CatalogFoundationTests.cs": {
+      "filePath": "Assets/Tests/EditMode/CatalogFoundationTests.cs",
+      "contentHash": "11d4877e81355690dd0646ddbc29c9b8cd5818ac6a916afd16ee4ba5fe61f49d",
+      "functions": [
+        {
+          "name": "SetUp",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Fixture_ContainsExpectedEntitiesAndValidReferences",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "CatalogVersion_RequiresFixedWidthDigits",
+          "params": [
+            "value",
+            "expected"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "Codec_RoundTripsAndIgnoresUnknownFields",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "Validator_RejectsDuplicateAndDanglingReferences",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "Validator_RejectsFallbackCycle",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "DeltaApplier_AppliesValidUpsertWithCanonicalHash",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "DeltaValidator_RejectsBaseMismatchAndCorruptInnerHash",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "Installer_ActivatesSnapshotAndPreservesLastKnownGoodOnCorruptPayload",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "Installer_RejectsMissingRollbackTarget",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "Installer_AppliesDeltaThenRollsBackAtomically",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "FileStore_ReturnsFalseForCorruptActiveSnapshot",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "Installer_AcceptsSchemaNMinusOneAndRejectsNMinusTwo",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "CreateDelta",
+          "params": [
+            "baseVersion",
+            "targetVersion"
+          ],
+          "returnType": "CatalogDelta",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "CreateManifest",
+          "params": [
+            "version",
+            "payload",
+            "rollbackVersion",
+            "schemaVersion"
+          ],
+          "returnType": "CatalogManifest",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "WithStore",
+          "params": [
+            "action"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "TemporaryRoot",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "DeleteDirectory",
+          "params": [
+            "path"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "CatalogFoundationTests",
+          "methods": [
+            "SetUp",
+            "Fixture_ContainsExpectedEntitiesAndValidReferences",
+            "CatalogVersion_RequiresFixedWidthDigits",
+            "Codec_RoundTripsAndIgnoresUnknownFields",
+            "Validator_RejectsDuplicateAndDanglingReferences",
+            "Validator_RejectsFallbackCycle",
+            "DeltaApplier_AppliesValidUpsertWithCanonicalHash",
+            "DeltaValidator_RejectsBaseMismatchAndCorruptInnerHash",
+            "Installer_ActivatesSnapshotAndPreservesLastKnownGoodOnCorruptPayload",
+            "Installer_RejectsMissingRollbackTarget",
+            "Installer_AppliesDeltaThenRollsBackAtomically",
+            "FileStore_ReturnsFalseForCorruptActiveSnapshot",
+            "Installer_AcceptsSchemaNMinusOneAndRejectsNMinusTwo",
+            "CreateDelta",
+            "CreateManifest",
+            "WithStore",
+            "TemporaryRoot",
+            "DeleteDirectory"
+          ],
+          "properties": [
+            "Now",
+            "codec",
+            "validator"
+          ],
+          "exported": true,
+          "lineCount": 247
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Catalog",
+          "specifiers": [
+            "Catalog"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        }
+      ],
+      "exports": [
+        "SetUp",
+        "Fixture_ContainsExpectedEntitiesAndValidReferences",
+        "CatalogVersion_RequiresFixedWidthDigits",
+        "Codec_RoundTripsAndIgnoresUnknownFields",
+        "Validator_RejectsDuplicateAndDanglingReferences",
+        "Validator_RejectsFallbackCycle",
+        "DeltaApplier_AppliesValidUpsertWithCanonicalHash",
+        "DeltaValidator_RejectsBaseMismatchAndCorruptInnerHash",
+        "Installer_ActivatesSnapshotAndPreservesLastKnownGoodOnCorruptPayload",
+        "Installer_RejectsMissingRollbackTarget",
+        "Installer_AppliesDeltaThenRollsBackAtomically",
+        "FileStore_ReturnsFalseForCorruptActiveSnapshot",
+        "Installer_AcceptsSchemaNMinusOneAndRejectsNMinusTwo",
+        "CatalogFoundationTests"
+      ],
+      "totalLines": 258,
+      "hasStructuralAnalysis": true
+    },
     "Assets/Tests/EditMode/ContextualMatchInputTests.cs": {
       "filePath": "Assets/Tests/EditMode/ContextualMatchInputTests.cs",
       "contentHash": "5204128ccfb8a1c0c18c6bc298970846504e68ada45311240e936dc610c9d659",
@@ -13528,13 +15301,135 @@
     },
     "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef": {
       "filePath": "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef",
-      "contentHash": "b4ed914610c7ef725f4a82923e5f4e10f1f918606cf856354b8f96b367657e3f",
+      "contentHash": "8f2144c613f92e4e37d5a7a7a84bf2db30568dbd7bf5b944c2aa9393b925b0d4",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 27,
+      "totalLines": 28,
       "hasStructuralAnalysis": false
+    },
+    "Assets/Tests/PlayMode/CatalogAddressablesPlayModeTests.cs": {
+      "filePath": "Assets/Tests/PlayMode/CatalogAddressablesPlayModeTests.cs",
+      "contentHash": "b3e8d550499f2cef325b1331ade75d7b6ee04913fa4917e298e69f87e8fb76c4",
+      "functions": [
+        {
+          "name": "SetUp",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "FixtureCatalog_LoadsFromAddressablesAndValidates",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "GenericModel_LoadsAfterCleanCacheRequest",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "RejectedManifest_UsesGenericFallbackWithoutBlocking",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "MissingAddress_UsesGenericFallbackAndCanBeEvicted",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "classes": [
+        {
+          "name": "CatalogAddressablesPlayModeTests",
+          "methods": [
+            "SetUp",
+            "FixtureCatalog_LoadsFromAddressablesAndValidates",
+            "GenericModel_LoadsAfterCleanCacheRequest",
+            "RejectedManifest_UsesGenericFallbackWithoutBlocking",
+            "MissingAddress_UsesGenericFallbackAndCanBeEvicted"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 88
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections",
+          "specifiers": [
+            "Collections"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Catalog.Unity",
+          "specifiers": [
+            "Unity"
+          ]
+        },
+        {
+          "source": "UnityEngine.AddressableAssets",
+          "specifiers": [
+            "AddressableAssets"
+          ]
+        },
+        {
+          "source": "UnityEngine.ResourceManagement",
+          "specifiers": [
+            "ResourceManagement"
+          ]
+        },
+        {
+          "source": "UnityEngine.TestTools",
+          "specifiers": [
+            "TestTools"
+          ]
+        }
+      ],
+      "exports": [
+        "SetUp",
+        "FixtureCatalog_LoadsFromAddressablesAndValidates",
+        "GenericModel_LoadsAfterCleanCacheRequest",
+        "RejectedManifest_UsesGenericFallbackWithoutBlocking",
+        "MissingAddress_UsesGenericFallbackAndCanBeEvicted",
+        "CatalogAddressablesPlayModeTests"
+      ],
+      "totalLines": 102,
+      "hasStructuralAnalysis": true
     },
     "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs": {
       "filePath": "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs",
@@ -13849,12 +15744,12 @@
     },
     "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef": {
       "filePath": "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef",
-      "contentHash": "cb37358cc1dd97a4d5b43ed31d58b97c8cc587ea2d104d4b2d109edb4ccc97e1",
+      "contentHash": "7ca2470a7fe7293e941062416feacc7ae5c27e30bc79f05b4a3960d5de81d722",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 24,
+      "totalLines": 28,
       "hasStructuralAnalysis": false
     },
     "Assets/testScene.unity": {
@@ -14393,7 +16288,7 @@
     },
     "docs/implementation/decision-validation-program.md": {
       "filePath": "docs/implementation/decision-validation-program.md",
-      "contentHash": "3fbd531d68d408d56fcfcd1bee58b392378f38dbdf732fb1626335e94d158bd1",
+      "contentHash": "b9e80c8c59830e7a9732c2c61238f632c3c4ffe161b70c6cb9cc283a0d08973f",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -14411,6 +16306,16 @@
       "totalLines": 193,
       "hasStructuralAnalysis": true
     },
+    "docs/implementation/p1-football-catalog-and-model-foundation.md": {
+      "filePath": "docs/implementation/p1-football-catalog-and-model-foundation.md",
+      "contentHash": "073fc95ad59f712e6469d3a9a6cb33db971f311066af6c7f182cf64aef48f007",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 97,
+      "hasStructuralAnalysis": true
+    },
     "docs/implementation/p1-localization-settings-implementation.md": {
       "filePath": "docs/implementation/p1-localization-settings-implementation.md",
       "contentHash": "3e6a95c43cbd3354b203d268ba8e19719e6b93b1b32f1de0d7f2a1b181902fc3",
@@ -14423,22 +16328,22 @@
     },
     "docs/implementation/unity-implementation-audit-and-backlog.md": {
       "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
-      "contentHash": "bbee96b4b9e1c10dfe9b777d7dd3af4e5a7df6ef120427d23c3a0ee773766cdb",
+      "contentHash": "988c1dd61879ffcb62b03e63e255c6ee34f87589cf9fd91f6eb11d3c4a5acb90",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 291,
+      "totalLines": 306,
       "hasStructuralAnalysis": true
     },
     "docs/index.md": {
       "filePath": "docs/index.md",
-      "contentHash": "0e0db0a525b32c43f81afaf420a5d2d749818cb7bb0f80fbeb92b8a13216ff63",
+      "contentHash": "65d6be8f8c3d0d2477fecfafd430e33bfc66415af2f4c06d6e76581862ff2bbe",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 73,
+      "totalLines": 74,
       "hasStructuralAnalysis": true
     },
     "docs/operations/live-data-and-operations.md": {
@@ -14493,7 +16398,7 @@
     },
     "docs/research/fc-mobile-vn-coverage-audit.md": {
       "filePath": "docs/research/fc-mobile-vn-coverage-audit.md",
-      "contentHash": "9da67cd2108981648f92f2461b35a2ca8de4d5f01fdcddb6d978241fd386a61c",
+      "contentHash": "878309999efd5009d1198e95d1eb9f0c441866b0d250ce1eadfe301f1c53cca9",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -14513,7 +16418,7 @@
     },
     "docs/research/fc-mobile-vn-source-register.md": {
       "filePath": "docs/research/fc-mobile-vn-source-register.md",
-      "contentHash": "0405747f6fbcc88ccbca9e07babda9d7b2ea93b20cd12babcc3c7a106f788d0a",
+      "contentHash": "daf4b59bc5c49dcd58d8c999cfee29383f9f46d019cb9b3c0b831f4f9a69e308",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -14613,7 +16518,7 @@
     },
     "docs/systems/football-catalog-player-database-and-model-assets.md": {
       "filePath": "docs/systems/football-catalog-player-database-and-model-assets.md",
-      "contentHash": "5b2fd2b238434b28580e01f9e129f750a0f1845b274fd7d4cf6b1db8175cbd17",
+      "contentHash": "a9a443f92c9ac8a70eb52543df785a23caf1d38c5833f845d6b57120afc0c8b5",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -14653,17 +16558,17 @@
     },
     "Packages/manifest.json": {
       "filePath": "Packages/manifest.json",
-      "contentHash": "0153e055bd8be3f70cc59f2d4c51d5408ec57fc0bf0e0f87454c1691c1c4f262",
+      "contentHash": "4fa97542b2a2482052d14970ddb5aefd50c3f49c47a5ec405a8d37ce38f4e9c2",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 85,
+      "totalLines": 86,
       "hasStructuralAnalysis": true
     },
     "Packages/packages-lock.json": {
       "filePath": "Packages/packages-lock.json",
-      "contentHash": "a3c21decfc910fd558c5a14356f088a3a407fc6509e65767bd32180e6a50c256",
+      "contentHash": "098bef0dd1d2d73218933c66378cee266115f2ed9d7a861a0a760cf38589c998",
       "functions": [],
       "classes": [],
       "imports": [],
