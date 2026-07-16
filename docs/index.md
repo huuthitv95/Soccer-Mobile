@@ -48,6 +48,7 @@
 - [Chương trình kiểm chứng decision register](implementation/decision-validation-program.md)
 - [Nhật ký P0 foundation](implementation/p0-foundation-implementation.md)
 - [Nhật ký P1-01 localization và settings](implementation/p1-localization-settings-implementation.md)
+- [Nhật ký P1-02 football catalog và model foundation](implementation/p1-football-catalog-and-model-foundation.md)
 
 ## 7. Bản đồ phụ thuộc
 

@@ -25,9 +25,9 @@ Ma trận này là authority về độ phủ, được đánh giá ngày **16/0
 | Tính năng tổng thể/core loop | Hoàn thành | Contract/guardrail hoàn chỉnh; tuning gated | Prototype một phần | [GDD](../product/gdd-soccer-mobile-pro.md), [nghiên cứu](fc-mobile-vn-research.md#features-and-modes) |
 | Layout UI/UX | Hoàn thành visual-first | Coverage hoàn chỉnh; token/art decisions gated | Chưa có product shell | [Video synthesis](video/ui-pattern-synthesis.md), [UI catalogue](../product/ui-design-system-and-screen-catalogue.md) |
 | Ngôn ngữ/cài đặt/tài khoản | Hoàn thành; provider VN còn decision | Contract hoàn chỉnh; provider/legal gated | P1-01 có locale `vi-VN`/`en`, typed registry, file persistence, N/N-1 và MainMenu panel; cloud/backend/voice/device/human gates còn mở | [Account spec](../systems/account-localization-and-settings.md), [evidence P1-01](../implementation/p1-localization-settings-implementation.md) |
-| Giải đấu/CLB/League/social | Hoàn thành; license catalog không suy diễn | Contract hoàn chỉnh; policy/licensing gated | Chưa triển khai | [Competition spec](../systems/competitions-leagues-clubs-and-social.md) |
-| Cầu thủ/player database | Hoàn thành với kết luận endpoint không công khai | Contract proposal hoàn chỉnh; backend choice gated | P0-03 đã có `CatalogManifest` và cache/version contract; product catalog chưa triển khai | [Catalog spec](../systems/football-catalog-player-database-and-model-assets.md) |
-| Model 3D | Hoàn thành với kết luận pipeline nội bộ không công khai | Pipeline proposal hoàn chỉnh; budgets gated | Asset hiện tại không phải pipeline sản phẩm | [Catalog/model spec](../systems/football-catalog-player-database-and-model-assets.md) |
+| Giải đấu/CLB/League/social | Hoàn thành; license không được dùng để suy diễn kiến trúc FC Mobile | Contract hoàn chỉnh; policy/backend gated | P1-02 có fixture 2 giải/4 CLB; social/competition runtime và production dataset chưa có | [Competition spec](../systems/competitions-leagues-clubs-and-social.md), [evidence P1-02](../implementation/p1-football-catalog-and-model-foundation.md) |
+| Cầu thủ/player database | Hoàn thành với kết luận endpoint không công khai | Contract proposal hoàn chỉnh; backend choice gated | P1-02 có entity, 44 cầu thủ hư cấu, snapshot/delta, atomic cache và validator; production API/dataset chưa có | [Catalog spec](../systems/football-catalog-player-database-and-model-assets.md), [evidence P1-02](../implementation/p1-football-catalog-and-model-foundation.md) |
+| Model 3D | Hoàn thành với kết luận pipeline nội bộ không công khai | Pipeline proposal hoàn chỉnh; budgets gated | P1-02 có local Addressables resolver và generic fallback; chưa có model production hoặc device profiling | [Catalog/model spec](../systems/football-catalog-player-database-and-model-assets.md), [evidence P1-02](../implementation/p1-football-catalog-and-model-foundation.md) |
 | Skills/PlayStyles/nâng cấp thẻ | Hoàn thành, ghi drift S08/S11 | Contract hoàn chỉnh; balance/economy gated | Chưa triển khai | [Cards/progression spec](../systems/player-cards-skills-progression-market-and-exchange.md) |
 | Controls có/không bóng, set piece | Hoàn thành ở mức public boundary/proposal | Contract hoàn chỉnh; layout/assist gated | P0-02 đã có typed action maps, adapter và test; legacy controller vẫn là mặc định runtime | [Controls spec](../systems/match-controls-set-pieces-and-var.md) |
 | VAR | Hoàn thành với kết luận chưa xác nhận VAR tương tác | Presentation contract hoàn chỉnh; eligibility gated | Chưa triển khai | [Controls/VAR spec](../systems/match-controls-set-pieces-and-var.md) |
@@ -36,7 +36,7 @@ Ma trận này là authority về độ phủ, được đánh giá ngày **16/0
 | Live data/assets/operations | Hoàn thành public boundary | Publish/incident contract hoàn chỉnh; SLA gated | Chưa triển khai | [Operations](../operations/live-data-and-operations.md) |
 | Giftcode/liveops/monetization | Hoàn thành, gồm S18/S19 support context | Transaction contract hoàn chỉnh; commercial policy gated | Chưa triển khai | [LiveOps](../operations/liveops-monetization-and-membership.md) |
 | Năm video | Hoàn thành visual-first | Chuyển hóa thành catalogue/state | Không phải implementation evidence | [Coverage video](video/ui-pattern-synthesis.md#evidence-coverage) |
-| Audit Unity | Không áp dụng | Backlog handoff | P0-01/P0-02/P0-03 đã có contract, adapter và automated evidence; các product gate vẫn mở | [Audit](../implementation/unity-implementation-audit-and-backlog.md) |
+| Audit Unity | Không áp dụng | Backlog handoff | P0-01/P0-02/P0-03, P1-01 và P1-02 foundation có contract/adapter/automated evidence; các product/device/backend gate vẫn mở | [Audit](../implementation/unity-implementation-audit-and-backlog.md) |
 
 <a id="evidence-quality"></a>
 
@@ -68,7 +68,7 @@ Lifecycle chuẩn là `Open → TestReady → InValidation → EvidenceReady →
 ### P1 — cần trước vertical slice meta
 
 1. P1-01 đã triển khai foundation kỹ thuật cho locale bootstrap `vi-VN`/`en`, typed settings registry, file persistence, migration N/N-1 và fallback; đây chưa phải phê duyệt brand font, voice pack, accessibility trên thiết bị hoặc cloud policy production.
-2. P1-02 chọn Addressables/catalog strategy và budget model 3D theo device tier.
+2. P1-02 đã triển khai catalog/local Addressables fixture và rehearsal rollback; bước còn lại là backend/CDN production, nhập dataset/model riêng và phê duyệt budget model 3D theo device tier.
 3. P1-03 prototype transaction nâng cấp server-authoritative với idempotency/receipt.
 4. Tạo scenario suite cho AI tactical shape, transition, marking và set piece sau khi contract player attribute/catalog ổn định.
 

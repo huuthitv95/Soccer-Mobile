@@ -88,6 +88,6 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 | ID | Quyết định | Owner | Gate | Trạng thái |
 | --- | --- | --- | --- | --- |
 | CAT-D01 | Backend store/API shape | Backend/Data | Client schema/cache/integrity pass; còn thiếu backend load, audit và cost | `InValidation` |
-| CAT-D02 | Addressables group/CDN | Client/DevOps | Staged update + rollback rehearsal | `TestReady` |
+| CAT-D02 | Addressables group/CDN | Client/DevOps | Local staged update/rollback đã pass; remote CDN rehearsal còn thiếu | `InValidation` |
 | CAT-D03 | Device-tier model budgets | Tech Art | Profiler trên target devices | `TestReady` |
-| CAT-D04 | Face/body coverage launch | Production/Licensing | Rights, capacity và fallback quality | `Blocked` |
+| CAT-D04 | Face/body coverage launch | Production/Data | License đã xác nhận; còn thiếu capacity, coverage và fallback quality | `TestReady` |
