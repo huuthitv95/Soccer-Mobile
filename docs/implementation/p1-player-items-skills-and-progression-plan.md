@@ -2,6 +2,8 @@
 
 > [Chỉ mục](../index.md) · [Cards/progression spec](../systems/player-cards-skills-progression-market-and-exchange.md) · [Catalog P1-02](p1-football-catalog-and-model-foundation.md) · [Nghiên cứu eFootball](../research/efootball-mobile/efootball-mobile-research.md) · [Adoption matrix](../research/efootball-mobile/efootball-mobile-adoption-decision-matrix.md)
 
+**Trạng thái:** foundation đã triển khai tại content baseline `dc23b73`; bằng chứng và giới hạn được ghi trong [nhật ký P1-03](p1-player-items-skills-and-progression-implementation.md).
+
 ## 0. Mục lục
 
 - [1. Mục tiêu và phạm vi](#goal)

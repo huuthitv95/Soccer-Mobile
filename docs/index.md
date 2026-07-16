@@ -51,6 +51,7 @@
 - [Nhật ký P1-01 localization và settings](implementation/p1-localization-settings-implementation.md)
 - [Nhật ký P1-02 football catalog và model foundation](implementation/p1-football-catalog-and-model-foundation.md)
 - [Kế hoạch P1-03 player items, skills và progression foundation](implementation/p1-player-items-skills-and-progression-plan.md)
+- [Nhật ký P1-03 player items, skills và progression](implementation/p1-player-items-skills-and-progression-implementation.md)
 
 ## 7. Bản đồ phụ thuộc
 
