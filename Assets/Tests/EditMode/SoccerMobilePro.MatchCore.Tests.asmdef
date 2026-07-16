@@ -5,6 +5,7 @@
     "SoccerMobilePro.MatchCore",
     "SoccerMobilePro.Input",
     "SoccerMobilePro.Platform",
+    "SoccerMobilePro.Catalog",
     "Unity.InputSystem"
   ],
   "includePlatforms": [
