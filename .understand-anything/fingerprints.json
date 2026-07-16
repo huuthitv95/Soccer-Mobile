@@ -1,16 +1,16 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "c993db3369811d168be142acdf26266d467d756f",
-  "generatedAt": "2026-07-16T04:22:26.718Z",
+  "gitCommitHash": "f85e57dd60ce8887eb0da146bd1cad6cdd291852",
+  "generatedAt": "2026-07-16T08:42:32.900Z",
   "files": {
     ".gitattributes": {
       "filePath": ".gitattributes",
-      "contentHash": "85deb84d6bc933ddfc9448c95243c84e26d644d85807c90916ba4920c397787d",
+      "contentHash": "1b30b8a7501e02c0796a7c660f90f2aae2b6eb6b2747d059cc4ea09436ae7386",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 63,
+      "totalLines": 65,
       "hasStructuralAnalysis": false
     },
     ".markdownlint.jsonc": {
@@ -35,12 +35,12 @@
     },
     "AGENTS.md": {
       "filePath": "AGENTS.md",
-      "contentHash": "2218d4ef3eca61d274e82e89585e9b503f9b806cbd1c4b3b70d8f08dcc92fbde",
+      "contentHash": "50d126d4b3277fb76596cd7f28e0d4cae879e3387ce80400b57a5d8c25cfe559",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 237,
+      "totalLines": 244,
       "hasStructuralAnalysis": true
     },
     "Assets/_LifeBar.unity": {
@@ -10257,6 +10257,118 @@
       "totalLines": 19,
       "hasStructuralAnalysis": false
     },
+    "Assets/SoccerMobilePro/Editor/ProjectLocalMcpConfigGuard.cs": {
+      "filePath": "Assets/SoccerMobilePro/Editor/ProjectLocalMcpConfigGuard.cs",
+      "contentHash": "201e404a67e5cac7def7229f5dfb8d49c1a9793599c6e7ca32796edab6da4f30",
+      "functions": [
+        {
+          "name": "ProjectLocalMcpConfigGuard",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "NormalizeConfigText",
+          "params": [
+            "text"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "NormalizeProjectConfig",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "Poll",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProjectLocalMcpConfigGuard",
+          "methods": [
+            "ProjectLocalMcpConfigGuard",
+            "NormalizeConfigText",
+            "NormalizeProjectConfig",
+            "Poll"
+          ],
+          "properties": [
+            "LocalServerUrl",
+            "PollIntervalSeconds",
+            "RoutedUrlPattern",
+            "ConfigPath",
+            "nextPoll",
+            "observedWriteTicks"
+          ],
+          "exported": true,
+          "lineCount": 54
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        },
+        {
+          "source": "System.Text.RegularExpressions",
+          "specifiers": [
+            "RegularExpressions"
+          ]
+        },
+        {
+          "source": "UnityEditor",
+          "specifiers": [
+            "UnityEditor"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        }
+      ],
+      "exports": [
+        "LocalServerUrl",
+        "NormalizeConfigText",
+        "NormalizeProjectConfig",
+        "ProjectLocalMcpConfigGuard"
+      ],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Editor/SoccerMobilePro.Editor.asmdef": {
+      "filePath": "Assets/SoccerMobilePro/Editor/SoccerMobilePro.Editor.asmdef",
+      "contentHash": "6e3dfc5105bf120c847e291cffff241c3a50d2ab218679721bb622dcfddea924",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
     "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs": {
       "filePath": "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
       "contentHash": "7bb00c079e65274a5de041a4cc53194df12bc65057a722792b70da75a0bf0e9c",
@@ -12513,9 +12625,1398 @@
       "totalLines": 15,
       "hasStructuralAnalysis": false
     },
+    "Assets/SoccerMobilePro/PlayerItems/InventoryPersistence.cs": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItems/InventoryPersistence.cs",
+      "contentHash": "0930751d0078f16b2bff6cf210b9d02955a0b049c644cb0fb66d5447e5e21683",
+      "functions": [
+        {
+          "name": "Serialize",
+          "params": [
+            "envelope"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "Deserialize",
+          "params": [
+            "payload",
+            "migrated"
+          ],
+          "returnType": "InventoryEnvelope",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "FileInventoryStore",
+          "params": [
+            "path",
+            "codec",
+            "forceReadOnly"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "TryLoad",
+          "params": [
+            "ownerId",
+            "snapshot"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "TryCommit",
+          "params": [
+            "ownerId",
+            "expectedRevision",
+            "next",
+            "receipt",
+            "entries"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "TryGetReceipt",
+          "params": [
+            "idempotencyKey",
+            "receipt"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "EntriesForTransaction",
+          "params": [
+            "transactionId"
+          ],
+          "returnType": "IReadOnlyList<LedgerEntry>",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "IsBalanced",
+          "params": [
+            "transactionId"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "LoadInitial",
+          "params": [],
+          "returnType": "InventoryEnvelope",
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "TryRead",
+          "params": [
+            "candidate",
+            "result",
+            "migrated"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "Persist",
+          "params": [
+            "value"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "CloneEnvelope",
+          "params": [
+            "source"
+          ],
+          "returnType": "InventoryEnvelope",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "CloneEntry",
+          "params": [
+            "entry"
+          ],
+          "returnType": "LedgerEntry",
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "InventoryPersistenceException",
+          "params": [
+            "message"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "InventoryPersistenceException",
+          "params": [
+            "message",
+            "innerException"
+          ],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [
+        {
+          "name": "InventoryEnvelope",
+          "methods": [],
+          "properties": [
+            "SchemaVersion",
+            "Inventories",
+            "Receipts",
+            "LedgerEntries",
+            "ExtensionData"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "InventoryCodec",
+          "methods": [
+            "Serialize",
+            "Deserialize"
+          ],
+          "properties": [
+            "CurrentSchemaVersion",
+            "BackwardSchemaWindow",
+            "Settings"
+          ],
+          "exported": true,
+          "lineCount": 47
+        },
+        {
+          "name": "FileInventoryStore",
+          "methods": [
+            "FileInventoryStore",
+            "TryLoad",
+            "TryCommit",
+            "TryGetReceipt",
+            "EntriesForTransaction",
+            "IsBalanced",
+            "LoadInitial",
+            "TryRead",
+            "Persist",
+            "CloneEnvelope",
+            "CloneEntry"
+          ],
+          "properties": [
+            "Utf8",
+            "sync",
+            "path",
+            "backupPath",
+            "codec",
+            "envelope",
+            "IsReadOnly",
+            "LoadedFromBackup",
+            "MigratedFromPreviousSchema"
+          ],
+          "exported": true,
+          "lineCount": 136
+        },
+        {
+          "name": "InventoryPersistenceException",
+          "methods": [
+            "InventoryPersistenceException",
+            "InventoryPersistenceException"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        },
+        {
+          "source": "Newtonsoft.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "Newtonsoft.Json.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        }
+      ],
+      "exports": [
+        "SchemaVersion",
+        "Inventories",
+        "Receipts",
+        "LedgerEntries",
+        "ExtensionData",
+        "InventoryEnvelope",
+        "CurrentSchemaVersion",
+        "BackwardSchemaWindow",
+        "Serialize",
+        "Deserialize",
+        "InventoryCodec",
+        "FileInventoryStore",
+        "IsReadOnly",
+        "LoadedFromBackup",
+        "MigratedFromPreviousSchema",
+        "TryLoad",
+        "TryCommit",
+        "TryGetReceipt",
+        "EntriesForTransaction",
+        "IsBalanced",
+        "FileInventoryStore",
+        "InventoryPersistenceException",
+        "InventoryPersistenceException",
+        "InventoryPersistenceException"
+      ],
+      "totalLines": 212,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/PlayerItems/InventoryTransactions.cs": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItems/InventoryTransactions.cs",
+      "contentHash": "8c5e1acf4124f4e6baeffba24cf2987140bc47fd156e2f591490c8bb0f741f39",
+      "functions": [
+        {
+          "name": "Seed",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "TryLoad",
+          "params": [
+            "ownerId",
+            "snapshot"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "TryCommit",
+          "params": [
+            "ownerId",
+            "expectedRevision",
+            "next",
+            "receipt",
+            "entries"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "TryGetReceipt",
+          "params": [
+            "idempotencyKey",
+            "receipt"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "EntriesForTransaction",
+          "params": [
+            "transactionId"
+          ],
+          "returnType": "IReadOnlyList<LedgerEntry>",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "IsBalanced",
+          "params": [
+            "transactionId"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "CloneEntry",
+          "params": [
+            "entry"
+          ],
+          "returnType": "LedgerEntry",
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "InventoryTransactionService",
+          "params": [
+            "inventory",
+            "receipts",
+            "rules",
+            "readOnly"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "Grant",
+          "params": [
+            "command",
+            "nowUtc"
+          ],
+          "returnType": "TransactionReceipt",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "Execute",
+          "params": [
+            "command",
+            "preview",
+            "nowUtc"
+          ],
+          "returnType": "TransactionReceipt",
+          "exported": true,
+          "lineCount": 36
+        },
+        {
+          "name": "TryReplay",
+          "params": [
+            "idempotencyKey",
+            "payloadHash",
+            "nowUtc",
+            "receipt"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "Commit",
+          "params": [
+            "ownerId",
+            "expectedRevision",
+            "idempotencyKey",
+            "payloadHash",
+            "operation",
+            "next",
+            "delta",
+            "nowUtc"
+          ],
+          "returnType": "TransactionReceipt",
+          "exported": false,
+          "lineCount": 24
+        },
+        {
+          "name": "Delta",
+          "params": [
+            "baseRevision",
+            "targetRevision",
+            "upserted",
+            "removed"
+          ],
+          "returnType": "InventoryDelta",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "Reject",
+          "params": [
+            "idempotencyKey",
+            "payloadHash",
+            "code",
+            "nowUtc"
+          ],
+          "returnType": "TransactionReceipt",
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [
+        {
+          "name": "InMemoryInventoryStore",
+          "methods": [
+            "Seed",
+            "TryLoad",
+            "TryCommit",
+            "TryGetReceipt",
+            "EntriesForTransaction",
+            "IsBalanced",
+            "CloneEntry"
+          ],
+          "properties": [
+            "sync",
+            "inventories",
+            "receipts",
+            "ledger"
+          ],
+          "exported": true,
+          "lineCount": 60
+        },
+        {
+          "name": "InventoryTransactionService",
+          "methods": [
+            "InventoryTransactionService",
+            "Grant",
+            "Execute",
+            "TryReplay",
+            "Commit",
+            "Delta",
+            "Reject"
+          ],
+          "properties": [
+            "inventory",
+            "receipts",
+            "rules",
+            "readOnly"
+          ],
+          "exported": true,
+          "lineCount": 141
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        }
+      ],
+      "exports": [
+        "Seed",
+        "TryLoad",
+        "TryCommit",
+        "TryGetReceipt",
+        "EntriesForTransaction",
+        "IsBalanced",
+        "InMemoryInventoryStore",
+        "InventoryTransactionService",
+        "Grant",
+        "Execute",
+        "InventoryTransactionService"
+      ],
+      "totalLines": 210,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/PlayerItems/PlayerItemContracts.cs": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItems/PlayerItemContracts.cs",
+      "contentHash": "fe25099b878b2d973cd47fed2d4c79cec152c05ac8de86dec06a5ea67718e623",
+      "functions": [
+        {
+          "name": "Clone",
+          "params": [],
+          "returnType": "OwnedPlayerItem",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "CloneExtensionData",
+          "params": [
+            "source"
+          ],
+          "returnType": "IDictionary<string, JToken>",
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "Find",
+          "params": [
+            "itemId"
+          ],
+          "returnType": "OwnedPlayerItem",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "Clone",
+          "params": [],
+          "returnType": "InventorySnapshot",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "CanonicalValue",
+          "params": [],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "ProgressionPreviewResult",
+          "params": [
+            "preview",
+            "failureCode"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "CanonicalPayload",
+          "params": [],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "CanonicalPayload",
+          "params": [],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "OwnedPlayerItem",
+          "methods": [
+            "Clone",
+            "CloneExtensionData"
+          ],
+          "properties": [
+            "ItemId",
+            "OwnerId",
+            "ItemDefinitionId",
+            "CatalogVersion",
+            "AcquiredAt",
+            "LevelXp",
+            "ProgressionAllocation",
+            "AdditionalSkills",
+            "PositionProficiencies",
+            "LockState",
+            "State",
+            "Revision",
+            "RulesVersion",
+            "ExtensionData"
+          ],
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "InventorySnapshot",
+          "methods": [
+            "Find",
+            "Clone"
+          ],
+          "properties": [
+            "SchemaVersion",
+            "OwnerId",
+            "Revision",
+            "CatalogVersion",
+            "RulesVersion",
+            "Items",
+            "ExtensionData"
+          ],
+          "exported": true,
+          "lineCount": 29
+        },
+        {
+          "name": "InventoryDelta",
+          "methods": [],
+          "properties": [
+            "BaseRevision",
+            "TargetRevision",
+            "UpsertedItems",
+            "RemovedItemIds"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "ProgressionIntent",
+          "methods": [
+            "CanonicalValue"
+          ],
+          "properties": [
+            "Operation",
+            "Amount",
+            "SelectionId",
+            "SourceItemId"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "ProgressionPreview",
+          "methods": [],
+          "properties": [
+            "OwnerId",
+            "ItemId",
+            "InventoryRevision",
+            "ItemRevision",
+            "CatalogVersion",
+            "RulesVersion",
+            "Intent",
+            "BeforeItem",
+            "AfterItem",
+            "SourceItemId",
+            "PreviewHash",
+            "ExpiresAt",
+            "Warnings"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "ProgressionPreviewResult",
+          "methods": [
+            "ProgressionPreviewResult"
+          ],
+          "properties": [
+            "Preview",
+            "FailureCode",
+            "Succeeded"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "ProgressionCommand",
+          "methods": [
+            "CanonicalPayload"
+          ],
+          "properties": [
+            "OwnerId",
+            "ItemId",
+            "ExpectedInventoryRevision",
+            "ExpectedItemRevision",
+            "PreviewHash",
+            "IdempotencyKey",
+            "Intent"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "GrantCommand",
+          "methods": [
+            "CanonicalPayload"
+          ],
+          "properties": [
+            "Item",
+            "IdempotencyKey"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "LedgerEntry",
+          "methods": [],
+          "properties": [
+            "TransactionId",
+            "AccountId",
+            "ResourceId",
+            "Amount"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "TransactionReceipt",
+          "methods": [],
+          "properties": [
+            "TransactionId",
+            "IdempotencyKey",
+            "PayloadHash",
+            "Status",
+            "FailureCode",
+            "InventoryDelta",
+            "LedgerEntries",
+            "CreatedAt"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "IInventoryRepository",
+          "methods": [
+            "TryLoad",
+            "TryCommit"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "ITransactionReceiptRepository",
+          "methods": [
+            "TryGetReceipt"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "ILedger",
+          "methods": [
+            "EntriesForTransaction",
+            "IsBalanced"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "IProgressionPreviewService",
+          "methods": [
+            "Build"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "IInventoryTransactionService",
+          "methods": [
+            "Grant",
+            "Execute"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "Newtonsoft.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "Newtonsoft.Json.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        }
+      ],
+      "exports": [
+        "ItemId",
+        "OwnerId",
+        "ItemDefinitionId",
+        "CatalogVersion",
+        "AcquiredAt",
+        "LevelXp",
+        "ProgressionAllocation",
+        "AdditionalSkills",
+        "PositionProficiencies",
+        "LockState",
+        "State",
+        "Revision",
+        "RulesVersion",
+        "ExtensionData",
+        "Clone",
+        "OwnedPlayerItem",
+        "SchemaVersion",
+        "OwnerId",
+        "Revision",
+        "CatalogVersion",
+        "RulesVersion",
+        "Items",
+        "ExtensionData",
+        "Find",
+        "Clone",
+        "InventorySnapshot",
+        "BaseRevision",
+        "TargetRevision",
+        "UpsertedItems",
+        "RemovedItemIds",
+        "InventoryDelta",
+        "Operation",
+        "Amount",
+        "SelectionId",
+        "SourceItemId",
+        "CanonicalValue",
+        "ProgressionIntent",
+        "OwnerId",
+        "ItemId",
+        "InventoryRevision",
+        "ItemRevision",
+        "CatalogVersion",
+        "RulesVersion",
+        "Intent",
+        "BeforeItem",
+        "AfterItem",
+        "SourceItemId",
+        "PreviewHash",
+        "ExpiresAt",
+        "Warnings",
+        "ProgressionPreview",
+        "ProgressionPreviewResult",
+        "Preview",
+        "FailureCode",
+        "Succeeded",
+        "ProgressionPreviewResult",
+        "OwnerId",
+        "ItemId",
+        "ExpectedInventoryRevision",
+        "ExpectedItemRevision",
+        "PreviewHash",
+        "IdempotencyKey",
+        "Intent",
+        "CanonicalPayload",
+        "ProgressionCommand",
+        "Item",
+        "IdempotencyKey",
+        "CanonicalPayload",
+        "GrantCommand",
+        "TransactionId",
+        "AccountId",
+        "ResourceId",
+        "Amount",
+        "LedgerEntry",
+        "TransactionId",
+        "IdempotencyKey",
+        "PayloadHash",
+        "Status",
+        "FailureCode",
+        "InventoryDelta",
+        "LedgerEntries",
+        "CreatedAt",
+        "TransactionReceipt",
+        "IInventoryRepository",
+        "ITransactionReceiptRepository",
+        "ILedger",
+        "IProgressionPreviewService",
+        "IInventoryTransactionService"
+      ],
+      "totalLines": 234,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/PlayerItems/PlayerItemsFixtureFactory.cs": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItems/PlayerItemsFixtureFactory.cs",
+      "contentHash": "3d5094ad2e4881b4b9edf651bf4f2fa6ac29db076ffd124f5d8eeb21848f110e",
+      "functions": [
+        {
+          "name": "CreateInventory",
+          "params": [
+            "catalog",
+            "ownerId",
+            "rulesVersion",
+            "acquiredAt"
+          ],
+          "returnType": "InventorySnapshot",
+          "exported": true,
+          "lineCount": 29
+        },
+        {
+          "name": "CreateRules",
+          "params": [
+            "catalog",
+            "rulesVersion"
+          ],
+          "returnType": "FixedProgressionRuleSet",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "PlayerItemsFixtureFactory",
+          "methods": [
+            "CreateInventory",
+            "CreateRules"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 46
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Catalog",
+          "specifiers": [
+            "Catalog"
+          ]
+        }
+      ],
+      "exports": [
+        "CreateInventory",
+        "CreateRules",
+        "PlayerItemsFixtureFactory"
+      ],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/PlayerItems/ProgressionRules.cs": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItems/ProgressionRules.cs",
+      "contentHash": "8384950af82edaaed0fe082c97d81e287a3ad6640d4a180a3dacc1f94484f8d0",
+      "functions": [
+        {
+          "name": "FixedProgressionRuleSet",
+          "params": [
+            "version",
+            "maxLevelXp",
+            "maxAdditionalSkills",
+            "fusionBaseXp",
+            "skills",
+            "positions"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "TryGetSkill",
+          "params": [
+            "skillId",
+            "definition"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "IsPositionEligible",
+          "params": [
+            "itemDefinitionId",
+            "positionId"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "DeterministicProgressionPreviewService",
+          "params": [
+            "rules"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "Build",
+          "params": [
+            "snapshot",
+            "itemId",
+            "intent",
+            "nowUtc"
+          ],
+          "returnType": "ProgressionPreviewResult",
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "Apply",
+          "params": [
+            "snapshot",
+            "after",
+            "intent",
+            "sourceItemId"
+          ],
+          "returnType": "TransactionFailureCode",
+          "exported": false,
+          "lineCount": 48
+        },
+        {
+          "name": "Fail",
+          "params": [
+            "code"
+          ],
+          "returnType": "ProgressionPreviewResult",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "ComputePreview",
+          "params": [
+            "preview"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "ComputePayload",
+          "params": [
+            "payload"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "CanonicalItem",
+          "params": [
+            "item"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "Sha256",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "SkillDefinition",
+          "methods": [],
+          "properties": [
+            "SkillId",
+            "ModifierBasisPoints",
+            "EligibleItemDefinitionIds"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "IProgressionRuleSet",
+          "methods": [
+            "TryGetSkill",
+            "IsPositionEligible"
+          ],
+          "properties": [
+            "Version",
+            "MaxLevelXp",
+            "MaxAdditionalSkills",
+            "FusionBaseXp"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "FixedProgressionRuleSet",
+          "methods": [
+            "FixedProgressionRuleSet",
+            "TryGetSkill",
+            "IsPositionEligible"
+          ],
+          "properties": [
+            "skills",
+            "positions",
+            "Version",
+            "MaxLevelXp",
+            "MaxAdditionalSkills",
+            "FusionBaseXp"
+          ],
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "DeterministicProgressionPreviewService",
+          "methods": [
+            "DeterministicProgressionPreviewService",
+            "Build",
+            "Apply",
+            "Fail"
+          ],
+          "properties": [
+            "PreviewLifetime",
+            "rules"
+          ],
+          "exported": true,
+          "lineCount": 105
+        },
+        {
+          "name": "ProgressionHash",
+          "methods": [
+            "ComputePreview",
+            "ComputePayload",
+            "CanonicalItem",
+            "Sha256"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 42
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "System.Security.Cryptography",
+          "specifiers": [
+            "Cryptography"
+          ]
+        },
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        }
+      ],
+      "exports": [
+        "SkillId",
+        "ModifierBasisPoints",
+        "EligibleItemDefinitionIds",
+        "SkillDefinition",
+        "IProgressionRuleSet",
+        "FixedProgressionRuleSet",
+        "Version",
+        "MaxLevelXp",
+        "MaxAdditionalSkills",
+        "FusionBaseXp",
+        "TryGetSkill",
+        "IsPositionEligible",
+        "FixedProgressionRuleSet",
+        "DeterministicProgressionPreviewService",
+        "Build",
+        "DeterministicProgressionPreviewService",
+        "ComputePreview",
+        "ComputePayload",
+        "ProgressionHash"
+      ],
+      "totalLines": 207,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/PlayerItems/SoccerMobilePro.PlayerItems.asmdef": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItems/SoccerMobilePro.PlayerItems.asmdef",
+      "contentHash": "8258569dba6d6a4c3d0c66ef1616e19a15426a8af0aa3e17df89082bbdf04082",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/PlayerItemsUnity/PlayerItemsFeatureGate.cs": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItemsUnity/PlayerItemsFeatureGate.cs",
+      "contentHash": "d13099f2fc43996c5997604d876ce3a704046a176fc04b1467f55239d22f4500",
+      "functions": [
+        {
+          "name": "ConfigureForDiagnostics",
+          "params": [
+            "enabled",
+            "forceReadOnly"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "InventoryProjection",
+          "params": [
+            "ownerId",
+            "revision",
+            "itemIds",
+            "readOnly"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "Create",
+          "params": [
+            "snapshot",
+            "gate"
+          ],
+          "returnType": "InventoryProjection",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "PlayerItemsFeatureGate",
+          "methods": [
+            "ConfigureForDiagnostics"
+          ],
+          "properties": [
+            "featureEnabled",
+            "readOnly",
+            "FeatureEnabled",
+            "IsReadOnly",
+            "CanMutate"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "InventoryProjection",
+          "methods": [
+            "InventoryProjection"
+          ],
+          "properties": [
+            "OwnerId",
+            "Revision",
+            "ItemIds",
+            "IsReadOnly"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "InventoryProjectionFactory",
+          "methods": [
+            "Create"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        }
+      ],
+      "exports": [
+        "FeatureEnabled",
+        "IsReadOnly",
+        "CanMutate",
+        "ConfigureForDiagnostics",
+        "PlayerItemsFeatureGate",
+        "InventoryProjection",
+        "OwnerId",
+        "Revision",
+        "ItemIds",
+        "IsReadOnly",
+        "InventoryProjection",
+        "Create",
+        "InventoryProjectionFactory"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/PlayerItemsUnity/SoccerMobilePro.PlayerItems.Unity.asmdef": {
+      "filePath": "Assets/SoccerMobilePro/PlayerItemsUnity/SoccerMobilePro.PlayerItems.Unity.asmdef",
+      "contentHash": "fd162191f16032375f8c94e4e6343829c597e9acef80066d06318daa6fe3c498",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
     "Assets/SoccerMobilePro/SettingsUI/SettingsPanelBehaviour.cs": {
       "filePath": "Assets/SoccerMobilePro/SettingsUI/SettingsPanelBehaviour.cs",
-      "contentHash": "36e9022d0509b90cdf68a0f046ce6366a1d0f6af7855c54c797b661db3a71c56",
+      "contentHash": "0eb7f3e6f5bb5e31adba1675a975c167b82889562ae69130b768e2bee31aca48",
       "functions": [
         {
           "name": "Initialize",
@@ -15299,14 +16800,474 @@
       "totalLines": 150,
       "hasStructuralAnalysis": true
     },
+    "Assets/Tests/EditMode/PlayerItemsPersistenceTests.cs": {
+      "filePath": "Assets/Tests/EditMode/PlayerItemsPersistenceTests.cs",
+      "contentHash": "8979c51583b52a740ff0674daed21bae1ff6adf85c5f04dac82b01335c84a200",
+      "functions": [
+        {
+          "name": "SetUp",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "TearDown",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "Codec_RoundTripsUnknownFields",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "Codec_MigratesNMinusOneAndRejectsNMinusTwo",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "FileStore_PersistsReceiptInventoryAndBalancedLedger",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "CorruptActive_UsesBackupAsReadOnlyLastKnownGood",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "ForcedReadOnlyStore_RejectsCommit",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "RetryAfterReload_ReturnsPersistedReceiptWithoutDuplicateGrant",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "Rules",
+          "params": [],
+          "returnType": "FixedProgressionRuleSet",
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "Item",
+          "params": [
+            "itemId"
+          ],
+          "returnType": "OwnedPlayerItem",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "Now",
+          "params": [],
+          "returnType": "DateTimeOffset",
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [
+        {
+          "name": "PlayerItemsPersistenceTests",
+          "methods": [
+            "SetUp",
+            "TearDown",
+            "Codec_RoundTripsUnknownFields",
+            "Codec_MigratesNMinusOneAndRejectsNMinusTwo",
+            "FileStore_PersistsReceiptInventoryAndBalancedLedger",
+            "CorruptActive_UsesBackupAsReadOnlyLastKnownGood",
+            "ForcedReadOnlyStore_RejectsCommit",
+            "RetryAfterReload_ReturnsPersistedReceiptWithoutDuplicateGrant",
+            "Rules",
+            "Item",
+            "Now"
+          ],
+          "properties": [
+            "directory",
+            "path"
+          ],
+          "exported": true,
+          "lineCount": 121
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.PlayerItems",
+          "specifiers": [
+            "PlayerItems"
+          ]
+        }
+      ],
+      "exports": [
+        "SetUp",
+        "TearDown",
+        "Codec_RoundTripsUnknownFields",
+        "Codec_MigratesNMinusOneAndRejectsNMinusTwo",
+        "FileStore_PersistsReceiptInventoryAndBalancedLedger",
+        "CorruptActive_UsesBackupAsReadOnlyLastKnownGood",
+        "ForcedReadOnlyStore_RejectsCommit",
+        "RetryAfterReload_ReturnsPersistedReceiptWithoutDuplicateGrant",
+        "PlayerItemsPersistenceTests"
+      ],
+      "totalLines": 131,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/Tests/EditMode/PlayerItemsTransactionTests.cs": {
+      "filePath": "Assets/Tests/EditMode/PlayerItemsTransactionTests.cs",
+      "contentHash": "d94382d80b4a1c4d0c0e1c7b114bfa34d999c67265becea6cad55d55ffccfce4",
+      "functions": [
+        {
+          "name": "SetUp",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "Preview_SameInputAndClock_IsDeterministic",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "LockedItem_CannotCreatePreview",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "AssignSkill_EnforcesEligibilityAndCap",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "PositionChoice_RejectsIneligiblePosition",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "Execute_CommitsExactlyOneRevisionAndBalancedLedger",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "RetryWithSameKeyAndPayload_ReturnsSameReceiptWithoutMutation",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "RetryWithSameKeyDifferentPayload_IsRejected",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "StaleCommand_DoesNotMutateInventory",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "TamperedPreview_IsRejected",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "ExpiredPreview_IsRejectedWithoutMutation",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "ConcurrentCommandsFromSameRevision_CommitOnlyOnce",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "Fixture_UsesStableCatalogItemDefinitionIds",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "Fusion_ConsumesSourceAndUpdatesTargetAtomically",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "FusionRejectsSourceThatIsInSquad",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "DirectGrant_IsAtomicAndIdempotent",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "ReadOnlyService_RejectsMutation",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "Build",
+          "params": [
+            "itemId",
+            "intent"
+          ],
+          "returnType": "ProgressionPreview",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "Command",
+          "params": [
+            "preview",
+            "key"
+          ],
+          "returnType": "ProgressionCommand",
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "CreateInventory",
+          "params": [],
+          "returnType": "InventorySnapshot",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "NewItem",
+          "params": [
+            "itemId",
+            "xp"
+          ],
+          "returnType": "OwnedPlayerItem",
+          "exported": false,
+          "lineCount": 16
+        }
+      ],
+      "classes": [
+        {
+          "name": "PlayerItemsTransactionTests",
+          "methods": [
+            "SetUp",
+            "Preview_SameInputAndClock_IsDeterministic",
+            "LockedItem_CannotCreatePreview",
+            "AssignSkill_EnforcesEligibilityAndCap",
+            "PositionChoice_RejectsIneligiblePosition",
+            "Execute_CommitsExactlyOneRevisionAndBalancedLedger",
+            "RetryWithSameKeyAndPayload_ReturnsSameReceiptWithoutMutation",
+            "RetryWithSameKeyDifferentPayload_IsRejected",
+            "StaleCommand_DoesNotMutateInventory",
+            "TamperedPreview_IsRejected",
+            "ExpiredPreview_IsRejectedWithoutMutation",
+            "ConcurrentCommandsFromSameRevision_CommitOnlyOnce",
+            "Fixture_UsesStableCatalogItemDefinitionIds",
+            "Fusion_ConsumesSourceAndUpdatesTargetAtomically",
+            "FusionRejectsSourceThatIsInSquad",
+            "DirectGrant_IsAtomicAndIdempotent",
+            "ReadOnlyService_RejectsMutation",
+            "Build",
+            "Command",
+            "CreateInventory",
+            "NewItem"
+          ],
+          "properties": [
+            "Now",
+            "store",
+            "rules",
+            "previews",
+            "transactions"
+          ],
+          "exported": true,
+          "lineCount": 290
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Catalog",
+          "specifiers": [
+            "Catalog"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.PlayerItems",
+          "specifiers": [
+            "PlayerItems"
+          ]
+        }
+      ],
+      "exports": [
+        "SetUp",
+        "Preview_SameInputAndClock_IsDeterministic",
+        "LockedItem_CannotCreatePreview",
+        "AssignSkill_EnforcesEligibilityAndCap",
+        "PositionChoice_RejectsIneligiblePosition",
+        "Execute_CommitsExactlyOneRevisionAndBalancedLedger",
+        "RetryWithSameKeyAndPayload_ReturnsSameReceiptWithoutMutation",
+        "RetryWithSameKeyDifferentPayload_IsRejected",
+        "StaleCommand_DoesNotMutateInventory",
+        "TamperedPreview_IsRejected",
+        "ExpiredPreview_IsRejectedWithoutMutation",
+        "ConcurrentCommandsFromSameRevision_CommitOnlyOnce",
+        "Fixture_UsesStableCatalogItemDefinitionIds",
+        "Fusion_ConsumesSourceAndUpdatesTargetAtomically",
+        "FusionRejectsSourceThatIsInSquad",
+        "DirectGrant_IsAtomicAndIdempotent",
+        "ReadOnlyService_RejectsMutation",
+        "PlayerItemsTransactionTests"
+      ],
+      "totalLines": 300,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/Tests/EditMode/ProjectLocalMcpConfigGuardTests.cs": {
+      "filePath": "Assets/Tests/EditMode/ProjectLocalMcpConfigGuardTests.cs",
+      "contentHash": "7d4c2853c3225867df08c592e5caeedd986190c7830f53a18bec6925944570c9",
+      "functions": [
+        {
+          "name": "NormalizeConfigText_ReplacesOnlyRoutedLocalEndpoint",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "NormalizeConfigText_PreservesUnrelatedServerUrls",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProjectLocalMcpConfigGuardTests",
+          "methods": [
+            "NormalizeConfigText_ReplacesOnlyRoutedLocalEndpoint",
+            "NormalizeConfigText_PreservesUnrelatedServerUrls"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "imports": [
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Editor",
+          "specifiers": [
+            "Editor"
+          ]
+        }
+      ],
+      "exports": [
+        "NormalizeConfigText_ReplacesOnlyRoutedLocalEndpoint",
+        "NormalizeConfigText_PreservesUnrelatedServerUrls",
+        "ProjectLocalMcpConfigGuardTests"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
     "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef": {
       "filePath": "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef",
-      "contentHash": "8f2144c613f92e4e37d5a7a7a84bf2db30568dbd7bf5b944c2aa9393b925b0d4",
+      "contentHash": "6251c9da2e01b50712015f1ebcb3b1f426832c272bc3468d856b083f4d2037f4",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 28,
+      "totalLines": 30,
       "hasStructuralAnalysis": false
     },
     "Assets/Tests/PlayMode/CatalogAddressablesPlayModeTests.cs": {
@@ -15538,9 +17499,92 @@
       "totalLines": 59,
       "hasStructuralAnalysis": true
     },
+    "Assets/Tests/PlayMode/PlayerItemsPlayModeTests.cs": {
+      "filePath": "Assets/Tests/PlayMode/PlayerItemsPlayModeTests.cs",
+      "contentHash": "42b167b433013529181fa88a799daabff31209fc4d65eab55f21d11ae25ba7cf",
+      "functions": [
+        {
+          "name": "FeatureGate_DefaultsToReadOnlyAndProjectsFixture",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 25
+        },
+        {
+          "name": "DiagnosticOverride_RequiresEnabledAndWritable",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "PlayerItemsPlayModeTests",
+          "methods": [
+            "FeatureGate_DefaultsToReadOnlyAndProjectsFixture",
+            "DiagnosticOverride_RequiresEnabledAndWritable"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Collections",
+          "specifiers": [
+            "Collections"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.PlayerItems",
+          "specifiers": [
+            "PlayerItems"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.PlayerItems.Unity",
+          "specifiers": [
+            "Unity"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        },
+        {
+          "source": "UnityEngine.TestTools",
+          "specifiers": [
+            "TestTools"
+          ]
+        }
+      ],
+      "exports": [
+        "FeatureGate_DefaultsToReadOnlyAndProjectsFixture",
+        "DiagnosticOverride_RequiresEnabledAndWritable",
+        "PlayerItemsPlayModeTests"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
     "Assets/Tests/PlayMode/SettingsUI/SettingsPanelPlayModeTests.cs": {
       "filePath": "Assets/Tests/PlayMode/SettingsUI/SettingsPanelPlayModeTests.cs",
-      "contentHash": "fa12f33fa3b3be30277c355f82be3a4f03a3743a5242b00ed5c34a9dbe22aa10",
+      "contentHash": "9950b4615fd96e0d345f9a062061154f4e4c8ef35698f559656b1966913b4584",
       "functions": [
         {
           "name": "TearDown",
@@ -15554,7 +17598,7 @@
           "params": [],
           "returnType": "IEnumerator",
           "exported": true,
-          "lineCount": 18
+          "lineCount": 20
         },
         {
           "name": "Cancel_RestoresPreviouslyConfirmedLocale",
@@ -15634,7 +17678,7 @@
             "root"
           ],
           "exported": true,
-          "lineCount": 240
+          "lineCount": 242
         }
       ],
       "imports": [
@@ -15715,6 +17759,12 @@
           "specifiers": [
             "UI"
           ]
+        },
+        {
+          "source": "TMPro",
+          "specifiers": [
+            "TMPro"
+          ]
         }
       ],
       "exports": [
@@ -15729,27 +17779,27 @@
         "FocusNavigation_CoversLocaleAndActionButtons",
         "SettingsPanelPlayModeTests"
       ],
-      "totalLines": 258,
+      "totalLines": 261,
       "hasStructuralAnalysis": true
     },
     "Assets/Tests/PlayMode/SettingsUI/SoccerMobilePro.SettingsUI.PlayModeTests.asmdef": {
       "filePath": "Assets/Tests/PlayMode/SettingsUI/SoccerMobilePro.SettingsUI.PlayModeTests.asmdef",
-      "contentHash": "14663e78f281504fe3bce0768164a7fa0a7d76b6d13b5766d0a358475139c2d0",
+      "contentHash": "05294ae7019b86ca8c6093e928521ed908d5d71d6cd02463433042606598a5eb",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 26,
+      "totalLines": 27,
       "hasStructuralAnalysis": false
     },
     "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef": {
       "filePath": "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef",
-      "contentHash": "7ca2470a7fe7293e941062416feacc7ae5c27e30bc79f05b4a3960d5de81d722",
+      "contentHash": "51b10f1c34b8bba86b7523f142b03688d8e17600fcbf5d7a6aa399fb89cb137c",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 28,
+      "totalLines": 30,
       "hasStructuralAnalysis": false
     },
     "Assets/testScene.unity": {
@@ -16288,7 +18338,7 @@
     },
     "docs/implementation/decision-validation-program.md": {
       "filePath": "docs/implementation/decision-validation-program.md",
-      "contentHash": "2a76a786450ada7a54290bc60341c7b281b717ceba220395f0348d00a6f776a6",
+      "contentHash": "1fd1d921b4bd06911a03d38f113dc3f899a5a1ba00532438e03c4aead7b5078e",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -16326,19 +18376,29 @@
       "totalLines": 96,
       "hasStructuralAnalysis": true
     },
-    "docs/implementation/p1-player-items-skills-and-progression-plan.md": {
-      "filePath": "docs/implementation/p1-player-items-skills-and-progression-plan.md",
-      "contentHash": "e0ac9278262d87346e523705b39571e33f7c3b7b94bcfd9ff744544dd87f3cca",
+    "docs/implementation/p1-player-items-skills-and-progression-implementation.md": {
+      "filePath": "docs/implementation/p1-player-items-skills-and-progression-implementation.md",
+      "contentHash": "325e97bf76063e1ac8ae55e66d385d58be26830e16aedee2fc1bef76cd74307f",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 126,
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "docs/implementation/p1-player-items-skills-and-progression-plan.md": {
+      "filePath": "docs/implementation/p1-player-items-skills-and-progression-plan.md",
+      "contentHash": "bb2dd63a6d7822a6ba511deff369a8f3e86c2473a56cae5a17a3ecc7ed893176",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 128,
       "hasStructuralAnalysis": true
     },
     "docs/implementation/unity-implementation-audit-and-backlog.md": {
       "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
-      "contentHash": "444615a8e4e1b2115302720ce5e6bf2c7ba2f7bdb14a8f0ed44672dade41ed3f",
+      "contentHash": "432a4e7e9582d201b581890447d3cc1aff4e37d5ee97e78f83164b2769b82f78",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -16348,12 +18408,12 @@
     },
     "docs/index.md": {
       "filePath": "docs/index.md",
-      "contentHash": "828ec1d2367c950f5561da0d50944f7389032a60a246482207090ba8c69340cb",
+      "contentHash": "e1ede2ed886e3b41543e459db26150e38277f2fb047c3c3f5851b1b857aa028c",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 76,
+      "totalLines": 77,
       "hasStructuralAnalysis": true
     },
     "docs/operations/live-data-and-operations.md": {
@@ -16458,7 +18518,7 @@
     },
     "docs/research/fc-mobile-vn-coverage-audit.md": {
       "filePath": "docs/research/fc-mobile-vn-coverage-audit.md",
-      "contentHash": "3dc3dbf931b3999f354555ddd8f97ea1225ca5ff8fc6be53dd0ed4804cfbad3b",
+      "contentHash": "b65747653d2447fbced5363150e68f675ad27228e3bbd56028a75c667b264ac0",
       "functions": [],
       "classes": [],
       "imports": [],

@@ -1,6 +1,6 @@
 {
     "name":  "Soccer-Mobile-Pro",
-    "description":  "Soccer Mobile Pro là prototype game bóng đá mobile xây dựng bằng Unity 2022.3 LTS, tập trung vào match prototype, scene flow, điều khiển cảm ứng và AI heuristic; tài liệu sản phẩm là nguồn sự thật cho các hệ thống live service đang ở trạng thái định hướng hoặc backlog. Dự án có hơn 100 tệp nguồn; nên giới hạn phân tích vào một thư mục con khi cần kết quả nhanh hơn.",
+    "description":  "Soccer Mobile Pro là prototype game bóng đá mobile xây dựng bằng Unity 2022.3 LTS, tập trung vào match prototype, scene flow, điều khiển cảm ứng legacy và AI heuristic; các hệ thống live service trong GDD hiện là định hướng hoặc backlog. Lưu ý: dự án có hơn 100 tệp nguồn; nên giới hạn phân tích vào một thư mục con khi cần kết quả nhanh hơn.",
     "languages":  [
                       "anim",
                       "asmdef",
@@ -42,7 +42,7 @@
                   {
                       "path":  ".gitattributes",
                       "language":  "unknown",
-                      "sizeLines":  62,
+                      "sizeLines":  64,
                       "fileCategory":  "code"
                   },
                   {
@@ -60,7 +60,7 @@
                   {
                       "path":  "AGENTS.md",
                       "language":  "markdown",
-                      "sizeLines":  236,
+                      "sizeLines":  243,
                       "fileCategory":  "docs"
                   },
                   {
@@ -2422,6 +2422,18 @@
                       "fileCategory":  "code"
                   },
                   {
+                      "path":  "Assets/SoccerMobilePro/Editor/ProjectLocalMcpConfigGuard.cs",
+                      "language":  "csharp",
+                      "sizeLines":  64,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/Editor/SoccerMobilePro.Editor.asmdef",
+                      "language":  "asmdef",
+                      "sizeLines":  16,
+                      "fileCategory":  "code"
+                  },
+                  {
                       "path":  "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs",
                       "language":  "csharp",
                       "sizeLines":  358,
@@ -2521,6 +2533,54 @@
                       "path":  "Assets/SoccerMobilePro/Platform/SoccerMobilePro.Platform.asmdef",
                       "language":  "asmdef",
                       "sizeLines":  14,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItems/InventoryPersistence.cs",
+                      "language":  "csharp",
+                      "sizeLines":  211,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItems/InventoryTransactions.cs",
+                      "language":  "csharp",
+                      "sizeLines":  209,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItems/PlayerItemContracts.cs",
+                      "language":  "csharp",
+                      "sizeLines":  233,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItems/PlayerItemsFixtureFactory.cs",
+                      "language":  "csharp",
+                      "sizeLines":  54,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItems/ProgressionRules.cs",
+                      "language":  "csharp",
+                      "sizeLines":  206,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItems/SoccerMobilePro.PlayerItems.asmdef",
+                      "language":  "asmdef",
+                      "sizeLines":  18,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItemsUnity/PlayerItemsFeatureGate.cs",
+                      "language":  "csharp",
+                      "sizeLines":  50,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/SoccerMobilePro/PlayerItemsUnity/SoccerMobilePro.PlayerItems.Unity.asmdef",
+                      "language":  "asmdef",
+                      "sizeLines":  16,
                       "fileCategory":  "code"
                   },
                   {
@@ -2710,9 +2770,27 @@
                       "fileCategory":  "code"
                   },
                   {
+                      "path":  "Assets/Tests/EditMode/PlayerItemsPersistenceTests.cs",
+                      "language":  "csharp",
+                      "sizeLines":  130,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/Tests/EditMode/PlayerItemsTransactionTests.cs",
+                      "language":  "csharp",
+                      "sizeLines":  299,
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "path":  "Assets/Tests/EditMode/ProjectLocalMcpConfigGuardTests.cs",
+                      "language":  "csharp",
+                      "sizeLines":  27,
+                      "fileCategory":  "code"
+                  },
+                  {
                       "path":  "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef",
                       "language":  "asmdef",
-                      "sizeLines":  27,
+                      "sizeLines":  29,
                       "fileCategory":  "code"
                   },
                   {
@@ -2728,21 +2806,27 @@
                       "fileCategory":  "code"
                   },
                   {
+                      "path":  "Assets/Tests/PlayMode/PlayerItemsPlayModeTests.cs",
+                      "language":  "csharp",
+                      "sizeLines":  50,
+                      "fileCategory":  "code"
+                  },
+                  {
                       "path":  "Assets/Tests/PlayMode/SettingsUI/SettingsPanelPlayModeTests.cs",
                       "language":  "csharp",
-                      "sizeLines":  257,
+                      "sizeLines":  260,
                       "fileCategory":  "code"
                   },
                   {
                       "path":  "Assets/Tests/PlayMode/SettingsUI/SoccerMobilePro.SettingsUI.PlayModeTests.asmdef",
                       "language":  "asmdef",
-                      "sizeLines":  25,
+                      "sizeLines":  26,
                       "fileCategory":  "code"
                   },
                   {
                       "path":  "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef",
                       "language":  "asmdef",
-                      "sizeLines":  27,
+                      "sizeLines":  29,
                       "fileCategory":  "code"
                   },
                   {
@@ -3004,9 +3088,15 @@
                       "fileCategory":  "docs"
                   },
                   {
+                      "path":  "docs/implementation/p1-player-items-skills-and-progression-implementation.md",
+                      "language":  "markdown",
+                      "sizeLines":  92,
+                      "fileCategory":  "docs"
+                  },
+                  {
                       "path":  "docs/implementation/p1-player-items-skills-and-progression-plan.md",
                       "language":  "markdown",
-                      "sizeLines":  125,
+                      "sizeLines":  127,
                       "fileCategory":  "docs"
                   },
                   {
@@ -3018,7 +3108,7 @@
                   {
                       "path":  "docs/index.md",
                       "language":  "markdown",
-                      "sizeLines":  75,
+                      "sizeLines":  76,
                       "fileCategory":  "docs"
                   },
                   {
@@ -3382,8 +3472,8 @@
                       "fileCategory":  "docs"
                   }
               ],
-    "totalFiles":  557,
-    "filteredByIgnore":  1246,
+    "totalFiles":  572,
+    "filteredByIgnore":  1263,
     "estimatedComplexity":  "very-large",
     "importMap":  {
                       ".gitattributes":  [
@@ -4577,6 +4667,12 @@
                       "Assets/SoccerMobilePro/CatalogUnity/SoccerMobilePro.Catalog.Unity.asmdef":  [
 
                                                                                                    ],
+                      "Assets/SoccerMobilePro/Editor/ProjectLocalMcpConfigGuard.cs":  [
+
+                                                                                      ],
+                      "Assets/SoccerMobilePro/Editor/SoccerMobilePro.Editor.asmdef":  [
+
+                                                                                      ],
                       "Assets/SoccerMobilePro/Input/ContextualMatchInput.cs":  [
 
                                                                                ],
@@ -4628,6 +4724,30 @@
                       "Assets/SoccerMobilePro/Platform/SoccerMobilePro.Platform.asmdef":  [
 
                                                                                           ],
+                      "Assets/SoccerMobilePro/PlayerItems/InventoryPersistence.cs":  [
+
+                                                                                     ],
+                      "Assets/SoccerMobilePro/PlayerItems/InventoryTransactions.cs":  [
+
+                                                                                      ],
+                      "Assets/SoccerMobilePro/PlayerItems/PlayerItemContracts.cs":  [
+
+                                                                                    ],
+                      "Assets/SoccerMobilePro/PlayerItems/PlayerItemsFixtureFactory.cs":  [
+
+                                                                                          ],
+                      "Assets/SoccerMobilePro/PlayerItems/ProgressionRules.cs":  [
+
+                                                                                 ],
+                      "Assets/SoccerMobilePro/PlayerItems/SoccerMobilePro.PlayerItems.asmdef":  [
+
+                                                                                                ],
+                      "Assets/SoccerMobilePro/PlayerItemsUnity/PlayerItemsFeatureGate.cs":  [
+
+                                                                                            ],
+                      "Assets/SoccerMobilePro/PlayerItemsUnity/SoccerMobilePro.PlayerItems.Unity.asmdef":  [
+
+                                                                                                           ],
                       "Assets/SoccerMobilePro/SettingsUI/SettingsPanelBehaviour.cs":  [
 
                                                                                       ],
@@ -4721,6 +4841,15 @@
                       "Assets/Tests/EditMode/PlatformContractTests.cs":  [
 
                                                                          ],
+                      "Assets/Tests/EditMode/PlayerItemsPersistenceTests.cs":  [
+
+                                                                               ],
+                      "Assets/Tests/EditMode/PlayerItemsTransactionTests.cs":  [
+
+                                                                               ],
+                      "Assets/Tests/EditMode/ProjectLocalMcpConfigGuardTests.cs":  [
+
+                                                                                   ],
                       "Assets/Tests/EditMode/SoccerMobilePro.MatchCore.Tests.asmdef":  [
 
                                                                                        ],
@@ -4730,6 +4859,9 @@
                       "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs":  [
 
                                                                                ],
+                      "Assets/Tests/PlayMode/PlayerItemsPlayModeTests.cs":  [
+
+                                                                            ],
                       "Assets/Tests/PlayMode/SettingsUI/SettingsPanelPlayModeTests.cs":  [
 
                                                                                          ],
@@ -4868,6 +5000,9 @@
                       "docs/implementation/p1-localization-settings-implementation.md":  [
 
                                                                                          ],
+                      "docs/implementation/p1-player-items-skills-and-progression-implementation.md":  [
+
+                                                                                                       ],
                       "docs/implementation/p1-player-items-skills-and-progression-plan.md":  [
 
                                                                                              ],
