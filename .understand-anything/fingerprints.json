@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "3fbed0d9db179bcd160e70a92df923daa775b0a2",
-  "generatedAt": "2026-07-15T08:00:08.735Z",
+  "gitCommitHash": "8b79d513d91228101b7abb6104d741b2003eca3e",
+  "generatedAt": "2026-07-16T01:33:56.221Z",
   "files": {
     ".gitattributes": {
       "filePath": ".gitattributes",
@@ -65,12 +65,12 @@
     },
     "Assets/AddressableAssetsData/AddressableAssetSettings.asset": {
       "filePath": "Assets/AddressableAssetsData/AddressableAssetSettings.asset",
-      "contentHash": "5c9f67edef0ff402201f8e644a3019cbe586256a399f4e6f94df76f64090c94f",
+      "contentHash": "2db69bf6b54786a75a2872cf8bd7c8f0de743741207dbf1eb4f1683ada920ce9",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 110,
+      "totalLines": 118,
       "hasStructuralAnalysis": false
     },
     "Assets/AddressableAssetsData/AddressableImportSettings.asset": {
@@ -113,6 +113,46 @@
       "totalLines": 26,
       "hasStructuralAnalysis": false
     },
+    "Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset",
+      "contentHash": "b72b0d3ea5d0851f37039fd9bfd093d07dc1a8fccc62f750411714acbec12936",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Localization-Locales.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Localization-Locales.asset",
+      "contentHash": "212aec9aeb1db4e2c8a7400f4474833ff77e44aae6a72c92e0c90b90a6bf5e6c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English.asset",
+      "contentHash": "f5806ef2c0de4d803df6c42dc19f6bb30aa0eeaab9c58121de337c37d03d6aa8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Vietnamese (Vietnam).asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Vietnamese (Vietnam).asset",
+      "contentHash": "a54644975b3719fb88977b7a97a4e815da6c1aa5fedadca62b7e35dd64081028",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
     "Assets/AddressableAssetsData/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset": {
       "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset",
       "contentHash": "27c4e94d2b963087f8ff5365117305bddc771f4229c2fb88897c630f4c9bdcd6",
@@ -136,6 +176,86 @@
     "Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset": {
       "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset",
       "contentHash": "859476aa14f21d89328e29b6bae60db4ebe61b396aa6ba6c91ba35c89b449a4b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Assets-Shared_BundledAssetGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Assets-Shared_BundledAssetGroupSchema.asset",
+      "contentHash": "c349680157b97c6a6f937fe685c14b0405dfdd9e3e958ff95cb2bd415ae0abbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Assets-Shared_ContentUpdateGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Assets-Shared_ContentUpdateGroupSchema.asset",
+      "contentHash": "39e6cb3dc2c0dc0e47d2230abd2bf11215c7af3ad66680ab0ec28916f0251d24",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Locales_BundledAssetGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Locales_BundledAssetGroupSchema.asset",
+      "contentHash": "bd3925e24818a5cc5ae3d606be9e0816e51254eb6f501e5a526d6f15873f0675",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Locales_ContentUpdateGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-Locales_ContentUpdateGroupSchema.asset",
+      "contentHash": "baa1121b5c9632003d363489357b992c4f49c04d1c8c7a4f70a3838aa5d94176",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-English_BundledAssetGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-English_BundledAssetGroupSchema.asset",
+      "contentHash": "d31749b6a4f63038fbf40dfddf14f65dab6da39015669cc00bb519663cabca9d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-English_ContentUpdateGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-English_ContentUpdateGroupSchema.asset",
+      "contentHash": "c076fcc94d2525344727e9e4c79a227def3bf4efbeadff6364009008b4625548",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-Vietnamese (Vietnam)_BundledAssetGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-Vietnamese (Vietnam)_BundledAssetGroupSchema.asset",
+      "contentHash": "5915d27d1c024e78041ff20319c96000763779d384b7d30b6d1b326062f64c9e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-Vietnamese (Vietnam)_ContentUpdateGroupSchema.asset": {
+      "filePath": "Assets/AddressableAssetsData/AssetGroups/Schemas/Localization-String-Tables-Vietnamese (Vietnam)_ContentUpdateGroupSchema.asset",
+      "contentHash": "45c6b750fdd05488a574915ba2015e5cf3a3e11a13761737a400405235a7d3c4",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -201,6 +321,16 @@
       "imports": [],
       "exports": [],
       "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/AddressableAssetsData/ProfileDataSourceSettings.asset": {
+      "filePath": "Assets/AddressableAssetsData/ProfileDataSourceSettings.asset",
+      "contentHash": "e56dfc1cf23f1a11c56bf46ce180d23893dd41514688bbf63f534b6fd3587cc6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
       "hasStructuralAnalysis": false
     },
     "Assets/Animations/kickoffOpponent.controller": {
@@ -975,32 +1105,32 @@
     },
     "Assets/Plugins/NuGet/.nuget-installed.json": {
       "filePath": "Assets/Plugins/NuGet/.nuget-installed.json",
-      "contentHash": "659c50721e65e8d7368994ebfcbe2d4c9fc3bad2551f5f051828263cce340fb2",
+      "contentHash": "6436bc7fc4ac638b8eb646198feadd2e85f4ee1f590672758b3a1980e6dbbd76",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 260,
+      "totalLines": 261,
       "hasStructuralAnalysis": true
     },
     "Assets/Plugins/NuGet/McpPlugin.Common.dll": {
       "filePath": "Assets/Plugins/NuGet/McpPlugin.Common.dll",
-      "contentHash": "6d6b75c059475b95bbb9eb9d5b25097258e3e3b32a0e51edbe6e486841771ace",
+      "contentHash": "12db30662ee67ccec35d3a727e8ee3f7b981149c71c5e3cf2b0b2f075411663a",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 606,
+      "totalLines": 1043,
       "hasStructuralAnalysis": false
     },
     "Assets/Plugins/NuGet/McpPlugin.dll": {
       "filePath": "Assets/Plugins/NuGet/McpPlugin.dll",
-      "contentHash": "90c93171ce7ef70da1a97dac51b451a9e493f37214300db2c1cb567f151c6b9c",
+      "contentHash": "a88d7628503326cc6965d220a4edfe9c38172f4d38f11738d851ceb47bbc47c5",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 5409,
+      "totalLines": 5750,
       "hasStructuralAnalysis": false
     },
     "Assets/Plugins/NuGet/Microsoft.AspNetCore.Connections.Abstractions.dll": {
@@ -1255,7 +1385,7 @@
     },
     "Assets/Plugins/NuGet/ReflectorNet.dll": {
       "filePath": "Assets/Plugins/NuGet/ReflectorNet.dll",
-      "contentHash": "831e28f33a393f15c306aaf09849767896ef20f4b70ce82ec9a8b4ae7795245b",
+      "contentHash": "4e48322e4800b69a6d81829e798b56f0456ab86a162cae5aeb03f2cad4d9f9c9",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -8942,6 +9072,86 @@
       "totalLines": 18,
       "hasStructuralAnalysis": false
     },
+    "Assets/SoccerMobilePro/Localization/Locales/en.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/Locales/en.asset",
+      "contentHash": "e945f083a5e309c76d707ca29e3af3dce2b12194a3b0d33f261be34d1cc70370",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/Locales/vi-VN.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/Locales/vi-VN.asset",
+      "contentHash": "b0172ca60eb3c30d0fb5778d69fc1b02934a4768a6f036ac784cc02160098131",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/QA/Editor/qps-ploc.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/QA/Editor/qps-ploc.asset",
+      "contentHash": "7a14af297be7f7f7976c3feac9e9785f3ef517a098e7454a5b2963c071a73a9b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 253,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/SoccerMobileProLocalizationSettings.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/SoccerMobileProLocalizationSettings.asset",
+      "contentHash": "138360e07d7f08525672ba26e6545706fa8219b26c1ca4effe6a51af8c8b2aaf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 229,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/Tables/SettingsUI Shared Data.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/Tables/SettingsUI Shared Data.asset",
+      "contentHash": "13faf6d16184bc643c271d883d1a83b05a76fcf9b9dbb44d51e66c6d568aba35",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/Tables/SettingsUI_en.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/Tables/SettingsUI_en.asset",
+      "contentHash": "b47cce492c7a2944c9fd5b44d826840d2d72dfe0d0abc97df01d4b6a5db2834e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/Tables/SettingsUI_vi-VN.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/Tables/SettingsUI_vi-VN.asset",
+      "contentHash": "514b2a2328d944e28d9558a6cb8c4913f37ca4cbd24b593ef8dbcc3d3a8bd29e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Localization/Tables/SettingsUI.asset": {
+      "filePath": "Assets/SoccerMobilePro/Localization/Tables/SettingsUI.asset",
+      "contentHash": "74672bb66beb858b0eb07f34d32119558b03c39fc0fd478f1d530d10a03cafe6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": false
+    },
     "Assets/SoccerMobilePro/MatchCore/MatchCore.cs": {
       "filePath": "Assets/SoccerMobilePro/MatchCore/MatchCore.cs",
       "contentHash": "bf14dd9cf98cca9a24de9eb79335041ac6f18cad5d2c3ef3ddbd4585fca9fefd",
@@ -9346,6 +9556,375 @@
       "exports": [],
       "totalLines": 15,
       "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/Platform/FileSettingsRepository.cs": {
+      "filePath": "Assets/SoccerMobilePro/Platform/FileSettingsRepository.cs",
+      "contentHash": "99681cf88688070fb65427ba8eb7d1149b324b8a489cb8bc3ae59f98d274dc63",
+      "functions": [
+        {
+          "name": "FileSettingsRepository",
+          "params": [
+            "path",
+            "registry",
+            "migrator",
+            "safeInitialSnapshot"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "Load",
+          "params": [],
+          "returnType": "SettingsSnapshot",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "TryWrite",
+          "params": [
+            "key",
+            "value",
+            "expectedRevision",
+            "nowUtc"
+          ],
+          "returnType": "SettingsWriteStatus",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "TryWriteBatch",
+          "params": [
+            "updates",
+            "expectedRevision",
+            "nowUtc"
+          ],
+          "returnType": "SettingsWriteStatus",
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "Prepare",
+          "params": [
+            "candidate",
+            "migrator"
+          ],
+          "returnType": "SettingsSnapshot",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "TryLoadCandidate",
+          "params": [
+            "candidatePath",
+            "migrator",
+            "stored"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "TryDeleteStaleTemporaryFile",
+          "params": [
+            "temporaryPath"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "WriteAtomically",
+          "params": [
+            "value"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 27
+        },
+        {
+          "name": "ReplaceWithBackupFallback",
+          "params": [
+            "temporaryPath",
+            "backupPath"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "Serialize",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "TryRead",
+          "params": [
+            "sourcePath",
+            "result"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 36
+        },
+        {
+          "name": "TryScalar",
+          "params": [
+            "line",
+            "expectedKey",
+            "value"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "Encode",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "TryDecode",
+          "params": [
+            "value",
+            "decoded"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "FileSettingsRepository",
+          "methods": [
+            "FileSettingsRepository",
+            "Load",
+            "TryWrite",
+            "TryWriteBatch",
+            "Prepare",
+            "TryLoadCandidate",
+            "TryDeleteStaleTemporaryFile",
+            "WriteAtomically",
+            "ReplaceWithBackupFallback",
+            "Serialize",
+            "TryRead",
+            "TryScalar",
+            "Encode",
+            "TryDecode"
+          ],
+          "properties": [
+            "Header",
+            "Utf8",
+            "path",
+            "registry",
+            "snapshot"
+          ],
+          "exported": true,
+          "lineCount": 200
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "System.Linq",
+          "specifiers": [
+            "Linq"
+          ]
+        },
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        }
+      ],
+      "exports": [
+        "FileSettingsRepository",
+        "Load",
+        "TryWrite",
+        "TryWriteBatch",
+        "FileSettingsRepository"
+      ],
+      "totalLines": 211,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/Platform/LocalizationCore.cs": {
+      "filePath": "Assets/SoccerMobilePro/Platform/LocalizationCore.cs",
+      "contentHash": "0e7b464414b7c87210a0603bb1718c72fc1e4176adae6c475e1500576b8c0559",
+      "functions": [
+        {
+          "name": "LocaleResolutionResult",
+          "params": [
+            "preference",
+            "requiresConfirmation"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "Resolve",
+          "params": [
+            "accountPreference",
+            "localPreference",
+            "deviceLocale",
+            "nowUtc"
+          ],
+          "returnType": "LocaleResolutionResult",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "IsSupported",
+          "params": [
+            "locale"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "TryGetSupported",
+          "params": [
+            "preference",
+            "locale"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "TryGetExact",
+          "params": [
+            "candidate",
+            "locale"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "TryGetLanguage",
+          "params": [
+            "candidate",
+            "locale"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "Create",
+          "params": [
+            "locale",
+            "source",
+            "version",
+            "voiceLocale",
+            "nowUtc",
+            "requiresConfirmation"
+          ],
+          "returnType": "LocaleResolutionResult",
+          "exported": false,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "LocaleResolutionResult",
+          "methods": [
+            "LocaleResolutionResult"
+          ],
+          "properties": [
+            "Preference",
+            "RequiresConfirmation"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "ILocaleResolver",
+          "methods": [
+            "Resolve"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "DefaultLocaleResolver",
+          "methods": [
+            "Resolve",
+            "IsSupported",
+            "TryGetSupported",
+            "TryGetExact",
+            "TryGetLanguage",
+            "Create"
+          ],
+          "properties": [
+            "FallbackLocale",
+            "SupportedLocales"
+          ],
+          "exported": true,
+          "lineCount": 87
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        }
+      ],
+      "exports": [
+        "LocaleResolutionResult",
+        "Preference",
+        "RequiresConfirmation",
+        "LocaleResolutionResult",
+        "ILocaleResolver",
+        "FallbackLocale",
+        "Resolve",
+        "IsSupported",
+        "DefaultLocaleResolver"
+      ],
+      "totalLines": 115,
+      "hasStructuralAnalysis": true
     },
     "Assets/SoccerMobilePro/Platform/PlatformContracts.cs": {
       "filePath": "Assets/SoccerMobilePro/Platform/PlatformContracts.cs",
@@ -9958,6 +10537,434 @@
       "totalLines": 397,
       "hasStructuralAnalysis": true
     },
+    "Assets/SoccerMobilePro/Platform/SettingsCore.cs": {
+      "filePath": "Assets/SoccerMobilePro/Platform/SettingsCore.cs",
+      "contentHash": "4b1a05184caf5cdbdae65f269fe56ecf8601325004ecc884608b76bd0f9293fc",
+      "functions": [
+        {
+          "name": "SettingDefinition",
+          "params": [
+            "key",
+            "valueType",
+            "scope",
+            "defaultValue",
+            "cloudSync",
+            "allowedValues",
+            "minimum",
+            "maximum"
+          ],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "TryNormalize",
+          "params": [
+            "value",
+            "normalized"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "IsWithinRange",
+          "params": [
+            "value"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "SettingsSanitizationResult",
+          "params": [
+            "snapshot",
+            "repairedKeys"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "DefaultSettingsRegistry",
+          "params": [
+            "definitions"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "TryGet",
+          "params": [
+            "key",
+            "definition"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "Sanitize",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "SettingsSanitizationResult",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "CreateDefault",
+          "params": [],
+          "returnType": "DefaultSettingsRegistry",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "VersionedSettingsMigrator",
+          "params": [
+            "currentSchemaVersion",
+            "versionOneRenames"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "CanMigrate",
+          "params": [
+            "schemaVersion"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "Migrate",
+          "params": [
+            "snapshot"
+          ],
+          "returnType": "SettingsSnapshot",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "Rename",
+          "params": [
+            "source"
+          ],
+          "returnType": "Dictionary<string, string>",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "InMemorySettingsRepository",
+          "params": [
+            "registry",
+            "migrator",
+            "initial"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Load",
+          "params": [],
+          "returnType": "SettingsSnapshot",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "TryWrite",
+          "params": [
+            "key",
+            "value",
+            "expectedRevision",
+            "nowUtc"
+          ],
+          "returnType": "SettingsWriteStatus",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "TryWriteBatch",
+          "params": [
+            "updates",
+            "expectedRevision",
+            "nowUtc"
+          ],
+          "returnType": "SettingsWriteStatus",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "SettingsMergeResult",
+          "params": [
+            "snapshot",
+            "hadConflict"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "SettingsCloudMerger",
+          "params": [
+            "registry"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "Merge",
+          "params": [
+            "local",
+            "remote"
+          ],
+          "returnType": "SettingsMergeResult",
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "Resolve",
+          "params": [
+            "key",
+            "snapshot",
+            "matchPolicy",
+            "registry"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettingDefinition",
+          "methods": [
+            "SettingDefinition",
+            "TryNormalize",
+            "IsWithinRange"
+          ],
+          "properties": [
+            "allowedValues",
+            "Key",
+            "ValueType",
+            "Scope",
+            "DefaultValue",
+            "CloudSync",
+            "Minimum",
+            "Maximum",
+            "IsReadOnly"
+          ],
+          "exported": true,
+          "lineCount": 78
+        },
+        {
+          "name": "ISettingsRegistry",
+          "methods": [
+            "TryGet",
+            "Sanitize"
+          ],
+          "properties": [
+            "Definitions"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "SettingsSanitizationResult",
+          "methods": [
+            "SettingsSanitizationResult"
+          ],
+          "properties": [
+            "Snapshot",
+            "RepairedKeys"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "DefaultSettingsRegistry",
+          "methods": [
+            "DefaultSettingsRegistry",
+            "TryGet",
+            "Sanitize"
+          ],
+          "properties": [
+            "definitions",
+            "Definitions"
+          ],
+          "exported": true,
+          "lineCount": 50
+        },
+        {
+          "name": "SoccerMobileSettingsRegistry",
+          "methods": [
+            "CreateDefault"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "ISettingsMigrator",
+          "methods": [
+            "CanMigrate",
+            "Migrate"
+          ],
+          "properties": [
+            "CurrentSchemaVersion"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "VersionedSettingsMigrator",
+          "methods": [
+            "VersionedSettingsMigrator",
+            "CanMigrate",
+            "Migrate",
+            "Rename"
+          ],
+          "properties": [
+            "versionOneRenames",
+            "CurrentSchemaVersion"
+          ],
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "ISettingsRepository",
+          "methods": [
+            "Load",
+            "TryWrite",
+            "TryWriteBatch"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "InMemorySettingsRepository",
+          "methods": [
+            "InMemorySettingsRepository",
+            "Load",
+            "TryWrite",
+            "TryWriteBatch"
+          ],
+          "properties": [
+            "registry",
+            "snapshot"
+          ],
+          "exported": true,
+          "lineCount": 41
+        },
+        {
+          "name": "SettingsMergeResult",
+          "methods": [
+            "SettingsMergeResult"
+          ],
+          "properties": [
+            "Snapshot",
+            "HadConflict"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "SettingsCloudMerger",
+          "methods": [
+            "SettingsCloudMerger",
+            "Merge"
+          ],
+          "properties": [
+            "registry"
+          ],
+          "exported": true,
+          "lineCount": 45
+        },
+        {
+          "name": "SettingsValueResolver",
+          "methods": [
+            "Resolve"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.Collections.ObjectModel",
+          "specifiers": [
+            "ObjectModel"
+          ]
+        },
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        }
+      ],
+      "exports": [
+        "SettingDefinition",
+        "Key",
+        "ValueType",
+        "Scope",
+        "DefaultValue",
+        "CloudSync",
+        "Minimum",
+        "Maximum",
+        "IsReadOnly",
+        "TryNormalize",
+        "SettingDefinition",
+        "ISettingsRegistry",
+        "SettingsSanitizationResult",
+        "Snapshot",
+        "RepairedKeys",
+        "SettingsSanitizationResult",
+        "DefaultSettingsRegistry",
+        "Definitions",
+        "TryGet",
+        "Sanitize",
+        "DefaultSettingsRegistry",
+        "CreateDefault",
+        "SoccerMobileSettingsRegistry",
+        "ISettingsMigrator",
+        "VersionedSettingsMigrator",
+        "CurrentSchemaVersion",
+        "CanMigrate",
+        "Migrate",
+        "VersionedSettingsMigrator",
+        "ISettingsRepository",
+        "InMemorySettingsRepository",
+        "Load",
+        "TryWrite",
+        "TryWriteBatch",
+        "InMemorySettingsRepository",
+        "SettingsMergeResult",
+        "Snapshot",
+        "HadConflict",
+        "SettingsMergeResult",
+        "SettingsCloudMerger",
+        "Merge",
+        "SettingsCloudMerger",
+        "Resolve",
+        "SettingsValueResolver"
+      ],
+      "totalLines": 378,
+      "hasStructuralAnalysis": true
+    },
     "Assets/SoccerMobilePro/Platform/SoccerMobilePro.Platform.asmdef": {
       "filePath": "Assets/SoccerMobilePro/Platform/SoccerMobilePro.Platform.asmdef",
       "contentHash": "15ed0e5f9ad0c0bc5d1c5edf75ad4f17edfb9fc1ddda70b1e437700d5167d997",
@@ -9966,6 +10973,754 @@
       "imports": [],
       "exports": [],
       "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    "Assets/SoccerMobilePro/SettingsUI/SettingsPanelBehaviour.cs": {
+      "filePath": "Assets/SoccerMobilePro/SettingsUI/SettingsPanelBehaviour.cs",
+      "contentHash": "36e9022d0509b90cdf68a0f046ce6366a1d0f6af7855c54c797b661db3a71c56",
+      "functions": [
+        {
+          "name": "Initialize",
+          "params": [
+            "service"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "Open",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "SelectLocale",
+          "params": [
+            "locale"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "ApplySelection",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "CancelChanges",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "ResetToDefaults",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "RefreshAfterLocalizationInitialization",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "BuildUi",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 52
+        },
+        {
+          "name": "Refresh",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "LocalizeError",
+          "params": [
+            "errorKey",
+            "vietnamese"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "ExplicitNavigation",
+          "params": [
+            "left",
+            "right",
+            "up",
+            "down"
+          ],
+          "returnType": "Navigation",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "SetButtonColor",
+          "params": [
+            "button",
+            "normal"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "CreateRect",
+          "params": [
+            "name",
+            "parent",
+            "anchorMin",
+            "anchorMax"
+          ],
+          "returnType": "RectTransform",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "CreateText",
+          "params": [
+            "name",
+            "parent",
+            "anchorMin",
+            "anchorMax",
+            "size",
+            "alignment"
+          ],
+          "returnType": "TMP_Text",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "CreateButton",
+          "params": [
+            "name",
+            "parent",
+            "anchorMin",
+            "anchorMax",
+            "color",
+            "label"
+          ],
+          "returnType": "Button",
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "ToTmpAlignment",
+          "params": [
+            "alignment"
+          ],
+          "returnType": "TextAlignmentOptions",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "EnsureEventSystem",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "TrySelect",
+          "params": [
+            "localeCode"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "Get",
+          "params": [
+            "key",
+            "fallback"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "OnEnable",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "Update",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "Apply",
+          "params": [
+            "safeArea",
+            "width",
+            "height"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "Install",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "ConfigureFileRepositoryIfNeeded",
+          "params": [],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 23
+        },
+        {
+          "name": "ResolveDeviceLocale",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "OnSceneLoaded",
+          "params": [
+            "scene",
+            "mode"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettingsPanelBehaviour",
+          "methods": [
+            "Initialize",
+            "Open",
+            "SelectLocale",
+            "ApplySelection",
+            "CancelChanges",
+            "ResetToDefaults",
+            "RefreshAfterLocalizationInitialization",
+            "BuildUi",
+            "Refresh",
+            "LocalizeError",
+            "ExplicitNavigation",
+            "SetButtonColor",
+            "CreateRect",
+            "CreateText",
+            "CreateButton",
+            "ToTmpAlignment",
+            "EnsureEventSystem"
+          ],
+          "properties": [
+            "BackdropColor",
+            "PanelColor",
+            "AccentColor",
+            "MutedColor",
+            "presenter",
+            "panel",
+            "title",
+            "description",
+            "error",
+            "applyLabel",
+            "cancelLabel",
+            "resetLabel",
+            "vietnameseButton",
+            "englishButton",
+            "settingsButton",
+            "resetButton",
+            "cancelButton",
+            "applyButton",
+            "Presenter",
+            "IsPanelVisible",
+            "CurrentTitle"
+          ],
+          "exported": true,
+          "lineCount": 237
+        },
+        {
+          "name": "LocalizationBridge",
+          "methods": [
+            "TrySelect",
+            "Get"
+          ],
+          "properties": [
+            "TableName"
+          ],
+          "exported": false,
+          "lineCount": 36
+        },
+        {
+          "name": "SettingsSafeArea",
+          "methods": [
+            "OnEnable",
+            "Update",
+            "Apply"
+          ],
+          "properties": [
+            "lastArea",
+            "lastSize"
+          ],
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "SettingsUiBootstrap",
+          "methods": [
+            "Install",
+            "ConfigureFileRepositoryIfNeeded",
+            "ResolveDeviceLocale",
+            "OnSceneLoaded"
+          ],
+          "properties": [
+            "MainMenuScene"
+          ],
+          "exported": true,
+          "lineCount": 56
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections",
+          "specifiers": [
+            "Collections"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        },
+        {
+          "source": "UnityEngine.EventSystems",
+          "specifiers": [
+            "EventSystems"
+          ]
+        },
+        {
+          "source": "UnityEngine.InputSystem.UI",
+          "specifiers": [
+            "UI"
+          ]
+        },
+        {
+          "source": "UnityEngine.Localization",
+          "specifiers": [
+            "Localization"
+          ]
+        },
+        {
+          "source": "UnityEngine.Localization.Settings",
+          "specifiers": [
+            "Settings"
+          ]
+        },
+        {
+          "source": "UnityEngine.Localization.Tables",
+          "specifiers": [
+            "Tables"
+          ]
+        },
+        {
+          "source": "UnityEngine.SceneManagement",
+          "specifiers": [
+            "SceneManagement"
+          ]
+        },
+        {
+          "source": "UnityEngine.UI",
+          "specifiers": [
+            "UI"
+          ]
+        },
+        {
+          "source": "TMPro",
+          "specifiers": [
+            "TMPro"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        }
+      ],
+      "exports": [
+        "Presenter",
+        "IsPanelVisible",
+        "CurrentTitle",
+        "Initialize",
+        "Open",
+        "SelectLocale",
+        "ApplySelection",
+        "CancelChanges",
+        "ResetToDefaults",
+        "SettingsPanelBehaviour",
+        "TrySelect",
+        "Get",
+        "Apply",
+        "SettingsSafeArea",
+        "SettingsUiBootstrap"
+      ],
+      "totalLines": 378,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/SettingsUI/SettingsPanelPresenter.cs": {
+      "filePath": "Assets/SoccerMobilePro/SettingsUI/SettingsPanelPresenter.cs",
+      "contentHash": "259b3fc806a08d6ff9dae717827510c95396bdafd6d934b4d522d7ac8929d969",
+      "functions": [
+        {
+          "name": "SettingsPanelPresenter",
+          "params": [
+            "service"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "Open",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "SelectLocale",
+          "params": [
+            "locale"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Apply",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "Cancel",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Reset",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "IsSupportedLocale",
+          "params": [
+            "locale"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "Normalize",
+          "params": [
+            "locale"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettingsPanelPresenter",
+          "methods": [
+            "SettingsPanelPresenter",
+            "Open",
+            "SelectLocale",
+            "Apply",
+            "Cancel",
+            "Reset",
+            "IsSupportedLocale",
+            "Normalize"
+          ],
+          "properties": [
+            "DefaultLocale",
+            "EnglishLocale",
+            "service",
+            "initialLocale",
+            "IsOpen",
+            "SelectedLocale",
+            "ErrorKey",
+            "IsFirstLaunch"
+          ],
+          "exported": true,
+          "lineCount": 75
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        }
+      ],
+      "exports": [
+        "DefaultLocale",
+        "EnglishLocale",
+        "SettingsPanelPresenter",
+        "IsOpen",
+        "SelectedLocale",
+        "ErrorKey",
+        "IsFirstLaunch",
+        "Open",
+        "SelectLocale",
+        "Apply",
+        "Cancel",
+        "Reset",
+        "IsSupportedLocale",
+        "SettingsPanelPresenter"
+      ],
+      "totalLines": 81,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/SettingsUI/SettingsUiService.cs": {
+      "filePath": "Assets/SoccerMobilePro/SettingsUI/SettingsUiService.cs",
+      "contentHash": "efb1cc097061eec65faa212f2444313fd8b4a94e17107afc968dbf50843f5b50",
+      "functions": [
+        {
+          "name": "Configure",
+          "params": [
+            "service"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "Configure",
+          "params": [
+            "repository",
+            "deviceLocale",
+            "utcNow"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "ResetComposition",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "PlatformSettingsUiService",
+          "params": [
+            "repository",
+            "deviceLocale",
+            "utcNow"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "TrySaveLocale",
+          "params": [
+            "locale",
+            "error"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "MapError",
+          "params": [
+            "status"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "TrySaveLocale",
+          "params": [
+            "value",
+            "error"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "ISettingsUiService",
+          "methods": [
+            "TrySaveLocale"
+          ],
+          "properties": [
+            "HasConfirmedLocale",
+            "ConfirmedLocale"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "SettingsUiServices",
+          "methods": [
+            "Configure",
+            "Configure",
+            "ResetComposition"
+          ],
+          "properties": [
+            "current",
+            "Current",
+            "IsConfigured"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "PlatformSettingsUiService",
+          "methods": [
+            "PlatformSettingsUiService",
+            "TrySaveLocale",
+            "MapError"
+          ],
+          "properties": [
+            "DisplayLocaleKey",
+            "LocaleConfirmedKey",
+            "repository",
+            "utcNow",
+            "suggestedLocale",
+            "HasConfirmedLocale",
+            "ConfirmedLocale"
+          ],
+          "exported": true,
+          "lineCount": 80
+        },
+        {
+          "name": "SessionSettingsUiService",
+          "methods": [
+            "TrySaveLocale"
+          ],
+          "properties": [
+            "locale",
+            "HasConfirmedLocale",
+            "ConfirmedLocale"
+          ],
+          "exported": false,
+          "lineCount": 22
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        }
+      ],
+      "exports": [
+        "ISettingsUiService",
+        "Current",
+        "IsConfigured",
+        "Configure",
+        "Configure",
+        "ResetComposition",
+        "SettingsUiServices",
+        "DisplayLocaleKey",
+        "LocaleConfirmedKey",
+        "PlatformSettingsUiService",
+        "HasConfirmedLocale",
+        "ConfirmedLocale",
+        "TrySaveLocale",
+        "PlatformSettingsUiService",
+        "HasConfirmedLocale",
+        "ConfirmedLocale",
+        "TrySaveLocale"
+      ],
+      "totalLines": 142,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/SoccerMobilePro/SettingsUI/SoccerMobilePro.SettingsUI.asmdef": {
+      "filePath": "Assets/SoccerMobilePro/SettingsUI/SoccerMobilePro.SettingsUI.asmdef",
+      "contentHash": "32e1df7ce7ad1369aea61146d4da183c0e960fa6215ec621cfe2685e9ce329f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
       "hasStructuralAnalysis": false
     },
     "Assets/Standard Assets (Mobile)/Materials/grid.mat": {
@@ -11362,6 +13117,268 @@
       "totalLines": 156,
       "hasStructuralAnalysis": true
     },
+    "Assets/Tests/EditMode/LocalizationSettingsTests.cs": {
+      "filePath": "Assets/Tests/EditMode/LocalizationSettingsTests.cs",
+      "contentHash": "11fc6a147d0280c33a0db7e9c42f76f37b41ebb827f0ed0bc8cf81aaa3e138b7",
+      "functions": [
+        {
+          "name": "LocaleResolver_UsesAccountThenLocalThenDeviceThenFallback",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "DeviceOrFallbackLocale_RequiresFirstLaunchConfirmation",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "LocalePreference_PreservesVietnameseTextAndRejectsUnsupportedVoiceFallback",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "Registry_RejectsDuplicateAndInvalidDefinitions",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "ProductRegistry_CoversAllSettingDomainsAndNumericBounds",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "Sanitize_RepairsOnlyCorruptFieldsAndPreservesUnknownKeys",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "Migrator_AcceptsOnlySchemaNAndNMinusOne",
+          "params": [
+            "schema",
+            "expected"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "Migrator_RenamesKnownKeyAndPreservesUnknownKey",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "Repository_EnforcesTypedValuesRevisionAndReadOnlyPolicy",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "InMemoryBatchWrite_IsAllOrNothingAndUsesOneRevision",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "MatchPolicy_OverridesSnapshotWithoutBecomingWritable",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "CloudMerge_UsesAllowlistAndKeepsDeviceSettingsLocal",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "CloudMerge_RejectsAccountAndUnsupportedSchemaBoundaries",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "FileRepository_RoundTripsDeterministicSnapshot",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "FileRepository_CorruptFileFallsBackToSafeInitialSnapshot",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "FileRepository_CorruptPrimaryRecoversLastAtomicBackup",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "FileRepository_SanitizesOnlyInvalidStoredField",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "FileRepository_BatchWriteIsAllOrNothingAndPersistsOnce",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "CreateRegistry",
+          "params": [],
+          "returnType": "DefaultSettingsRegistry",
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "Boolean",
+          "params": [
+            "key",
+            "scope",
+            "defaultValue"
+          ],
+          "returnType": "SettingDefinition",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "Snapshot",
+          "params": [
+            "schema",
+            "revision",
+            "values"
+          ],
+          "returnType": "SettingsSnapshot",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "WithTemporarySettingsPath",
+          "params": [
+            "assertion"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "LocalizationSettingsTests",
+          "methods": [
+            "LocaleResolver_UsesAccountThenLocalThenDeviceThenFallback",
+            "DeviceOrFallbackLocale_RequiresFirstLaunchConfirmation",
+            "LocalePreference_PreservesVietnameseTextAndRejectsUnsupportedVoiceFallback",
+            "Registry_RejectsDuplicateAndInvalidDefinitions",
+            "ProductRegistry_CoversAllSettingDomainsAndNumericBounds",
+            "Sanitize_RepairsOnlyCorruptFieldsAndPreservesUnknownKeys",
+            "Migrator_AcceptsOnlySchemaNAndNMinusOne",
+            "Migrator_RenamesKnownKeyAndPreservesUnknownKey",
+            "Repository_EnforcesTypedValuesRevisionAndReadOnlyPolicy",
+            "InMemoryBatchWrite_IsAllOrNothingAndUsesOneRevision",
+            "MatchPolicy_OverridesSnapshotWithoutBecomingWritable",
+            "CloudMerge_UsesAllowlistAndKeepsDeviceSettingsLocal",
+            "CloudMerge_RejectsAccountAndUnsupportedSchemaBoundaries",
+            "FileRepository_RoundTripsDeterministicSnapshot",
+            "FileRepository_CorruptFileFallsBackToSafeInitialSnapshot",
+            "FileRepository_CorruptPrimaryRecoversLastAtomicBackup",
+            "FileRepository_SanitizesOnlyInvalidStoredField",
+            "FileRepository_BatchWriteIsAllOrNothingAndPersistsOnce",
+            "CreateRegistry",
+            "Boolean",
+            "Snapshot",
+            "WithTemporarySettingsPath"
+          ],
+          "properties": [
+            "Now"
+          ],
+          "exported": true,
+          "lineCount": 338
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "System.IO",
+          "specifiers": [
+            "IO"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        }
+      ],
+      "exports": [
+        "LocaleResolver_UsesAccountThenLocalThenDeviceThenFallback",
+        "DeviceOrFallbackLocale_RequiresFirstLaunchConfirmation",
+        "LocalePreference_PreservesVietnameseTextAndRejectsUnsupportedVoiceFallback",
+        "Registry_RejectsDuplicateAndInvalidDefinitions",
+        "ProductRegistry_CoversAllSettingDomainsAndNumericBounds",
+        "Sanitize_RepairsOnlyCorruptFieldsAndPreservesUnknownKeys",
+        "Migrator_AcceptsOnlySchemaNAndNMinusOne",
+        "Migrator_RenamesKnownKeyAndPreservesUnknownKey",
+        "Repository_EnforcesTypedValuesRevisionAndReadOnlyPolicy",
+        "InMemoryBatchWrite_IsAllOrNothingAndUsesOneRevision",
+        "MatchPolicy_OverridesSnapshotWithoutBecomingWritable",
+        "CloudMerge_UsesAllowlistAndKeepsDeviceSettingsLocal",
+        "CloudMerge_RejectsAccountAndUnsupportedSchemaBoundaries",
+        "FileRepository_RoundTripsDeterministicSnapshot",
+        "FileRepository_CorruptFileFallsBackToSafeInitialSnapshot",
+        "FileRepository_CorruptPrimaryRecoversLastAtomicBackup",
+        "FileRepository_SanitizesOnlyInvalidStoredField",
+        "FileRepository_BatchWriteIsAllOrNothingAndPersistsOnce",
+        "LocalizationSettingsTests"
+      ],
+      "totalLines": 348,
+      "hasStructuralAnalysis": true
+    },
     "Assets/Tests/EditMode/PlatformContractTests.cs": {
       "filePath": "Assets/Tests/EditMode/PlatformContractTests.cs",
       "contentHash": "748b3eced1789f39bc35113d89b83f13e4e8383e7499917a6b54c54d82fd5dd0",
@@ -11521,8 +13538,22 @@
     },
     "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs": {
       "filePath": "Assets/Tests/PlayMode/MatchCorePlayModeSmokeTests.cs",
-      "contentHash": "7ae10bb600e72ea16c5877767278363cbd67ac031024c5ab86772b8295cc4fd6",
+      "contentHash": "d26356b4f1e3a6af6d6df534f9f12b4c147c15845b21596bad5b413fed6060ad",
       "functions": [
+        {
+          "name": "QuickMatchSelectionScene_LoadsFromBuildSettings",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "CupGroupScene_LoadsFromBuildSettings",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 6
+        },
         {
           "name": "MatchLifecycle_AdvancesAcrossFrames",
           "params": [],
@@ -11542,12 +13573,14 @@
         {
           "name": "MatchCorePlayModeSmokeTests",
           "methods": [
+            "QuickMatchSelectionScene_LoadsFromBuildSettings",
+            "CupGroupScene_LoadsFromBuildSettings",
             "MatchLifecycle_AdvancesAcrossFrames",
             "ContextualInput_CreatesTypedCommandAcrossFrames"
           ],
           "properties": [],
           "exported": true,
-          "lineCount": 32
+          "lineCount": 46
         }
       ],
       "imports": [
@@ -11592,15 +13625,227 @@
           "specifiers": [
             "TestTools"
           ]
+        },
+        {
+          "source": "UnityEngine.SceneManagement",
+          "specifiers": [
+            "SceneManagement"
+          ]
         }
       ],
       "exports": [
+        "QuickMatchSelectionScene_LoadsFromBuildSettings",
+        "CupGroupScene_LoadsFromBuildSettings",
         "MatchLifecycle_AdvancesAcrossFrames",
         "ContextualInput_CreatesTypedCommandAcrossFrames",
         "MatchCorePlayModeSmokeTests"
       ],
-      "totalLines": 44,
+      "totalLines": 59,
       "hasStructuralAnalysis": true
+    },
+    "Assets/Tests/PlayMode/SettingsUI/SettingsPanelPlayModeTests.cs": {
+      "filePath": "Assets/Tests/PlayMode/SettingsUI/SettingsPanelPlayModeTests.cs",
+      "contentHash": "fa12f33fa3b3be30277c355f82be3a4f03a3743a5242b00ed5c34a9dbe22aa10",
+      "functions": [
+        {
+          "name": "TearDown",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "FirstLaunch_RequiresApplyAndPersistsThroughService",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "Cancel_RestoresPreviouslyConfirmedLocale",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "SaveFailure_ShowsFallbackAndKeepsPanelOpen",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "Reset_UsesVietnameseDefault",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "PlatformService_SuggestsDeviceEnglishAndSavesAtomically",
+          "params": [],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "SafeArea_ConvertsPixelsToAnchors",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "VietnameseStringTable_LoadsExactDiacriticsAndExcludesQaPseudoLocale",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "FocusNavigation_CoversLocaleAndActionButtons",
+          "params": [],
+          "returnType": "IEnumerator",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "CreatePanel",
+          "params": [
+            "service"
+          ],
+          "returnType": "SettingsPanelBehaviour",
+          "exported": false,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettingsPanelPlayModeTests",
+          "methods": [
+            "TearDown",
+            "FirstLaunch_RequiresApplyAndPersistsThroughService",
+            "Cancel_RestoresPreviouslyConfirmedLocale",
+            "SaveFailure_ShowsFallbackAndKeepsPanelOpen",
+            "Reset_UsesVietnameseDefault",
+            "PlatformService_SuggestsDeviceEnglishAndSavesAtomically",
+            "SafeArea_ConvertsPixelsToAnchors",
+            "VietnameseStringTable_LoadsExactDiacriticsAndExcludesQaPseudoLocale",
+            "FocusNavigation_CoversLocaleAndActionButtons",
+            "CreatePanel"
+          ],
+          "properties": [
+            "root"
+          ],
+          "exported": true,
+          "lineCount": 240
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "System.Collections",
+          "specifiers": [
+            "Collections"
+          ]
+        },
+        {
+          "source": "System.Collections.Generic",
+          "specifiers": [
+            "Generic"
+          ]
+        },
+        {
+          "source": "NUnit.Framework",
+          "specifiers": [
+            "Framework"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.Platform",
+          "specifiers": [
+            "Platform"
+          ]
+        },
+        {
+          "source": "SoccerMobilePro.SettingsUI",
+          "specifiers": [
+            "SettingsUI"
+          ]
+        },
+        {
+          "source": "UnityEngine",
+          "specifiers": [
+            "UnityEngine"
+          ]
+        },
+        {
+          "source": "UnityEngine.EventSystems",
+          "specifiers": [
+            "EventSystems"
+          ]
+        },
+        {
+          "source": "UnityEngine.TestTools",
+          "specifiers": [
+            "TestTools"
+          ]
+        },
+        {
+          "source": "UnityEngine.Localization",
+          "specifiers": [
+            "Localization"
+          ]
+        },
+        {
+          "source": "UnityEngine.Localization.Settings",
+          "specifiers": [
+            "Settings"
+          ]
+        },
+        {
+          "source": "UnityEngine.Localization.Tables",
+          "specifiers": [
+            "Tables"
+          ]
+        },
+        {
+          "source": "UnityEngine.UI",
+          "specifiers": [
+            "UI"
+          ]
+        }
+      ],
+      "exports": [
+        "TearDown",
+        "FirstLaunch_RequiresApplyAndPersistsThroughService",
+        "Cancel_RestoresPreviouslyConfirmedLocale",
+        "SaveFailure_ShowsFallbackAndKeepsPanelOpen",
+        "Reset_UsesVietnameseDefault",
+        "PlatformService_SuggestsDeviceEnglishAndSavesAtomically",
+        "SafeArea_ConvertsPixelsToAnchors",
+        "VietnameseStringTable_LoadsExactDiacriticsAndExcludesQaPseudoLocale",
+        "FocusNavigation_CoversLocaleAndActionButtons",
+        "SettingsPanelPlayModeTests"
+      ],
+      "totalLines": 258,
+      "hasStructuralAnalysis": true
+    },
+    "Assets/Tests/PlayMode/SettingsUI/SoccerMobilePro.SettingsUI.PlayModeTests.asmdef": {
+      "filePath": "Assets/Tests/PlayMode/SettingsUI/SoccerMobilePro.SettingsUI.PlayModeTests.asmdef",
+      "contentHash": "14663e78f281504fe3bce0768164a7fa0a7d76b6d13b5766d0a358475139c2d0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
     },
     "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef": {
       "filePath": "Assets/Tests/PlayMode/SoccerMobilePro.MatchCore.PlayModeTests.asmdef",
@@ -11654,12 +13899,12 @@
     },
     "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset": {
       "filePath": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
-      "contentHash": "6f33cdcd6d203e175a012087a4209442c2b6811baeebce6c875bb8c8d7c64e51",
+      "contentHash": "007f8a625aeb49389dc456331ae0ded1b5a223a985db5aa6c298d30043ec235b",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 344,
+      "totalLines": 360,
       "hasStructuralAnalysis": false
     },
     "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat": {
@@ -12148,7 +14393,7 @@
     },
     "docs/implementation/decision-validation-program.md": {
       "filePath": "docs/implementation/decision-validation-program.md",
-      "contentHash": "4a97e00961f9b38d60a80c0738ee29539b63fdb299e3a0352e512042151d0eff",
+      "contentHash": "3fbd531d68d408d56fcfcd1bee58b392378f38dbdf732fb1626335e94d158bd1",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -12166,49 +14411,59 @@
       "totalLines": 193,
       "hasStructuralAnalysis": true
     },
-    "docs/implementation/unity-implementation-audit-and-backlog.md": {
-      "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
-      "contentHash": "1b0dd49a597ea32827f56fb07d5c1f42b47248de815a8724aa5466703c6dc53a",
+    "docs/implementation/p1-localization-settings-implementation.md": {
+      "filePath": "docs/implementation/p1-localization-settings-implementation.md",
+      "contentHash": "3e6a95c43cbd3354b203d268ba8e19719e6b93b1b32f1de0d7f2a1b181902fc3",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 289,
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "docs/implementation/unity-implementation-audit-and-backlog.md": {
+      "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
+      "contentHash": "bbee96b4b9e1c10dfe9b777d7dd3af4e5a7df6ef120427d23c3a0ee773766cdb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 291,
       "hasStructuralAnalysis": true
     },
     "docs/index.md": {
       "filePath": "docs/index.md",
-      "contentHash": "a400e911bc3c6c4531e1405dbaff5aa912121f81b394d8ca725d29bd3ae70f91",
+      "contentHash": "0e0db0a525b32c43f81afaf420a5d2d749818cb7bb0f80fbeb92b8a13216ff63",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 72,
+      "totalLines": 73,
       "hasStructuralAnalysis": true
     },
     "docs/operations/live-data-and-operations.md": {
       "filePath": "docs/operations/live-data-and-operations.md",
-      "contentHash": "ca8b6cbab3e256220294833f0cb949208c93f3dcee7389eee584af806acc974f",
+      "contentHash": "04a4d2b8b741e537865dd2c306a58a54a8131287359d8394f2f8cc404a9aab27",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 69,
+      "totalLines": 99,
       "hasStructuralAnalysis": true
     },
     "docs/operations/liveops-monetization-and-membership.md": {
       "filePath": "docs/operations/liveops-monetization-and-membership.md",
-      "contentHash": "7659c5047c864ef9eb4e99c8cb6cd91f2ad2bd68003c0f1bae00196ded12772d",
+      "contentHash": "dbb496af11bc0b4911a3f1da560484277b24c90f5997115e2f8e4f2de86dbd63",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 79,
+      "totalLines": 109,
       "hasStructuralAnalysis": true
     },
     "docs/product/gdd-soccer-mobile-pro.md": {
       "filePath": "docs/product/gdd-soccer-mobile-pro.md",
-      "contentHash": "661a1d146d99451f8895e784c85885943696c0b47378627f2cae7ad55f87cf27",
+      "contentHash": "83511866d7b860fa1f19680ed149cee877d5658f43508576a66f6031182fb43d",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -12228,42 +14483,42 @@
     },
     "docs/product/ux-wireflows-and-states.md": {
       "filePath": "docs/product/ux-wireflows-and-states.md",
-      "contentHash": "dc46b8e6848e0a96d2ccb59898426e2c14d08b612bd7abf70b0cfcad94cde4ac",
+      "contentHash": "541a74203b77c14ae57ce6064048eb66a49970d59ca96a3e09e31088e550aff7",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 83,
+      "totalLines": 113,
       "hasStructuralAnalysis": true
     },
     "docs/research/fc-mobile-vn-coverage-audit.md": {
       "filePath": "docs/research/fc-mobile-vn-coverage-audit.md",
-      "contentHash": "aacb09e037f79e8c42404f7c062df24a49714e62732ac80485448978d4f7760b",
+      "contentHash": "9da67cd2108981648f92f2461b35a2ca8de4d5f01fdcddb6d978241fd386a61c",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 83,
+      "totalLines": 91,
       "hasStructuralAnalysis": true
     },
     "docs/research/fc-mobile-vn-research.md": {
       "filePath": "docs/research/fc-mobile-vn-research.md",
-      "contentHash": "fe3139197b3cf3b1a01b1e90c0e0c9b552eec3a97eed47752f835bc6c5031fdd",
+      "contentHash": "1dc3b55c16daa6c9bed2f3ca45f1e80c2a0fd7b28eb3a02db8cbd0c4305f97c2",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 162,
+      "totalLines": 180,
       "hasStructuralAnalysis": true
     },
     "docs/research/fc-mobile-vn-source-register.md": {
       "filePath": "docs/research/fc-mobile-vn-source-register.md",
-      "contentHash": "ca69f063cb720740e898b21ac81583b4c3aba1cee1aec35512761da751b89647",
+      "contentHash": "0405747f6fbcc88ccbca9e07babda9d7b2ea93b20cd12babcc3c7a106f788d0a",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 93,
+      "totalLines": 101,
       "hasStructuralAnalysis": true
     },
     "docs/research/video/01-login-account.md": {
@@ -12328,12 +14583,12 @@
     },
     "docs/systems/account-localization-and-settings.md": {
       "filePath": "docs/systems/account-localization-and-settings.md",
-      "contentHash": "449e67d78d12442839be2c070b971581e82d2cf5bf0724cde71bf4be4db95361",
+      "contentHash": "ebe405d21bf46799cf38961be0a34a5b2a35ca9d3729176c7b39457b7f537961",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 95,
+      "totalLines": 97,
       "hasStructuralAnalysis": true
     },
     "docs/systems/competitions-leagues-clubs-and-social.md": {
@@ -12348,12 +14603,12 @@
     },
     "docs/systems/competitive-integrity-and-esports.md": {
       "filePath": "docs/systems/competitive-integrity-and-esports.md",
-      "contentHash": "5a2d0b062e64f0311cf01ebd1cda0e7d9cae8ee6754ba09d4d3dee413f3c645b",
+      "contentHash": "5ff7ef8ce915a69c126b7bbb38f793aafbdfe2714bb7beb6daafa9fcf6db0651",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 95,
+      "totalLines": 128,
       "hasStructuralAnalysis": true
     },
     "docs/systems/football-catalog-player-database-and-model-assets.md": {
@@ -12368,12 +14623,12 @@
     },
     "docs/systems/match-controls-set-pieces-and-var.md": {
       "filePath": "docs/systems/match-controls-set-pieces-and-var.md",
-      "contentHash": "626af4b0909c77cbc56ccb2bc668c75dac1df70218446c7565ca8d5d19356253",
+      "contentHash": "5cdcdf065782a4d52647252d22d680c203dc77e2bfc1ca515ef6b34acb95e4fc",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 95,
+      "totalLines": 131,
       "hasStructuralAnalysis": true
     },
     "docs/systems/offline-ai-tactics-and-difficulty.md": {
@@ -12398,22 +14653,22 @@
     },
     "Packages/manifest.json": {
       "filePath": "Packages/manifest.json",
-      "contentHash": "94de5335ff98277adda7f1fef9aa92a0818138d01b7e5519e14c5f1d4ec3c527",
+      "contentHash": "0153e055bd8be3f70cc59f2d4c51d5408ec57fc0bf0e0f87454c1691c1c4f262",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 83,
+      "totalLines": 85,
       "hasStructuralAnalysis": true
     },
     "Packages/packages-lock.json": {
       "filePath": "Packages/packages-lock.json",
-      "contentHash": "affc8bbe031705e397bcd53f7844ae81f96d3f8521978ae5a84a0c4ca515741f",
+      "contentHash": "a3c21decfc910fd558c5a14356f088a3a407fc6509e65767bd32180e6a50c256",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 805,
+      "totalLines": 826,
       "hasStructuralAnalysis": true
     },
     "ProjectSettings/AudioManager.asset": {
@@ -12448,12 +14703,12 @@
     },
     "ProjectSettings/EditorBuildSettings.asset": {
       "filePath": "ProjectSettings/EditorBuildSettings.asset",
-      "contentHash": "0b8823544dbb3b15f5b319fe8c688e2cf12266171fc05ccdfe6d7d43b5973627",
+      "contentHash": "d310fd77724ffb5985cd960ff14765101a844c388183461365827c7733d4e0fb",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 52,
+      "totalLines": 54,
       "hasStructuralAnalysis": false
     },
     "ProjectSettings/EditorSettings.asset": {
@@ -12624,6 +14879,16 @@
       "imports": [],
       "exports": [],
       "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "ProjectSettings/ScriptableBuildPipeline.json": {
+      "filePath": "ProjectSettings/ScriptableBuildPipeline.json",
+      "contentHash": "9ef5816157356c9b43513e33faf4c1e889d4d36d5acdce1a31a8db629d8db545",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
       "hasStructuralAnalysis": true
     },
     "ProjectSettings/ShaderGraphSettings.asset": {
