@@ -6,7 +6,7 @@
 **Nền tảng:** Android / iOS
 **Thể loại:** Bóng đá mobile online — kết hợp cơ chế xây đội hình thẻ bài (lấy cảm hứng FC Mobile VN) với trải nghiệm thi đấu trực tiếp (lấy cảm hứng eFootball Mobile)
 **Trạng thái tài liệu:** Living document — v1.1
-**Ngày cập nhật:** 15/07/2026
+**Ngày cập nhật:** 16/07/2026
 **Authority:** Quyết định sản phẩm của Soccer Mobile Pro; thông tin tham chiếu phải truy về [sổ nguồn](../research/fc-mobile-vn-source-register.md).
 
 **Thứ tự authority:** GDD khóa vision/guardrail; spec domain khóa contract/state/authority; operations khóa publish/incident; implementation audit khóa trạng thái code. Khi ví dụ hoặc số giả thuyết trong GDD khác spec domain, spec domain và decision register thắng; không dùng ví dụ GDD làm config production.
@@ -38,9 +38,9 @@
 19. [Kiến trúc kỹ thuật](#section-19)
 20. [Prototype hiện tại](#section-20)
 21. [Backlog nghiên cứu](#section-21)
-    - [Đặc tả đã tách file](#section-21a)
-22. [Nguồn tham khảo](#section-22)
-23. [Decision register và playtest gates](#section-23)
+22. [Đặc tả đã tách file](#section-21a)
+23. [Nguồn tham khảo](#section-22)
+24. [Decision register và playtest gates](#section-23)
 
 ---
 
@@ -491,7 +491,7 @@ Các câu hỏi chưa khóa không còn là checkbox vô chủ. Chúng được 
 
 <a id="section-21a"></a>
 
-## 21A. ĐẶC TẢ BỔ SUNG ĐÃ TÁCH FILE
+## 22. ĐẶC TẢ BỔ SUNG ĐÃ TÁCH FILE
 
 - [Coverage audit](../research/fc-mobile-vn-coverage-audit.md): ma trận bao phủ, ranh giới bằng chứng và Definition of Done.
 - [Nghiên cứu FC Mobile VN](../research/fc-mobile-vn-research.md): data governance, card model, controls, VAR và AI.
@@ -512,7 +512,7 @@ Các hệ thống dưới đây được tách khỏi GDD tổng để đội s�
 
 <a id="section-22"></a>
 
-## 22. PHỤ LỤC: NGUỒN THAM KHẢO
+## 23. PHỤ LỤC: NGUỒN THAM KHẢO
 
 - [Nghiên cứu chi tiết](../research/fc-mobile-vn-research.md)
 - [Sổ nguồn chính thức và mức độ chắc chắn](../research/fc-mobile-vn-source-register.md)
@@ -524,7 +524,7 @@ Các công thức, schema và pipeline trong GDD là quyết định hoặc đ�
 
 <a id="section-23"></a>
 
-## 23. DECISION REGISTER VÀ PLAYTEST GATES
+## 24. DECISION REGISTER VÀ PLAYTEST GATES
 
 | ID | Quyết định mở | Owner | Dependency/phạm vi thử | Metric và gate | Trạng thái |
 | --- | --- | --- | --- | --- | --- |

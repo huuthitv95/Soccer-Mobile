@@ -2,6 +2,20 @@
 
 > [Chỉ mục](../index.md) · [GDD](gdd-soccer-mobile-pro.md) · [UI design system](ui-design-system-and-screen-catalogue.md) · [Bằng chứng video](../research/video/ui-pattern-synthesis.md)
 
+## 0. Mục lục
+
+- [1. Mục tiêu và phạm vi](#goal)
+- [2. Global navigation](#navigation)
+- [3. Core wireflows](#wireflows)
+- [4. State catalogue](#states)
+- [5. Layout và interaction contract](#layout-interaction)
+- [6. Localization và accessibility](#localization-accessibility)
+- [7. Analytics](#analytics)
+- [8. QA và rollback](#quality)
+- [9. Nguồn liên quan](#references)
+
+<a id="goal"></a>
+
 ## 1. Mục tiêu và phạm vi
 
 Đặc tả này định nghĩa điều hướng, trạng thái bất đồng bộ, accessibility và contract UX dùng chung. Hình ảnh FC Mobile VN chỉ là tham chiếu; Soccer Mobile Pro dùng hệ thống hình ảnh và dữ liệu riêng.
@@ -11,6 +25,8 @@
 **Client:** render, navigation, local preference, preview và optimistic state an toàn.
 **Server:** account, entitlement, economy, progression, event eligibility và transaction result.
 
+<a id="navigation"></a>
+
 ## 2. Global navigation
 
 - Home là hub; thanh điều hướng chính gồm Home, Club/Squad, Play, Exchange/Market và Store/Profile tùy ngữ cảnh sản phẩm.
@@ -18,6 +34,8 @@
 - Back đóng modal trước, quay về parent route sau; không thoát app từ checkout, nâng cấp hoặc match flow.
 - Deep link phải đi qua login gate, asset gate và eligibility gate; event hết hạn đưa về fallback có giải thích.
 - Mọi route quan trọng giữ scroll/filter/tab state khi quay lại.
+
+<a id="wireflows"></a>
 
 ## 3. Core wireflows
 
@@ -36,6 +54,8 @@
 
 Mỗi flow đi qua cùng gate theo thứ tự: `session → version/catalog → entitlement/eligibility → asset → domain command`. Gate thất bại trả về state có hành động và route fallback; không chuyển thẳng về Home làm mất context.
 
+<a id="states"></a>
+
 ## 4. State catalogue
 
 | State | Hiển thị | Hành động hợp lệ | Không được làm |
@@ -48,6 +68,8 @@ Mỗi flow đi qua cùng gate theo thứ tự: `session → version/catalog → 
 | Expired | Event/offer đã hết hạn | Về Home hoặc event kế tiếp | Giữ CTA mua/claim hoạt động |
 | Conflict | Dữ liệu local cũ hơn server | Reload/merge theo policy | Ghi đè im lặng |
 
+<a id="layout-interaction"></a>
+
 ## 5. Layout và interaction contract
 
 - Touch target tối thiểu 44 dp; safe-area áp dụng cho top bar, bottom nav và cụm điều khiển trận.
@@ -56,6 +78,8 @@ Mỗi flow đi qua cùng gate theo thứ tự: `session → version/catalog → 
 - Currency change phải chỉ rõ nguồn/sink; premium spend và dùng thẻ khóa làm nguyên liệu cần xác nhận hai lớp.
 - Webview đăng nhập/sự kiện có domain indicator, nút đóng/back, timeout và quay về đúng route.
 
+<a id="localization-accessibility"></a>
+
 ## 6. Localization và accessibility
 
 - UI string dùng localization key; tên riêng cầu thủ/CLB/giải giữ canonical name và có trường display override khi hợp đồng yêu cầu.
@@ -63,9 +87,13 @@ Mỗi flow đi qua cùng gate theo thứ tự: `session → version/catalog → 
 - Voice pack hiển thị dung lượng, trạng thái tải/xóa, checksum và fallback subtitle.
 - Không truyền nghĩa chỉ bằng màu; icon có label/accessible name và focus order nhất quán.
 
+<a id="analytics"></a>
+
 ## 7. Analytics
 
 Event tối thiểu: `screen_view`, `navigation_action`, `cta_tap`, `modal_result`, `loading_duration`, `ui_error`, `deep_link_result`, `accessibility_setting_changed`. Không ghi token, mật khẩu, tên thật hoặc nội dung form nhạy cảm.
+
+<a id="quality"></a>
 
 ## 8. QA và rollback
 
@@ -73,6 +101,8 @@ Event tối thiểu: `screen_view`, `navigation_action`, `cta_tap`, `modal_resul
 - Snapshot các trạng thái loading/empty/error/offline và kiểm tra toàn bộ link/route.
 - Feature flag cho navigation/live-event surface; rollback về Home shell ổn định nếu config hoặc asset lỗi.
 - Acceptance: không có dead-end, mọi transaction có trạng thái cuối xác định, và keyboard/controller/touch đều tới được CTA chính.
+
+<a id="references"></a>
 
 ## 9. Nguồn liên quan
 

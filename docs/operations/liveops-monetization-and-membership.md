@@ -2,9 +2,25 @@
 
 > [Chỉ mục](../index.md) · [Live data](live-data-and-operations.md) · [GDD](../product/gdd-soccer-mobile-pro.md)
 
+## 0. Mục lục
+
+- [1. Mục tiêu](#goal)
+- [2. Purchase và entitlement](#purchase-entitlement)
+- [3. Membership](#membership)
+- [4. Inbox, calendar và giftcode](#inbox-calendar)
+- [5. Event và season pass](#event-pass)
+- [6. Analytics, abuse và privacy](#analytics-privacy)
+- [7. Accessibility và failure states](#accessibility-failure)
+- [8. QA và rollback](#quality)
+- [9. Failure matrix và decision register](#failure-decisions)
+
+<a id="goal"></a>
+
 ## 1. Mục tiêu
 
 Tạo live service minh bạch, có entitlement server-side, tôn trọng thời gian người chơi và không biến progression thành nghĩa vụ. Mọi ngưỡng, giá và quyền lợi bên dưới là **đề xuất cho Soccer Mobile Pro**, không phải xác nhận cơ chế nội bộ FC Mobile VN.
+
+<a id="purchase-entitlement"></a>
 
 ## 2. Purchase và entitlement
 
@@ -16,6 +32,8 @@ Tạo live service minh bạch, có entitlement server-side, tôn trọng thời
 
 Không gắn purchase vào device; không grant từ client; retry dùng transaction ID để chống double charge.
 
+<a id="membership"></a>
+
 ## 3. Membership
 
 - Điểm membership chỉ phát sinh từ giao dịch hợp lệ và có ledger riêng.
@@ -25,6 +43,8 @@ Không gắn purchase vào device; không grant từ client; retry dùng transac
 
 Ngưỡng tiền/điểm cụ thể phải được economy, legal và privacy phê duyệt trước khi publish; tài liệu này không hard-code tỷ lệ thử nghiệm thành policy production.
 
+<a id="inbox-calendar"></a>
+
 ## 4. Inbox, calendar và giftcode
 
 - Inbox item có sender, localization key, attachment, eligibility, sent/expiry time và claim state.
@@ -33,11 +53,15 @@ Ngưỡng tiền/điểm cụ thể phải được economy, legal và privacy p
 
 **Thông tin công khai đã xác minh:** bản FC Mobile VN cho nhập giftcode từ Khu Phức Hợp, yêu cầu 6–16 ký tự chữ hoa/số, tài khoản liên kết và trả quà qua hộp thư; xem [S18](../research/fc-mobile-vn-source-register.md#claim-register). Đây là UX reference, không chứng minh backend. Soccer Mobile Pro dùng `CodeIssued → Active → Redeemed|Expired|Revoked`; redeem tạo receipt/ledger idempotent, còn inbox attachment chuyển `Pending → Claimable → Claimed|Expired|Reconciled`.
 
+<a id="event-pass"></a>
+
 ## 5. Event và season pass
 
 - Mỗi event có mục tiêu, eligibility, nhiệm vụ, currency, source/sink, reward table, Home placement, end-state và compensation policy.
 - Pass có free/paid tracks, preview đầy đủ và claim-all an toàn.
 - Event liên quan giải thật chỉ publish khi catalog, asset và licensing scope đã được xác nhận.
+
+<a id="analytics-privacy"></a>
 
 ## 6. Analytics, abuse và privacy
 
@@ -45,17 +69,23 @@ Event tối thiểu: `offer_viewed`, `checkout_started`, `receipt_verified`, `en
 
 Chống abuse: receipt replay, guest reroll, refund fraud, code farming, duplicate claim và clock manipulation. Dữ liệu hồ sơ membership chỉ thu khi thật sự cần, có consent, retention và delete flow.
 
+<a id="accessibility-failure"></a>
+
 ## 7. Accessibility và failure states
 
 - Giá và nội dung đọc được bằng screen reader; không dùng màu làm tín hiệu duy nhất.
 - Pending purchase có lịch sử/retry support; entitlement chậm dùng inbox reconciliation.
 - Event expired/maintenance/offline phải chặn hành động ghi và giải thích rõ.
 
+<a id="quality"></a>
+
 ## 8. QA và rollback
 
 - Sandbox purchase, duplicate callback, delayed receipt, refund, reconnect và cross-device restore.
 - Feature flag cho offer/event/tier; rollback không xóa entitlement đã grant.
 - Acceptance: không double grant/charge, odds và terms luôn khớp offer version, mọi claim có trạng thái cuối có thể audit.
+
+<a id="failure-decisions"></a>
 
 ## 9. Failure matrix và decision register
 

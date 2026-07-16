@@ -2,9 +2,27 @@
 
 > [Chỉ mục](../index.md) · [GDD](../product/gdd-soccer-mobile-pro.md) · [Audit Unity](../implementation/unity-implementation-audit-and-backlog.md)
 
+## 0. Mục lục
+
+- [1. Mục tiêu và authority](#goal)
+- [2. Input matrix](#input-matrix)
+- [3. Input contract](#input-contract)
+- [4. Data flow](#data-flow)
+- [5. Set pieces](#set-pieces)
+- [6. VAR presentation](#var-presentation)
+- [7. Analytics và integrity](#analytics-integrity)
+- [8. Accessibility](#accessibility)
+- [9. QA và acceptance](#qa-acceptance)
+- [10. Rollback](#rollback)
+- [11. Contracts và decision register](#contracts-decisions)
+
+<a id="goal"></a>
+
 ## 1. Mục tiêu và authority
 
 Tạo control model dễ học nhưng có skill ceiling, đồng thời tách quyết định luật khỏi lớp trình bày VAR. Match simulation/server là authority cho ranked; client gửi intent có timestamp, không gửi kết quả.
+
+<a id="input-matrix"></a>
 
 ## 2. Input matrix
 
@@ -18,6 +36,8 @@ Tạo control model dễ học nhưng có skill ceiling, đồng thời tách qu
 | Penalty | Aim | Power/timing | GK direction/commit timing |
 | Throw-in/goal kick | Chọn hướng/người nhận | Short/long/quick restart | Timeout chống câu giờ |
 
+<a id="input-contract"></a>
+
 ## 3. Input contract
 
 - Action dùng state rõ: `started`, `performed`, `canceled`; buffer chỉ tồn tại trong cửa sổ đã định và bị xóa khi possession/match state đổi.
@@ -25,6 +45,8 @@ Tạo control model dễ học nhưng có skill ceiling, đồng thời tách qu
 - Swipe/hold có threshold theo dp và thời gian, không phụ thuộc FPS; cancel khi ngón rời vùng an toàn hoặc modal/pause mở.
 - Auto-switch, pass/shoot assist và target selection là policy riêng, versioned và ghi vào match metadata.
 - Preset: Beginner, Assisted, Semi, Manual. Ranked phải công bố preset nào được phép và không ghép hàng đợi mơ hồ.
+
+<a id="data-flow"></a>
 
 ## 4. Data flow
 
@@ -36,12 +58,16 @@ Touch/gamepad intent → input context → command buffer → match state valida
 
 Client chịu trách nhiệm sampling, HUD và feedback; authoritative simulation chịu trách nhiệm possession, foul, offside, goal, stamina và kết quả. Input sequence ID chống gửi trùng; reconnect không phát lại command đã hết hiệu lực.
 
+<a id="set-pieces"></a>
+
 ## 5. Set pieces
 
 - Corner hỗ trợ target zone, power/curl, near/far runner; phòng ngự chọn man/zonal và người phá bóng.
 - Free kick có direct/cross/short routine; wall position và distance do luật quyết định.
 - Penalty có state machine setup → ready → strike → resolution; shoot-out lưu lượt, thứ tự và sudden death.
 - Throw-in/goal kick có quick option, timeout và tactical positioning; không cho exploit reset stamina hoặc kéo dài vô hạn.
+
+<a id="var-presentation"></a>
 
 ## 6. VAR presentation
 
@@ -50,15 +76,21 @@ Client chịu trách nhiệm sampling, HUD và feedback; authoritative simulatio
 - Replay 2–4 giây, có overlay/line visualization và skip setting. Skip chỉ bỏ cutscene, không đổi kết quả.
 - Ranked áp dụng frequency budget; nếu replay/evidence thiếu thì hiển thị quyết định ngắn, không dựng minh họa sai.
 
+<a id="analytics-integrity"></a>
+
 ## 7. Analytics và integrity
 
 Event tối thiểu: `input_action`, `input_context_changed`, `command_rejected`, `auto_switch`, `assist_applied`, `set_piece_started`, `var_triggered`, `var_skipped`, `rule_decision`. Sampling input phải giảm tần suất và không lưu dữ liệu cá nhân.
+
+<a id="accessibility"></a>
 
 ## 8. Accessibility
 
 - Cho đổi kích thước, vị trí, opacity, fixed/floating joystick và left-handed mirror.
 - Haptic, visual feedback và audio cue độc lập; reduced motion áp dụng cho camera/VAR replay.
 - Training overlay dạy đúng lúc, có thể mở lại; không dựa riêng vào text hoặc màu.
+
+<a id="qa-acceptance"></a>
 
 ## 9. QA và acceptance
 
@@ -67,9 +99,13 @@ Event tối thiểu: `input_action`, `input_context_changed`, `command_rejected`
 - VAR phải deterministic từ cùng replay log; test timeout, skip, offside line, penalty contact, goal-line và red-card reason.
 - Acceptance: không có cùng input tạo hai action, context đổi không kích hoạt nhầm, và rule result không phụ thuộc cutscene.
 
+<a id="rollback"></a>
+
 ## 10. Rollback
 
 Control preset/config có version và feature flag. Khi preset mới lỗi, server từ chối version không tương thích và client quay về Classic; VAR presentation có thể tắt độc lập mà không tắt rule engine.
+
+<a id="contracts-decisions"></a>
 
 ## 11. Contracts và decision register
 

@@ -1,6 +1,6 @@
 # Soccer Mobile Pro — chỉ mục tài liệu
 
-> Cập nhật: 15/07/2026 · Ngôn ngữ chuẩn: tiếng Việt · [Mở thư mục dự án](../README.md)
+> Cập nhật: 16/07/2026 · Mốc nghiên cứu: 15/07/2026 · Ngôn ngữ chuẩn: tiếng Việt · [Mở thư mục dự án](../README.md)
 
 Đây là cổng vào duy nhất của knowledge wiki. Tài liệu được chia theo domain để mỗi quyết định chỉ có một nơi chịu trách nhiệm, còn các trang khác dùng liên kết tương đối thay vì sao chép nội dung.
 

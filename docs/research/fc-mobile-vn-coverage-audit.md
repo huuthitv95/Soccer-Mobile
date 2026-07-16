@@ -6,7 +6,7 @@
 
 ## 1. Mục tiêu kiểm toán
 
-Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba cột được chấm độc lập: **Research** chỉ hỏi claim có nguồn hoặc kết luận “không công khai”; **Spec** hỏi contract có đủ state/authority/version/failure/QA/rollback; **Unity** chỉ phản ánh code hiện hữu. Một section tồn tại không tự động được tính hoàn thành. Trạng thái phê duyệt của toàn bộ quyết định mở do [chương trình kiểm chứng decision register](../implementation/decision-validation-program.md) quản lý; coverage hoàn chỉnh không đồng nghĩa decision đã `Approved`.
+Ma trận này là authority về độ phủ, được đánh giá ngày **16/07/2026** trên mốc nghiên cứu **15/07/2026**. Ba cột được chấm độc lập: **Research** chỉ hỏi claim có nguồn hoặc kết luận “không công khai”; **Spec** hỏi contract có đủ state/authority/version/failure/QA/rollback; **Unity** chỉ phản ánh code hiện hữu. Một section tồn tại không tự động được tính hoàn thành. Trạng thái phê duyệt của toàn bộ quyết định mở do [chương trình kiểm chứng decision register](../implementation/decision-validation-program.md) quản lý; coverage hoàn chỉnh không đồng nghĩa decision đã `Approved`.
 
 <a id="coverage-matrix"></a>
 
@@ -16,19 +16,19 @@ Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba c�
 | --- | --- | --- | --- | --- |
 | Tính năng tổng thể/core loop | Hoàn thành | Contract/guardrail hoàn chỉnh; tuning gated | Prototype một phần | [GDD](../product/gdd-soccer-mobile-pro.md), [nghiên cứu](fc-mobile-vn-research.md#features-and-modes) |
 | Layout UI/UX | Hoàn thành visual-first | Coverage hoàn chỉnh; token/art decisions gated | Chưa có product shell | [Video synthesis](video/ui-pattern-synthesis.md), [UI catalogue](../product/ui-design-system-and-screen-catalogue.md) |
-| Ngôn ngữ/cài đặt/tài khoản | Hoàn thành; provider VN còn decision | Contract hoàn chỉnh; provider/legal gated | Chưa triển khai | [Account spec](../systems/account-localization-and-settings.md) |
+| Ngôn ngữ/cài đặt/tài khoản | Hoàn thành; provider VN còn decision | Contract hoàn chỉnh; provider/legal gated | P0-03 đã có account/settings contract và fake/offline adapter; localization/settings runtime chưa triển khai | [Account spec](../systems/account-localization-and-settings.md) |
 | Giải đấu/CLB/League/social | Hoàn thành; license catalog không suy diễn | Contract hoàn chỉnh; policy/licensing gated | Chưa triển khai | [Competition spec](../systems/competitions-leagues-clubs-and-social.md) |
-| Cầu thủ/player database | Hoàn thành với kết luận endpoint không công khai | Contract proposal hoàn chỉnh; backend choice gated | Chưa triển khai | [Catalog spec](../systems/football-catalog-player-database-and-model-assets.md) |
+| Cầu thủ/player database | Hoàn thành với kết luận endpoint không công khai | Contract proposal hoàn chỉnh; backend choice gated | P0-03 đã có `CatalogManifest` và cache/version contract; product catalog chưa triển khai | [Catalog spec](../systems/football-catalog-player-database-and-model-assets.md) |
 | Model 3D | Hoàn thành với kết luận pipeline nội bộ không công khai | Pipeline proposal hoàn chỉnh; budgets gated | Asset hiện tại không phải pipeline sản phẩm | [Catalog/model spec](../systems/football-catalog-player-database-and-model-assets.md) |
 | Skills/PlayStyles/nâng cấp thẻ | Hoàn thành, ghi drift S08/S11 | Contract hoàn chỉnh; balance/economy gated | Chưa triển khai | [Cards/progression spec](../systems/player-cards-skills-progression-market-and-exchange.md) |
-| Controls có/không bóng, set piece | Hoàn thành ở mức public boundary/proposal | Contract hoàn chỉnh; layout/assist gated | Legacy prototype một phần | [Controls spec](../systems/match-controls-set-pieces-and-var.md) |
+| Controls có/không bóng, set piece | Hoàn thành ở mức public boundary/proposal | Contract hoàn chỉnh; layout/assist gated | P0-02 đã có typed action maps, adapter và test; legacy controller vẫn là mặc định runtime | [Controls spec](../systems/match-controls-set-pieces-and-var.md) |
 | VAR | Hoàn thành với kết luận chưa xác nhận VAR tương tác | Presentation contract hoàn chỉnh; eligibility gated | Chưa triển khai | [Controls/VAR spec](../systems/match-controls-set-pieces-and-var.md) |
 | AI offline | Hoàn thành với kết luận thuật toán không công khai | Contract/R&D governance hoàn chỉnh; policy gated | Heuristic prototype, không trained model | [AI spec](../systems/offline-ai-tactics-and-difficulty.md) |
 | Report/integrity/esports | Hoàn thành, gồm S17 | Case/sanction/appeal contract hoàn chỉnh; policy gated | Chưa có service | [Integrity spec](../systems/competitive-integrity-and-esports.md) |
 | Live data/assets/operations | Hoàn thành public boundary | Publish/incident contract hoàn chỉnh; SLA gated | Chưa triển khai | [Operations](../operations/live-data-and-operations.md) |
 | Giftcode/liveops/monetization | Hoàn thành, gồm S18/S19 support context | Transaction contract hoàn chỉnh; commercial policy gated | Chưa triển khai | [LiveOps](../operations/liveops-monetization-and-membership.md) |
 | Năm video | Hoàn thành visual-first | Chuyển hóa thành catalogue/state | Không phải implementation evidence | [Coverage video](video/ui-pattern-synthesis.md#evidence-coverage) |
-| Audit Unity | Không áp dụng | Backlog handoff | Đã audit HEAD theo batch cuối | [Audit](../implementation/unity-implementation-audit-and-backlog.md) |
+| Audit Unity | Không áp dụng | Backlog handoff | P0-01/P0-02/P0-03 đã có contract, adapter và automated evidence; các product gate vẫn mở | [Audit](../implementation/unity-implementation-audit-and-backlog.md) |
 
 <a id="evidence-quality"></a>
 
@@ -50,19 +50,19 @@ Ma trận này là authority về độ phủ tại mốc **15/07/2026**. Ba c�
 
 Lifecycle chuẩn là `Open → TestReady → InValidation → EvidenceReady → Approved | Rejected | Blocked`. Mọi mục dưới đây phải có evidence artifact và rollback trước khi phê duyệt.
 
-### P0 — cần trước khi chốt interface
+### P0 — foundation đã hoàn tất, product gate còn mở
 
-1. Khóa account provider, age/consent và recovery policy cho bản phát hành Soccer Mobile Pro.
-2. Khóa data authority và version contract cho player/club/competition/card instance.
-3. Khóa action map có bóng/không bóng/set piece/goalkeeper cùng accessibility HUD.
-4. Xác nhận rule engine deterministic và ranh giới VAR presentation.
+1. P0-01 đã tạo deterministic match seam và automated test; incident taxonomy, VAR eligibility và human/device evidence vẫn phải qua decision lifecycle.
+2. P0-02 đã tạo typed action maps/adapter và rollback flag; HUD thật, controller reconnect, Android device matrix và playtest accessibility vẫn chưa qua gate.
+3. P0-03 đã tạo account/settings/catalog contract, fake/offline adapter và contract test; provider, privacy/legal, secure storage và backend authority vẫn bị gate.
+4. Không dùng trạng thái hoàn thành foundation để suy diễn rằng policy sản phẩm hoặc quyết định mở đã được phê duyệt.
 
 ### P1 — cần trước vertical slice meta
 
-1. Chọn Addressables/catalog strategy và budget model 3D theo device tier.
-2. Prototype transaction nâng cấp server-authoritative với idempotency/receipt.
-3. Tạo scenario suite cho AI tactical shape, transition, marking và set piece.
-4. Đưa bằng chứng video vào screen inventory và UX state matrix.
+1. P1-01 triển khai foundation kỹ thuật cho locale bootstrap `vi-VN`/`en`, typed settings registry, migration N/N-1 và fallback; đây chưa phải phê duyệt brand font, voice pack hoặc cloud policy production.
+2. P1-02 chọn Addressables/catalog strategy và budget model 3D theo device tier.
+3. P1-03 prototype transaction nâng cấp server-authoritative với idempotency/receipt.
+4. Tạo scenario suite cho AI tactical shape, transition, marking và set piece sau khi contract player attribute/catalog ổn định.
 
 ### P2 — cần trước live operation
 
