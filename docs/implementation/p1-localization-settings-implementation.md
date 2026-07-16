@@ -59,7 +59,7 @@ Runtime mới nằm trong assembly `SoccerMobilePro.Platform` và `SoccerMobileP
 
 ## 5. UI và localization assets
 
-- Unity Localization có locale asset production `vi-VN`, `en` và asset pseudo-locale `qps-ploc` chỉ dành QA; pseudo-locale không được đưa vào Addressables/runtime locale provider. String collection `SettingsUI` chứa copy bootstrap/settings cho hai locale production.
+- Unity Localization có locale asset production `vi-VN`, `en` và asset pseudo-locale `qps-ploc` chỉ dành QA. Asset QA nằm trong phạm vi `Editor/` để Unity không tự đăng ký lại vào Addressables/runtime locale provider sau domain reload hoặc khởi động lại Editor. String collection `SettingsUI` chứa copy bootstrap/settings cho hai locale production.
 - `SettingsUiBootstrap` chỉ tạo panel ở scene `MainMenu`, không chặn scene navigation. Nếu file repository không khả dụng, UI dùng session-only fallback và cảnh báo.
 - `SettingsPanelPresenter` hỗ trợ first launch, Việt/English, Apply, Cancel và Reset về `vi-VN`; lựa chọn chỉ persist khi Apply/Reset thành công.
 - `SettingsPanelBehaviour` tạo UGUI/TMP runtime, đợi Localization initialization bất đồng bộ, có text fallback khi table/key chưa sẵn sàng, focus target và safe-area adapter.
@@ -72,7 +72,7 @@ Runtime mới nằm trong assembly `SoccerMobilePro.Platform` và `SoccerMobileP
 Unity 2022.3.62f3 runner đã báo:
 
 - EditMode: **44/44 pass** toàn runner. P1-01 coverage gồm locale precedence/confirmation, chuỗi tiếng Việt, registry/range, sửa field hỏng, unknown-key round-trip, schema N/N-1, revision/read-only, batch atomic, match-policy override, cloud allowlist/device-local, account/schema merge guard, file round-trip, backup recovery và corrupt-file fallback.
-- PlayMode: **12/12 pass** toàn runner. P1-01 coverage gồm first launch, apply/hot-switch, cancel, save failure giữ panel mở, reset `vi-VN`, safe area, exact Vietnamese string-table diacritics, pseudo-locale exclusion, focus graph và smoke load Quick Match/Cup.
+- PlayMode: **12/12 pass** toàn runner, gồm một lượt xác minh lại sau khi khởi động Editor mới. P1-01 coverage gồm first launch, apply/hot-switch, cancel, save failure giữ panel mở, reset `vi-VN`, safe area, exact Vietnamese string-table diacritics, pseudo-locale exclusion bền qua domain reload, focus graph và smoke load Quick Match/Cup.
 - Automated tests không thay thế Android device matrix, human usability/accessibility review, voice download/resume profiling hoặc production cloud threat review.
 - Android development build smoke: **pass**. Unity ghi `Build Successful` trong **361,602 ms**; APK tại `Temp/P1-01/SoccerMobilePro-smoke.apk` có kích thước **336.160.006 byte**, SHA-256 `1A4294FC20C03CACD001796580D310FAAF85DC83C924AF16AF33A8926BCEA603`. Kiểm tra ZIP xác nhận có `assets/aa/catalog.json`, `settings.json` và bốn bundle locale/string-table `vi-VN`/`en`. Artifact dưới `Temp/` chỉ là evidence local, không commit vào repository.
 
