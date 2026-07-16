@@ -1,6 +1,6 @@
 # Player cards, skills, progression, market và exchange
 
-> [Chỉ mục](../index.md) · [GDD](../product/gdd-soccer-mobile-pro.md) · [Catalog](football-catalog-player-database-and-model-assets.md) · [LiveOps](../operations/liveops-monetization-and-membership.md)
+> [Chỉ mục](../index.md) · [GDD](../product/gdd-soccer-mobile-pro.md) · [Catalog](football-catalog-player-database-and-model-assets.md) · [Nghiên cứu eFootball](../research/efootball-mobile/efootball-mobile-research.md) · [P1-03 plan](../implementation/p1-player-items-skills-and-progression-plan.md)
 
 ## 0. Mục lục
 
@@ -23,8 +23,11 @@ Mục tiêu: card instance, skill taxonomy, upgrade và market/exchange có prev
 ## 2. Entities và contracts
 
 ```text
-OwnedPlayerItem { itemId, ownerId, itemDefinitionId, rank, trainingLevel,
-  allocatedSkillPoints, lockState, acquisition, revision }
+OwnedPlayerItem { itemId, ownerId, itemDefinitionId, catalogVersion,
+  levelXp, progressionAllocation, additionalSkills,
+  positionProficiencies, lockState, state, revision, rulesVersion }
+InventorySnapshot { ownerId, revision, catalogVersion, rulesVersion, items }
+InventoryDelta { baseRevision, targetRevision, upsertedItems, removedItemIds }
 SkillMoveDefinition { id, inputId, requirements, animationProfile,
   staminaCost, riskTags, rulesVersion }
 TraitDefinition { id, triggers, conditions, modifiers, caps,
@@ -34,6 +37,8 @@ UpgradePreview { commandHash, itemRevision, ruleVersion, cost,
   consumedItems, before, after, warnings, expiresAt }
 UpgradeCommand { itemId, previewHash, itemRevision, idempotencyKey }
 UpgradeReceipt { transactionId, status, ledgerEntries, newItemRevision }
+FusionCommand { sourceItemId, targetItemId, sourceRevision,
+  targetRevision, previewHash, idempotencyKey }
 ```
 
 Market listing có `listingId`, seller, item snapshot hash, price, currency, created/expiry, status/revision. Exchange recipe có version, eligibility, inputs, outputs, repeat limit và effective interval. Client nhận projection/preview; server giữ inventory, currency, lock/reservation, order matching, tax và grant ledger.
@@ -48,6 +53,8 @@ Market listing có `listingId`, seller, item snapshot hash, price, currency, cre
 - Exchange: `Eligible → Previewed → Reserved → Granted|Rejected`; input consume và output grant cùng transaction.
 
 Skill/Trait/PlayStyle modifier có trigger/context/cap/exclusion và trace; Trait là đặc tính thụ động, SkillMove là input/animation, PlayStyle là identity chiến thuật. Không tạo option mạnh hơn mọi mặt. Rank/Training/Skill là trục riêng; respec preview consequence và không mất điểm do timeout.
+
+Foundation P1-03 dùng direct fixture grant, deterministic skill assignment và eligible position choice. Random pack, random skill/position, Booster vượt cap, paid respec và market không nằm trong batch; xem [ma trận áp dụng eFootball](../research/efootball-mobile/efootball-mobile-adoption-decision-matrix.md#p1-slice).
 
 <a id="version"></a>
 
@@ -91,3 +98,5 @@ Trạng thái/evidence chi tiết nằm tại [chương trình kiểm chứng](.
 | PCS-D02 | Skill taxonomy/caps | Gameplay | Scenario suite, không dominant strategy | `TestReady` |
 | PCS-D03 | Market model/tax/band | Economy + Backend | Inflation/abuse/load simulation | `TestReady` |
 | PCS-D04 | Respec price/policy | Product + Compliance | Regret/fairness test; không paywall experimentation | `Blocked` |
+
+Nghiên cứu eFootball làm rõ risk/control và không phải implementation evidence. Kế hoạch executable nằm tại [P1-03 foundation](../implementation/p1-player-items-skills-and-progression-plan.md); lifecycle chỉ đổi khi có artifact tự động/human/backend đúng gate.

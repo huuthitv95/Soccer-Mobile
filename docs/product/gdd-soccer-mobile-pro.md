@@ -1,13 +1,13 @@
 # Soccer Mobile Pro — Game Design Document
 
-> [Chỉ mục](../index.md) · [Nghiên cứu FC Mobile VN](../research/fc-mobile-vn-research.md) · [Audit Unity](../implementation/unity-implementation-audit-and-backlog.md)
+> [Chỉ mục](../index.md) · [Nghiên cứu FC Mobile VN](../research/fc-mobile-vn-research.md) · [Nghiên cứu eFootball](../research/efootball-mobile/efootball-mobile-research.md) · [Audit Unity](../implementation/unity-implementation-audit-and-backlog.md)
 
 **Chủ đầu tư / Studio:** ZGameVN
 **Nền tảng:** Android / iOS
 **Thể loại:** Bóng đá mobile online — kết hợp cơ chế xây đội hình thẻ bài (lấy cảm hứng FC Mobile VN) với trải nghiệm thi đấu trực tiếp (lấy cảm hứng eFootball Mobile)
 **Trạng thái tài liệu:** Living document — v1.1
 **Ngày cập nhật:** 16/07/2026
-**Authority:** Quyết định sản phẩm của Soccer Mobile Pro; thông tin tham chiếu phải truy về [sổ nguồn](../research/fc-mobile-vn-source-register.md).
+**Authority:** Quyết định sản phẩm của Soccer Mobile Pro; thông tin tham chiếu phải truy về [sổ nguồn FC Mobile](../research/fc-mobile-vn-source-register.md) hoặc [sổ nguồn eFootball](../research/efootball-mobile/efootball-mobile-source-register.md).
 
 **Thứ tự authority:** GDD khóa vision/guardrail; spec domain khóa contract/state/authority; operations khóa publish/incident; implementation audit khóa trạng thái code. Khi ví dụ hoặc số giả thuyết trong GDD khác spec domain, spec domain và decision register thắng; không dùng ví dụ GDD làm config production.
 
@@ -51,7 +51,7 @@
 Soccer Mobile Pro là game bóng đá mobile online, xây dựng đội hình từ **cầu thủ, CLB và giải đấu đã được ZGameVN cấp phép bản quyền**, phối trộn hai triết lý thiết kế:
 
 - **Từ FC Mobile VN:** hệ thống thẻ bài cạnh tranh (Rank Up / Training / Skill Points), chợ chuyển nhượng giữa người chơi, Division Rivals (3 chế độ xếp hạng song song), sự kiện dạng lộ trình đổi token, bình luận/giao diện tiếng Việt.
-- **Từ eFootball Mobile:** mô hình ký hợp đồng cầu thủ đặc biệt/huyền thoại (Dream Team), Progression Points tùy biến chỉ số, Team Playstyle + độ phù hợp HLV, cơ chế phòng ngự Match-Up, chế độ hợp tác 3v3.
+- **Từ eFootball Mobile:** Dream Team, Progression Points, Team Playstyle/manager, Match-Up và Co-op 3v3 là các cơ chế công khai đã xác minh; Soccer Mobile Pro chỉ xem chúng như hypothesis qua [ma trận áp dụng](../research/efootball-mobile/efootball-mobile-adoption-decision-matrix.md), không sao chép công thức hoặc economy.
 
 **Điểm khác biệt cốt lõi:** Soccer Mobile Pro ưu tiên trận bóng điều khiển trực tiếp, đội hình có bản sắc và live service minh bạch; nội dung có giấy phép được dùng theo catalog của dự án, không biến sản phẩm thành bản sao giao diện hoặc công thức cân bằng của game tham chiếu.
 
@@ -245,7 +245,7 @@ Thiết kế lai giữa 2 mô hình:
 
 - Ký cầu thủ Tiêu biểu/Huyền thoại trực tiếp từ hệ thống (không qua người chơi khác) bằng Kim cương.
 - Danh sách làm mới định kỳ (theo tuần), có cơ chế "chỉ định" (nominating) cho phép chọn đúng cầu thủ mong muốn với chi phí cao hơn quay ngẫu nhiên.
-- Hợp đồng có thời hạn sử dụng (đề xuất theo mùa giải trong game, không nhất thiết 365 ngày như eFootball — cần cân bằng riêng).
+- Expiry hợp đồng không được mặc định áp dụng. Nếu thử nghiệm phải qua `LOM-D03`, có cảnh báo, grace/catch-up/convert và compensation; nguồn eFootball chỉ xác nhận taxonomy/carryover theo version, không khóa policy Soccer Mobile Pro.
 
 **Tab Đổi (Exchange):**
 

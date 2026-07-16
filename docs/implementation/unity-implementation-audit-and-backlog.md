@@ -227,6 +227,8 @@ Authority đặc tả cho các khoảng trống: [account/settings](../systems/a
 
 ### P1-03 — Inventory, skills/PlayStyles và nâng cấp thẻ
 
+**Trạng thái:** chưa triển khai runtime. Nghiên cứu eFootball đã hoàn tất inventory/risk/adoption và thu hẹp batch thành deterministic foundation; xem [kế hoạch P1-03](p1-player-items-skills-and-progression-plan.md). Competitor research không phải automated evidence.
+
 - **Owner layer:** Economy Backend + Player Progression + Client Collection UI.
 - **Dependencies:** P0-03 account, P1-02 catalog, balance config, ledger/idempotency và compliance decision.
 - **Input/output:** card instance + materials/currency + versioned recipe -> authoritative transaction receipt, inventory delta và projected stats/skills.

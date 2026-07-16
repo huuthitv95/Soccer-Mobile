@@ -1,6 +1,6 @@
 # Soccer Mobile Pro — chỉ mục tài liệu
 
-> Cập nhật: 16/07/2026 · Mốc nghiên cứu: 15/07/2026 · Ngôn ngữ chuẩn: tiếng Việt · [Mở thư mục dự án](../README.md)
+> Cập nhật: 16/07/2026 · Mốc FC Mobile VN: 15/07/2026 · Mốc eFootball Mobile: 16/07/2026 · Ngôn ngữ chuẩn: tiếng Việt · [Mở thư mục dự án](../README.md)
 
 Đây là cổng vào duy nhất của knowledge wiki. Tài liệu được chia theo domain để mỗi quyết định chỉ có một nơi chịu trách nhiệm, còn các trang khác dùng liên kết tương đối thay vì sao chép nội dung.
 
@@ -24,6 +24,7 @@
 - [Nghiên cứu FC Mobile VN](research/fc-mobile-vn-research.md)
 - [Sổ nguồn FC Mobile VN](research/fc-mobile-vn-source-register.md)
 - [Kiểm toán độ bao phủ](research/fc-mobile-vn-coverage-audit.md)
+- eFootball Mobile: [nghiên cứu](research/efootball-mobile/efootball-mobile-research.md), [sổ nguồn](research/efootball-mobile/efootball-mobile-source-register.md), [inventory cơ chế](research/efootball-mobile/efootball-mobile-feature-mechanic-inventory.md), [risk controls](research/efootball-mobile/efootball-mobile-risk-control-matrix.md), [adoption decisions](research/efootball-mobile/efootball-mobile-adoption-decision-matrix.md)
 - [Tổng hợp pattern UI từ video](research/video/ui-pattern-synthesis.md)
 - Phân tích từng video: [login/account](research/video/01-login-account.md), [Home/LiveOps](research/video/02-home-liveops.md), [profile/settings](research/video/03-profile-settings.md), [club/customization](research/video/04-club-squad-customization.md), [exchange/events](research/video/05-exchange-missions-events.md)
 
@@ -49,6 +50,7 @@
 - [Nhật ký P0 foundation](implementation/p0-foundation-implementation.md)
 - [Nhật ký P1-01 localization và settings](implementation/p1-localization-settings-implementation.md)
 - [Nhật ký P1-02 football catalog và model foundation](implementation/p1-football-catalog-and-model-foundation.md)
+- [Kế hoạch P1-03 player items, skills và progression foundation](implementation/p1-player-items-skills-and-progression-plan.md)
 
 ## 7. Bản đồ phụ thuộc
 

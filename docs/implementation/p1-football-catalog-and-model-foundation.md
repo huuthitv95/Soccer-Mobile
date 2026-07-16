@@ -93,4 +93,4 @@ Tổng lifecycle sau batch: 27 `TestReady`, 6 `InValidation`, 12 `Blocked`, 0 `E
 
 ## 7. Bước tiếp theo
 
-P1-03 nên triển khai inventory/card instance, skills/PlayStyles và upgrade transaction foundation trên stable catalog ID. Dependency là P1-02 catalog version, P0 account contract, balance rules và ledger/idempotency boundary. Acceptance tối thiểu: preview deterministic, receipt atomic/idempotent, stale-version rejection, reconnect reconciliation và read-only rollback; production economy/market vẫn cần backend và product/compliance gate.
+P1-03 triển khai theo [kế hoạch player items, skills và progression foundation](p1-player-items-skills-and-progression-plan.md) trên stable catalog ID. Nghiên cứu eFootball đã khóa direct fixture grant, deterministic skill/position path và fusion atomic; random pack, Booster, paid respec và market nằm ngoài batch. Acceptance tối thiểu vẫn là preview deterministic, receipt atomic/idempotent, stale-version rejection, reconnect reconciliation và read-only rollback.
