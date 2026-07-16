@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "a6276a6346c1067d3e5f691cc9035b2e27553b4a",
-  "generatedAt": "2026-07-16T03:09:10.900Z",
+  "gitCommitHash": "c993db3369811d168be142acdf26266d467d756f",
+  "generatedAt": "2026-07-16T04:22:26.718Z",
   "files": {
     ".gitattributes": {
       "filePath": ".gitattributes",
@@ -16288,7 +16288,7 @@
     },
     "docs/implementation/decision-validation-program.md": {
       "filePath": "docs/implementation/decision-validation-program.md",
-      "contentHash": "b9e80c8c59830e7a9732c2c61238f632c3c4ffe161b70c6cb9cc283a0d08973f",
+      "contentHash": "2a76a786450ada7a54290bc60341c7b281b717ceba220395f0348d00a6f776a6",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -16308,7 +16308,7 @@
     },
     "docs/implementation/p1-football-catalog-and-model-foundation.md": {
       "filePath": "docs/implementation/p1-football-catalog-and-model-foundation.md",
-      "contentHash": "073fc95ad59f712e6469d3a9a6cb33db971f311066af6c7f182cf64aef48f007",
+      "contentHash": "7b5f5d2d9662b757f8d5c055574718484b992da2e440d673d0d1cd65d0331c12",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -16326,24 +16326,34 @@
       "totalLines": 96,
       "hasStructuralAnalysis": true
     },
-    "docs/implementation/unity-implementation-audit-and-backlog.md": {
-      "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
-      "contentHash": "988c1dd61879ffcb62b03e63e255c6ee34f87589cf9fd91f6eb11d3c4a5acb90",
+    "docs/implementation/p1-player-items-skills-and-progression-plan.md": {
+      "filePath": "docs/implementation/p1-player-items-skills-and-progression-plan.md",
+      "contentHash": "e0ac9278262d87346e523705b39571e33f7c3b7b94bcfd9ff744544dd87f3cca",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 306,
+      "totalLines": 126,
+      "hasStructuralAnalysis": true
+    },
+    "docs/implementation/unity-implementation-audit-and-backlog.md": {
+      "filePath": "docs/implementation/unity-implementation-audit-and-backlog.md",
+      "contentHash": "444615a8e4e1b2115302720ce5e6bf2c7ba2f7bdb14a8f0ed44672dade41ed3f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 308,
       "hasStructuralAnalysis": true
     },
     "docs/index.md": {
       "filePath": "docs/index.md",
-      "contentHash": "65d6be8f8c3d0d2477fecfafd430e33bfc66415af2f4c06d6e76581862ff2bbe",
+      "contentHash": "828ec1d2367c950f5561da0d50944f7389032a60a246482207090ba8c69340cb",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 74,
+      "totalLines": 76,
       "hasStructuralAnalysis": true
     },
     "docs/operations/live-data-and-operations.md": {
@@ -16368,7 +16378,7 @@
     },
     "docs/product/gdd-soccer-mobile-pro.md": {
       "filePath": "docs/product/gdd-soccer-mobile-pro.md",
-      "contentHash": "83511866d7b860fa1f19680ed149cee877d5658f43508576a66f6031182fb43d",
+      "contentHash": "3b6fa4f26d447d2a4642bb39259b59071aecee852e19ddac774adbd5f8975b40",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -16396,9 +16406,59 @@
       "totalLines": 113,
       "hasStructuralAnalysis": true
     },
+    "docs/research/efootball-mobile/efootball-mobile-adoption-decision-matrix.md": {
+      "filePath": "docs/research/efootball-mobile/efootball-mobile-adoption-decision-matrix.md",
+      "contentHash": "5eace0e567cc3b3ca29b55b6fb127fda461e40a11fef244976a6bff5243ed72c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "docs/research/efootball-mobile/efootball-mobile-feature-mechanic-inventory.md": {
+      "filePath": "docs/research/efootball-mobile/efootball-mobile-feature-mechanic-inventory.md",
+      "contentHash": "5532ae81790a9aaffcc4a0833e1fa4907e0c7eba87acf0b8a4d707de86b060e5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 138,
+      "hasStructuralAnalysis": true
+    },
+    "docs/research/efootball-mobile/efootball-mobile-research.md": {
+      "filePath": "docs/research/efootball-mobile/efootball-mobile-research.md",
+      "contentHash": "a362973ecafbcec5c6b74759d34ac1e8c966ceb269f31d28ea3b26f7bb3d8016",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 166,
+      "hasStructuralAnalysis": true
+    },
+    "docs/research/efootball-mobile/efootball-mobile-risk-control-matrix.md": {
+      "filePath": "docs/research/efootball-mobile/efootball-mobile-risk-control-matrix.md",
+      "contentHash": "24c9337e1f008b74461c27dd72efae3dbd0b16af5e8d50b5387863cd123b75e2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "docs/research/efootball-mobile/efootball-mobile-source-register.md": {
+      "filePath": "docs/research/efootball-mobile/efootball-mobile-source-register.md",
+      "contentHash": "8a1cc86d042ddc22333a6de41b238aadcbfbd112c17b69c566a9ae12be32d26f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": true
+    },
     "docs/research/fc-mobile-vn-coverage-audit.md": {
       "filePath": "docs/research/fc-mobile-vn-coverage-audit.md",
-      "contentHash": "878309999efd5009d1198e95d1eb9f0c441866b0d250ce1eadfe301f1c53cca9",
+      "contentHash": "3dc3dbf931b3999f354555ddd8f97ea1225ca5ff8fc6be53dd0ed4804cfbad3b",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -16548,12 +16608,12 @@
     },
     "docs/systems/player-cards-skills-progression-market-and-exchange.md": {
       "filePath": "docs/systems/player-cards-skills-progression-market-and-exchange.md",
-      "contentHash": "98d387eb788fd95f50891d0aa3652faf72ac7c913293adef8d744fc5b7353965",
+      "contentHash": "2f608e0e84e28f4b053dc5f053cedde5b98f52562b84411d58da96f6992bdcef",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 94,
+      "totalLines": 103,
       "hasStructuralAnalysis": true
     },
     "Packages/manifest.json": {
