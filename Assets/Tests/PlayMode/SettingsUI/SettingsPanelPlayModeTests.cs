@@ -11,6 +11,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
 using UnityEngine.UI;
+using TMPro;
 
 namespace SoccerMobilePro.SettingsUI.PlayModeTests
 {
@@ -34,6 +35,8 @@ namespace SoccerMobilePro.SettingsUI.PlayModeTests
             yield return null;
 
             Assert.That(panel.IsPanelVisible, Is.True);
+            TMP_Text[] labels = root.GetComponentsInChildren<TMP_Text>(true);
+            Assert.That(Array.Exists(labels, label => label.text == "SET"), Is.True);
             panel.CancelChanges();
             Assert.That(panel.IsPanelVisible, Is.True, "First launch cannot be dismissed before locale confirmation.");
 

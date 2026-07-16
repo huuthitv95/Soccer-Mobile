@@ -110,7 +110,7 @@ namespace SoccerMobilePro.SettingsUI
             safeRoot.gameObject.AddComponent<SettingsSafeArea>();
 
             settingsButton = CreateButton("SettingsButton", safeRoot, new Vector2(0.80f, 0.88f), new Vector2(0.98f, 0.98f), MutedColor, out TMP_Text settingsLabel);
-            settingsLabel.text = "⚙";
+            settingsLabel.text = "SET";
             settingsLabel.fontSize = 28;
             settingsButton.onClick.AddListener(Open);
 

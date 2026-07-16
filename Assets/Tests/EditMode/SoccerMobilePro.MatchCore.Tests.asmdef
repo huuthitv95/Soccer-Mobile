@@ -6,6 +6,7 @@
     "SoccerMobilePro.Input",
     "SoccerMobilePro.Platform",
     "SoccerMobilePro.Catalog",
+    "SoccerMobilePro.Editor",
     "Unity.InputSystem"
   ],
   "includePlatforms": [

@@ -5,6 +5,7 @@
     "SoccerMobilePro.SettingsUI",
     "SoccerMobilePro.Platform",
     "Unity.ugui",
+    "Unity.TextMeshPro",
     "Unity.Localization",
     "Unity.ResourceManager"
   ],
