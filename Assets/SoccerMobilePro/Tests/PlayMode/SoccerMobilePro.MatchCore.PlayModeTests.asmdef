@@ -9,6 +9,7 @@
     "SoccerMobilePro.Catalog.Unity",
     "SoccerMobilePro.PlayerItems",
     "SoccerMobilePro.PlayerItems.Unity",
+    "SoccerMobilePro.Competition",
     "Unity.InputSystem",
     "Unity.Addressables",
     "Unity.ResourceManager"

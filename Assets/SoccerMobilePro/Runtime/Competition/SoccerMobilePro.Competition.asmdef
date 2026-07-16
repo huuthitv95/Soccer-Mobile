@@ -1,0 +1,19 @@
+{
+  "name": "SoccerMobilePro.Competition",
+  "rootNamespace": "SoccerMobilePro.Competition",
+  "references": [
+    "SoccerMobilePro.Platform",
+    "SoccerMobilePro.Catalog",
+    "SoccerMobilePro.MatchCore",
+    "Unity.Newtonsoft.Json"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true
+}

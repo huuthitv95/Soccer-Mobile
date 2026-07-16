@@ -3,6 +3,7 @@ using NUnit.Framework;
 using SoccerMobilePro.MatchCore;
 using SoccerMobilePro.Input;
 using SoccerMobilePro.Platform;
+using SoccerMobilePro.Competition;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TestTools;
@@ -54,6 +55,20 @@ namespace SoccerMobilePro.MatchCore.PlayModeTests
                 Assert.That(command.Type, Is.EqualTo(MatchCommandType.Shoot));
                 Assert.That(command.Modifiers, Is.EqualTo(MatchInputContext.OnBall.ToString()));
             }
+        }
+
+        [UnityTest]
+        public IEnumerator CompetitionFeatureGate_DefaultsOffWithoutChangingSceneFlow()
+        {
+            yield return SceneManager.LoadSceneAsync(SceneIds.TournamentGroups, LoadSceneMode.Single);
+            var service = new CompetitionService(
+                new InMemoryCompetitionRepository(),
+                new DefaultResultVerifier(),
+                new InMemoryRewardGrantGateway());
+            CompetitionOperationResult result = service.Create(new TournamentDefinition());
+
+            Assert.That(result.FailureCode, Is.EqualTo(CompetitionFailureCode.Disabled));
+            Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo(SceneIds.TournamentGroups));
         }
     }
 }

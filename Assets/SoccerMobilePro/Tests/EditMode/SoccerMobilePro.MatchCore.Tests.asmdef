@@ -7,6 +7,7 @@
     "SoccerMobilePro.Platform",
     "SoccerMobilePro.Catalog",
     "SoccerMobilePro.PlayerItems",
+    "SoccerMobilePro.Competition",
     "SoccerMobilePro.Editor",
     "Unity.InputSystem"
   ],
