@@ -6,6 +6,8 @@
     "SoccerMobilePro.Input",
     "SoccerMobilePro.Catalog",
     "SoccerMobilePro.Catalog.Unity",
+    "SoccerMobilePro.PlayerItems",
+    "SoccerMobilePro.PlayerItems.Unity",
     "Unity.InputSystem",
     "Unity.Addressables",
     "Unity.ResourceManager"
