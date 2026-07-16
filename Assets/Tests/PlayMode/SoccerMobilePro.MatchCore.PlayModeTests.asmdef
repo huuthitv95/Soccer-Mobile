@@ -4,7 +4,11 @@
   "references": [
     "SoccerMobilePro.MatchCore",
     "SoccerMobilePro.Input",
-    "Unity.InputSystem"
+    "SoccerMobilePro.Catalog",
+    "SoccerMobilePro.Catalog.Unity",
+    "Unity.InputSystem",
+    "Unity.Addressables",
+    "Unity.ResourceManager"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
