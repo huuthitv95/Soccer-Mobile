@@ -11,7 +11,8 @@ public class HomeTeamSelectionController : MonoBehaviour
 	public static int teamIndex = 0;
 	public Texture[] teams;
 	public Texture[] textures;
-	public Texture[] HDTextures;
+	[UnityEngine.Serialization.FormerlySerializedAs("HDTextures")]
+	public Texture[] hdTextures;
 	// Use this for initialization
 	void Start () {
 
@@ -29,7 +30,7 @@ public class HomeTeamSelectionController : MonoBehaviour
 		GameManager.SharedObject ().playerTeamFlag = teams[teamIndex];
 		GameManager.SharedObject ().playerTeamTexture = textures[teamIndex];
 
-		GameManager.SharedObject ().playerTeamHDTexture = HDTextures[teamIndex];
+		GameManager.SharedObject ().playerTeamHDTexture = hdTextures[teamIndex];
 	}
 }
 }

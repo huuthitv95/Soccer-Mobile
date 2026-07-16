@@ -15,14 +15,15 @@ public class OpponentFoulHandler : MonoBehaviour
 
 	public BallScript ballScript;
 	private Transform[] players;
-	public Transform LeftHand;
+	[UnityEngine.Serialization.FormerlySerializedAs("LeftHand")]
+	public Transform leftHand;
 
 	private AiMidfielderController playerScript;
 
 	Transform player1, player2, player3, player4;
 	Vector3 position1, position2, position3, position4;
 
-	private GameObject FootBall;
+	private GameObject football;
 
 	private bool throwing = false;
 
@@ -31,8 +32,8 @@ public class OpponentFoulHandler : MonoBehaviour
 	{
 		playerScript = gameObject.GetComponent<AiMidfielderController> ();
 
-		FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		ballScript = FootBall.GetComponent<BallScript> ();
+		football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		ballScript = football.GetComponent<BallScript> ();
 
 		GameObject[] playersT = GameObject.FindGameObjectsWithTag ("AIMidfiielder");
 
@@ -51,7 +52,7 @@ public class OpponentFoulHandler : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(!GameManager.SharedObject().OpponentMadeFoul && !GameManager.SharedObject().PlayerMadeFoul && playerScript.enabled == false)
+		if(!GameManager.SharedObject().opponentMadeFoul && !GameManager.SharedObject().playerMadeFoul && playerScript.enabled == false)
 		{
 			gameObject.GetComponent<OpponentFoulHandler>().enabled = false;
 			playerScript.enabled = true;
@@ -66,10 +67,10 @@ public class OpponentFoulHandler : MonoBehaviour
 		//
 		if(transform == player1)
 		{
-			if(GameManager.SharedObject().PlayerMadeFoul)
+			if(GameManager.SharedObject().playerMadeFoul)
 			{
 				if(ballScript.ownerPlayer==null)
-					ballScript.ownerPlayer = LeftHand;
+					ballScript.ownerPlayer = leftHand;
 
 				if(GetComponent<Animation>()["saque_banda"].enabled == false)
 					GetComponent<Animation>().Play("saque_banda", PlayMode.StopAll);
@@ -77,7 +78,7 @@ public class OpponentFoulHandler : MonoBehaviour
 				if(throwing == false)
 				{
 					GetComponent<Animation>()["saque_banda"].normalizedTime = 0F;
-					FootBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+					football.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 				}
 
 				if(Vector3.Distance(transform.position, GameManager.SharedObject().foulPosition) > 0.5f)
@@ -94,7 +95,7 @@ public class OpponentFoulHandler : MonoBehaviour
 		}
 		else if(transform == player2)
 		{
-			if(GameManager.SharedObject().PlayerMadeFoul)
+			if(GameManager.SharedObject().playerMadeFoul)
 			{
 				if(GameManager.SharedObject().foulPosition.z < 0)
 					transform.position = new Vector3(GameManager.SharedObject().foulPosition.x,0,GameManager.SharedObject().foulPosition.z+6f);
@@ -111,7 +112,7 @@ public class OpponentFoulHandler : MonoBehaviour
 		}
 		else if(transform == player3)
 		{
-			if(GameManager.SharedObject().PlayerMadeFoul)
+			if(GameManager.SharedObject().playerMadeFoul)
 			{
 				if(GameManager.SharedObject().foulPosition.z < 0)
 					transform.position = new Vector3(GameManager.SharedObject().foulPosition.x+6f,0,GameManager.SharedObject().foulPosition.z+4f);
@@ -128,7 +129,7 @@ public class OpponentFoulHandler : MonoBehaviour
 		}
 		else if(transform == player4)
 		{
-			if(GameManager.SharedObject().PlayerMadeFoul)
+			if(GameManager.SharedObject().playerMadeFoul)
 			{
 				if(GameManager.SharedObject().foulPosition.z < 0)
 					transform.position = new Vector3(GameManager.SharedObject().foulPosition.x-6f,0,GameManager.SharedObject().foulPosition.z+4f);
@@ -182,11 +183,11 @@ public class OpponentFoulHandler : MonoBehaviour
 		throwing = true;
 		yield return new WaitForSeconds(0.56f);
 
-		FootBall.GetComponent<BallScript> ().SetFree();
-		FootBall.GetComponent<Rigidbody>().velocity = transform.forward * 15f;//(new Vector3(player2.position.x,FootBall.transform.position.y,player2.position.z) - FootBall.transform.position).normalized * 15;
+		football.GetComponent<BallScript> ().SetFree();
+		football.GetComponent<Rigidbody>().velocity = transform.forward * 15f;//(new Vector3(player2.position.x,football.transform.position.y,player2.position.z) - football.transform.position).normalized * 15;
 
-		GameManager.SharedObject ().PlayerMadeFoul = false;
-		GameManager.SharedObject ().OpponentMadeFoul = false;
+		GameManager.SharedObject ().playerMadeFoul = false;
+		GameManager.SharedObject ().opponentMadeFoul = false;
 		}
 	}
 }

@@ -11,10 +11,10 @@ using System.Collections;
 
 public class GameManager
 {
-	public bool ShowHalfTimeDialog = false;
-	public bool ShowMatchEndDialog = false;
+	public bool showHalfTimeDialog = false;
+	public bool showMatchEndDialog = false;
 
-	public int GameTime = 0;
+	public int gameTime = 0;
 
 	private static GameManager sharedObject = null;
 
@@ -36,23 +36,23 @@ public class GameManager
 	public int playerTeamGoals = 0;
 	public int opponentTeamGoals = 0;
 
-	public bool IsGameReady = true;
-	public bool IsFirstHalf = true;
+	public bool isGameReady = true;
+	public bool isFirstHalf = true;
 
-	public bool OpponentMadeFoul = false;
-	public bool PlayerMadeFoul = false;
+	public bool opponentMadeFoul = false;
+	public bool playerMadeFoul = false;
 
-	public bool OpponentGotCornerKick = false;
-	public bool PlayerGotCornerKick = false;
+	public bool opponentGotCornerKick = false;
+	public bool playerGotCornerKick = false;
 
-	public bool PlayerMissedGoal = false;
-	public bool OpponentMissedGoal = false;
+	public bool playerMissedGoal = false;
+	public bool opponentMissedGoal = false;
 
 	public Vector3 foulPosition = Vector3.zero;
 
 	public bool isQuickMatch = false;
 
-	public int CurrentMatch = 0;
+	public int currentMatch = 0;
 
 	public static GameManager SharedObject()
 	{
@@ -66,11 +66,11 @@ public class GameManager
 	{
 		playerTeamGoals = 0;
 		opponentTeamGoals = 0;
-		IsGameReady = true;
-		IsFirstHalf = true;
+		isGameReady = true;
+		isFirstHalf = true;
 
-		OpponentMadeFoul = false;
-		PlayerMadeFoul = false;
+		opponentMadeFoul = false;
+		playerMadeFoul = false;
 
 		foulPosition = Vector3.zero;
 	}

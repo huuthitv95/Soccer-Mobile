@@ -10,7 +10,8 @@ using System.Collections;
 [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "", sourceAssembly: "Assembly-CSharp", sourceClassName: "OGTController")]
 public class OpponentGoalTriggerController : MonoBehaviour
 {
-	public GameObject Golie;
+	[UnityEngine.Serialization.FormerlySerializedAs("Golie")]
+	public GameObject goalkeeper;
 	public BallScript ballScript;
 
 	float lastTriggerTime = 0f;
@@ -22,7 +23,7 @@ public class OpponentGoalTriggerController : MonoBehaviour
 
 	void StartPlay()
 	{
-		GameManager.SharedObject ().IsGameReady = true;
+		GameManager.SharedObject ().isGameReady = true;
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -39,10 +40,10 @@ public class OpponentGoalTriggerController : MonoBehaviour
 
 			lastTriggerTime = Time.time;
 			GameManager.SharedObject().playerTeamGoals += 1;
-			GameManager.SharedObject().IsGameReady = false;
-			PlayerPosition.PlayerTurn = false;
-			//Golie.GetComponent<OpponentGoalkeeper>().enabled = false;
-			//Golie.GetComponent<OpponentGoalkeeperKickController>().enabled = true;
+			GameManager.SharedObject().isGameReady = false;
+			PlayerPosition.playerTurn = false;
+			//goalkeeper.GetComponent<OpponentGoalkeeper>().enabled = false;
+			//goalkeeper.GetComponent<OpponentGoalkeeperKickController>().enabled = true;
 
 			ballScript.PlaceOnInitialPositon();
 //			AudioManager.PlayOnGoalRoar();

@@ -11,7 +11,8 @@ using System.Collections;
 public class PlayerGoalTriggerController : MonoBehaviour
 {
 	float lastTriggerTime = 0f;
-	public GameObject Golie;
+	[UnityEngine.Serialization.FormerlySerializedAs("Golie")]
+	public GameObject goalkeeper;
 	public BallScript ballScript;
 
 	public GameObject starterPlayer;
@@ -23,7 +24,7 @@ public class PlayerGoalTriggerController : MonoBehaviour
 
 //	void StartPlay()
 //	{
-//		GameManager.SharedObject().IsGameReady = true;
+//		GameManager.SharedObject().isGameReady = true;
 //	}
 
 	void OnTriggerEnter(Collider other)
@@ -38,10 +39,10 @@ public class PlayerGoalTriggerController : MonoBehaviour
 
 			lastTriggerTime = Time.time;
 			GameManager.SharedObject().opponentTeamGoals += 1;
-			GameManager.SharedObject().IsGameReady = false;
-			PlayerPosition.PlayerTurn = true;
-//			Golie.GetComponent<PlayerGoalkeeper>().enabled = false;
-//			Golie.GetComponent<PlayerGoalkeeperKickController>().enabled = true;
+			GameManager.SharedObject().isGameReady = false;
+			PlayerPosition.playerTurn = true;
+//			goalkeeper.GetComponent<PlayerGoalkeeper>().enabled = false;
+//			goalkeeper.GetComponent<PlayerGoalkeeperKickController>().enabled = true;
 
 			ballScript.PlaceOnInitialPositon();
 			starterPlayer.GetComponent<PlayerPosition>().enabled = true;

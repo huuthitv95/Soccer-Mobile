@@ -91,15 +91,15 @@ public class ButtonAction : MonoBehaviour
 
 		case Buttons.QuickMatch:
 			GameManager.SharedObject().isQuickMatch = true;
-			GameManager.SharedObject().IsFirstHalf = true;
-			PlayerPosition.PlayerTurn = true;
+			GameManager.SharedObject().isFirstHalf = true;
+			PlayerPosition.playerTurn = true;
 			SceneManager.LoadScene(SoccerMobilePro.Platform.SceneIds.HomeTeamSelection);
 			break;
 
 		case Buttons.InternationalCup:
 			GameManager.SharedObject().isQuickMatch = false;
-			GameManager.SharedObject().IsFirstHalf = true;
-			PlayerPosition.PlayerTurn = true;
+			GameManager.SharedObject().isFirstHalf = true;
+			PlayerPosition.playerTurn = true;
 
 			if(MatchesSceneController.HasPendingCup())
 				SceneManager.LoadScene(SoccerMobilePro.Platform.SceneIds.TournamentMatches);
@@ -151,7 +151,7 @@ public class ButtonAction : MonoBehaviour
 
 			PauseController.isPaused = false;
 			Time.timeScale = 1f;
-			PlayerPosition.PlayerTurn = !PlayerPosition.PlayerTurn;
+			PlayerPosition.playerTurn = !PlayerPosition.playerTurn;
 			if(SceneManager.GetActiveScene().name == SoccerMobilePro.Platform.SceneIds.TournamentCelebration)
 			{
 				SceneManager.LoadScene(SoccerMobilePro.Platform.SceneIds.MainMenu);
@@ -177,9 +177,9 @@ public class ButtonAction : MonoBehaviour
 
 		case Buttons.PlaySecondHalf:
 			InitGame.halfComplete=false;
-			PlayerPosition.PlayerTurn = false;
-			GameManager.SharedObject().GameTime = 0;
-			GameManager.SharedObject().IsFirstHalf = false;
+			PlayerPosition.playerTurn = false;
+			GameManager.SharedObject().gameTime = 0;
+			GameManager.SharedObject().isFirstHalf = false;
 			if(GameManager.SharedObject().isQuickMatch)
 				SceneManager.LoadScene(SoccerMobilePro.Platform.SceneIds.Match);
 			else
@@ -187,10 +187,10 @@ public class ButtonAction : MonoBehaviour
 			break;
 
 		case Buttons.Replay:
-			GameManager.SharedObject().IsFirstHalf = true;
-			GameManager.SharedObject().IsGameReady = true;
-			GameManager.SharedObject().ShowHalfTimeDialog = false;
-			GameManager.SharedObject().ShowMatchEndDialog = false;
+			GameManager.SharedObject().isFirstHalf = true;
+			GameManager.SharedObject().isGameReady = true;
+			GameManager.SharedObject().showHalfTimeDialog = false;
+			GameManager.SharedObject().showMatchEndDialog = false;
 			GameManager.SharedObject().playerTeamGoals = 0;
 			GameManager.SharedObject().opponentTeamGoals = 0;
 			SceneManager.LoadScene(SoccerMobilePro.Platform.SceneIds.Match);

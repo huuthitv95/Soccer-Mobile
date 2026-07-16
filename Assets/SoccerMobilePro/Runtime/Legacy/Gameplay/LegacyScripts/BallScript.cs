@@ -65,10 +65,10 @@ public class BallScript : MonoBehaviour
 		}
 
 		if(ownerPlayer != null)
-		if(GameManager.SharedObject().IsGameReady == false && ownerPlayer.tag != "Hand")
+		if(GameManager.SharedObject().isGameReady == false && ownerPlayer.tag != "Hand")
 			SetFree();
 
-		if(GameManager.SharedObject().OpponentMadeFoul || GameManager.SharedObject().PlayerMadeFoul || GameManager.SharedObject().IsGameReady==false)
+		if(GameManager.SharedObject().opponentMadeFoul || GameManager.SharedObject().playerMadeFoul || GameManager.SharedObject().isGameReady==false)
 		{
 			if(ownerPlayer)
 				transform.position = ownerPlayer.position;

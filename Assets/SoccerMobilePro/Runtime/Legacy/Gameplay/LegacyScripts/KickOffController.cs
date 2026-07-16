@@ -16,26 +16,39 @@ public class KickOffController : MonoBehaviour
 	private const string DefaultOpponentTeamName = "Angola";
 	private const string DefaultOpponentTeamShortName = "ANG";
 
-	public GUITexture Team1Flag, Team2Flag;
-	public GUIText Team1Name, Team2Name;
-	public Material Team1Material, Team2Material,Team1HDMaterial, Team2HDMaterial;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team1Flag")]
+	public GUITexture team1Flag;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team2Flag")]
+	public GUITexture team2Flag;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team1Name")]
+	public GUIText team1Name;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team2Name")]
+	public GUIText team2Name;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team1Material")]
+	public Material team1Material;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team2Material")]
+	public Material team2Material;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team1HDMaterial")]
+	public Material team1HdMaterial;
+	[UnityEngine.Serialization.FormerlySerializedAs("Team2HDMaterial")]
+	public Material team2HdMaterial;
 
 	// Use this for initialization
 	void Start()
 	{
-		Team1Flag = ResolveTextureField(Team1Flag, "Team1Flag");
-		Team2Flag = ResolveTextureField(Team2Flag, "Team2Flag");
-		Team1Name = ResolveTextField(Team1Name, "Team1Name");
-		Team2Name = ResolveTextField(Team2Name, "Team2Name");
+		team1Flag = ResolveTextureField(team1Flag, "Team1Flag");
+		team2Flag = ResolveTextureField(team2Flag, "Team2Flag");
+		team1Name = ResolveTextField(team1Name, "Team1Name");
+		team2Name = ResolveTextField(team2Name, "Team2Name");
 
 		GameManager manager = GameManager.SharedObject();
 
-		Texture defaultTeam1Flag = Team1Flag != null ? Team1Flag.texture : null;
-		Texture defaultTeam2Flag = Team2Flag != null ? Team2Flag.texture : null;
-		Texture defaultTeam1Texture = Team1Material != null ? Team1Material.mainTexture : null;
-		Texture defaultTeam2Texture = Team2Material != null ? Team2Material.mainTexture : null;
-		Texture defaultTeam1HDTexture = Team1HDMaterial != null ? Team1HDMaterial.mainTexture : null;
-		Texture defaultTeam2HDTexture = Team2HDMaterial != null ? Team2HDMaterial.mainTexture : null;
+		Texture defaultTeam1Flag = team1Flag != null ? team1Flag.texture : null;
+		Texture defaultTeam2Flag = team2Flag != null ? team2Flag.texture : null;
+		Texture defaultTeam1Texture = team1Material != null ? team1Material.mainTexture : null;
+		Texture defaultTeam2Texture = team2Material != null ? team2Material.mainTexture : null;
+		Texture defaultTeam1HDTexture = team1HdMaterial != null ? team1HdMaterial.mainTexture : null;
+		Texture defaultTeam2HDTexture = team2HdMaterial != null ? team2HdMaterial.mainTexture : null;
 
 		if(manager.playerTeamFlag == null)
 			manager.playerTeamFlag = defaultTeam1Flag;
@@ -55,25 +68,25 @@ public class KickOffController : MonoBehaviour
 		manager.opponentTeamName = ResolveTeamName(manager.opponentTeamName, "OpponentTeam", DefaultOpponentTeamName);
 		manager.opponentTeamShortName = ResolveTeamName(manager.opponentTeamShortName, "OTM", DefaultOpponentTeamShortName);
 
-		if(Team1Flag != null && manager.playerTeamFlag != null)
-			Team1Flag.texture = manager.playerTeamFlag;
-		if(Team2Flag != null && manager.opponentTeamFlag != null)
-			Team2Flag.texture = manager.opponentTeamFlag;
+		if(team1Flag != null && manager.playerTeamFlag != null)
+			team1Flag.texture = manager.playerTeamFlag;
+		if(team2Flag != null && manager.opponentTeamFlag != null)
+			team2Flag.texture = manager.opponentTeamFlag;
 
-		if(Team1Name != null)
-			Team1Name.text = manager.playerTeamName;
-		if(Team2Name != null)
-			Team2Name.text = manager.opponentTeamName;
+		if(team1Name != null)
+			team1Name.text = manager.playerTeamName;
+		if(team2Name != null)
+			team2Name.text = manager.opponentTeamName;
 
-		if(Team1Material != null && manager.playerTeamTexture != null)
-			Team1Material.mainTexture =  manager.playerTeamTexture;
-		if(Team2Material != null && manager.opponentTeamTexture != null)
-			Team2Material.mainTexture =  manager.opponentTeamTexture;
+		if(team1Material != null && manager.playerTeamTexture != null)
+			team1Material.mainTexture =  manager.playerTeamTexture;
+		if(team2Material != null && manager.opponentTeamTexture != null)
+			team2Material.mainTexture =  manager.opponentTeamTexture;
 
-		if(Team1HDMaterial != null && manager.playerTeamHDTexture != null)
-			Team1HDMaterial.mainTexture =  manager.playerTeamHDTexture;
-		if(Team2HDMaterial != null && manager.opponentTeamHDTexture != null)
-			Team2HDMaterial.mainTexture =  manager.opponentTeamHDTexture;
+		if(team1HdMaterial != null && manager.playerTeamHDTexture != null)
+			team1HdMaterial.mainTexture =  manager.playerTeamHDTexture;
+		if(team2HdMaterial != null && manager.opponentTeamHDTexture != null)
+			team2HdMaterial.mainTexture =  manager.opponentTeamHDTexture;
 //		Team1HDMaterial.mainTexture =  GameManager.SharedObject ().opponentTeamHDTexture;
 
 

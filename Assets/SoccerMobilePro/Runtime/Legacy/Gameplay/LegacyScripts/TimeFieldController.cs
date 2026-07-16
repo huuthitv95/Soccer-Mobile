@@ -19,11 +19,11 @@ public class TimeFieldController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if(GameManager.SharedObject().IsGameReady == false)
+		if(GameManager.SharedObject().isGameReady == false)
 			return;
 
-		int minutes = GameManager.SharedObject ().GameTime / 60;
-		float seconds = GameManager.SharedObject ().GameTime % 60;
+		int minutes = GameManager.SharedObject ().gameTime / 60;
+		float seconds = GameManager.SharedObject ().gameTime % 60;
 
 		LegacyGuiUtility.GetOrAddGUIText(gameObject).text = (minutes<10?"0":"")+minutes + ":"+(seconds<10?"0":"")+ seconds;
 

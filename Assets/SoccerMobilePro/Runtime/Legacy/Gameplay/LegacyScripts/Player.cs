@@ -192,10 +192,10 @@ public class Player : MonoBehaviour
                 targetPosition = initialPosition;
         }
 
-        if (!GameManager.SharedObject().IsGameReady)
+        if (!GameManager.SharedObject().isGameReady)
             targetPosition = initialPosition;
 
-        float RotationSpeed = 100f;
+        float rotationSpeed = 100f;
         if (Vector3.Distance(transform.position, targetPosition) > 1f)
         {
             isMoving = true;
@@ -211,7 +211,7 @@ public class Player : MonoBehaviour
             _lookRotation = Quaternion.LookRotation(_direction);
             _lookRotation.x = _lookRotation.z = 0f;
             //rotate us over time according to speed until we are in the required rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 
             Vector3 currentPosition = this.transform.position;
             //first, check to see if we're close enough to the target
@@ -236,7 +236,7 @@ public class Player : MonoBehaviour
             _direction = (theBall.transform.position - transform.position).normalized;
             _lookRotation = Quaternion.LookRotation(_direction);
             _lookRotation.x = _lookRotation.z = 0f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
         }
 
         if (isMoving == false && GetComponent<Animation>()["entrada"].enabled == false)
@@ -254,9 +254,9 @@ public class Player : MonoBehaviour
         //move towards the center of the world (or where ever you like)
         Vector3 targetPosition = theBall.transform.position;
         targetPosition.y = transform.position.y;
-        float RotationSpeed = 100f;
+        float rotationSpeed = 100f;
 
-        if (!GameManager.SharedObject().IsGameReady)
+        if (!GameManager.SharedObject().isGameReady)
             targetPosition = initialPosition;
 
         //values for internal use
@@ -270,7 +270,7 @@ public class Player : MonoBehaviour
         _lookRotation = _direction != Vector3.zero ? Quaternion.LookRotation(_direction) : Quaternion.identity;
         _lookRotation.x = _lookRotation.z = 0f;
         //rotate us over time according to speed until we are in the required rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 
         Vector3 currentPosition = this.transform.position;
         //first, check to see if we're close enough to the target
@@ -305,21 +305,21 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (GameManager.SharedObject().OpponentMadeFoul || GameManager.SharedObject().PlayerMadeFoul)
+        if (GameManager.SharedObject().opponentMadeFoul || GameManager.SharedObject().playerMadeFoul)
         {
             gameObject.GetComponent<Player>().enabled = false;
             gameObject.GetComponent<PlayerFoulHandler>().enabled = true;
             return;
         }
 
-        if (GameManager.SharedObject().PlayerGotCornerKick || GameManager.SharedObject().OpponentGotCornerKick)
+        if (GameManager.SharedObject().playerGotCornerKick || GameManager.SharedObject().opponentGotCornerKick)
         {
             gameObject.GetComponent<Player>().enabled = false;
             gameObject.GetComponent<PlayerCornerKickHandler>().enabled = true;
             return;
         }
         /////****0.5/////ballGetableDistance
-        if (Vector3.Distance(theBall.transform.position, transform.position) < ballGetableDistance && GameManager.SharedObject().IsGameReady)
+        if (Vector3.Distance(theBall.transform.position, transform.position) < ballGetableDistance && GameManager.SharedObject().isGameReady)
             theBall.GetComponent<BallScript>().SetOwnerIfPossible(transform);
 
         isMoving = false;
@@ -331,12 +331,12 @@ public class Player : MonoBehaviour
 #if !UNITY_EDITOR
             float multiplier = 1f;
 
-            if (GameManager.SharedObject().IsFirstHalf)
+            if (GameManager.SharedObject().isFirstHalf)
                 multiplier = 1f;
             else
                 multiplier = -1f;
 
-            if (GameManager.SharedObject().IsGameReady == false)
+            if (GameManager.SharedObject().isGameReady == false)
                 multiplier = 0f;
 
 			float x = multiplier*GameObject.Find("Single Joystick").GetComponent<Joystick>().position.x;
@@ -434,7 +434,7 @@ public class Player : MonoBehaviour
 							{
 								tackleButtonPressed = false;
 								//TACKLE CODE HERE..
-								if(Time.time - lastTackleTime > 3 && theBallScript.ownerPlayer != null && Vector3.Distance(theBallScript.ownerPlayer.position, transform.position)<1 && GameManager.SharedObject().IsGameReady)
+								if(Time.time - lastTackleTime > 3 && theBallScript.ownerPlayer != null && Vector3.Distance(theBallScript.ownerPlayer.position, transform.position)<1 && GameManager.SharedObject().isGameReady)
 								{
 									theBallScript.ownerPlayer.gameObject.GetComponent<Animation>().Play("entrada", PlayMode.StopAll);
 									theBallScript.SetOwner(transform);
@@ -607,7 +607,7 @@ public class Player : MonoBehaviour
         if (!PauseController.isPaused && !InitGame.matchcomplete && !InitGame.halfComplete)
 
         {
-            if (!GameManager.SharedObject().IsGameReady || PauseController.isPaused)
+            if (!GameManager.SharedObject().isGameReady || PauseController.isPaused)
                 return;
 
             if (HasTheBall())

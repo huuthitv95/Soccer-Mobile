@@ -17,58 +17,72 @@ public enum Alignment { None,LeftTop, RightTop, LeftBot, RightBot ,MiddleTop ,Mi
 
 public class RadarSystem : MonoBehaviour {
 
-	private Vector2 inposition;
-	public float Size = 400; // size of minimap
-	public float Distance = 100;// maximum distance of objects
-	public float Alpha = 0.5f;
-	public Texture2D[] Navtexture;// textutes list
-	public string[] EnemyTag;// object tags list
-	public Texture2D NavCompass;// compass texture
-	public Texture2D NavBG;// background texture
-	public Vector2 PositionOffset = new Vector2(0,0);// minimap position offset
-	public float Scale = 1;// mini map scale ( Scale < 1 = zoom in , Scale > 1 = zoom out)
-	public Alignment PositionAlignment = Alignment.None;// position alignment
-	public bool MapRotation;
-	public GameObject Player;
-	public bool Show = true;
-	public Color ColorMult = Color.white;
+	private Vector2 minimapPosition;
+	[UnityEngine.Serialization.FormerlySerializedAs("Size")]
+	public float size = 400;
+	[UnityEngine.Serialization.FormerlySerializedAs("Distance")]
+	public float distance = 100;
+	[UnityEngine.Serialization.FormerlySerializedAs("Alpha")]
+	public float alpha = 0.5f;
+	[UnityEngine.Serialization.FormerlySerializedAs("Navtexture")]
+	public Texture2D[] navigationTextures;
+	[UnityEngine.Serialization.FormerlySerializedAs("EnemyTag")]
+	public string[] trackedTags;
+	[UnityEngine.Serialization.FormerlySerializedAs("NavCompass")]
+	public Texture2D compassTexture;
+	[UnityEngine.Serialization.FormerlySerializedAs("NavBG")]
+	public Texture2D backgroundTexture;
+	[UnityEngine.Serialization.FormerlySerializedAs("PositionOffset")]
+	public Vector2 positionOffset = new Vector2(0,0);
+	[UnityEngine.Serialization.FormerlySerializedAs("Scale")]
+	public float scale = 1;
+	[UnityEngine.Serialization.FormerlySerializedAs("PositionAlignment")]
+	public Alignment positionAlignment = Alignment.None;
+	[UnityEngine.Serialization.FormerlySerializedAs("MapRotation")]
+	public bool mapRotation;
+	[UnityEngine.Serialization.FormerlySerializedAs("Player")]
+	public GameObject player;
+	[UnityEngine.Serialization.FormerlySerializedAs("Show")]
+	public bool show = true;
+	[UnityEngine.Serialization.FormerlySerializedAs("ColorMult")]
+	public Color colorMultiplier = Color.white;
 
 	void Start ()
 	{
-		Size = Size * Screen.height / 640f;
+		size = size * Screen.height / 640f;
 	}
 
 
 	void Update () {
-		if(!Player){
-			Player = this.gameObject;
+		if(!player){
+			player = this.gameObject;
 		}
 
-		if(Scale<=0){
-			Scale = 1;
+		if(scale<=0){
+			scale = 1;
 		}
 
-		switch(PositionAlignment){
+		switch(positionAlignment){
 		case Alignment.None:
-			inposition = PositionOffset;
+			minimapPosition = positionOffset;
 		break;
 		case Alignment.LeftTop:
-			inposition = Vector2.zero + PositionOffset;
+			minimapPosition = Vector2.zero + positionOffset;
 		break;
 		case Alignment.RightTop:
-			inposition = new Vector2(Screen.width - Size-75,0) + PositionOffset;
+			minimapPosition = new Vector2(Screen.width - size-75,0) + positionOffset;
 		break;
 		case Alignment.LeftBot:
-			inposition = new Vector2(0,Screen.height - Size) + PositionOffset;
+			minimapPosition = new Vector2(0,Screen.height - size) + positionOffset;
 		break;
 		case Alignment.RightBot:
-			inposition = new Vector2(Screen.width - Size,Screen.height - Size) + PositionOffset;
+			minimapPosition = new Vector2(Screen.width - size,Screen.height - size) + positionOffset;
 		break;
 		case Alignment.MiddleTop:
-			inposition = new Vector2((Screen.width/2) - (Size/2),Size) + PositionOffset;
+			minimapPosition = new Vector2((Screen.width/2) - (size/2),size) + positionOffset;
 		break;
 		case Alignment.MiddleBot:
-			inposition = new Vector2((Screen.width/2) - (Size/2),Screen.height - Size*0.75f) + PositionOffset;
+			minimapPosition = new Vector2((Screen.width/2) - (size/2),Screen.height - size*0.75f) + positionOffset;
 		break;
 		}
 
@@ -76,24 +90,24 @@ public class RadarSystem : MonoBehaviour {
 
 	Vector2 ConvertToNavPosition(Vector3 pos)
 	{
-		if(GameManager.SharedObject().IsFirstHalf == false)
+		if(GameManager.SharedObject().isFirstHalf == false)
 		{
 			pos.x *= -1f;
 			pos.z *= -1f;
 		}
 
 		Vector2 res = Vector2.zero;
-		if(Player)
+		if(player)
 		{
-			res.x = inposition.x + ((pos.x+55)/110 * Size);
-			res.y = inposition.y + ((-pos.z+37)/74 * (Size*0.684f));
+			res.x = minimapPosition.x + ((pos.x+55)/110 * size);
+			res.y = minimapPosition.y + ((-pos.z+37)/74 * (size*0.684f));
 		}
 		return res;
 	}
 
 
 	void DrawNav(GameObject[] enemylists,Texture2D navtexture){
-		if(Player)
+		if(player)
 		{
 		for(int i=0;i<enemylists.Length;i++)
 		{
@@ -103,7 +117,7 @@ public class RadarSystem : MonoBehaviour {
 
 				//if(Vector2.Distance(pos,(inposition+ new Vector2(Size/2f,Size/2f))) + (navtexture.width/2) < (Size/2f))
 					{
-					float navscale = Scale;
+					float navscale = scale;
 					if(navscale<1){
 						navscale = 1;
 					}
@@ -118,27 +132,27 @@ public class RadarSystem : MonoBehaviour {
 
 	void OnGUI()
 	{
-		if(GameManager.SharedObject().IsGameReady == false || PauseController.isPaused)
+		if(GameManager.SharedObject().isGameReady == false || PauseController.isPaused)
 			return;
 
-		if(NavBG)
-			GUI.DrawTexture(new Rect(inposition.x,inposition.y,Size,Size*0.684f),NavBG);
+		if(backgroundTexture)
+			GUI.DrawTexture(new Rect(minimapPosition.x,minimapPosition.y,size,size*0.684f),backgroundTexture);
 
-		if(!Show)
+		if(!show)
 			return;
 
-		GUI.color = new Color(ColorMult.r,ColorMult.g,ColorMult.b,Alpha);
-		if(MapRotation){
-			GUIUtility.RotateAroundPivot (-(this.transform.eulerAngles.y), inposition + new Vector2(Size/2f, Size/2f));
+		GUI.color = new Color(colorMultiplier.r,colorMultiplier.g,colorMultiplier.b,alpha);
+		if(mapRotation){
+			GUIUtility.RotateAroundPivot (-(this.transform.eulerAngles.y), minimapPosition + new Vector2(size/2f, size/2f));
 		}
 
-		for(int i=0;i<EnemyTag.Length;i++){
-			DrawNav(GameObject.FindGameObjectsWithTag(EnemyTag[i]),Navtexture[i]);
+		for(int i=0;i<trackedTags.Length;i++){
+			DrawNav(GameObject.FindGameObjectsWithTag(trackedTags[i]),navigationTextures[i]);
 		}
 
-		GUIUtility.RotateAroundPivot ((this.transform.eulerAngles.y), inposition + new Vector2(Size/2f, Size/2f));
-		if(NavCompass)
-		GUI.DrawTexture(new Rect(inposition.x + (Size/2f)-(NavCompass.width/2f),inposition.y + (Size/2f) - (NavCompass.height/2f),NavCompass.width,NavCompass.height),NavCompass);
+		GUIUtility.RotateAroundPivot ((this.transform.eulerAngles.y), minimapPosition + new Vector2(size/2f, size/2f));
+		if(compassTexture)
+		GUI.DrawTexture(new Rect(minimapPosition.x + (size/2f)-(compassTexture.width/2f),minimapPosition.y + (size/2f) - (compassTexture.height/2f),compassTexture.width,compassTexture.height),compassTexture);
 
 	}
 }

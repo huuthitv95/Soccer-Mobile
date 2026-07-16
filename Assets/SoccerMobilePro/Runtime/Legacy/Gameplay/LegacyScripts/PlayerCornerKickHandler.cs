@@ -23,7 +23,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
 
     Transform player1, player2, player3, player4;
     Vector3 position1, position2, position3, position4;
-    private GameObject FootBall;
+    private GameObject football;
 
     private bool throwing = false;
 
@@ -36,8 +36,8 @@ public class PlayerCornerKickHandler : MonoBehaviour
 
         playerScript = gameObject.GetComponent<Player>();
 
-        FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-        ballScript = FootBall.GetComponent<BallScript>();
+        football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+        ballScript = football.GetComponent<BallScript>();
 
         GameObject[] playersT = GameObject.FindGameObjectsWithTag("Player");
 
@@ -62,7 +62,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
             return;
         }
 
-        if (!GameManager.SharedObject().OpponentGotCornerKick && !GameManager.SharedObject().PlayerGotCornerKick)
+        if (!GameManager.SharedObject().opponentGotCornerKick && !GameManager.SharedObject().playerGotCornerKick)
         {
             gameObject.GetComponent<PlayerCornerKickHandler>().enabled = false;
             ballScript.enabled = true;
@@ -84,7 +84,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
 
         if (transform == player1)
         {
-            if (GameManager.SharedObject().PlayerGotCornerKick)
+            if (GameManager.SharedObject().playerGotCornerKick)
             {
                 Vector3 targetPosition = Vector3.zero;
 
@@ -108,7 +108,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
                 if (GetComponent<Animation>()["reposo"].enabled == false && throwing == false)
                     GetComponent<Animation>().Play("reposo", PlayMode.StopAll);
 
-                transform.LookAt(FootBall.transform.position);
+                transform.LookAt(football.transform.position);
 #if !UNITY_EDITOR
 				float x = GameObject.Find("Single Joystick").GetComponent<Joystick>().position.x;
 
@@ -164,7 +164,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
                 {
                     Vector3 currentPosition = this.transform.position;
 
-                    //if(Vector3.Distance(currentPosition, FootBall.transform.position) > .4f)
+                    //if(Vector3.Distance(currentPosition, football.transform.position) > .4f)
                     transform.forward *= (600 * Time.deltaTime);
                 }
             }
@@ -178,7 +178,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
         }
         else if (transform == player2)
         {
-            //			if(GameManager.SharedObject().PlayerGotCornerKick)
+            //			if(GameManager.SharedObject().playerGotCornerKick)
             //			{
             if (GameManager.SharedObject().foulPosition.z < 0)
                 transform.position = new Vector3(GameManager.SharedObject().foulPosition.x + 8, 0, -2f);
@@ -195,7 +195,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
         }
         else if (transform == player3)
         {
-            //			if(GameManager.SharedObject().PlayerGotCornerKick)
+            //			if(GameManager.SharedObject().playerGotCornerKick)
             //			{
             if (GameManager.SharedObject().foulPosition.z < 0)
                 transform.position = new Vector3(GameManager.SharedObject().foulPosition.x + 10f, 0, 2f);
@@ -212,7 +212,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
         }
         else if (transform == player4)
         {
-            //			if(GameManager.SharedObject().PlayerGotCornerKick)
+            //			if(GameManager.SharedObject().playerGotCornerKick)
             //			{
             if (GameManager.SharedObject().foulPosition.z < 0)
                 transform.position = new Vector3(GameManager.SharedObject().foulPosition.x + 5f, 0, 0);
@@ -242,16 +242,16 @@ public class PlayerCornerKickHandler : MonoBehaviour
 
         AudioManager.PlayKickSound();
 
-        FootBall.GetComponent<BallScript>().SetFree();
-        //FootBall.rigidbody.velocity = transform.forward * 15f;//(new Vector3(player2.position.x,FootBall.transform.position.y,player2.position.z) - FootBall.transform.position).normalized * 15;
+        football.GetComponent<BallScript>().SetFree();
+        //football.rigidbody.velocity = transform.forward * 15f;//(new Vector3(player2.position.x,football.transform.position.y,player2.position.z) - football.transform.position).normalized * 15;
 
         Quaternion shotAngle = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 20, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
-        FootBall.transform.rotation = shotAngle;
-        FootBall.GetComponent<Rigidbody>().AddForce(FootBall.transform.forward * 2200, ForceMode.Impulse);
+        football.transform.rotation = shotAngle;
+        football.GetComponent<Rigidbody>().AddForce(football.transform.forward * 2200, ForceMode.Impulse);
 
-        GameManager.SharedObject().PlayerGotCornerKick = false;
-        GameManager.SharedObject().OpponentGotCornerKick = false;
-        GameManager.SharedObject().IsGameReady = true;
+        GameManager.SharedObject().playerGotCornerKick = false;
+        GameManager.SharedObject().opponentGotCornerKick = false;
+        GameManager.SharedObject().isGameReady = true;
     }
 
     void OnGUI()
@@ -259,7 +259,7 @@ public class PlayerCornerKickHandler : MonoBehaviour
 
         if (!PauseController.isPaused)
         {
-            if (transform == player1 && GameManager.SharedObject().PlayerGotCornerKick)
+            if (transform == player1 && GameManager.SharedObject().playerGotCornerKick)
             {
                 if (passButtonPressed)
                     GUI.DrawTexture(passButtonRect, passButtonSel);

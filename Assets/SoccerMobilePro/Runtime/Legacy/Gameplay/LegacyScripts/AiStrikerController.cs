@@ -15,16 +15,17 @@ public class AiStrikerController : MonoBehaviour
 
     public Transform goal;
     private int moveSpeed = 5;
-    public Vector3 InitialPosition = Vector3.zero;
+    [UnityEngine.Serialization.FormerlySerializedAs("InitialPosition")]
+    public Vector3 initialPosition = Vector3.zero;
     private Vector3 targetPosition = Vector3.zero;
 
-    private GameObject FootBall;
-    private BallScript FootBallScript;
+    private GameObject football;
+    private BallScript footballScript;
 
-    static bool Position1Available = true;
-    static bool Position2Available = true;
-    static bool Position3Available = true;
-    static bool Position4Available = true;
+    static bool position1Available = true;
+    static bool position2Available = true;
+    static bool position3Available = true;
+    static bool position4Available = true;
 
     private int zOffset = 0;
     private int xOffset = 0;
@@ -38,8 +39,8 @@ public class AiStrikerController : MonoBehaviour
     public bool isMoving = false;
     private float lastTime = 0;
 
-    private float AttackTime = 0;
-    private bool Attack = false;
+    private float attackTime = 0;
+    private bool attack = false;
 
     // Use this for initialization
     void Start()
@@ -48,35 +49,35 @@ public class AiStrikerController : MonoBehaviour
 		AtPosition2 = false;
 		AtPosition3 = false;*/
 
-        InitialPosition = transform.position;
+        initialPosition = transform.position;
         targetPosition = transform.position;
 
-        FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-        FootBallScript = FootBall.GetComponent<BallScript>();
+        football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+        footballScript = football.GetComponent<BallScript>();
 
-        if (Position1Available)
+        if (position1Available)
         {
             xOffset = 5;
             zOffset = 15;
-            Position1Available = false;
+            position1Available = false;
         }
-        else if (Position2Available)
+        else if (position2Available)
         {
             xOffset = 5;
             zOffset = -15;
-            Position2Available = false;
+            position2Available = false;
         }
-        else if (Position3Available)
+        else if (position3Available)
         {
             xOffset = -5;
             zOffset = -15;
-            Position3Available = false;
+            position3Available = false;
         }
-        else if (Position4Available)
+        else if (position4Available)
         {
             xOffset = -5;
             zOffset = 15;
-            Position3Available = false;
+            position3Available = false;
         }
 
         GameObject[] playersT = GameObject.FindGameObjectsWithTag("AIStriker");
@@ -95,28 +96,28 @@ public class AiStrikerController : MonoBehaviour
 
     bool TeamHasTheBall()
     {
-        return (FootBallScript.ownerPlayer && FootBallScript.ownerPlayer.gameObject.name == transform.gameObject.name);
+        return (footballScript.ownerPlayer && footballScript.ownerPlayer.gameObject.name == transform.gameObject.name);
     }
 
     private void MoveForward()
     {
-        targetPosition = FootBall.transform.position;
+        targetPosition = football.transform.position;
 
-        if (FootBall.transform.position.x < 30 && FootBall.transform.position.x > -30)
+        if (football.transform.position.x < 30 && football.transform.position.x > -30)
         {
             if (TeamHasTheBall())
-                targetPosition = new Vector3(FootBall.transform.position.x - xOffset, 0, ((FootBall.transform.position.z + zOffset < 37 && FootBall.transform.position.z + zOffset > -37) ? FootBall.transform.position.z + zOffset : targetPosition.z));
+                targetPosition = new Vector3(football.transform.position.x - xOffset, 0, ((football.transform.position.z + zOffset < 37 && football.transform.position.z + zOffset > -37) ? football.transform.position.z + zOffset : targetPosition.z));
             else
-                targetPosition = new Vector3(FootBall.transform.position.x + xOffset, 0, ((FootBall.transform.position.z + zOffset < 37 && FootBall.transform.position.z + zOffset > -37) ? FootBall.transform.position.z + zOffset : targetPosition.z));
+                targetPosition = new Vector3(football.transform.position.x + xOffset, 0, ((football.transform.position.z + zOffset < 37 && football.transform.position.z + zOffset > -37) ? football.transform.position.z + zOffset : targetPosition.z));
         }
         else
-            targetPosition = InitialPosition;
+            targetPosition = initialPosition;
 
-        if (!GameManager.SharedObject().IsGameReady)
-            targetPosition = InitialPosition;
+        if (!GameManager.SharedObject().isGameReady)
+            targetPosition = initialPosition;
 
         targetPosition.y = transform.position.y;
-        float RotationSpeed = 100;
+        float rotationSpeed = 100;
 
         Quaternion _lookRotation = transform.rotation;
         Vector3 _direction;
@@ -134,7 +135,7 @@ public class AiStrikerController : MonoBehaviour
 
             if (Time.time - lastTime > 0.3f)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+                transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
                 lastTime = Time.time;
             }
 
@@ -144,10 +145,10 @@ public class AiStrikerController : MonoBehaviour
         {
             isMoving = false;
 
-            _direction = (FootBall.transform.position - transform.position).normalized;
+            _direction = (football.transform.position - transform.position).normalized;
             _lookRotation = Quaternion.LookRotation(_direction);
             _lookRotation.x = _lookRotation.z = 0f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
         }
 
         if (isMoving == false && GetComponent<Animation>()["tiro"].enabled == false && GetComponent<Animation>()["entrada"].enabled == false)
@@ -161,38 +162,38 @@ public class AiStrikerController : MonoBehaviour
         if (GetComponent<Animation>()["tiro"].enabled == true || GetComponent<Animation>()["pase"].enabled == true) return;
         isMoving = true;
 
-        targetPosition = FootBall.transform.position;
+        targetPosition = football.transform.position;
 
-        if (FootBall.transform.position.x < 0 && FootBall.transform.position.x > -55)
+        if (football.transform.position.x < 0 && football.transform.position.x > -55)
         {
-            AttackTime += Time.deltaTime;
+            attackTime += Time.deltaTime;
 
-            if (Attack == false && AttackTime > 3)
+            if (attack == false && attackTime > 3)
             {
-                Attack = true;
-                AttackTime = 0;
+                attack = true;
+                attackTime = 0;
             }
-            else if (Attack == true && AttackTime > 4)
+            else if (attack == true && attackTime > 4)
             {
-                AttackTime = 0;
-                Attack = false;
+                attackTime = 0;
+                attack = false;
             }
 
-            if ((Attack || FootBallScript.ownerPlayer == null) && !TeamHasTheBall())
-                targetPosition = FootBall.transform.position;
+            if ((attack || footballScript.ownerPlayer == null) && !TeamHasTheBall())
+                targetPosition = football.transform.position;
             else if (TeamHasTheBall())
-                targetPosition = new Vector3(FootBall.transform.position.x - 10, 0, FootBall.transform.position.z + zOffset / 2);
+                targetPosition = new Vector3(football.transform.position.x - 10, 0, football.transform.position.z + zOffset / 2);
             else
-                targetPosition = new Vector3(FootBall.transform.position.x + 10, 0, FootBall.transform.position.z);
+                targetPosition = new Vector3(football.transform.position.x + 10, 0, football.transform.position.z);
         }
         else
-            targetPosition = InitialPosition;
+            targetPosition = initialPosition;
 
-        if (!GameManager.SharedObject().IsGameReady)
-            targetPosition = InitialPosition;
+        if (!GameManager.SharedObject().isGameReady)
+            targetPosition = initialPosition;
 
         targetPosition.y = transform.position.y;
-        float RotationSpeed = 100;
+        float rotationSpeed = 100;
 
         Quaternion _lookRotation;
         Vector3 _direction;
@@ -206,7 +207,7 @@ public class AiStrikerController : MonoBehaviour
         //rotate us over time according to speed until we are in the required rotation
         if (Time.time - lastTime > 0.3f)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
             lastTime = Time.time;
         }
 
@@ -218,10 +219,10 @@ public class AiStrikerController : MonoBehaviour
         {
             isMoving = false;
 
-            _direction = (FootBall.transform.position - transform.position).normalized;
+            _direction = (football.transform.position - transform.position).normalized;
             _lookRotation = Quaternion.LookRotation(_direction);
             _lookRotation.x = _lookRotation.z = 0f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
         }
 
         if (isMoving == false && GetComponent<Animation>()["entrada"].enabled == false)
@@ -241,10 +242,10 @@ public class AiStrikerController : MonoBehaviour
 
         Vector3 targetPosition = goal.transform.position;
         targetPosition.y = transform.position.y;
-        float RotationSpeed = 100;
+        float rotationSpeed = 100;
 
-        if (!GameManager.SharedObject().IsGameReady)
-            targetPosition = InitialPosition;
+        if (!GameManager.SharedObject().isGameReady)
+            targetPosition = initialPosition;
 
         Quaternion _lookRotation;
         Vector3 _direction;
@@ -255,7 +256,7 @@ public class AiStrikerController : MonoBehaviour
         //create the rotation we need to be in to look at the target
         _lookRotation = Quaternion.LookRotation(_direction);
         _lookRotation.x = _lookRotation.z = 0f;
-        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 
         if (Vector3.Distance(transform.position, targetPosition) > .5f && GetComponent<Animation>()["entrada"].enabled == false)
 
@@ -266,45 +267,45 @@ public class AiStrikerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.SharedObject().OpponentMadeFoul || GameManager.SharedObject().PlayerMadeFoul || GameManager.SharedObject().PlayerGotCornerKick || GameManager.SharedObject().OpponentGotCornerKick)
+        if (GameManager.SharedObject().opponentMadeFoul || GameManager.SharedObject().playerMadeFoul || GameManager.SharedObject().playerGotCornerKick || GameManager.SharedObject().opponentGotCornerKick)
         {
-            transform.rotation = Quaternion.LookRotation((FootBall.transform.position - transform.position));
+            transform.rotation = Quaternion.LookRotation((football.transform.position - transform.position));
 
             if (GetComponent<Animation>()["reposo"].enabled == false)
                 GetComponent<Animation>().Play("reposo", PlayMode.StopAll);
             return;
         }
 
-        if (GameManager.SharedObject().PlayerGotCornerKick || GameManager.SharedObject().OpponentGotCornerKick)
+        if (GameManager.SharedObject().playerGotCornerKick || GameManager.SharedObject().opponentGotCornerKick)
         {
             gameObject.GetComponent<AiStrikerController>().enabled = false;
             gameObject.GetComponent<OpponentCornerKickHandler>().enabled = true;
             return;
         }
 
-        if (Vector3.Distance(FootBall.transform.position, transform.position) < 0.5f && GameManager.SharedObject().IsGameReady)
-            FootBallScript.SetOwnerIfPossible(transform);
+        if (Vector3.Distance(football.transform.position, transform.position) < 0.5f && GameManager.SharedObject().isGameReady)
+            footballScript.SetOwnerIfPossible(transform);
 
         isMoving = false;
 
-        if ((waitForPass <= 0 || Vector3.Distance(transform.position, FootBall.transform.position) < 5f) && isMoving == false && transform == ControllablePlayer() && !HasTheBall() && ((FootBallScript.ownerPlayer == null || !TeamHasTheBall() && GameManager.SharedObject().IsGameReady) /*&& Vector3.Distance(transform.position, FootBall.transform.position)<10f*/))
+        if ((waitForPass <= 0 || Vector3.Distance(transform.position, football.transform.position) < 5f) && isMoving == false && transform == ControllablePlayer() && !HasTheBall() && ((footballScript.ownerPlayer == null || !TeamHasTheBall() && GameManager.SharedObject().isGameReady) /*&& Vector3.Distance(transform.position, football.transform.position)<10f*/))
             MoveTowardsTheBall();
 
-        if (waitForPass <= 0 && transform != ControllablePlayer() && !HasTheBall() && GameManager.SharedObject().IsGameReady)
+        if (waitForPass <= 0 && transform != ControllablePlayer() && !HasTheBall() && GameManager.SharedObject().isGameReady)
             MoveForward();
 
-        if (transform == ControllablePlayer() && HasTheBall() && GameManager.SharedObject().IsGameReady)
+        if (transform == ControllablePlayer() && HasTheBall() && GameManager.SharedObject().isGameReady)
             MoveForGoal();
 
         if (isMoving == false && GetComponent<Animation>()["reposo"].enabled == false && GetComponent<Animation>()["tiro"].enabled == false && GetComponent<Animation>()["pase"].enabled == false && GetComponent<Animation>()["entrada"].enabled == false)
             GetComponent<Animation>().Play("reposo", PlayMode.StopAll);
 
-        if (Vector3.Distance(transform.position, FootBall.transform.position) < 0.5f && transform == ControllablePlayer() && !HasTheBall() && GetComponent<Animation>()["entrada"].enabled == false && GameManager.SharedObject().IsGameReady)
+        if (Vector3.Distance(transform.position, football.transform.position) < 0.5f && transform == ControllablePlayer() && !HasTheBall() && GetComponent<Animation>()["entrada"].enabled == false && GameManager.SharedObject().isGameReady)
         {
-            if (FootBallScript.ownerPlayer && FootBallScript.ownerPlayer.GetComponent<Animation>() != null)
-                FootBallScript.ownerPlayer.gameObject.GetComponent<Animation>().Play("entrada", PlayMode.StopAll);
+            if (footballScript.ownerPlayer && footballScript.ownerPlayer.GetComponent<Animation>() != null)
+                footballScript.ownerPlayer.gameObject.GetComponent<Animation>().Play("entrada", PlayMode.StopAll);
 
-            FootBallScript.SetOwner(transform);
+            footballScript.SetOwner(transform);
             timeToPass = 5f;
         }
 
@@ -314,9 +315,9 @@ public class AiStrikerController : MonoBehaviour
 		if(transform == ControllablePlayer() && HasTheBall())
 			Debug.Log ("time: "+timeToPass);
 		*/
-        if (transform == ControllablePlayer() && HasTheBall() && OpponentNearBy() && timeToPass < 0f && GameManager.SharedObject().IsGameReady)
+        if (transform == ControllablePlayer() && HasTheBall() && OpponentNearBy() && timeToPass < 0f && GameManager.SharedObject().isGameReady)
             StartCoroutine(MakeAPass());
-        else if (transform == ControllablePlayer() && HasTheBall() && (transform.position.x < -43f) && GameManager.SharedObject().IsGameReady)
+        else if (transform == ControllablePlayer() && HasTheBall() && (transform.position.x < -43f) && GameManager.SharedObject().isGameReady)
         {
             transform.rotation = Quaternion.LookRotation((goal.position - transform.position).normalized);
             StartCoroutine(KickTheBall());
@@ -355,7 +356,7 @@ public class AiStrikerController : MonoBehaviour
 
             yield return new WaitForSeconds(0.3f);
 
-            FootBallScript.SetFree();
+            footballScript.SetFree();
 
             AudioManager.PlayKickSound();
             //find the vector pointing from our position to the target
@@ -367,10 +368,10 @@ public class AiStrikerController : MonoBehaviour
             transform.rotation = _lookRotation;//Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * 9999999999);
 
             Quaternion shotAngle = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 25 * progress, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
-            FootBall.transform.rotation = shotAngle;
+            football.transform.rotation = shotAngle;
 
-            FootBall.transform.rotation = shotAngle;
-            FootBall.GetComponent<Rigidbody>().AddForce(FootBall.transform.forward * 250, ForceMode.Impulse);
+            football.transform.rotation = shotAngle;
+            football.GetComponent<Rigidbody>().AddForce(football.transform.forward * 250, ForceMode.Impulse);
 
             progress = 0;
         }
@@ -385,12 +386,12 @@ public class AiStrikerController : MonoBehaviour
 
         AudioManager.PlayKickSound();
 
-        FootBallScript.SetFree();
-        FootBallScript.isKicked = true;
+        footballScript.SetFree();
+        footballScript.isKicked = true;
 
         Quaternion shotAngle = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 5, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
-        FootBall.transform.rotation = shotAngle;
-        FootBall.GetComponent<Rigidbody>().AddForce(FootBall.transform.forward * 150, ForceMode.Impulse);
+        football.transform.rotation = shotAngle;
+        football.GetComponent<Rigidbody>().AddForce(football.transform.forward * 150, ForceMode.Impulse);
     }
 
     Transform ControllablePlayer()
@@ -401,7 +402,7 @@ public class AiStrikerController : MonoBehaviour
 
         foreach (Transform player in strikers)
         {
-            if (Vector3.Distance(FootBall.transform.position, player.position) - Vector3.Distance(FootBall.transform.position, idealPlayer.position) < 1f)
+            if (Vector3.Distance(football.transform.position, player.position) - Vector3.Distance(football.transform.position, idealPlayer.position) < 1f)
                 idealPlayer = player;
         }
         return idealPlayer;
@@ -421,7 +422,7 @@ public class AiStrikerController : MonoBehaviour
 
     bool HasTheBall()
     {
-        return (FootBallScript.ownerPlayer == transform);
+        return (footballScript.ownerPlayer == transform);
     }
 }
 }

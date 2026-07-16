@@ -50,13 +50,13 @@ public class InitGame : MonoBehaviour
 
 
 		GameManager gm = GameManager.SharedObject();
-		gm.GameTime = 0;
-		gm.IsGameReady = false;
-		gm.PlayerMadeFoul = false;
-		gm.OpponentMadeFoul = false;
-		LegacyMatchCoreAdapter.BeginSession(gm.IsFirstHalf, gm.CurrentMatch);
+		gm.gameTime = 0;
+		gm.isGameReady = false;
+		gm.playerMadeFoul = false;
+		gm.opponentMadeFoul = false;
+		LegacyMatchCoreAdapter.BeginSession(gm.isFirstHalf, gm.currentMatch);
 
-		if(gm.IsFirstHalf)
+		if(gm.isFirstHalf)
 		{
 			gm.playerTeamGoals = 0;
 			gm.opponentTeamGoals = 0;
@@ -71,7 +71,7 @@ public class InitGame : MonoBehaviour
 		}
 
 		startTime = Time.time;
-		gm.GameTime = 0;
+		gm.gameTime = 0;
 		lasTime = Time.time;
 
 		AudioManager.StopBackgroundMusic();
@@ -81,29 +81,29 @@ public class InitGame : MonoBehaviour
 
 	void Update()
 	{
-		if(Time.time-lasTime >= matchTimeStep && GameManager.SharedObject().IsGameReady)
+		if(Time.time-lasTime >= matchTimeStep && GameManager.SharedObject().isGameReady)
 		{
-			GameManager.SharedObject().GameTime += 1;
+			GameManager.SharedObject().gameTime += 1;
 			if(LegacyMatchCoreAdapter.Current != null)
-				LegacyMatchCoreAdapter.Current.AdvanceClock(GameManager.SharedObject().GameTime);
+				LegacyMatchCoreAdapter.Current.AdvanceClock(GameManager.SharedObject().gameTime);
 			lasTime = Time.time;
 		}
 
-		if(GameManager.SharedObject().GameTime > 45f*60f)
+		if(GameManager.SharedObject().gameTime > 45f*60f)
 		{
 			if(LegacyMatchCoreAdapter.Current != null)
-				LegacyMatchCoreAdapter.Current.CompleteCurrentHalf(GameManager.SharedObject().GameTime);
+				LegacyMatchCoreAdapter.Current.CompleteCurrentHalf(GameManager.SharedObject().gameTime);
 			Player.noControls = true;
 
-			GameManager.SharedObject().IsGameReady = false;
+			GameManager.SharedObject().isGameReady = false;
 			AudioManager.PlayPauseWhistle();
 
-			if(GameManager.SharedObject().IsFirstHalf)
+			if(GameManager.SharedObject().isFirstHalf)
 			{
 				PlayerPrefs.SetInt("lost",0);
 				PlayerPrefs.Save();
 
-				GameManager.SharedObject().ShowHalfTimeDialog = true;
+				GameManager.SharedObject().showHalfTimeDialog = true;
 				if(matchEndDialog != null)
 				{
 					matchEndDialog.gameObject.SetActive(false);
@@ -126,7 +126,7 @@ public class InitGame : MonoBehaviour
 			}
 			else
 			{
-				GameManager.SharedObject().ShowMatchEndDialog = true;
+				GameManager.SharedObject().showMatchEndDialog = true;
 
 				if(matchEndDialog != null && matchEndDialog.gameObject != null)
 				{
@@ -153,19 +153,19 @@ public class InitGame : MonoBehaviour
 				if(GameManager.SharedObject().isQuickMatch == false)
 				{
 					int currentMatch = 1;
-					if(PlayerPrefs.GetInt("match1TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					if(PlayerPrefs.GetInt("match1TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 1;
-					else if(PlayerPrefs.GetInt("match2TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					else if(PlayerPrefs.GetInt("match2TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 2;
-					else if(PlayerPrefs.GetInt("match3TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					else if(PlayerPrefs.GetInt("match3TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 3;
-					else if(PlayerPrefs.GetInt("match4TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					else if(PlayerPrefs.GetInt("match4TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 4;
-					else if(PlayerPrefs.GetInt("match5TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					else if(PlayerPrefs.GetInt("match5TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 5;
-					else if(PlayerPrefs.GetInt("match6TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					else if(PlayerPrefs.GetInt("match6TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 6;
-					else if(PlayerPrefs.GetInt("match7TeamIndex") == GameManager.SharedObject().CurrentMatch)
+					else if(PlayerPrefs.GetInt("match7TeamIndex") == GameManager.SharedObject().currentMatch)
 						currentMatch = 7;
 
 					string score1Key, score2Key;
@@ -204,15 +204,15 @@ public class InitGame : MonoBehaviour
 	/*
 	void FixedUpdate()
 	{
-		if(GameManager.SharedObject().ShowHalfTimeDialog)
+		if(GameManager.SharedObject().showHalfTimeDialog)
 		{
-			//GameManager.SharedObject().IsGameReady = false;
+			//GameManager.SharedObject().isGameReady = false;
 			matchEndDialog.gameObject.SetActive(false);
 			halfTimeDialog.gameObject.SetActive(true);
 		}
-		else if(GameManager.SharedObject().ShowMatchEndDialog)
+		else if(GameManager.SharedObject().showMatchEndDialog)
 		{
-			//GameManager.SharedObject().IsGameReady = false;
+			//GameManager.SharedObject().isGameReady = false;
 			halfTimeDialog.gameObject.SetActive(false);
 			matchEndDialog.gameObject.SetActive(true);
 		}

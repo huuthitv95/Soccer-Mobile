@@ -11,17 +11,17 @@ using System.Collections;
 
 public class CPlayerScript : MonoBehaviour
 {
-	private Vector3 InitialPosition;
+	private Vector3 initialPosition;
 
 	void Start()
 	{
-		InitialPosition = transform.position;
+		initialPosition = transform.position;
 	}
 
 	public void Reset()
 	{
 		GetComponent<Animation>().Stop ();
-		transform.position = InitialPosition;
+		transform.position = initialPosition;
 	}
 
 	public void AnimatePlayer()

@@ -12,20 +12,21 @@ using System.Collections;
 public class OpponentGoalMissTrigger : MonoBehaviour
 {
 	private BallScript ballScript;
-	public GameObject Golie;
+	[UnityEngine.Serialization.FormerlySerializedAs("Golie")]
+	public GameObject goalkeeper;
 	// Use this for initialization
 	void Start()
 	{
-		GameObject FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		ballScript = FootBall.GetComponent<BallScript>();
+		GameObject football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		ballScript = football.GetComponent<BallScript>();
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "TheSoccerBall")
 		{
-			Golie.GetComponent<OpponentGoalkeeper>().enabled = false;
-			Golie.GetComponent<OpponentGoalkeeperKickController>().enabled = true;
+			goalkeeper.GetComponent<OpponentGoalkeeper>().enabled = false;
+			goalkeeper.GetComponent<OpponentGoalkeeperKickController>().enabled = true;
 
 			other.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 			other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;

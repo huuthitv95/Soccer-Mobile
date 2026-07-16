@@ -11,29 +11,32 @@ using System.Collections;
 
 public class OpponentPosition : MonoBehaviour
 {
-	public Transform InitialPositonTransform, SecondaryPositonTransform;
-	private Vector3 InitialPosition, SecondaryPosition;
+	[UnityEngine.Serialization.FormerlySerializedAs("InitialPositonTransform")]
+	public Transform initialPositionTransform;
+	[UnityEngine.Serialization.FormerlySerializedAs("SecondaryPositonTransform")]
+	public Transform secondaryPositionTransform;
+	private Vector3 initialPosition, secondaryPosition;
 
 	private AiStrikerController playerScript;
 
 	// Use this for initialization
 	void Start () {
-		playerScript = InitialPositonTransform.GetComponent<AiStrikerController> ();
-		InitialPosition = InitialPositonTransform.position;
-		SecondaryPosition = SecondaryPositonTransform.position;
+		playerScript = initialPositionTransform.GetComponent<AiStrikerController> ();
+		initialPosition = initialPositionTransform.position;
+		secondaryPosition = secondaryPositionTransform.position;
 	}
 
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if(PlayerPosition.PlayerTurn)
-			playerScript.InitialPosition = InitialPosition;
+		if(PlayerPosition.playerTurn)
+			playerScript.initialPosition = initialPosition;
 		else
-			playerScript.InitialPosition = SecondaryPosition;
+			playerScript.initialPosition = secondaryPosition;
 
-		if(PlayerPosition.PlayerTurn == false && Vector3.Distance(transform.position, SecondaryPosition) < 1f)
+		if(PlayerPosition.playerTurn == false && Vector3.Distance(transform.position, secondaryPosition) < 1f)
 		{
-			GameManager.SharedObject().IsGameReady = true;
+			GameManager.SharedObject().isGameReady = true;
 		}
 	}
 }

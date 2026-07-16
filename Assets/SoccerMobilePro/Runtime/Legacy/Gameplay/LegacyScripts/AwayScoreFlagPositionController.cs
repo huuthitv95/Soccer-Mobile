@@ -17,7 +17,7 @@ public class AwayScoreFlagPositionController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GameManager.SharedObject ().IsFirstHalf)
+		if (GameManager.SharedObject ().isFirstHalf)
 			transform.position = new Vector3 (0.324f, transform.position.y, transform.position.z);
 		else
 			transform.position = new Vector3 (0.08f, transform.position.y, transform.position.z);

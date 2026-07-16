@@ -11,12 +11,13 @@ using System.Collections;
 public class OpponentCornerTriggerController : MonoBehaviour
 {
 	private BallScript ballScript;
-	public GameObject Golie;
+	[UnityEngine.Serialization.FormerlySerializedAs("Golie")]
+	public GameObject goalkeeper;
 
 	void Start()
 	{
-		GameObject FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		ballScript = FootBall.GetComponent<BallScript>();
+		GameObject football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		ballScript = football.GetComponent<BallScript>();
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -24,13 +25,13 @@ public class OpponentCornerTriggerController : MonoBehaviour
 		if(other.tag == "TheSoccerBall")
 		{
 			if(ballScript.lastOwnerTag != "Player")
-				GameManager.SharedObject().PlayerGotCornerKick = true;
+				GameManager.SharedObject().playerGotCornerKick = true;
 			else
 			{
-				Golie.GetComponent<OpponentGoalkeeper>().enabled = false;
-				Golie.GetComponent<OpponentGoalkeeperKickController>().enabled = true;
+				goalkeeper.GetComponent<OpponentGoalkeeper>().enabled = false;
+				goalkeeper.GetComponent<OpponentGoalkeeperKickController>().enabled = true;
 
-				GameManager.SharedObject().PlayerMissedGoal = true;
+				GameManager.SharedObject().playerMissedGoal = true;
 			}
 			ballScript.ownerPlayer = null;
 
@@ -43,7 +44,7 @@ public class OpponentCornerTriggerController : MonoBehaviour
 			other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
 			other.gameObject.transform.position = GameManager.SharedObject().foulPosition;
-			LegacyMatchCoreAdapter.RecordCorner(GameManager.SharedObject().GameTime);
+			LegacyMatchCoreAdapter.RecordCorner(GameManager.SharedObject().gameTime);
 		}
 	}
 }

@@ -15,16 +15,16 @@ public class AiMidfielderController : MonoBehaviour
 
 	public Transform goal;
 	private int moveSpeed = 5;
-	private Vector3 InitialPosition = Vector3.zero;
+	private Vector3 initialPosition = Vector3.zero;
 	private Vector3 targetPosition = Vector3.zero;
 
-	private GameObject FootBall;
-	private BallScript FootBallScript;
+	private GameObject football;
+	private BallScript footballScript;
 
-	static bool Position1Available = true;
-	static bool Position2Available = true;
-	static bool Position3Available = true;
-	static bool Position4Available = true;
+	static bool position1Available = true;
+	static bool position2Available = true;
+	static bool position3Available = true;
+	static bool position4Available = true;
 
 	private int zOffset = 0;
 	private int xOffset = 0;
@@ -38,12 +38,12 @@ public class AiMidfielderController : MonoBehaviour
 	public bool isMoving = false;
 	private float lastTime = 0;
 
-	private float AttackTime = 0;
-	private bool Attack = false;
+	private float attackTime = 0;
+	private bool attack = false;
 
 	private Vector2 GetForceFrom(Vector3 fromPos, Vector3 toPos)
 	{
-		return (new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y))*FootBall.GetComponent<Rigidbody>().mass;
+		return (new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y))*football.GetComponent<Rigidbody>().mass;
 	}
 	// Use this for initialization
 	void Start ()
@@ -52,35 +52,35 @@ public class AiMidfielderController : MonoBehaviour
 		AtPosition2 = false;
 		AtPosition3 = false;*/
 
-		InitialPosition = transform.position;
+		initialPosition = transform.position;
 		targetPosition = transform.position;
 
-		FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		FootBallScript = FootBall.GetComponent<BallScript> ();
+		football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		footballScript = football.GetComponent<BallScript> ();
 
-		if(Position1Available)
+		if(position1Available)
 		{
 			xOffset = 5;
 			zOffset = 15;
-			Position1Available = false;
+			position1Available = false;
 		}
-		else if(Position2Available)
+		else if(position2Available)
 		{
 			xOffset = 5;
 			zOffset = -15;
-			Position2Available = false;
+			position2Available = false;
 		}
-		else if(Position3Available)
+		else if(position3Available)
 		{
 			xOffset = -5;
 			zOffset = -15;
-			Position3Available = false;
+			position3Available = false;
 		}
-		else if(Position4Available)
+		else if(position4Available)
 		{
 			xOffset = -5;
 			zOffset = 15;
-			Position3Available = false;
+			position3Available = false;
 		}
 
 		GameObject[] playersT = GameObject.FindGameObjectsWithTag("AIMidfiielder");
@@ -99,29 +99,29 @@ public class AiMidfielderController : MonoBehaviour
 
 	bool TeamHasTheBall()
 	{
-		return (FootBallScript.ownerPlayer && FootBallScript.ownerPlayer.gameObject.name == transform.gameObject.name);
+		return (footballScript.ownerPlayer && footballScript.ownerPlayer.gameObject.name == transform.gameObject.name);
 	}
 
 	private void MoveForward()
 	{
-		targetPosition = FootBall.transform.position;
+		targetPosition = football.transform.position;
 
 
-		if(FootBall.transform.position.x < 30 && FootBall.transform.position.x > -30)
+		if(football.transform.position.x < 30 && football.transform.position.x > -30)
 		{
 			if(TeamHasTheBall())
-				targetPosition = new Vector3(FootBall.transform.position.x-xOffset,0,((FootBall.transform.position.z+zOffset < 37 && FootBall.transform.position.z+zOffset > -37)?FootBall.transform.position.z+zOffset:targetPosition.z));
+				targetPosition = new Vector3(football.transform.position.x-xOffset,0,((football.transform.position.z+zOffset < 37 && football.transform.position.z+zOffset > -37)?football.transform.position.z+zOffset:targetPosition.z));
 			else
-				targetPosition = new Vector3(FootBall.transform.position.x+xOffset,0,((FootBall.transform.position.z+zOffset < 37 && FootBall.transform.position.z+zOffset > -37)?FootBall.transform.position.z+zOffset:targetPosition.z));
+				targetPosition = new Vector3(football.transform.position.x+xOffset,0,((football.transform.position.z+zOffset < 37 && football.transform.position.z+zOffset > -37)?football.transform.position.z+zOffset:targetPosition.z));
 		}
 		else
-			targetPosition = InitialPosition;
+			targetPosition = initialPosition;
 
 		targetPosition.y = transform.position.y;
-		float RotationSpeed = 100;
+		float rotationSpeed = 100;
 
-		if(!GameManager.SharedObject().IsGameReady)
-			targetPosition = InitialPosition;
+		if(!GameManager.SharedObject().isGameReady)
+			targetPosition = initialPosition;
 
 		Quaternion _lookRotation = transform.rotation;
 		Vector3 _direction;
@@ -139,7 +139,7 @@ public class AiMidfielderController : MonoBehaviour
 
 			if(Time.time - lastTime > 0.3f)
 			{
-				transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+				transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 				lastTime = Time.time;
 			}
 
@@ -149,10 +149,10 @@ public class AiMidfielderController : MonoBehaviour
 		{
 			isMoving = false;
 
-			_direction = (FootBall.transform.position - transform.position).normalized;
+			_direction = (football.transform.position - transform.position).normalized;
 			_lookRotation = Quaternion.LookRotation(_direction);
 			_lookRotation.x = _lookRotation.z = 0f;
-			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 		}
 
 		if(isMoving == false)
@@ -166,38 +166,38 @@ public class AiMidfielderController : MonoBehaviour
 		if(GetComponent<Animation>()["tiro"].enabled == true || GetComponent<Animation>()["pase"].enabled == true) return;
 		isMoving = true;
 
-		targetPosition = FootBall.transform.position;
+		targetPosition = football.transform.position;
 
-		if(FootBall.transform.position.x < 30 && FootBall.transform.position.x > -30)
+		if(football.transform.position.x < 30 && football.transform.position.x > -30)
 		{
-			AttackTime += Time.deltaTime;
+			attackTime += Time.deltaTime;
 
-			if(Attack == false && AttackTime > 3)
+			if(attack == false && attackTime > 3)
 			{
-				Attack = true;
-				AttackTime = 0;
+				attack = true;
+				attackTime = 0;
 			}
-			else if(Attack == true && AttackTime>4)
+			else if(attack == true && attackTime>4)
 			{
-				AttackTime = 0;
-				Attack = false;
+				attackTime = 0;
+				attack = false;
 			}
 
-			if((Attack || FootBallScript.ownerPlayer == null) && !TeamHasTheBall())
-				targetPosition = FootBall.transform.position;
+			if((attack || footballScript.ownerPlayer == null) && !TeamHasTheBall())
+				targetPosition = football.transform.position;
 			else if(TeamHasTheBall())
-				targetPosition = new Vector3(FootBall.transform.position.x-10,0,FootBall.transform.position.z+zOffset/2);
+				targetPosition = new Vector3(football.transform.position.x-10,0,football.transform.position.z+zOffset/2);
 			else
-				targetPosition = new Vector3(FootBall.transform.position.x+10,0,FootBall.transform.position.z);
+				targetPosition = new Vector3(football.transform.position.x+10,0,football.transform.position.z);
 		}
 		else
-			targetPosition = InitialPosition;
+			targetPosition = initialPosition;
 
-		if(!GameManager.SharedObject().IsGameReady)
-			targetPosition = InitialPosition;
+		if(!GameManager.SharedObject().isGameReady)
+			targetPosition = initialPosition;
 
 		targetPosition.y = transform.position.y;
-		float RotationSpeed = 100;
+		float rotationSpeed = 100;
 
 		Quaternion _lookRotation = transform.rotation;
 		Vector3 _direction;
@@ -211,7 +211,7 @@ public class AiMidfielderController : MonoBehaviour
 
 		if(Time.time - lastTime > 0.3f)
 		{
-			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 			lastTime = Time.time;
 		}
 
@@ -225,10 +225,10 @@ public class AiMidfielderController : MonoBehaviour
 		{
 			isMoving = false;
 
-			_direction = (FootBall.transform.position - transform.position).normalized;
+			_direction = (football.transform.position - transform.position).normalized;
 			_lookRotation = Quaternion.LookRotation(_direction);
 			_lookRotation.x = _lookRotation.z = 0f;
-			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 		}
 
 		if(isMoving == false)
@@ -247,11 +247,11 @@ public class AiMidfielderController : MonoBehaviour
 
 		Vector3 targetPosition = goal.transform.position;
 
-		if(!GameManager.SharedObject().IsGameReady)
-			targetPosition = InitialPosition;
+		if(!GameManager.SharedObject().isGameReady)
+			targetPosition = initialPosition;
 
 		targetPosition.y = transform.position.y;
-		float RotationSpeed = 100;
+		float rotationSpeed = 100;
 
 		Quaternion _lookRotation;
 		Vector3 _direction;
@@ -262,7 +262,7 @@ public class AiMidfielderController : MonoBehaviour
 		//create the rotation we need to be in to look at the target
 		_lookRotation = Quaternion.LookRotation(_direction);
 
-		transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+		transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 
 		if(Vector3.Distance(transform.position, targetPosition) > .5f)
 			transform.Translate(Vector3.forward*Time.deltaTime*moveSpeed * 0.65f); //****StatesAndBehaviours.oppPlayerSpeed
@@ -271,43 +271,43 @@ public class AiMidfielderController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(GameManager.SharedObject().OpponentMadeFoul || GameManager.SharedObject().PlayerMadeFoul)
+		if(GameManager.SharedObject().opponentMadeFoul || GameManager.SharedObject().playerMadeFoul)
 		{
 			gameObject.GetComponent<AiMidfielderController>().enabled = false;
 			gameObject.GetComponent<OpponentFoulHandler>().enabled = true;
 			return;
 		}
 
-		if(GameManager.SharedObject().PlayerGotCornerKick || GameManager.SharedObject().OpponentGotCornerKick)
+		if(GameManager.SharedObject().playerGotCornerKick || GameManager.SharedObject().opponentGotCornerKick)
 		{
 			gameObject.GetComponent<AiMidfielderController>().enabled = false;
 			gameObject.GetComponent<OpponentCornerKickHandler>().enabled = true;
 			return;
 		}
 
-		if(Vector3.Distance(FootBall.transform.position,transform.position) < 0.5f && GameManager.SharedObject().IsGameReady)
-			FootBallScript.SetOwnerIfPossible(transform);
+		if(Vector3.Distance(football.transform.position,transform.position) < 0.5f && GameManager.SharedObject().isGameReady)
+			footballScript.SetOwnerIfPossible(transform);
 
 		isMoving = false;
 
-		if((waitForPass <= 0 || Vector3.Distance(transform.position, FootBall.transform.position)<5f) && isMoving == false && transform == ControllablePlayer() && !HasTheBall()  && ((FootBallScript.ownerPlayer == null || !TeamHasTheBall() && GameManager.SharedObject().IsGameReady) /*&& Vector3.Distance(transform.position, FootBall.transform.position)<10f*/))
+		if((waitForPass <= 0 || Vector3.Distance(transform.position, football.transform.position)<5f) && isMoving == false && transform == ControllablePlayer() && !HasTheBall()  && ((footballScript.ownerPlayer == null || !TeamHasTheBall() && GameManager.SharedObject().isGameReady) /*&& Vector3.Distance(transform.position, football.transform.position)<10f*/))
 			MoveTowardsTheBall();
 
-		if(waitForPass <= 0 && transform != ControllablePlayer() && !HasTheBall() && GameManager.SharedObject().IsGameReady)
+		if(waitForPass <= 0 && transform != ControllablePlayer() && !HasTheBall() && GameManager.SharedObject().isGameReady)
 			MoveForward();
 
-		if(transform == ControllablePlayer() && HasTheBall() && GameManager.SharedObject().IsGameReady)
+		if(transform == ControllablePlayer() && HasTheBall() && GameManager.SharedObject().isGameReady)
 			MoveForGoal();
 
 		if(isMoving == false && GetComponent<Animation>()["reposo"].enabled == false && GetComponent<Animation>()["tiro"].enabled == false && GetComponent<Animation>()["pase"].enabled == false && GetComponent<Animation>()["entrada"].enabled == false)
 			GetComponent<Animation>().Play("reposo", PlayMode.StopAll);
 
-		if(Vector3.Distance(transform.position, FootBall.transform.position)<0.5f && transform == ControllablePlayer() && !HasTheBall() && GetComponent<Animation>()["entrada"].enabled == false && GameManager.SharedObject().IsGameReady)
+		if(Vector3.Distance(transform.position, football.transform.position)<0.5f && transform == ControllablePlayer() && !HasTheBall() && GetComponent<Animation>()["entrada"].enabled == false && GameManager.SharedObject().isGameReady)
 		{
-			if(FootBallScript.ownerPlayer)
-				FootBallScript.ownerPlayer.gameObject.GetComponent<Animation>().Play("entrada", PlayMode.StopAll);
+			if(footballScript.ownerPlayer)
+				footballScript.ownerPlayer.gameObject.GetComponent<Animation>().Play("entrada", PlayMode.StopAll);
 
-			FootBallScript.SetOwner(transform);
+			footballScript.SetOwner(transform);
 			timeToPass = 5f;
 		}
 
@@ -361,7 +361,7 @@ public class AiMidfielderController : MonoBehaviour
 		idealPlayer.GetComponent<ComputerPlayer> ().WaitForPass ();
 		*/
 
-		FootBallScript.SetFree();
+		footballScript.SetFree();
 
 		AudioManager.PlayKickSound ();
 
@@ -374,9 +374,9 @@ public class AiMidfielderController : MonoBehaviour
 		transform.rotation = _lookRotation;//Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * 9999999999);
 
 		Quaternion shotAngle = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 25 * progress,transform.rotation.eulerAngles.y,transform.rotation.eulerAngles.z));
-		FootBall.transform.rotation = shotAngle;
-		FootBall.GetComponent<Rigidbody>().AddForce(FootBall.transform.forward*300, ForceMode.Impulse);
-		//FootBall.GetComponent<Rigidbody>().AddForce(GetForceFrom(FootBall.transform.position,idealPlayer.position), ForceMode.Impulse);
+		football.transform.rotation = shotAngle;
+		football.GetComponent<Rigidbody>().AddForce(football.transform.forward*300, ForceMode.Impulse);
+		//football.GetComponent<Rigidbody>().AddForce(GetForceFrom(football.transform.position,idealPlayer.position), ForceMode.Impulse);
 		progress = 0;
 	}
 
@@ -389,12 +389,12 @@ public class AiMidfielderController : MonoBehaviour
 
 		AudioManager.PlayKickSound ();
 
-		FootBallScript.SetFree();
-		FootBallScript.isKicked = true;
+		footballScript.SetFree();
+		footballScript.isKicked = true;
 
 		Quaternion shotAngle = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 20,transform.rotation.eulerAngles.y,transform.rotation.eulerAngles.z));
-		FootBall.transform.rotation = shotAngle;
-		FootBall.GetComponent<Rigidbody>().AddForce(FootBall.transform.forward*150, ForceMode.Impulse);
+		football.transform.rotation = shotAngle;
+		football.GetComponent<Rigidbody>().AddForce(football.transform.forward*150, ForceMode.Impulse);
 	}
 
 	Transform ControllablePlayer()
@@ -405,7 +405,7 @@ public class AiMidfielderController : MonoBehaviour
 
 		foreach(Transform player in midfielders)
 		{
-			if(Vector3.Distance(FootBall.transform.position,player.position) - Vector3.Distance(FootBall.transform.position,idealPlayer.position) < 1f)
+			if(Vector3.Distance(football.transform.position,player.position) - Vector3.Distance(football.transform.position,idealPlayer.position) < 1f)
 				idealPlayer = player;
 		}
 		return idealPlayer;
@@ -425,7 +425,7 @@ public class AiMidfielderController : MonoBehaviour
 
 	bool HasTheBall()
 	{
-		return (FootBallScript.ownerPlayer == transform);
+		return (footballScript.ownerPlayer == transform);
 	}
 }
 }

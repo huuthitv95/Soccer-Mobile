@@ -16,23 +16,23 @@ public class FoulTriggerController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		GameObject FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		ballScript = FootBall.GetComponent<BallScript> ();
+		GameObject football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		ballScript = football.GetComponent<BallScript> ();
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.tag == "TheSoccerBall" && GameManager.SharedObject().OpponentMadeFoul == false && GameManager.SharedObject().PlayerMadeFoul == false)
+		if(other.tag == "TheSoccerBall" && GameManager.SharedObject().opponentMadeFoul == false && GameManager.SharedObject().playerMadeFoul == false)
 		{
 			if(ballScript.lastOwnerTag == "Player")
 			{
-				GameManager.SharedObject().OpponentMadeFoul = false;
-				GameManager.SharedObject().PlayerMadeFoul = true;
+				GameManager.SharedObject().opponentMadeFoul = false;
+				GameManager.SharedObject().playerMadeFoul = true;
 			}
 			else
 			{
-				GameManager.SharedObject().OpponentMadeFoul = true;
-				GameManager.SharedObject().PlayerMadeFoul = false;
+				GameManager.SharedObject().opponentMadeFoul = true;
+				GameManager.SharedObject().playerMadeFoul = false;
 			}
 			ballScript.ownerPlayer = null;
 			float z = 0f;
@@ -42,7 +42,7 @@ public class FoulTriggerController : MonoBehaviour
 				z = 37.5f;
 
 			GameManager.SharedObject().foulPosition = new Vector3(other.gameObject.transform.position.x,0,z);
-			LegacyMatchCoreAdapter.RecordFoul(GameManager.SharedObject().GameTime);
+			LegacyMatchCoreAdapter.RecordFoul(GameManager.SharedObject().gameTime);
 		}
 	}
 }

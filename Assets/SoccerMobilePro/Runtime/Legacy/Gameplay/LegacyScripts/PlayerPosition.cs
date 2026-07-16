@@ -13,10 +13,13 @@ public class PlayerPosition : MonoBehaviour
 {
 	public GUIStyle passButtonStyle;
 
-	public static bool PlayerTurn = true;
+	public static bool playerTurn = true;
 
-	public Transform InitialPositonTransform, SecondaryPositonTransform;
-	private Vector3 InitialPosition, SecondaryPosition;
+	[UnityEngine.Serialization.FormerlySerializedAs("InitialPositonTransform")]
+	public Transform initialPositionTransform;
+	[UnityEngine.Serialization.FormerlySerializedAs("SecondaryPositonTransform")]
+	public Transform secondaryPositionTransform;
+	private Vector3 initialPosition, secondaryPosition;
 
 	private Player playerScript;
 
@@ -26,17 +29,17 @@ public class PlayerPosition : MonoBehaviour
 	void Start ()
 	{
 		ball = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		playerScript = InitialPositonTransform.GetComponent<Player> ();
-		InitialPosition = InitialPositonTransform.position;
-		SecondaryPosition = SecondaryPositonTransform.position;
+		playerScript = initialPositionTransform.GetComponent<Player> ();
+		initialPosition = initialPositionTransform.position;
+		secondaryPosition = secondaryPositionTransform.position;
 	}
 
 	void Update ()
 	{
-		if(PlayerTurn)
-			playerScript.initialPosition = InitialPosition;
+		if(playerTurn)
+			playerScript.initialPosition = initialPosition;
 		else
-			playerScript.initialPosition = SecondaryPosition;
+			playerScript.initialPosition = secondaryPosition;
 	}
 
 	void OnGUI()
@@ -45,7 +48,7 @@ public class PlayerPosition : MonoBehaviour
 		{
 
 
-		if(PlayerTurn && GameManager.SharedObject().IsGameReady == false && Vector3.Distance(transform.position,ball.transform.position)<1.5f)
+		if(playerTurn && GameManager.SharedObject().isGameReady == false && Vector3.Distance(transform.position,ball.transform.position)<1.5f)
 		{
 			if(GUI.Button(new Rect (Screen.width - GetValue(150), Screen.height - GetValue(150) - GetValue(130), GetValue(110), GetValue(110)),"",passButtonStyle))
 			{
@@ -54,7 +57,7 @@ public class PlayerPosition : MonoBehaviour
 				ball.GetComponent<Rigidbody>().AddForce(direction*1200, ForceMode.Impulse);
 
 				AudioManager.PlayResumeWhistle();
-				GameManager.SharedObject().IsGameReady = true;
+				GameManager.SharedObject().isGameReady = true;
 			}
 		}
 		}

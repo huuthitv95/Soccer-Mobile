@@ -16,7 +16,7 @@ public class OpponentGoalkeeperKickController : MonoBehaviour
 
 	private Vector3 ballPosition;
 
-	private GameObject FootBall;
+	private GameObject football;
 	public BallScript ballScript;
 
 	// Use this for initialization
@@ -24,8 +24,8 @@ public class OpponentGoalkeeperKickController : MonoBehaviour
 	{
 		ballPosition = new Vector3 (48,0.15773f,0);
 
-		FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		ballScript = FootBall.GetComponent<BallScript>();
+		football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		ballScript = football.GetComponent<BallScript>();
 	}
 
 	// Update is called once per frame
@@ -36,9 +36,9 @@ public class OpponentGoalkeeperKickController : MonoBehaviour
 			if(GetComponent<Animation>()["reposo"].enabled == false)
 				GetComponent<Animation>().Play("reposo", PlayMode.StopAll);
 
-			FootBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
-			FootBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-			FootBall.transform.position = ballPosition;
+			football.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			football.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+			football.transform.position = ballPosition;
 
 			transform.position = new Vector3(ballPosition.x+3, 0, ballPosition.z);
 			transform.rotation = Quaternion.Euler(new Vector3(0,-90,0));
@@ -67,8 +67,8 @@ public class OpponentGoalkeeperKickController : MonoBehaviour
 
 					ballKicked = true;
 					Quaternion shotAngle = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x - 30,transform.rotation.eulerAngles.y,transform.rotation.eulerAngles.z));
-					FootBall.transform.rotation = shotAngle;
-					FootBall.GetComponent<Rigidbody>().AddForce(FootBall.transform.forward*2000, ForceMode.Impulse);
+					football.transform.rotation = shotAngle;
+					football.GetComponent<Rigidbody>().AddForce(football.transform.forward*2000, ForceMode.Impulse);
 					Invoke("StartPlay",1f);
 				}
 			}
@@ -79,7 +79,7 @@ public class OpponentGoalkeeperKickController : MonoBehaviour
 
 	void StartPlay()
 	{
-		GameManager.SharedObject().IsGameReady = true;
+		GameManager.SharedObject().isGameReady = true;
 	}
 }
 }

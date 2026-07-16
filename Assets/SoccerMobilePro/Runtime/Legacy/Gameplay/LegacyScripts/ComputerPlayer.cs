@@ -146,7 +146,7 @@ public class ComputerPlayer : MonoBehaviour
 		}
 
 		targetPosition.y = transform.position.y;
-		float RotationSpeed = 50;
+		float rotationSpeed = 50;
 
 		Quaternion _lookRotation;
 		Vector3 _direction;
@@ -169,7 +169,7 @@ public class ComputerPlayer : MonoBehaviour
 
 			if(Time.time - lastTime > 0.3f)
 			{
-				transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+				transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 				lastTime = Time.time;
 			}
 
@@ -181,7 +181,7 @@ public class ComputerPlayer : MonoBehaviour
 
 			_direction = (theBall.transform.position - transform.position).normalized;
 			_lookRotation = Quaternion.LookRotation(_direction);
-			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 		}
 
 		if(isMoving == false)
@@ -205,7 +205,7 @@ public class ComputerPlayer : MonoBehaviour
 				targetPosition = initialPosition;
 		}
 		targetPosition.y = transform.position.y;
-		float RotationSpeed = 50;
+		float rotationSpeed = 50;
 
 		Quaternion _lookRotation;
 		Vector3 _direction;
@@ -220,7 +220,7 @@ public class ComputerPlayer : MonoBehaviour
 
 		if(Time.time - lastTime > 0.3f)
 		{
-			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 			lastTime = Time.time;
 		}
 
@@ -236,7 +236,7 @@ public class ComputerPlayer : MonoBehaviour
 
 			_direction = (theBall.transform.position - transform.position).normalized;
 			_lookRotation = Quaternion.LookRotation(_direction);
-			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 		}
 
 		if(isMoving == false)
@@ -256,7 +256,7 @@ public class ComputerPlayer : MonoBehaviour
 
 		Vector3 targetPosition = goal.transform.position;
 		targetPosition.y = transform.position.y;
-		float RotationSpeed = 50;
+		float rotationSpeed = 50;
 
 		Quaternion _lookRotation;
 		Vector3 _direction;
@@ -267,7 +267,7 @@ public class ComputerPlayer : MonoBehaviour
 		//create the rotation we need to be in to look at the target
 		_lookRotation = Quaternion.LookRotation(_direction);
 
-		transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
+		transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 
 		if(Vector3.Distance(transform.position, targetPosition) > .5f)
 			transform.Translate(Vector3.forward*Time.deltaTime*moveSpeed * 0.65f);

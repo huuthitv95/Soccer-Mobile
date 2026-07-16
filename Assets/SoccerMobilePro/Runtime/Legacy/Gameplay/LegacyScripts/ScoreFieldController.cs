@@ -26,7 +26,7 @@ public class ScoreFieldController : MonoBehaviour
 		string oGoals = ""+manager.opponentTeamGoals;
 		if(playerGoals&&oppositeGoals)
 		{
-		if(manager.IsFirstHalf) ///*** in order to switch teamNames and scores
+		if(manager.isFirstHalf) ///*** in order to switch teamNames and scores
 		{
 //		guiText.text = manager.playerTeamShortName + "    "+pGoals+" - "+oGoals+"    "+manager.opponentTeamShortName;
 			LegacyGuiUtility.GetOrAddGUIText(gameObject).text = ""+pGoals+" - "+oGoals+"";
@@ -39,7 +39,7 @@ public class ScoreFieldController : MonoBehaviour
 		else if(playerGoals&&!oppositeGoals)
 		{
 			LegacyGuiUtility.GetOrAddGUIText(gameObject).text = ""+pGoals;
-			if(manager.IsFirstHalf) ///*** in order to switch teamNames and scores
+			if(manager.isFirstHalf) ///*** in order to switch teamNames and scores
 			{
 				if(transform.position.x!=0.14f)
 				{
@@ -57,7 +57,7 @@ public class ScoreFieldController : MonoBehaviour
 		else if(!playerGoals&&oppositeGoals)
 		{
 			LegacyGuiUtility.GetOrAddGUIText(gameObject).text = ""+oGoals;
-			if(manager.IsFirstHalf) ///*** in order to switch teamNames and scores
+			if(manager.isFirstHalf) ///*** in order to switch teamNames and scores
 			{
 				if(transform.position.x!=0.26f)
 				{

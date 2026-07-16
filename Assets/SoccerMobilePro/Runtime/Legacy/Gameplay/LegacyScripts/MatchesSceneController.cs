@@ -11,7 +11,8 @@ using System.Collections;
 
 public class MatchesSceneController : MonoBehaviour
 {
-	public Texture[] Flags;
+	[UnityEngine.Serialization.FormerlySerializedAs("Flags")]
+	public Texture[] flags;
 
 	public Transform flag1,flag2,flag3,flag4,flag5,flag6,flag7;
 	private int match1TeamIndex=-1,match2TeamIndex=-1,match3TeamIndex=-1,match4TeamIndex=-1,match5TeamIndex=-1,match6TeamIndex=-1,match7TeamIndex=-1;
@@ -42,61 +43,61 @@ public class MatchesSceneController : MonoBehaviour
 		}
 		else
 		{
-			int SelectedGroupStartIndex = 0;
-			int SelectedGroupEndIndex = 3;
+			int selectedGroupStartIndex = 0;
+			int selectedGroupEndIndex = 3;
 
 			if(HomeTeamSelectionController.teamIndex>=0 && HomeTeamSelectionController.teamIndex<=3)
 			{
 				teamGroup = "A";
-				SelectedGroupStartIndex = 0;
-				SelectedGroupEndIndex = 3;
+				selectedGroupStartIndex = 0;
+				selectedGroupEndIndex = 3;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=4 && HomeTeamSelectionController.teamIndex<=7)
 			{
 				teamGroup = "B";
-				SelectedGroupStartIndex = 4;
-				SelectedGroupEndIndex = 7;
+				selectedGroupStartIndex = 4;
+				selectedGroupEndIndex = 7;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=8 && HomeTeamSelectionController.teamIndex<=11)
 			{
 				teamGroup = "C";
-				SelectedGroupStartIndex = 8;
-				SelectedGroupEndIndex = 11;
+				selectedGroupStartIndex = 8;
+				selectedGroupEndIndex = 11;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=12 && HomeTeamSelectionController.teamIndex<=15)
 			{
 				teamGroup = "D";
-				SelectedGroupStartIndex = 12;
-				SelectedGroupEndIndex = 15;
+				selectedGroupStartIndex = 12;
+				selectedGroupEndIndex = 15;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=16 && HomeTeamSelectionController.teamIndex<=19)
 			{
 				teamGroup = "E";
-				SelectedGroupStartIndex = 16;
-				SelectedGroupEndIndex = 19;
+				selectedGroupStartIndex = 16;
+				selectedGroupEndIndex = 19;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=20 && HomeTeamSelectionController.teamIndex<=23)
 			{
 				teamGroup = "F";
-				SelectedGroupStartIndex = 20;
-				SelectedGroupEndIndex = 23;
+				selectedGroupStartIndex = 20;
+				selectedGroupEndIndex = 23;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=24 && HomeTeamSelectionController.teamIndex<=27)
 			{
 				teamGroup = "G";
-				SelectedGroupStartIndex = 24;
-				SelectedGroupEndIndex = 27;
+				selectedGroupStartIndex = 24;
+				selectedGroupEndIndex = 27;
 			}
 			else if(HomeTeamSelectionController.teamIndex>=28 && HomeTeamSelectionController.teamIndex<=31)
 			{
 				teamGroup = "H";
-				SelectedGroupStartIndex = 28;
-				SelectedGroupEndIndex = 31;
+				selectedGroupStartIndex = 28;
+				selectedGroupEndIndex = 31;
 			}
 
 			// GROUP MATCHES
 			int tIndex = 0;
-			for(int i = SelectedGroupStartIndex; i <= SelectedGroupEndIndex; i++)
+			for(int i = selectedGroupStartIndex; i <= selectedGroupEndIndex; i++)
 			{
 				if(i != HomeTeamSelectionController.teamIndex)
 				{
@@ -111,69 +112,69 @@ public class MatchesSceneController : MonoBehaviour
 				}
 			}
 
-			int NextGroupStartIndex = 0;
-			int NextGroupEndIndex = 3;
+			int nextGroupStartIndex = 0;
+			int nextGroupEndIndex = 3;
 
 			if(teamGroup == "A")
 			{
-				NextGroupStartIndex = 4;
-				NextGroupStartIndex = 7;
+				nextGroupStartIndex = 4;
+				nextGroupStartIndex = 7;
 			}
 			else if(teamGroup == "B")
 			{
-				NextGroupStartIndex = 0;
-				NextGroupStartIndex = 3;
+				nextGroupStartIndex = 0;
+				nextGroupStartIndex = 3;
 			}
 			else if(teamGroup == "C")
 			{
-				NextGroupStartIndex = 12;
-				NextGroupStartIndex = 15;
+				nextGroupStartIndex = 12;
+				nextGroupStartIndex = 15;
 			}
 			else if(teamGroup == "D")
 			{
-				NextGroupStartIndex = 8;
-				NextGroupStartIndex = 11;
+				nextGroupStartIndex = 8;
+				nextGroupStartIndex = 11;
 			}
 			else if(teamGroup == "E")
 			{
-				NextGroupStartIndex = 20;
-				NextGroupStartIndex = 23;
+				nextGroupStartIndex = 20;
+				nextGroupStartIndex = 23;
 			}
 			else if(teamGroup == "F")
 			{
-				NextGroupStartIndex = 16;
-				NextGroupStartIndex = 19;
+				nextGroupStartIndex = 16;
+				nextGroupStartIndex = 19;
 			}
 			else if(teamGroup == "G")
 			{
-				NextGroupStartIndex = 28;
-				NextGroupStartIndex = 31;
+				nextGroupStartIndex = 28;
+				nextGroupStartIndex = 31;
 			}
 			else if(teamGroup == "H")
 			{
-				NextGroupStartIndex = 24;
-				NextGroupStartIndex = 27;
+				nextGroupStartIndex = 24;
+				nextGroupStartIndex = 27;
 			}
 
-			match4TeamIndex = Random.Range(NextGroupStartIndex,NextGroupEndIndex+1);
+			match4TeamIndex = Random.Range(nextGroupStartIndex,nextGroupEndIndex+1);
 
-			int QuarterFinalStartIndex = 0;
-			int QuarterFinalEndIndex = 0;
+			int quarterFinalStartIndex = 0;
+			int quarterFinalEndIndex = 0;
 
 			if(teamGroup == "C" || teamGroup == "B" || teamGroup == "C" || teamGroup == "D")
 			{
-				QuarterFinalStartIndex = 0;
-				QuarterFinalEndIndex = 15;
+				quarterFinalStartIndex = 0;
+				quarterFinalEndIndex = 15;
 			}
 			else
 			{
-				QuarterFinalStartIndex = 16;
-				QuarterFinalEndIndex = 31;
+				quarterFinalStartIndex = 16;
+				quarterFinalEndIndex = 31;
 			}
 			//Quarter Final
 			while(match5TeamIndex == -1)
 			{
-				int index = Random.Range(QuarterFinalStartIndex,QuarterFinalEndIndex+1);
+				int index = Random.Range(quarterFinalStartIndex,quarterFinalEndIndex+1);
 				if(index != HomeTeamSelectionController.teamIndex && index != match1TeamIndex && index != match2TeamIndex && index != match3TeamIndex && index != match4TeamIndex)
 					match5TeamIndex = index;
 			}
@@ -231,25 +232,25 @@ public class MatchesSceneController : MonoBehaviour
 
 		matchNumber = PlayerPrefs.GetInt("matchNumber");
 
-		LegacyGuiUtility.GetOrAddGUITexture(flag1).texture = Flags[match1TeamIndex];
-		LegacyGuiUtility.GetOrAddGUITexture(flag2).texture = Flags[match2TeamIndex];
-		LegacyGuiUtility.GetOrAddGUITexture(flag3).texture = Flags[match3TeamIndex];
+		LegacyGuiUtility.GetOrAddGUITexture(flag1).texture = flags[match1TeamIndex];
+		LegacyGuiUtility.GetOrAddGUITexture(flag2).texture = flags[match2TeamIndex];
+		LegacyGuiUtility.GetOrAddGUITexture(flag3).texture = flags[match3TeamIndex];
 
 		if(matchNumber > 3)
-			LegacyGuiUtility.GetOrAddGUITexture(flag4).texture = Flags[match4TeamIndex];
+			LegacyGuiUtility.GetOrAddGUITexture(flag4).texture = flags[match4TeamIndex];
 
 		if(matchNumber > 4)
-			LegacyGuiUtility.GetOrAddGUITexture(flag5).texture = Flags[match5TeamIndex];
+			LegacyGuiUtility.GetOrAddGUITexture(flag5).texture = flags[match5TeamIndex];
 
 		if(matchNumber > 5)
-			LegacyGuiUtility.GetOrAddGUITexture(flag6).texture = Flags[match6TeamIndex];
+			LegacyGuiUtility.GetOrAddGUITexture(flag6).texture = flags[match6TeamIndex];
 
 		if(matchNumber > 6)
-			LegacyGuiUtility.GetOrAddGUITexture(flag7).texture = Flags[match7TeamIndex];
+			LegacyGuiUtility.GetOrAddGUITexture(flag7).texture = flags[match7TeamIndex];
 
-		GameManager.SharedObject ().CurrentMatch = CurrentMatchIndex();
-		GameManager.SharedObject ().IsFirstHalf = true;
-		AwayTeamSelectionController.teamIndex = GameManager.SharedObject ().CurrentMatch;
+		GameManager.SharedObject ().currentMatch = CurrentMatchIndex();
+		GameManager.SharedObject ().isFirstHalf = true;
+		AwayTeamSelectionController.teamIndex = GameManager.SharedObject ().currentMatch;
 		HomeTeamSelectionController.teamIndex = PlayerPrefs.GetInt("playerTeamIndex");
 	}
 

@@ -20,13 +20,14 @@ public class PlayerFoulHandler : MonoBehaviour
 
 	public BallScript ballScript;
 	private Transform[] players;
-	public Transform LeftHand;
+	[UnityEngine.Serialization.FormerlySerializedAs("LeftHand")]
+	public Transform leftHand;
 
 	private Player playerScript;
 
 	Transform player1, player2, player3, player4;
 	Vector3 position1, position2, position3, position4;
-	private GameObject FootBall;
+	private GameObject football;
 
 	private bool throwing = false;
 
@@ -38,8 +39,8 @@ public class PlayerFoulHandler : MonoBehaviour
 
 		playerScript = gameObject.GetComponent<Player>();
 
-		FootBall = GameObject.FindGameObjectWithTag("TheSoccerBall");
-		ballScript = FootBall.GetComponent<BallScript>();
+		football = GameObject.FindGameObjectWithTag("TheSoccerBall");
+		ballScript = football.GetComponent<BallScript>();
 
 		GameObject[] playersT = GameObject.FindGameObjectsWithTag("Player");
 
@@ -64,7 +65,7 @@ public class PlayerFoulHandler : MonoBehaviour
 			return;
 		}
 
-		if(!GameManager.SharedObject().OpponentMadeFoul && !GameManager.SharedObject().PlayerMadeFoul && playerScript.enabled == false)
+		if(!GameManager.SharedObject().opponentMadeFoul && !GameManager.SharedObject().playerMadeFoul && playerScript.enabled == false)
 		{
 			gameObject.GetComponent<PlayerFoulHandler>().enabled = false;
 			playerScript.enabled = true;
@@ -78,11 +79,11 @@ public class PlayerFoulHandler : MonoBehaviour
 
 		if(transform == player1)
 		{
-			if(GameManager.SharedObject().OpponentMadeFoul)
+			if(GameManager.SharedObject().opponentMadeFoul)
 			{
 				if(ballScript.ownerPlayer==null)
 				{
-					ballScript.ownerPlayer = LeftHand;
+					ballScript.ownerPlayer = leftHand;
 					transform.position = GameManager.SharedObject().foulPosition;
 					transform.LookAt(Vector3.zero);
 					foulTime = 0;
@@ -94,7 +95,7 @@ public class PlayerFoulHandler : MonoBehaviour
 				if(throwing == false)
 				{
 					GetComponent<Animation>()["saque_banda"].normalizedTime = 0F;
-					FootBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+					football.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 				}
 
 				//////
@@ -180,7 +181,7 @@ public class PlayerFoulHandler : MonoBehaviour
 		}
 		else if(transform == player2)
 		{
-			if(GameManager.SharedObject().OpponentMadeFoul)
+			if(GameManager.SharedObject().opponentMadeFoul)
 			{
 				if(GameManager.SharedObject().foulPosition.z < 0)
 					transform.position = new Vector3(GameManager.SharedObject().foulPosition.x,0,GameManager.SharedObject().foulPosition.z+10f);
@@ -197,7 +198,7 @@ public class PlayerFoulHandler : MonoBehaviour
 		}
 		else if(transform == player3)
 		{
-			if(GameManager.SharedObject().OpponentMadeFoul)
+			if(GameManager.SharedObject().opponentMadeFoul)
 			{
 				if(GameManager.SharedObject().foulPosition.z < 0)
 					transform.position = new Vector3(GameManager.SharedObject().foulPosition.x+8f,0,GameManager.SharedObject().foulPosition.z+8f);
@@ -214,7 +215,7 @@ public class PlayerFoulHandler : MonoBehaviour
 		}
 		else if(transform == player4)
 		{
-			if(GameManager.SharedObject().OpponentMadeFoul)
+			if(GameManager.SharedObject().opponentMadeFoul)
 			{
 				if(GameManager.SharedObject().foulPosition.z < 0)
 					transform.position = new Vector3(GameManager.SharedObject().foulPosition.x-8f,0,GameManager.SharedObject().foulPosition.z+8f);
@@ -243,11 +244,11 @@ public class PlayerFoulHandler : MonoBehaviour
 		throwing = true;
 		yield return new WaitForSeconds(0.56f);
 
-		FootBall.GetComponent<BallScript>().SetFree();
-		FootBall.GetComponent<Rigidbody>().velocity = transform.forward * 15f;//(new Vector3(player2.position.x,FootBall.transform.position.y,player2.position.z) - FootBall.transform.position).normalized * 15;
+		football.GetComponent<BallScript>().SetFree();
+		football.GetComponent<Rigidbody>().velocity = transform.forward * 15f;//(new Vector3(player2.position.x,football.transform.position.y,player2.position.z) - football.transform.position).normalized * 15;
 
-		GameManager.SharedObject().PlayerMadeFoul = false;
-		GameManager.SharedObject().OpponentMadeFoul = false;
+		GameManager.SharedObject().playerMadeFoul = false;
+		GameManager.SharedObject().opponentMadeFoul = false;
 	}
 
 	void OnGUI()
@@ -255,7 +256,7 @@ public class PlayerFoulHandler : MonoBehaviour
 
 		if(!PauseController.isPaused)
 		{
-		if(transform == player1 && GameManager.SharedObject().OpponentMadeFoul)
+		if(transform == player1 && GameManager.SharedObject().opponentMadeFoul)
 		{
 			if(passButtonPressed)
 				GUI.DrawTexture(passButtonRect, passButtonSel);

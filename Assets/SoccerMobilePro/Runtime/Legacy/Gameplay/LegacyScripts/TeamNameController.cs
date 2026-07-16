@@ -12,7 +12,8 @@ using System.Collections;
 
 public class TeamNameController : MonoBehaviour
 {
-	public string[] TeamNames;
+	[UnityEngine.Serialization.FormerlySerializedAs("TeamNames")]
+	public string[] teamNames;
 	private static readonly string[] DefaultTeamNames =
 	{
 		"Algeria", "Angola", "Argentina", "Austria", "Bahrain", "Brazil", "Cameroon", "China",
@@ -63,8 +64,8 @@ public class TeamNameController : MonoBehaviour
 
 	private string[] GetTeamNames()
 	{
-		if(TeamNames != null && TeamNames.Length > 0)
-			return TeamNames;
+		if(teamNames != null && teamNames.Length > 0)
+			return teamNames;
 
 		return DefaultTeamNames;
 	}
