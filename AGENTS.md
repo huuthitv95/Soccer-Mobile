@@ -118,6 +118,13 @@ The following Firecrawl skills are also not default choices for this project: `f
 - `package-list`, `package-search`, `package-add`, `package-remove`: use only when evaluating or changing Unity packages. Explain compatibility, project impact, and rollback first.
 - `scene-list-opened`, `scene-get-data`, `assets-find`, `assets-get-data`, `script-read`: use before editing an unfamiliar area.
 
+### AI Game Developer domain reloads
+
+- Keep the global `unity-mcp-cli` version aligned with `com.ivanmurzak.unity.mcp`. On Windows, use `npm.cmd install -g unity-mcp-cli@<version>` if the CLI self-updater fails.
+- A Unity domain reload intentionally disconnects the Editor bridge and reconnects it afterward. Wait for compilation/update to finish and verify `unity-mcp-cli status <project>` before changing configuration.
+- Do not click **Reconfigure** or regenerate `.agents/skills` merely because the bridge is temporarily unavailable during reload. Reconfigure only when the saved endpoint/transport actually differs after reconnection, or when the registered tool inventory has changed.
+- Preserve `keepServerRunning`, `keepConnected`, `skillAutoGenerate.codex`, `skillsPath`, and the Codex endpoint in `UserSettings/AI-Game-Developer-Config.json` / `.codex/config.toml`. Diagnose unexpected resets by comparing these persisted values before and after reload.
+
 ### Assets, scenes, prefabs, and scripts
 
 - `assets-find`, `assets-get-data`, `assets-copy`, `assets-move`, `assets-refresh`: inspect or manage existing assets.
