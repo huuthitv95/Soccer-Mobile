@@ -1,2 +1,0 @@
-Dashboard đã được xác minh cục bộ ngày 15/07/2026.
-Không lưu access token tạm thời vào repository.
